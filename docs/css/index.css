@@ -3,41 +3,44 @@ body {
 	margin: auto 0;
 }
 
-body > header {
+.--dark {
 	background: black;
-	background: linear-gradient(180deg, black 75%, white 100%);
 	color: whitesmoke;
-	height: 115vh;
-	text-align: center;
 }
 
-body > header a {
+.--dark a {
 	color: snow;
 }
 
-body > header a:hover {
+.--dark a:hover {
 	color: white;
 	text-shadow: white 2px 1px 10px;
 }
 
-body > header h1 {
-	font-size: 4em;
+.titles {
+	background: linear-gradient(180deg, black 75%, white 100%) !important;
+	height: 115vh;
+	text-align: center;
 }
 
-body > header h2 {
-	font-size: 2em;
-}
-
-body > header h3 {
-	font-size: 1.5em;
-}
-
-.titles-container {
+.titles__container {
 	height: 93vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
   align-items: center;
+}
+
+.titles__h1 {
+	font-size: 4em;
+}
+
+.titles__h2 {
+	font-size: 2em;
+}
+
+.titles__h3 {
+	font-size: 1.5em;
 }
 
 .chevron-arrow-down {
@@ -50,37 +53,26 @@ body > header h3 {
   transform: rotate(-315deg);
 }
 
-body > main {
+.about-this {
 	margin: 0 10%;
 }
 
-body > section {
+.projects {
 	margin: 0 10%;
 }
 
-body > footer {
-	background-color: black;
-	color: whitesmoke;
+.contact {
 	text-align: center;
 	padding: 10px;
 }
 
-body > footer > ul {
+.contact__ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-body > footer li {
+.contact__li {
 	display: inline-block;
 	padding: 10px;
-}
-
-body > footer a {
-	color: snow;
-}
-
-body > footer a:hover {
-	color: white;
-	text-shadow: white 2px 1px 10px;
 }
