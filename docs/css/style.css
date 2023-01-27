@@ -11,6 +11,18 @@ body {
 	color: var(--font-color);
 }
 
+a {
+	color: steelblue;
+}
+
+a:hover {
+	color: midnightblue;
+}
+
+a:visited {
+	color: slateblue;
+}
+
 .--dark {
 	background: black;
 	color: whitesmoke;
