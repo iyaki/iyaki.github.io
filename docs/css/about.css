@@ -1,0 +1,27 @@
+.nav-bar {
+	padding: 15px;
+}
+
+.nav-bar__list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-bar__item {
+	display: inline-block;
+	padding: 10px;
+}
+
+.nav-bar__item--logo {
+	margin-right: 2em;
+}
+
+.nav-bar__logo {
+	height: 2.5em;
+	margin-bottom: -1em;
+}
+
+.brief-history {
+	margin: var(--content-margin);
+}
