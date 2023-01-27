@@ -49,3 +49,12 @@ body > header h3 {
 	border-radius: 5px;
   transform: rotate(-315deg);
 }
+
+body > main {
+	margin: 0 10%;
+}
+
+body > section {
+	margin: 0 10%;
+}
+
