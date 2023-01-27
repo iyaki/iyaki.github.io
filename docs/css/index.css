@@ -58,3 +58,29 @@ body > section {
 	margin: 0 10%;
 }
 
+body > footer {
+	background-color: black;
+	color: whitesmoke;
+	text-align: center;
+	padding: 10px;
+}
+
+body > footer > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body > footer li {
+	display: inline-block;
+	padding: 10px;
+}
+
+body > footer a {
+	color: snow;
+}
+
+body > footer a:hover {
+	color: white;
+	text-shadow: white 2px 1px 10px;
+}
