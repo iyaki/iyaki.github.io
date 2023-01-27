@@ -1,0 +1,51 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: auto 0;
+}
+
+body > header {
+	background: black;
+	background: linear-gradient(180deg, black 75%, white 100%);
+	color: whitesmoke;
+	height: 115vh;
+	text-align: center;
+}
+
+body > header a {
+	color: snow;
+}
+
+body > header a:hover {
+	color: white;
+	text-shadow: white 2px 1px 10px;
+}
+
+body > header h1 {
+	font-size: 4em;
+}
+
+body > header h2 {
+	font-size: 2em;
+}
+
+body > header h3 {
+	font-size: 1.5em;
+}
+
+.titles-container {
+	height: 93vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+}
+
+.chevron-arrow-down {
+  display: inline-block;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  width: 30px;
+  height: 30px;
+	border-radius: 5px;
+  transform: rotate(-315deg);
+}
