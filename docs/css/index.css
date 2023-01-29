@@ -34,14 +34,6 @@
 	transform: rotate(-315deg);
 }
 
-.about-this {
-	margin: var(--content-margin);
-}
-
-.projects {
-	margin: var(--content-margin);
-}
-
 .projects__project {
 	border: 2px solid black;
 	border-radius: 3px;

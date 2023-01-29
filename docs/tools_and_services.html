@@ -19,36 +19,41 @@
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
+		<link href="/css/style.css" rel="stylesheet" />
 	</head>
 	<body>
-		<header>
+		<header class="nav-bar --dark">
 			<nav>
-				<ul>
-					<li><a href="/">Inicio</a></li>
-					<li><a href="/about.html">Sobre mí</a></li>
-					<li><a href="/curated.html">Recopilador de contenidos curados</a></li>
-					<li><a href="/tools_and_services.html">Recopilador de herramientas y servicios</a></li>
+				<ul class="nav-bar__list">
+					<li class="nav-bar__item nav-bar__item--logo"><a href="/">
+						<img src="/images/logo.png" alt="Logo del sitio" class="nav-bar__logo" sync />
+					</a></li>
+					<li class="nav-bar__item"><a href="/">Inicio</a></li>
+					<li class="nav-bar__item"><a href="/about.html">Sobre mí</a></li>
+					<li class="nav-bar__item"><a href="/curated.html">Recopilador de contenidos curados</a></li>
+					<li class="nav-bar__item"><a href="/tools_and_services.html">Recopilador de herramientas y servicios</a></li>
 				</ul>
 			</nav>
 		</header>
-		<main>
-			<h1>Recopilador de herramientas y servicios</h1>
-			<h2>Colección de software, servicios, bibliotecas y <i lang="en">frameworks</i> útiles para desempeñarse en <abbr title="Information Technology" lang="en">IT</abbr></h2>
-			<p>Hace unos meses, como parte de la base de conocimientos del proyecto <a href="/curated.html">Recopilador de contenidos curados</a> comencé recopilar también múltiples programas, servicios, <i lang="en">frameworks</i> y bibliotecas (muchos no tan conocidos) que probe y me resultarón de utilidad, o bien, no alcance a probar pero se ven prometedores.</p>
-			<p>Pueden encontrar esta lista <a href="https://iyaki.notion.site/066daa9a7abb4c029724323209c85ca6?v=89038aa4a17f4216832e51b1e7cb7623">aquí</a>.</p>
-			<details>
-				<summary>Mis herramientas diarias</summary>
-				Próximamente :P
-			</details>
-		</main>
-		<footer>
+		<div class="page-content">
+			<main>
+				<h1>Recopilador de herramientas y servicios</h1>
+				<h2>Colección de software, servicios, bibliotecas y <i lang="en">frameworks</i> útiles para desempeñarse en <abbr title="Information Technology" lang="en">IT</abbr></h2>
+				<p>Hace unos meses, como parte de la base de conocimientos del proyecto <a href="/curated.html">Recopilador de contenidos curados</a> comencé recopilar también múltiples programas, servicios, <i lang="en">frameworks</i> y bibliotecas (muchos no tan conocidos) que probe y me resultarón de utilidad, o bien, no alcance a probar pero se ven prometedores.</p>
+				<p>Pueden encontrar esta lista <a href="https://iyaki.notion.site/066daa9a7abb4c029724323209c85ca6?v=89038aa4a17f4216832e51b1e7cb7623">aquí</a>.</p>
+				<details>
+					<summary>Mis herramientas diarias</summary>
+					Próximamente :P
+				</details>
+			</main>
+		</div>
+		<footer class="contact --dark">
 			<h2>Contacto</h2>
-			<p>
-				<ul>
-					<li><a href="mailto:me@iyaki.ar">me@iyaki.ar</a></li>
-					<li><a href="https://www.linkedin.com/in/ivan-yakimovicz/">Linkedin</a></li>
-					<li><a href="https://github.com/iyaki" lang="en">Github</a></li>
-				</ul>
+			<ul class="contact__list">
+				<li class="contact__item"><a href="mailto:me@iyaki.ar">me@iyaki.ar</a></li>
+				<li class="contact__item"><a href="https://www.linkedin.com/in/ivan-yakimovicz/">Linkedin</a></li>
+				<li class="contact__item"><a href="https://github.com/iyaki" lang="en">Github</a></li>
+			</ul>
 		</footer>
 	</body>
 </html>
