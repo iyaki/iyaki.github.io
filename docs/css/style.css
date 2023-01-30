@@ -47,6 +47,10 @@ a:visited {
 	padding: 15px;
 }
 
+.nav-bar__nav {
+	display: inline-block;
+}
+
 .nav-bar__list {
 	list-style-type: none;
 	margin: 0;
