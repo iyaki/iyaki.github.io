@@ -1,11 +1,12 @@
 .titles {
 	background: linear-gradient(180deg, black 75%, var(--background-color) 100%) !important;
-	height: 115vh;
+	height: 105vh;
+	padding: 0 50px;
 	text-align: center;
 }
 
 .titles__container {
-	height: 93vh;
+	height: 85vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
