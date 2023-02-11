@@ -43,34 +43,6 @@ a:visited {
 	text-shadow: white 2px 1px 10px;
 }
 
-.nav-bar {
-	padding: 15px;
-}
-
-.nav-bar__nav {
-	display: inline-block;
-}
-
-.nav-bar__list {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-.nav-bar__item {
-	display: inline-block;
-	padding: 10px;
-}
-
-.nav-bar__item--logo {
-	margin-right: 2em;
-}
-
-.nav-bar__logo {
-	height: 2.5em;
-	margin-bottom: -1em;
-}
-
 .contact {
 	padding: 10px;
 	text-align: center;
