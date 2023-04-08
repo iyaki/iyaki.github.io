@@ -28,24 +28,24 @@ body {
 }
 
 .titles__h1 {
-	font-size: 4em;
+	font-size: 4rem;
 }
 
 .titles__h2 {
-	font-size: 2em;
+	font-size: 2rem;
 }
 
 .titles__h3 {
-	font-size: 1.5em;
+	font-size: 1.5rem;
 }
 
 .chevron-arrow-down {
 	display: inline-block;
-	border-right: 0.25em solid white;
-	border-bottom: 0.25em solid white;
-	width: 2em;
-	height: 2em;
-	border-radius: 0.25em;
+	border-right: 0.25rem solid white;
+	border-bottom: 0.25rem solid white;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 0.25rem;
 	transform: rotate(-315deg);
 }
 
@@ -57,5 +57,5 @@ body {
 	border: 0.15em solid var(--box-border-color);
 	border-radius: 0.2em;
 	padding: 15px;
-	margin: 0.75em 0;
+	margin: 0.75rem 0;
 }
