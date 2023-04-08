@@ -1,0 +1,66 @@
+@import "utils/color-schema.css";
+@import "utils/sizing.css";
+
+:root {
+	--top-margin: 2rem;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	max-height: 140vh;
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	align-items: start;
+	align-content: space-around;
+}
+
+@media screen and (max-height: 600px) {
+	body {
+		max-height: 180vh;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.header-panel {
+		order: 0;
+		max-width: 12rem;
+		height: fit-content;
+		margin-top: var(--top-margin);
+	}
+
+	.main-panel {
+		order: 2;
+		width: var(--main-content-width);
+		height: calc(100vh - var(--top-margin));
+		overflow-y: auto;
+		margin-top: var(--top-margin);
+		padding: 0 2em;
+	}
+
+	.about-panel {
+		order: 3;
+		max-width: 15rem;
+		margin-top: var(--top-margin);
+	}
+
+	.advertisements-panel {
+		order: 4;
+		margin-bottom: 5rem;
+	}
+
+	.contact-panel {
+		order: 1;
+		margin-bottom: 1rem;
+	}
+}
+
+.main-panel > header {
+	margin-bottom: 5rem;
+}
+
+.main-panel > section > article {
+	margin: 2.5em 0;
+}
