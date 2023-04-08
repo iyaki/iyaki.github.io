@@ -1,5 +1,6 @@
 @import "utils/color-schema.css";
 @import "utils/dark.css";
+@import "utils/sizing.css";
 @import "components/contacts.css";
 
 body {
@@ -9,10 +10,6 @@ body {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
-}
-
-.page-content {
-	margin: 5% 10%;
 }
 
 .titles {
@@ -50,6 +47,10 @@ body {
 	height: 2em;
 	border-radius: 0.25em;
 	transform: rotate(-315deg);
+}
+
+.projects {
+	margin-top: 5rem;
 }
 
 .projects > article {

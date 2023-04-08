@@ -1,5 +1,6 @@
 @import "utils/color-schema.css";
 @import "utils/dark.css";
+@import "utils/sizing.css";
 @import "components/contacts.css";
 @import "components/top-bar.css";
 
@@ -10,8 +11,4 @@ body {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
-}
-
-.page-content {
-	margin: 5% 10%;
 }
