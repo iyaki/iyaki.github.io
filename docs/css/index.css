@@ -1,4 +1,19 @@
 @import "utils/color-schema.css";
+@import "utils/dark.css";
+@import "components/contacts.css";
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.page-content {
+	margin: 5% 10%;
+}
 
 .titles {
 	background: linear-gradient(180deg, black 75%, var(--background-color) 100%) !important;
@@ -10,7 +25,6 @@
 
 .titles__container {
 	height: 85vh;
-	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -38,7 +52,7 @@
 	transform: rotate(-315deg);
 }
 
-.project {
+.projects > article {
 	border: 0.15em solid var(--box-border-color);
 	border-radius: 0.2em;
 	padding: 15px;
