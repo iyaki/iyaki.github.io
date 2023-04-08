@@ -1,3 +1,5 @@
+@import "utils/color-schema.css";
+
 .titles {
 	background: linear-gradient(180deg, black 75%, var(--background-color) 100%) !important;
 	height: 105vh;
@@ -37,7 +39,7 @@
 }
 
 .project {
-	border: 0.15em solid black;
+	border: 0.15em solid var(--box-border-color);
 	border-radius: 0.2em;
 	padding: 15px;
 	margin: 0.75em 0;
