@@ -9,8 +9,8 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #383838;
 	display: flex;
-	flex-flow: column wrap;
-	justify-content: space-between;
+	flex-flow: row wrap;
+	justify-content: space-around;
 }
 
 .page-content {
@@ -40,11 +40,12 @@ a:visited {
 
 .--dark a:hover {
 	color: white;
-	text-shadow: white 2px 1px 10px;
+	text-shadow: white 2px 1px 0.5em;
 }
 
 .contact {
-	padding: 10px;
+	width: 100vw;
+	padding: 0.75em;
 	text-align: center;
 }
 
@@ -56,5 +57,5 @@ a:visited {
 
 .contact__item {
 	display: inline-block;
-	padding: 10px;
+	padding: 0.75em;
 }
