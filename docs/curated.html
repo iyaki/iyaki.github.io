@@ -55,6 +55,16 @@
 					href="https://iyaki.notion.site/iyaki/066daa9a7abb4c029724323209c85ca6?v=0a0294da7e734adcb9e4e5413c1db1da" target="_blank">mi Notion</a>.</p>
 			</header>
 			<section>
+				<template id="article-template">
+					<article id="{{articleID}}" data-date-added="{{dateAdded}}">
+						<header>
+							<h1>{{articleTitle}}</h1>
+						</header>
+						<p>{{articleComment}}</p>
+						<p><a href="{{articleLink}}" target="_blank" title="Artículo original">Leer mas</a></p>
+					</article>
+					<hr>
+				</template>
 				<article id="b961389666f04312bd820236098637e3" data-date-added="2023-04-06">
 					<header>
 						<h1>Please Don't Flashbang Me</h1>
