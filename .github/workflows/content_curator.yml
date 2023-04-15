@@ -11,6 +11,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: Dependencies setup
+        run: cd curator && npm install --save-exact
       - name: publish
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
