@@ -4,6 +4,8 @@ import { addArticle, publishArticles, publishedArticles } from './webpage.js';
 
 console.log('Starting curator')
 
+let existNewArticles = false
+
 // La api de ChatGPT tiene un limite de 3 usos por minuto
 for (let i = 1; i <= 3; ++i) {
 	const newArticle = await getNewArticle(publishedArticles())
@@ -12,11 +14,16 @@ for (let i = 1; i <= 3; ++i) {
 		break
 	}
 
+	existNewArticles = true
 	addArticle(newArticle)
 
 	console.log(`Added ${i} articles`)
 }
 
-console.log('Publishing articles')
 
-publishArticles()
+if (existNewArticles) {
+	console.log('Publishing articles')
+	publishArticles()
+}
+
+console.log('Curator finished')
