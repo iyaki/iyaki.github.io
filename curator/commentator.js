@@ -9,7 +9,7 @@ export async function getComment(excerpt) {
 		model: "gpt-3.5-turbo",
 		messages: [{
 			role: 'user',
-			content: `Write, in spanish, in a non personal way, a short (no more than 2 sentences) comment for this article: ${excerpt}`,
+			content: `Write, in spanish, in a non personal way, a short (no more than 2 sentences) comment for this article: ${excerpt.substring(0, 17000)}`,
 		}]
 	})
 

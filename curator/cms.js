@@ -28,61 +28,61 @@ function articleIsPublished(article, publishedArticles) {
 }
 
 async function fetchArticleFromNotion(startCursor) {
-		const results = await notion.databases.query({
-			database_id: DATABASE_ID,
-			page_size: 2,
-			start_cursor: startCursor,
-			sorts: [{
-				timestamp: 'created_time',
-				direction: 'ascending',
-			}],
-			filter: {
-				and: [
-					{
-						property: "Category",
-						multi_select: {
-							does_not_contain: "Tool",
-						},
+	const results = await notion.databases.query({
+		database_id: DATABASE_ID,
+		page_size: 2,
+		start_cursor: startCursor,
+		sorts: [{
+			timestamp: 'created_time',
+			direction: 'ascending',
+		}],
+		filter: {
+			and: [
+				{
+					property: "Category",
+					multi_select: {
+						does_not_contain: "Tool",
 					},
-					{
-						property: "Category",
-						multi_select: {
-							does_not_contain: "Service",
-						},
+				},
+				{
+					property: "Category",
+					multi_select: {
+						does_not_contain: "Service",
 					},
-					{
-						property: "Category",
-						multi_select: {
-							does_not_contain: "Website",
-						},
+				},
+				{
+					property: "Category",
+					multi_select: {
+						does_not_contain: "Website",
 					},
-					{
-						property: "Category",
-						multi_select: {
-							does_not_contain: "Note",
-						},
+				},
+				{
+					property: "Category",
+					multi_select: {
+						does_not_contain: "Note",
 					},
-					{
-						property: "Category",
-						multi_select: {
-							does_not_contain: "Framework/Library",
-						},
+				},
+				{
+					property: "Category",
+					multi_select: {
+						does_not_contain: "Framework/Library",
 					},
-					{
-						property: "Category",
-						multi_select: {
-							does_not_contain: "Game",
-						},
+				},
+				{
+					property: "Category",
+					multi_select: {
+						does_not_contain: "Game",
 					},
-				]
-			}
-		})
-
-		if (results.results.length < 2) {
-			return null
+				},
+			]
 		}
+	})
 
-		return results.results[1]
+	if (results.results.length < 2) {
+		return null
+	}
+
+	return results.results[1]
 }
 
 async function extractArticleData(article) {
