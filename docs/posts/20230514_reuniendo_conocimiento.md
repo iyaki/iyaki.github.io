@@ -14,8 +14,8 @@ aprender leyendo artículos de distintos blogs.
 Empecé con uno o dos blogs que leía intermitentemente, los dejaba en pestañas
 del navegador que mantenía siempre abiertas y así me mantenía actualizado. Esto
 no tardó en escalar y al cabo de algunos meses mantenía de abiertas una o dos
-decenas de pestañas (antes de que [[Google Chrome]] incorporara los grupos de
-pestañas).
+decenas de pestañas (antes de que [Google Chrome](https://www.google.com/intl/es-419/chrome/)
+incorporara los grupos de pestañas).
 
 Entonces supe que ese sistema ya no me servía. Sabía de la existencia del RSS
 pero creía que era una tecnología vieja y en proceso de extinción (y no estaba
@@ -24,7 +24,8 @@ muy alejado de la realidad). Aún así decidí darle una oportunidad.
 *[RSS]: Really Simple Syndication.
 
 Luego de investigar brevemente sobre las herramientas y servicios disponibles
-decidí utilizar [[Feedly]] en su capa gratuita y ya nunca lo abandoné.
+decidí utilizar [Feedly](https://feedly.com/) en su capa gratuita y ya nunca
+lo abandoné.
 
 Desde hace varios años el RSS se ha convertido en mi forma predilecta de
 informarme y en una parte clave de mi rutina.
