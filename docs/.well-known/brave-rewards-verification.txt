@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: iyaki.ar
-Token: d488d7c09f8e57bc785fb43504ac3e60b4214a4c89cba8d8b9c7839d3ed1b838
