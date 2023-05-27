@@ -21,27 +21,12 @@
 	<meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<link href="/css/curated.css" rel="stylesheet">
-	
-	<script src='https://js.sentry-cdn.com/eaf5a56de8c049109d5370187db987ae.min.js' crossorigin="anonymous"></script>
-	
-	<script>
-		!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="mCdOKCJPM9cyAnTS8BtzdPPJCNHSpWs3";;analytics.SNIPPET_VERSION="4.15.3";
-		analytics.load("mCdOKCJPM9cyAnTS8BtzdPPJCNHSpWs3");
-		analytics.page();
-		}}();
-	</script>
-	
+	<!-- PostHog -->
 	<script>
 		!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
 		posthog.init('phc_GiyRIzw94jjfJLj7Wm2KozJ1LnuFPY81cc3HymGjqd4',{api_host:'https://app.posthog.com'})
 	</script>
-	
-	<script type="text/javascript">
-		!function(){"use strict";!function(e,t){var n=e.amplitude||{_q:[],_iq:{}};if(n.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var r=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,n){return function(r){e._q.push({name:t,args:Array.prototype.slice.call(n,0),resolve:r})}},o=function(e,t,n){e[t]=function(){if(n)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<y.length;t++)o(e,y[t],!1);for(var n=0;n<g.length;n++)o(e,g[n],!0)};n.invoked=!0;var a=t.createElement("script");a.type="text/javascript",a.integrity="sha384-TPZhteUkZj8CAyBx+GZZytBdkuKnhKsSKcCoVCq0QSteWf/Kw5Kb9oVFUROLE1l3",a.crossOrigin="anonymous",a.async=!0,a.src="https://cdn.amplitude.com/libs/analytics-browser-1.9.1-min.js.gz",a.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(a,c);for(var u=function(){return this._q=[],this},l=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],p=0;p<l.length;p++)r(u,l[p]);n.Identify=u;for(var d=function(){return this._q=[],this},f=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],v=0;v<f.length;v++)r(d,f[v]);n.Revenue=d;var y=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset"],g=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(n),n.createInstance=function(e){return n._iq[e]={_q:[]},i(n._iq[e]),n._iq[e]},e.amplitude=n}}(window,document)}();
-
-		amplitude.init('d464ff22c3088a83c3d67ba8480ff29a', undefined, { defaultTracking: { sessions: true, pageViews: true, formInteractions: true, fileDownloads: true }});
-	</script>
-	
+	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QF72BWC0NV"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -114,7 +99,7 @@
 					<p><a href="https://blog.logrocket.com/product-management/democratic-leadership-style/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="90793221-a1c7-45f0-927d-d3e4cea35ef5" data-date-added="2023-05-23">
 					<header>
 						<h1>9 tips to go from attendee to speaker at a tech conference</h1>
@@ -123,7 +108,7 @@
 					<p><a href="https://github.blog/2023-05-18-9-tips-to-go-from-attendee-to-speaker-at-a-tech-conference/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="2b08f32a-26d2-4701-bd35-dab1663ca242" data-date-added="2023-05-19">
 					<header>
 						<h1>Porcelains</h1>
@@ -132,7 +117,7 @@
 					<p><a href="https://glazkov.com/2023/04/17/porcelains/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="b284a1ce-d89f-4dd2-aa9c-77ab1c3f4ddb" data-date-added="2023-05-19">
 					<header>
 						<h1>11 things good managers do that bad managers don’t in 1-on-1's</h1>
@@ -141,7 +126,7 @@
 					<p><a href="https://threadreaderapp.com/thread/1658445946500571136.html" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="9a5af762-1094-4898-a4f0-9069b79bc775" data-date-added="2023-05-19">
 					<header>
 						<h1>Keep ‘em separated: Get better maintainability in web projects using the model-view-controller pattern</h1>
@@ -150,7 +135,7 @@
 					<p><a href="https://stackoverflow.blog/2023/05/17/keep-em-separated-get-better-maintainability-in-web-projects-using-the-model-view-controller-pattern/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="46a9cb83-3338-4955-8728-718bf9d4d524" data-date-added="2023-05-18">
 					<header>
 						<h1>A step-by-step breakdown of the UX design process</h1>
@@ -159,7 +144,7 @@
 					<p><a href="https://blog.logrocket.com/ux-design/step-by-step-breakdown-ux-design-process/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="618041fc-5eec-4b08-a734-1ceb8edade66" data-date-added="2023-05-18">
 					<header>
 						<h1>Exploit Notes</h1>
@@ -168,7 +153,7 @@
 					<p><a href="https://exploit-notes.hdks.org/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="bb439fcd-008c-4129-8e22-e5f2d6bede33" data-date-added="2023-05-18">
 					<header>
 						<h1>Continuous Code Reviews using Non-Blocking Reviews</h1>
@@ -177,7 +162,7 @@
 					<p><a href="https://thinkinglabs.io/articles/2023/05/02/continuous-code-reviews-using-non-blocking-reviews-a-case-study.html" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="a1b79ffe-76d4-49ea-b0f4-5fae957cbd38" data-date-added="2023-05-16">
 					<header>
 						<h1>Retiro estratégico anual</h1>
@@ -186,7 +171,7 @@
 					<p><a href="https://blog.10pines.com/2023/05/03/retiro-estrategico-anual/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="f2fa7de1-bb90-4420-8496-706638035603" data-date-added="2023-05-15">
 					<header>
 						<h1>Do papercuts matter?</h1>
@@ -195,7 +180,7 @@
 					<p><a href="https://registerspill.thorstenball.com/p/do-papercuts-matter" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="ced52baa-7487-4c53-819e-d6c1b03d23a3" data-date-added="2023-05-15">
 					<header>
 						<h1>Cobertura de test rápida con Golden Master</h1>
@@ -204,7 +189,7 @@
 					<p><a href="https://franiglesias.github.io/approval_testing/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="a9a689ca-34b1-4675-9396-a5280fbae426" data-date-added="2023-05-15">
 					<header>
 						<h1>Advice for junior developers</h1>
@@ -213,7 +198,7 @@
 					<p><a href="https://www.entropywins.wtf/blog/2022/09/21/advice-for-junior-developers/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="aef61692-8a39-4018-8726-625c9aa7f045" data-date-added="2023-05-13">
 					<header>
 						<h1>What is asynchronous communication and how to balance it</h1>
@@ -222,7 +207,7 @@
 					<p><a href="https://blog.logrocket.com/product-management/what-is-asynchronous-communication/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="7d5f675b-abdb-4eaf-bcb7-117218db45a4" data-date-added="2023-05-12">
 					<header>
 						<h1>5 cosas que los fundadores, inversores y reclutadores deberían saber sobre el papel del CTO</h1>
@@ -231,7 +216,7 @@
 					<p><a href="https://sysarmy.com/blog/posts/5-cosas-que-los-fundadores-inversores-y-reclutadores-deberian-saber-sobre-el-papel-del-cto/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="0a3b9035-5ad6-47be-881c-5a7abfe304bf" data-date-added="2023-05-12">
 					<header>
 						<h1>Better problem solving with root cause analysis (with template)</h1>
@@ -240,7 +225,7 @@
 					<p><a href="https://blog.logrocket.com/product-management/what-is-root-cause-analysis/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="f159db91-17b6-4780-a425-a3e5ddc29a06" data-date-added="2023-05-12">
 					<header>
 						<h1>Stop Using Hamburger Menus</h1>
@@ -249,7 +234,7 @@
 					<p><a href="https://bt.ht/hamburgers/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="87bb60a4-8571-46e0-9a0f-1387e9bd7c6a" data-date-added="2023-05-06">
 					<header>
 						<h1>Métricas ágiles de producto desde la perspectiva funcional</h1>
@@ -258,7 +243,7 @@
 					<p><a href="https://kill-the-newsletter.com/alternates/mytk0u20tubgardx.html" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="b305fc3b-c704-401c-9382-cdf9fc39b84c" data-date-added="2023-05-06">
 					<header>
 						<h1>La estrategia de la intención del comandante en Roadmaps</h1>
@@ -267,7 +252,7 @@
 					<p><a href="https://kill-the-newsletter.com/alternates/qfdlw35z7lzdbqe8.html" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="3b57e8e9-1515-4fb8-a633-68f318c44e41" data-date-added="2023-05-06">
 					<header>
 						<h1>Promotion interview tips for tech: How to sell your value</h1>
@@ -276,7 +261,7 @@
 					<p><a href="https://www.pluralsight.com/blog/learning-and-development/promotion-interview-tips-tech" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="87f2ef54-0482-4711-9bbf-6f803a1b12de" data-date-added="2023-05-04">
 					<header>
 						<h1>Rules of Thumb for Software Development Estimations</h1>
@@ -285,7 +270,7 @@
 					<p><a href="https://vadimkravcenko.com/shorts/project-estimates/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="490c3bfc-b98e-4f98-9ae1-92e4206d0e97" data-date-added="2023-05-04">
 					<header>
 						<h1>Sovereign clouds</h1>
@@ -294,7 +279,7 @@
 					<p><a href="https://world.hey.com/dhh/sovereign-clouds-661eb5e4" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="cf81741f-24e6-430e-96b2-06140b4fc42a" data-date-added="2023-04-27">
 					<header>
 						<h1>Query Performance Optimization - High Performance MySQL, 2nd Edition</h1>
@@ -303,7 +288,7 @@
 					<p><a href="https://www.oreilly.com/library/view/high-performance-mysql/9780596101718/ch04.html" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="9ed294fa-29a6-41e6-9d7a-f67eb8813f42" data-date-added="2023-04-27">
 					<header>
 						<h1>The URL is the ultimate global state management tool</h1>
@@ -312,7 +297,7 @@
 					<p><a href="https://www.jacobparis.com/guides/url-as-state-management" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="1a6d910c-5986-402b-aae7-863663140bfb" data-date-added="2023-04-27">
 					<header>
 						<h1>Exploring The Potential Of Web Workers For Multithreading On The Web</h1>
@@ -321,7 +306,7 @@
 					<p><a href="https://www.smashingmagazine.com/2023/04/potential-web-workers-multithreading-web/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="518e952d-da5f-4e37-904a-958332daf189" data-date-added="2023-04-27">
 					<header>
 						<h1>Fixed-price projects</h1>
@@ -330,7 +315,7 @@
 					<p><a href="https://mikeveerman.substack.com/p/fixed-price-projects" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="17e9cc77-a6bb-4f8f-b5cf-f7f4f38473dd" data-date-added="2023-04-27">
 					<header>
 						<h1>Clever vs Insightful Code</h1>
@@ -339,7 +324,7 @@
 					<p><a href="https://www.hillelwayne.com/post/cleverness/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="e606d2c0-d9d0-4b94-9536-2a5208b36bca" data-date-added="2023-04-27">
 					<header>
 						<h1>How to manage your time as a new engineering manager</h1>
@@ -348,7 +333,7 @@
 					<p><a href="https://leaddev.com/personal-development/how-manage-your-time-new-engineering-manager" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="08bdd46b-56d3-46bc-bf22-b6c0808486aa" data-date-added="2023-04-27">
 					<header>
 						<h1>Dependencies Make Us Better</h1>
@@ -357,7 +342,7 @@
 					<p><a href="https://unfix.com/blog/dependencies-make-us-better" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="2f9e60a5-2943-4548-93b4-134ba2a6ba4c" data-date-added="2023-04-27">
 					<header>
 						<h1>Offline Is Just Online With Extreme Latency</h1>
@@ -366,7 +351,7 @@
 					<p><a href="https://blog.jim-nielsen.com/2023/offline-is-online-with-extreme-latency/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="bd6db8b1-5adf-455e-8f05-286e68232a93" data-date-added="2023-04-27">
 					<header>
 						<h1>openai-cookbook: Examples and guides for using the OpenAI API</h1>
@@ -375,7 +360,7 @@
 					<p><a href="https://github.com/openai/openai-cookbook" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="3b93fc1a-57eb-469b-83f2-65627da62641" data-date-added="2023-04-26">
 					<header>
 						<h1>ddd-crew/ddd-starter-modelling-process: If you're new to DDD and not sure where to start, this process will guide you step-by-step</h1>
@@ -384,7 +369,7 @@
 					<p><a href="https://github.com/ddd-crew/ddd-starter-modelling-process" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="bc138c16-7910-4ca7-a81b-a8e655421fab" data-date-added="2023-04-26">
 					<header>
 						<h1>The Philosophy of Computer Science (Stanford Encyclopedia of Philosophy)</h1>
@@ -393,7 +378,7 @@
 					<p><a href="https://plato.stanford.edu/entries/computer-science/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="8a4b9c3e-026a-45b6-b81f-c32ba4aea1c1" data-date-added="2023-04-26">
 					<header>
 						<h1>Keep Stuff Linkable</h1>
@@ -402,7 +387,7 @@
 					<p><a href="https://animaomnium.github.io/keep-stuff-linkable/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="d783a90b-1c4d-4b5d-aa79-03eee0d709cc" data-date-added="2023-04-26">
 					<header>
 						<h1>An On-Ramp to Flow</h1>
@@ -411,7 +396,7 @@
 					<p><a href="https://census.dev/blog/an-on-ramp-to-flow" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="a2fe9030-e303-4344-bdd0-ba37bed8b82b" data-date-added="2023-04-26">
 					<header>
 						<h1>Color and Contrast.com</h1>
@@ -420,7 +405,7 @@
 					<p><a href="https://colorandcontrast.com/#/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="da26b196-6506-4d75-ab0a-86cd3c7f9c58" data-date-added="2023-04-26">
 					<header>
 						<h1>Rethinking the Modern Web</h1>
@@ -429,7 +414,7 @@
 					<p><a href="https://dev.to/oxharris/rethinking-the-modern-web-5cn1" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="4c1a60d9-ebeb-4dd0-bb9e-7bc119affcd8" data-date-added="2023-04-26">
 					<header>
 						<h1>Is software quality attainable in Agile contexts?</h1>
@@ -438,7 +423,7 @@
 					<p><a href="https://alediaferia.com/2021/12/27/what-does-software-quality-mean-in-agile/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="7e6779e2-bddd-4f5c-b723-a35e8cfdd3e8" data-date-added="2023-04-26">
 					<header>
 						<h1>Excuse me, is there a problem?</h1>
@@ -447,7 +432,7 @@
 					<p><a href="https://longform.asmartbear.com/problem/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="1d978b75-d1ce-464a-a37a-69a3407fa631" data-date-added="2023-04-26">
 					<header>
 						<h1>Shitlist Driven Development</h1>
@@ -456,7 +441,7 @@
 					<p><a href="https://sirupsen.com/shitlists" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="08863071-2194-4f64-ab5c-ea61f7809452" data-date-added="2023-04-25">
 					<header>
 						<h1>The Capability-Tractability Tradeoff</h1>
@@ -465,7 +450,7 @@
 					<p><a href="https://buttondown.email/hillelwayne/archive/the-capability-tractability-tradeoff/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="540a8384-a4c8-46de-a83a-f5cf915af4ac" data-date-added="2023-04-25">
 					<header>
 						<h1>Software Mimicry</h1>
@@ -474,7 +459,7 @@
 					<p><a href="https://www.hillelwayne.com/post/software-mimicry/" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="275bb372-ee52-4c9d-8ce1-4283b33de681" data-date-added="2023-04-25">
 					<header>
 						<h1>Blub Paradox</h1>
@@ -483,7 +468,7 @@
 					<p><a href="https://wiki.c2.com/?BlubParadox" target="_blank" title="Artículo original">Leer mas</a></p>
 				</article>
 				<hr>
-			
+
 				<article id="9d1181c9-e08f-4513-aece-10f4b2a74e04" data-date-added="2023-04-22">
 					<header>
 						<h1>GitHub's employee intellectual property agreement, open sourced and reusable</h1>
