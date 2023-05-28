@@ -1,16 +1,32 @@
-// Read markdown post (passed as argument)
+import { updateWithArticle as updateBlogWithArticle } from "./blog.js";
+import { publish as publishHtml } from "./postHtml.js";
+import { publish as publishMd } from "./postMd.js";
+import { updateWithArticle as updatePostsIndexWithArticle } from "./postsIndex.js";
 
-// Read post template
+function main() {
+	const args = process.argv.slice(2)
 
-// Recognize post title (if possible)
-// Convert markdown post to HTML
-// Add post to posts/index.html
-// Add post to blog.html (description as argument?)
+	if (args.length === 0) {
+		throw 'ERROR: El script requiere un argumento, el path al post en markdown'
+	}
 
-import { hydrateFrom } from "./postHydrator.js";
+	const markdownPostPath = args[0]
 
-const args = process.argv.slice(2)
+	const articleMd = publishMd(markdownPostPath)
 
-const post = hydrateFrom(args[0])
+	if (articleMd.newPublication) {
+		updatePostsIndexWithArticle(articleMd)
+	}
 
-console.log(post)
+
+	const articleHtml = publishHtml(articleMd)
+
+	if (articleHtml.newPublication) {
+		updatePostsIndexWithArticle(articleHtml)
+
+		updateBlogWithArticle(articleHtml)
+	}
+}
+
+
+main()

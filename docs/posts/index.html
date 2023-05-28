@@ -45,15 +45,20 @@
 		<article>
 			<h1>Índice:</h1>
 			<ul>
+				<template id="article-template">
+					<li>
+						[{{dateAdded}}]
+						<a href="{{articleLink}}">{{articleTitle}}</a>
+						{{articleNote}}
+					</li>
+				</template>
 				<li>
-					14/05/2023
-					-
+					[14/05/2023]
 					<a href="/posts/20230514_reuniendo_conocimiento.md">Reuniendo conocimiento</a>
 					(Markdown version)
 				</li>
 				<li>
-					22/04/2023
-					-
+					[22/04/2023]
 					<a href="/posts/20230422_here_we_go.md">Here we go</a>
 					(Markdown version)
 				</li>

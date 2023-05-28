@@ -53,6 +53,21 @@
 			<h2 class="main-panel__title">Últimas publicaciones</h2>
 		</header>
 		<ol class="main-panel__articles">
+			<template id="article-template">
+				<li>
+					<article>
+						<header>
+							<a href="{{articleLink}}" title="{{articleTitle}}">
+								<h1>{{articleTitle}}</h1>
+							</a>
+							<p>{{dateAdded}}</p>
+						</header>
+						<p>
+							INSERT DESCRIPTION HERE
+						</p>
+					</article>
+				</li>
+			</template>
 			<li>
 				<article>
 					<header>
