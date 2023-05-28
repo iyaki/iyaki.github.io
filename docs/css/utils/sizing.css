@@ -10,6 +10,6 @@
 }
 
 .main-content {
-	width: var(--main-content-width);
+	max-width: var(--main-content-width);
 	padding: 3rem 3rem;
 }
