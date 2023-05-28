@@ -14,11 +14,6 @@ function main() {
 
 	const articleMd = publishMd(markdownPostPath)
 
-	if (articleMd.newPublication) {
-		updatePostsIndexWithArticle(articleMd)
-	}
-
-
 	const articleHtml = publishHtml(articleMd)
 
 	if (articleHtml.newPublication) {

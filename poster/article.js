@@ -1,31 +1,14 @@
-import { getFileExtension } from "./utils/file.js"
-
 const BASE_URL_PATH = '/posts/'
 const BASE_PATH = '../docs' + BASE_URL_PATH
-const ALLOWED_FILE_EXTENSIONS = [
-	'.html',
-	'.md',
-]
 
-export function newArticle({
+export function newMarkdownArticle({
 	filename,
 	title,
 	content,
 	datePublished,
 	newPublication,
 }) {
-	const fileExtension = getFileExtension(filename)
-	if (!ALLOWED_FILE_EXTENSIONS.includes(fileExtension)) {
-		throw `
-El tipo de archivo ${fileExtension} no esta permitido.
-Los formatos permitidos son: ${ALLOWED_FILE_EXTENSIONS.join(', ')}.
-`
-	}
-
 	return {
-		get id() {
-			return filename
-		},
 		get title() {
 			return title
 		},
@@ -39,16 +22,45 @@ Los formatos permitidos son: ${ALLOWED_FILE_EXTENSIONS.join(', ')}.
 			return newPublication
 		},
 		get path() {
-			return BASE_PATH + filename
+			return getPostPath(filename)
 		},
 		get urlPath() {
-			return BASE_URL_PATH + filename
-		},
-		isMd() {
-			return fileExtension === 'md'
-		},
-		isHtml() {
-			return fileExtension === 'html'
+			return getPostUrlPath(filename)
 		},
 	}
+}
+
+export function newHtmlArticleFrom({
+	markDownArticle,
+	filename,
+	content,
+}) {
+	return {
+		get title() {
+			return markDownArticle.title
+		},
+		get content() {
+			return content
+		},
+		get datePublished() {
+			return markDownArticle.datePublished
+		},
+		get newPublication() {
+			return markDownArticle.newPublication
+		},
+		get urlPathHtml() {
+			return getPostUrlPath(filename)
+		},
+		get urlPathMd() {
+			return markDownArticle.urlPath
+		},
+	}
+}
+
+function getPostPath(filename) {
+	return BASE_PATH + filename
+}
+
+function getPostUrlPath(filename) {
+	return BASE_URL_PATH + filename
 }

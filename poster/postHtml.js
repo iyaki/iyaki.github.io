@@ -1,6 +1,6 @@
-import { cleanFilenameDate, exists, getDateForFilename, getFilename, getFilenameWithoutExtension, read, write } from './utils/file.js';
+import { getFilenameWithoutExtension, read, write } from './utils/file.js';
 import { htmlFrom } from './utils/markdown.js';
-import { newArticle } from './article.js';
+import { newHtmlArticleFrom } from './article.js';
 
 const POST_TEMPLATE_PATH = './templates/post.html'
 const POST_TEMPLATE = read(POST_TEMPLATE_PATH)
@@ -16,27 +16,15 @@ export function publish(articleMd) {
 
 	const postPath = getPathForPost(filename)
 
-	const newPublication = isNew(postPath)
-
 	write(postPath, content)
 
-	return newArticle({
+	return newHtmlArticleFrom({
+		markDownArticle: articleMd,
 		filename,
-		title: articleMd.title,
 		content,
-		datePublished: new Date(),
-		newPublication,
 	})
-}
-
-function isNew(postPath) {
-	return !exists(postPath)
 }
 
 function getPathForPost(filename) {
 	return POSTS_PATH + filename
-}
-
-function getNewPathForPost(filename) {
-	return getPathForPost(getDateForFilename() + cleanFilenameDate(filename))
 }

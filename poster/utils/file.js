@@ -47,7 +47,3 @@ export function cleanFilenameDate(filename) {
 
 	return filename.substring(start)
 }
-
-export function exists(completePath) {
-	return fs.existsSync(completePath)
-}

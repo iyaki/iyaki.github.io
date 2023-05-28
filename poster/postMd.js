@@ -1,4 +1,4 @@
-import { newArticle } from './article.js'
+import { newMarkdownArticle } from './article.js'
 import { addUtf8Bom, cleanFilenameDate, getDateForFilename, getFilename, read, removeUtf8Bom, write } from './utils/file.js'
 import { firstTitleFrom } from './utils/markdown.js'
 
@@ -10,11 +10,13 @@ export function publish(postPath) {
 
 	const newPublication = isNew(filename)
 
-	const newPostPath = (
+	const newFilename = (
 		newPublication
-		? POSTS_PATH + getDateForFilename() + cleanFilenameDate(filename)
-		: postPath
+		? getDateForFilename() + cleanFilenameDate(filename)
+		: filename
 	)
+
+	const newPostPath = POSTS_PATH + newFilename
 
 	const content = removeUtf8Bom(read(postPath))
 
@@ -25,8 +27,8 @@ export function publish(postPath) {
 		addUtf8Bom(content)
 	)
 
-	return newArticle({
-			filename,
+	return newMarkdownArticle({
+			filename: newFilename,
 			title: firstTitleFrom(content),
 			content,
 			datePublished: new Date(),

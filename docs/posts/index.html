@@ -48,8 +48,8 @@
 				<template id="article-template">
 					<li>
 						[{{dateAdded}}]
-						<a href="{{articleLink}}">{{articleTitle}}</a>
-						{{articleNote}}
+						<a href="{{articleHtmlLink}}" title="{{articleTitle}}">{{articleTitle}}</a>
+						(<a href="{{articleMdLink}}" title="Artículo en formato markdown">Markdown Version</a>)
 					</li>
 				</template>
 					<li>
