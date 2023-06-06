@@ -21,7 +21,6 @@
 	<meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<link href="/css/about.css" rel="stylesheet">
-	<script src="/js/top-bar.js" type="module" async defer></script>
 	<!-- PostHog -->
 	<script>
 		!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -39,23 +38,20 @@
 </head>
 
 <body>
-	<header class="top-bar --dark">
-		<a href="/" title="Inicio" class="top-bar__item top-bar__item--logo">
-			<img src="/images/logo.webp" alt="Allons-y!" title="Allons-y!" class="top-bar__logo" sync>
-		</a>
-		<button class="top-bar__item top-bar__item--mobile-menu --dark" title="Mostrar/Ocultar barra de navegación" hidden>
-			&#9776;
-		</button>
-		<nav class="top-bar__nav">
-			<ul class="top-bar__list">
-				<li class="top-bar__item top-bar__item--nav"><a href="/">Inicio</a></li>
-				<li class="top-bar__item top-bar__item--nav"><a href="/about.html">Sobre mí</a></li>
-				<li class="top-bar__item top-bar__item--nav"><a href="/curated.html">Recopilador de contenidos curados</a></li>
-				<li class="top-bar__item top-bar__item--nav"><a href="/tools_and_services.html">Recopilador de herramientas y
-						servicios</a></li>
-			</ul>
-		</nav>
-	</header>
+	<nav>
+		<ul>
+			<li>
+				<a href="/" title="Volver al inicio">
+					&lt; Volver
+				</a>
+			</li>
+			<li>
+				<a href="/" title="Inicio">
+					<img src="/images/logo.webp" alt="Allons-y!" title="Allons-y!">
+				</a>
+			</li>
+		</ul>
+	</nav>
 	<main class="main-content">
 		<header>
 			<h1>Mi nombre es Iván Yakimovicz.</h1>
