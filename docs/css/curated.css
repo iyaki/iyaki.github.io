@@ -1,20 +1,32 @@
 @import "utils/color-schema.css";
 @import "utils/sizing.css";
 
-:root {
-	--top-margin: 2rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=Maitree:wght@400;700&family=Josefin+Sans:wght@600&display=swap');
 
 body {
 	margin: 0;
 	min-height: 100vh;
 	max-height: 140vh;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Maitree', serif;
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-between;
 	align-items: start;
 	align-content: space-around;
+}
+
+h1 {
+	line-height: 1.2em;
+}
+
+.header-panel > h1 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 2.2em;
+	line-height: 0.95em;
+}
+
+.main-panel > header > h2 {
+	font-family: 'Arsenal', sans-serif;
 }
 
 @media screen and (max-height: 600px) {

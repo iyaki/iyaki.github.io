@@ -1,36 +1,8 @@
-@import "utils/color-schema.css";
-@import "utils/sizing.css";
+@import "utils/base.css";
 @import "components/blog-header.css";
-
-@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=Maitree:wght@400;700&display=swap');
-
-body {
-	margin: 0;
-	font-family: 'Maitree', serif;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
 
 .header-panel {
 	width: 100vw;
-}
-
-.main-panel {
-	text-align: justify;
-}
-
-.main-panel__title {
-	font-size: 2em;
-	font-family: 'Arsenal', sans-serif;
-	margin: 1em 0.5em;
-}
-
-.main-panel__articles {
-	max-width: var(--main-content-width);
-	margin: 0 1em;
-	padding: 0 1.5em;
-	list-style: none;
 }
 
 .third-panel {
@@ -42,6 +14,7 @@ body {
 		height: 100vh;
 		overflow-y: hidden;
 		flex-direction: row-reverse;
+		justify-content: space-between;
 	}
 
 	.header-panel {

@@ -48,59 +48,49 @@
 			</a>
 		</div>
 	</header>
-	<main class="main-panel">
+	<main class="main-panel main-content">
 		<header>
-			<h2 class="main-panel__title">Últimas publicaciones</h2>
+			<h1>Últimas publicaciones</h1>
 		</header>
-		<ol class="main-panel__articles">
 			<template id="article-template">
-				<li>
-					<article>
-						<header>
-							<a href="{{articleLink}}" title="{{articleTitle}}">
-								<h1>{{articleTitle}}</h1>
-							</a>
-							<p>{{dateAdded}}</p>
-						</header>
-						<p>
-							INSERT DESCRIPTION HERE
-						</p>
-					</article>
-				</li>
+				<article>
+					<header>
+						<a href="{{articleLink}}" title="{{articleTitle}}">
+							<h1>{{articleTitle}}</h1>
+						</a>
+						<p>{{dateAdded}}</p>
+					</header>
+					<p>
+						INSERT DESCRIPTION HERE
+					</p>
+				</article>
 			</template>
-			<li>
-				<article>
-					<header>
-						<a href="/posts/20230514_reuniendo_conocimiento.html" title="Reuniendo conocimiento">
-							<h1>Reuniendo conocimiento</h1>
-						</a>
-						<p>14/05/2023</p>
-					</header>
-					<p>
-						Hace poco comencé a compartir cosas interesantes que encuentro por internet en mi <a
-							href="/curated.html">Recopilador de contenidos curados</a>.
-						<br>
-						En esta serie de artículos repaso el proceso que sigo para reunir, ordenar, depurar y compartir información.
-					</p>
-				</article>
-			</li>
-
-			<li>
-				<article>
-					<header>
-						<a href="/posts/20230422_here_we_go.html" title="Here we go">
-							<h1>Here we go</h1>
-						</a>
-						<p>22/04/2023</p>
-					</header>
-					<p>
-						Comienza un nuevo día y con él un nuevo blog random donde alguien en
-						internet expresará sus pensamientos.
-					</p>
-				</article>
-			</li>
-
-		</ol>
+			<article>
+				<header>
+					<a href="/posts/20230514_reuniendo_conocimiento.html" title="Reuniendo conocimiento">
+						<h1>Reuniendo conocimiento</h1>
+					</a>
+					<p>14/05/2023</p>
+				</header>
+				<p>
+					Hace poco comencé a compartir cosas interesantes que encuentro por internet en mi <a
+						href="/curated.html">Recopilador de contenidos curados</a>.
+					<br>
+					En esta serie de artículos repaso el proceso que sigo para reunir, ordenar, depurar y compartir información.
+				</p>
+			</article>
+			<article>
+				<header>
+					<a href="/posts/20230422_here_we_go.html" title="Here we go">
+						<h1>Here we go</h1>
+					</a>
+					<p>22/04/2023</p>
+				</header>
+				<p>
+					Comienza un nuevo día y con él un nuevo blog random donde alguien en
+					internet expresará sus pensamientos.
+				</p>
+			</article>
 	</main>
 	<aside class="third-panel"></aside>
 </body>

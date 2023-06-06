@@ -8,8 +8,3 @@
 		font-size: 21px;
 	}
 }
-
-.main-content {
-	max-width: var(--main-content-width);
-	padding: 1rem 3rem;
-}

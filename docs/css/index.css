@@ -1,21 +1,14 @@
-@import "utils/color-schema.css";
+@import "utils/base.css";
 @import "utils/dark.css";
-@import "utils/sizing.css";
 @import "components/contacts.css";
 
-body {
-	margin: 0;
-	min-height: 100vh;
-	font-family: Arial, Helvetica, sans-serif;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 .titles {
 	background: linear-gradient(180deg, black 75%, var(--background-color) 100%) !important;
 	height: 105vh;
 	width: 100vw;
+	font-family: Arial, Helvetica, sans-serif;
 	padding: 0 2em;
 	text-align: center;
 }
@@ -28,15 +21,20 @@ body {
 }
 
 .titles__h1 {
-	font-size: 4rem;
+	font-size: 4em;
+}
+
+.titles__h1--hola {
+	font-family: "Rock Salt";
+	font-size: 3.5rem;
 }
 
 .titles__h2 {
-	font-size: 2rem;
+	font-size: 2em;
 }
 
 .titles__h3 {
-	font-size: 1.5rem;
+	font-size: 1.5em;
 }
 
 .chevron-arrow-down {
@@ -49,13 +47,9 @@ body {
 	transform: rotate(-315deg);
 }
 
-.projects {
-	margin-top: 5rem;
-}
-
-.projects > article {
+.projects__project {
 	border: 0.15em solid var(--box-border-color);
 	border-radius: 0.2em;
-	padding: 15px;
+	padding: 0 3em !important;
 	margin: 0.75rem 0;
 }
