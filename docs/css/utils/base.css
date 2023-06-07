@@ -13,7 +13,7 @@ body {
 
 .main-content {
 	max-width: var(--main-content-width);
-	padding: 2rem 2rem;
+	padding: 2em;
 	text-align: justify;
 }
 
