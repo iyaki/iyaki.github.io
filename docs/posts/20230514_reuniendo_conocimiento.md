@@ -37,15 +37,10 @@ Para ir cerrando el post les dejo la lista de *sources* RSS que sigo actualmente
 (14/05/2023):
 
 - [A Smart Bear](https://longform.asmartbear.com/)
-- [Derecho en Zapatillas](https://www.derechoenzapatillas.com/)
 - [Genbeta](https://www.genbeta.com/)
-- [Hacker Noon](https://hackernoon.com/)
-- [iProfesional](https://www.iprofesional.com/)
 - [Lobsters](https://lobste.rs/)
-- [Ambito](https://www.ambito.com/)
 - [PHP reddit](https://www.reddit.com/r/PHP)
 - [The talking bit](https://franiglesias.github.io/)
-- [Xataka](https://www.xataka.com/)
 - [10Pines Blog](https://blog.10pines.com/)
 - [Apuntes inchequeables](https://facundoolano.github.io/)
 - [brandur.org](https://brandur.org/)
@@ -59,11 +54,9 @@ Para ir cerrando el post les dejo la lista de *sources* RSS que sigo actualmente
 - [Javier Garzas](https://www.javiergarzas.com/)
 - [Jim Nielsen's Blog](https://blog.jim-nielsen.com/)
 - [LeadDev](https://leaddev.com/)
-- [LogRocket Blog](https://blog.logrocket.com/)
 - [Lucas F. Costa](https://lucasfcosta.com/)
 - [madewithlove](https://madewithlove.com/blog/)
 - [Martin Fowler](https://martinfowler.com/)
-- [Material.io](https://m3.material.io/)
 - [Matthias Noback](https://matthiasnoback.nl/)
 - [nikic's blog](https://www.npopov.com/)
 - [PHP RFC Watch](https://php.watch/rfcs)
@@ -83,3 +76,8 @@ Para ir cerrando el post les dejo la lista de *sources* RSS que sigo actualmente
 
 Y no podía terminar sin mencionar una excelente herramienta para seguir mediante
 RSS Newsletters en formato e-mail: [Kill the newsletter](https://kill-the-newsletter.com/).
+
+## Actualizaciones
+
+Este post se actualizó el 10/06/2023 para eliminar múltiples feeds RSS que ya no
+sigo por no considerarlos de valor.
