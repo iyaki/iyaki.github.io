@@ -1,0 +1,21 @@
+on:
+    workflow_dispatch:
+    push:
+      branches:
+        - 'main'
+      paths:
+        - 'docs/curated.html'
+
+  jobs:
+    publish:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v3
+          with:
+            node-version: 18
+        - name: Dependencies setup
+          run: cd rss && npm install --save-exact
+        - name: Generate RSS
+          run: cd rss && node main.js config.curated.json
+        - uses: stefanzweifel/git-auto-commit-action@v4
