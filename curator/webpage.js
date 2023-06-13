@@ -6,9 +6,9 @@ import { parse } from 'node-html-parser'
 const HTML_PATH = '../docs/curated.html'
 
 const rootElement = parse(
-		fs.readFileSync(HTML_PATH, { encoding: 'utf8' }),
-		{comment: true}
-	)
+	fs.readFileSync(HTML_PATH, { encoding: 'utf8' }),
+	{comment: true}
+)
 
 const templateElement = rootElement.getElementById('article-template')
 
