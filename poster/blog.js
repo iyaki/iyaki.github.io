@@ -20,7 +20,7 @@ function hydrateTemplate(article) {
 	return templateHTML
 		.replaceAll('{{articleTitle}}', article.title)
 		.replaceAll('{{dateAdded}}', getHumanDate(article.datePublished))
-		.replaceAll('{{isoDateAdded}}', article.datePublished)
+		.replaceAll('{{isoDateAdded}}', article.datePublished.toISOString())
 		.replaceAll('{{articleLink}}', article.urlPathHtml)
 }
 
