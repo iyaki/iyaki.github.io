@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 14 Jun 2023 00:28:34 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 14 Jun 2023 00:55:09 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Modern CSS in Real Life]]></title>
+            <description><![CDATA[El autor comparte una versión adaptada de su presentación sobre cómo CSS ha mejorado en los últimos años y su impacto en el mundo real, destacando 5 nuevas características relevantes para el desarrollo. Además, comparte un artículo interesante para ejemplificar estos avances en la práctica.]]></description>
+            <link>https://chriscoyier.net/2023/06/06/modern-css-in-real-life/</link>
+            <guid isPermaLink="true">https://chriscoyier.net/2023/06/06/modern-css-in-real-life/</guid>
+        </item>
+        <item>
+            <title><![CDATA[The Surprising Power of Documentation]]></title>
+            <description><![CDATA[La documentación es la columna vertebral de una organización efectiva. Desde el inicio de una startup, compartir información y conocimiento puede ser fácil, pero a medida que la empresa se expande, la cantidad de personas, proyectos y complejidades aumentan exponencialmente. La documentación puede ser una fuente de verdad universal que capture y preserve la sabiduría colectiva, y así ayudar a todo el equipo a solucionar problemas que antes eran imposibles de resolver.]]></description>
+            <link>https://vadimkravcenko.com/shorts/proper-documentation/</link>
+            <guid isPermaLink="true">https://vadimkravcenko.com/shorts/proper-documentation/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Satisficing vs Maximizing]]></title>
+            <description><![CDATA[Es importante elegir sabiamente entre "Maximizar" o "Satisfacer" al momento de tomar decisiones. Aunque los maximizadores suelen tomar decisiones más acertadas, los satisfactores disfrutan más de sus elecciones y ahorran tiempo y estrés al no buscar la perfección. Es necesario saber cuándo maximizar y cuándo satisfacer, y en muchos casos la velocidad y la satisfacción son más importantes que la perfección.]]></description>
+            <link>https://longform.asmartbear.com/maximizing/</link>
+            <guid isPermaLink="true">https://longform.asmartbear.com/maximizing/</guid>
+        </item>
         <item>
             <title><![CDATA[The Design Patterns for Distributed Systems Handbook – Key Concepts Every Developer Should Know]]></title>
             <description><![CDATA[El autor del artículo comparte su experiencia como ingeniero de backend y cómo, al principio de su carrera, trabajó con sistemas monolíticos, sin conocer el término de sistemas distribuidos hasta que un compañero lo mencionó. Después de investigar y estudiar el tema durante algunos años, ahora comparte su conocimiento sobre sistemas distribuidos. Advierte que la discusión de los temas puede ser avanzada para programadores principiantes y da algunas recomendaciones para estar preparados.]]></description>
@@ -118,24 +136,6 @@
             <description><![CDATA[La realización de reuniones 1 a 1 es una práctica común entre los gerentes, pero pocos lo hacen bien. Los buenos gerentes se centran en las cuestiones más críticas para los reportes y ofrecen ayuda y apoyo mientras que los malos gerentes se enfocan en triviales asuntos superficiales y evitan temas reales.]]></description>
             <link>https://threadreaderapp.com/thread/1658445946500571136.html</link>
             <guid isPermaLink="true">https://threadreaderapp.com/thread/1658445946500571136.html</guid>
-        </item>
-        <item>
-            <title><![CDATA[Keep ‘em separated: Get better maintainability in web projects using the model-view-controller pattern]]></title>
-            <description><![CDATA[El patrón de diseño modelo-vista-controlador (MVC) sigue siendo relevante en las aplicaciones web, a pesar de ser un patrón antiguo. Cada componente de este patrón, incluyendo modelos, vistas y controladores, tiene una función y comportamiento específicos para construir una arquitectura de software sólida y separar las preocupaciones en la aplicación.]]></description>
-            <link>https://stackoverflow.blog/2023/05/17/keep-em-separated-get-better-maintainability-in-web-projects-using-the-model-view-controller-pattern/</link>
-            <guid isPermaLink="true">https://stackoverflow.blog/2023/05/17/keep-em-separated-get-better-maintainability-in-web-projects-using-the-model-view-controller-pattern/</guid>
-        </item>
-        <item>
-            <title><![CDATA[A step-by-step breakdown of the UX design process]]></title>
-            <description><![CDATA[En este artículo se presentan los cuatro pasos principales del proceso de diseño UX: investigación de usuarios, diseño, pruebas y desarrollo, y se destaca la importancia de la iteración en este proceso. Además, se enfatiza la necesidad de priorizar a los usuarios y de utilizar la empatía para entender sus necesidades y errores. Finalmente, se menciona que los diseñadores pueden personalizar el proceso de diseño a sus propias necesidades y objetivos.]]></description>
-            <link>https://blog.logrocket.com/ux-design/step-by-step-breakdown-ux-design-process/</link>
-            <guid isPermaLink="true">https://blog.logrocket.com/ux-design/step-by-step-breakdown-ux-design-process/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Exploit Notes]]></title>
-            <description><![CDATA[Según un reciente estudio, el 85% de los pacientes diagnosticados con COVID-19 experimentaron síntomas neurológicos, como dolores de cabeza, confusión y fatiga. Este hallazgo destaca la importancia de seguir investigando los efectos de la enfermedad más allá de los síntomas respiratorios.]]></description>
-            <link>https://exploit-notes.hdks.org/</link>
-            <guid isPermaLink="true">https://exploit-notes.hdks.org/</guid>
         </item>
     </channel>
 </rss>
