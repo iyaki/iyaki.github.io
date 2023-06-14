@@ -9,6 +9,14 @@
 	display: none;
 }
 
+.rss {
+	padding-bottom: 1em;
+}
+
+.rss__icon {
+	color: #383838;
+}
+
 @media screen and (min-width: 900px) {
 	body {
 		height: 100vh;
@@ -31,8 +39,9 @@
 	}
 
 	.third-panel {
-		display: block;
+		display: flex;
 		height: 100vh;
 		width: 25vw;
+		align-items: flex-end;
 	}
 }
