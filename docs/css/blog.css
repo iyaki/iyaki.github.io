@@ -10,11 +10,11 @@
 }
 
 .rss {
-	padding-bottom: 1em;
+	padding: 1em;
 }
 
 .rss__icon {
-	color: #383838;
+	color: var(--text-color);
 }
 
 @media screen and (min-width: 900px) {
