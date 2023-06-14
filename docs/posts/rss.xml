@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/blog.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 14 Jun 2023 00:26:20 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 14 Jun 2023 13:42:02 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/posts/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,15 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Habemus RSS]]></title>
+            <description><![CDATA[
+						Noticia de último momento. Interrumpimos la programación habitual para comunicar un mensaje a la comunidad: Es el fin de la hipocresía, finalmente este blog y el recopilador de contenidos tienen feed RSS.
+					]]></description>
+            <link>https://iyaki.ar/posts/20230614_habemus_rss.html</link>
+            <guid isPermaLink="true">https://iyaki.ar/posts/20230614_habemus_rss.html</guid>
+            <pubDate>Wed, 14 Jun 2023 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Depurando conocimiento]]></title>
             <description><![CDATA[
