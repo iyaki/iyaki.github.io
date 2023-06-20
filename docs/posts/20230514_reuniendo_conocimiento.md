@@ -33,8 +33,7 @@ informarme y en una parte clave de mi rutina.
 Este debería ser el primero de una serie de artículos sobre como obtengo,
 clasifico, depuro y comparto conocimiento.
 
-Para ir cerrando el post les dejo la lista de *sources* RSS que sigo actualmente
-(14/05/2023):
+Para ir cerrando el post les dejo la lista de sources RSS que sigo actualmente:
 
 - [A Smart Bear](https://longform.asmartbear.com/)
 - [Genbeta](https://www.genbeta.com/)
