@@ -1,5 +1,10 @@
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - .github/workflows/content_curator.yml
+    types:
+      - completed
   push:
     branches:
       - 'main'
