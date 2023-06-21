@@ -12,9 +12,7 @@ export function newMarkdownArticle({
 		get title() {
 			return title
 		},
-		get content() {
-			return content
-		},
+		content,
 		get datePublished() {
 			return datePublished
 		},

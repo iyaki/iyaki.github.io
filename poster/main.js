@@ -1,6 +1,6 @@
 import { updateWithArticle as updateBlogWithArticle } from "./blog.js";
 import { publish as publishHtml } from "./postHtml.js";
-import { publish as publishMd } from "./postMd.js";
+import { draft as draftMd, process as processMd, publish as publishMd} from "./postMd.js";
 import { updateWithArticle as updatePostsIndexWithArticle } from "./postsIndex.js";
 
 function main() {
@@ -12,10 +12,11 @@ function main() {
 
 	const markdownPostPath = args[0]
 
-	const articleMd = publishMd(markdownPostPath)
+	const articleMd = processMd(draftMd(markdownPostPath))
 
 	const articleHtml = publishHtml(articleMd)
 
+	publishMd(articleMd)
 	if (articleHtml.newPublication) {
 		updatePostsIndexWithArticle(articleHtml)
 

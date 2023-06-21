@@ -1,10 +1,8 @@
 import { newMarkdownArticle } from './article.js'
-import { addUtf8Bom, cleanFilenameDate, getDateForFilename, getFilename, read, removeUtf8Bom, write } from './utils/file.js'
-import { firstTitleFrom } from './utils/markdown.js'
+import { addUtf8Bom, cleanPostFilename, getDateForFilename, getFilename, read, removeUtf8Bom, write } from './utils/file.js'
+import { addCommonAbbreviations, firstTitleFrom } from './utils/markdown.js'
 
-const POSTS_PATH = '../docs/posts/'
-
-export function publish(postPath) {
+export function draft(postPath) {
 
 	let filename = getFilename(postPath)
 
@@ -12,20 +10,11 @@ export function publish(postPath) {
 
 	const newFilename = (
 		newPublication
-		? getDateForFilename() + cleanFilenameDate(filename)
+		? getDateForFilename() + '_' + cleanPostFilename(filename)
 		: filename
 	)
 
-	const newPostPath = POSTS_PATH + newFilename
-
 	const content = removeUtf8Bom(read(postPath))
-
-	// wikilinker.searchAndReplaceWikilinks()
-
-	write(
-		newPostPath,
-		addUtf8Bom(content)
-	)
 
 	return newMarkdownArticle({
 			filename: newFilename,
@@ -34,6 +23,23 @@ export function publish(postPath) {
 			datePublished: new Date(),
 			newPublication,
 	})
+}
+
+export function process(markdownArticle) {
+	let content = markdownArticle.content
+
+	content = addCommonAbbreviations(content)
+
+	markdownArticle.content = content
+
+	return markdownArticle
+}
+
+export function publish(markdownArticle) {
+	write(
+		markdownArticle.path,
+		addUtf8Bom(markdownArticle.content)
+	)
 }
 
 // A post is considered new if his filename does not starts with a date (8 numbers)

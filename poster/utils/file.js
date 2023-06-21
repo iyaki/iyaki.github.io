@@ -36,14 +36,16 @@ export function getDateForFilename() {
 		.replaceAll('-', '')
 }
 
-export function cleanFilenameDate(filename) {
-	let start = 0
-	while (true) {
-		if (isNaN(filename[start])) {
+export function cleanPostFilename(filename) {
+	let index = 0
+	for (index = 0; index < filename.length; ++index) {
+		if (
+			isNaN(filename[index]) &&
+			! ['_', '-'].includes(filename[index])
+		) {
 			break
 		}
-		++start
 	}
 
-	return filename.substring(start)
+	return filename.substring(index)
 }
