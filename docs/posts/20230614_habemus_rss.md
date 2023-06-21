@@ -27,7 +27,7 @@ Todo esto es ejecutado mediante [Github Actions](https://github.com/features/act
 Pueden encontrar la configuración de cada workflow de Girhub Actions en los siguientes enlaces:
 
 - [Workflow RSS del recopilador de contenido](https://github.com/iyaki/iyaki.github.io/blob/main/.github/workflows/rss_curated.yml)
-- [Link a workflow blog](https://github.com/iyaki/iyaki.github.io/blob/main/.github/workflows/rss_blog.yml)
+- [Workflow RSS del blog](https://github.com/iyaki/iyaki.github.io/blob/main/.github/workflows/rss_blog.yml)
 
 Volviendo a revisar un poco cómo quedó resuelta la generación de RSS y viendo lo genérica que resultó la solución, creo que podría convertir la herramienta en una Action y publicarla en el [marketplace de Github](https://github.com/marketplace). Con una [breve búsqueda](https://github.com/marketplace?type=actions&query=rss+) lo único parecido que encontré fue [esto](https://github.com/marketplace/actions/rssify-any).
 
