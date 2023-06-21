@@ -1,5 +1,6 @@
 import { Remarkable } from 'remarkable'
 import { linkify } from 'remarkable/dist/cjs/linkify.js';
+import { replaceLinks } from '../wikilinker.js';
 
 const md = new Remarkable({
 	typographer: true,
@@ -62,4 +63,8 @@ export function addCommonAbbreviations(markdown) {
 	}
 
 	return markdownWithAbbreviations + '\n'
+}
+
+export function replaceWikiLinks(markdown) {
+	return replaceLinks(markdown)
 }

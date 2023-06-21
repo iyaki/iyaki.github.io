@@ -1,6 +1,6 @@
 import { newMarkdownArticle } from './article.js'
 import { addUtf8Bom, cleanPostFilename, getDateForFilename, getFilename, read, removeUtf8Bom, write } from './utils/file.js'
-import { addCommonAbbreviations, firstTitleFrom } from './utils/markdown.js'
+import { addCommonAbbreviations, firstTitleFrom, replaceWikiLinks } from './utils/markdown.js'
 
 export function draft(postPath) {
 
@@ -27,6 +27,8 @@ export function draft(postPath) {
 
 export function process(markdownArticle) {
 	let content = markdownArticle.content
+
+	content = replaceWikiLinks(content)
 
 	content = addCommonAbbreviations(content)
 
