@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 14 Jun 2023 12:01:19 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 22 Jun 2023 00:38:56 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,66 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Generating income from open source]]></title>
+            <description><![CDATA[Ink, un proyecto de código abierto, no genera ingresos y esto es algo que afecta a muchos otros proyectos también. Las donaciones individuales pueden ser una forma de expresar gratitud, pero no son una fuente de ingresos estable. Los mantenedores de proyectos de código abierto deben considerar establecer relaciones comerciales con empresas que se benefician de su trabajo.]]></description>
+            <link>https://vadimdemedes.com/posts/generating-income-from-open-source</link>
+            <guid isPermaLink="true">https://vadimdemedes.com/posts/generating-income-from-open-source</guid>
+        </item>
+        <item>
+            <title><![CDATA[Finding Staff-Level Scope]]></title>
+            <description><![CDATA[En este artículo se destacan las habilidades necesarias para ascender de Senior a Staff Software Engineer, donde la capacidad para identificar el alcance propio de un Staff es tan importante como la ejecución efectiva. Se presentan dos enfoques para encontrar este tipo de trabajo, tanto a través de la cadena de liderazgo como de persuasiones propias.]]></description>
+            <link>https://www.developing.dev/p/finding-staff-level-scope?utm_source=substack&amp;utm_medium=email</link>
+            <guid isPermaLink="true">https://www.developing.dev/p/finding-staff-level-scope?utm_source=substack&amp;utm_medium=email</guid>
+        </item>
+        <item>
+            <title><![CDATA[Shuhari]]></title>
+            <description><![CDATA[El artículo explica cómo el proceso de seguir las mejores prácticas en el desarrollo de software, eventualmente termina en romperlas y transcenderlas. El autor utiliza el concepto japonés Shuhari para explicar este proceso y cómo puede ser confuso para los principiantes en la industria. Finalmente, sugiere que se deben seguir las mejores prácticas de código limpio pero también saber dejarlas ir.]]></description>
+            <link>https://frantic.im/shuhari/</link>
+            <guid isPermaLink="true">https://frantic.im/shuhari/</guid>
+        </item>
+        <item>
+            <title><![CDATA[9 Senior Developer Mental Models Every Programmer Should Master]]></title>
+            <description><![CDATA[Un buen Senior Developer no es solo alguien que conoce los frameworks más recientes, sino que sabe cómo pensar y tomar decisiones estratégicas. En este artículo, se presentan nueve modelos mentales que ayudarán a los desarrolladores a enfocarse en lo que realmente importa y lograr resultados significativos.]]></description>
+            <link>https://dev.to/dragosnedelcu/9-senior-developer-mental-models-every-programmer-should-master-1jlk</link>
+            <guid isPermaLink="true">https://dev.to/dragosnedelcu/9-senior-developer-mental-models-every-programmer-should-master-1jlk</guid>
+        </item>
+        <item>
+            <title><![CDATA[How to run a good all-hands meeting]]></title>
+            <description><![CDATA[Es recomendable que los nuevos gerentes realicen regularmente una reunión de todo el equipo. Es importante tomar en cuenta que estas reuniones deben ser limitadas en tiempo y enfocadas en comunicar asuntos importantes para toda la audiencia, sin usar diapositivas que distraigan del contenido.]]></description>
+            <link>https://madewithlove.com/blog/how-to-run-a-good-all-hands-meeting/</link>
+            <guid isPermaLink="true">https://madewithlove.com/blog/how-to-run-a-good-all-hands-meeting/</guid>
+        </item>
+        <item>
+            <title><![CDATA[8 principles for effectively scaling engineering teams]]></title>
+            <description><![CDATA[Este artículo trata sobre la nueva tendencia de los perros de terapia digitales y la posibilidad de utilizarlos en entornos como los hospitales. Es interesante ver cómo la tecnología puede ser utilizada para mejorar la salud mental de las personas.]]></description>
+            <link>https://leaddev.com/team/8-principles-effectively-scaling-engineering-teams</link>
+            <guid isPermaLink="true">https://leaddev.com/team/8-principles-effectively-scaling-engineering-teams</guid>
+        </item>
+        <item>
+            <title><![CDATA[Technical Debt is over-used]]></title>
+            <description><![CDATA[El término "deuda técnica" se ha utilizado mucho y a menudo se confunde con "código que no me gusta" o "código que preexistía". Sin embargo, la deuda técnica hace referencia a diferentes tipos de "código problemático" que pueden dificultar el desarrollo futuro y cuyo valor no es fácilmente cuantificable. Es importante entender y abordar de manera específica cada tipo de problema para solucionarlo adecuadamente.]]></description>
+            <link>https://peakd.com/hive-168588/@crell/technical-debt-is-over-used</link>
+            <guid isPermaLink="true">https://peakd.com/hive-168588/@crell/technical-debt-is-over-used</guid>
+        </item>
+        <item>
+            <title><![CDATA[Words To Avoid in Educational Writing]]></title>
+            <description><![CDATA[El uso de palabras innecesarias en la escritura, como "obvio", "claramente" o "simple", no añade valor y puede incluso restarle. Es importante ser claro y conciso en la comunicación escrita, utilizando palabras selectas y explicaciones precisas.]]></description>
+            <link>https://css-tricks.com/words-avoid-educational-writing/</link>
+            <guid isPermaLink="true">https://css-tricks.com/words-avoid-educational-writing/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Linking Modular Architecture to Development Teams]]></title>
+            <description><![CDATA[Este artículo demuestra la relación directa entre los problemas de escalabilidad móvil, la arquitectura técnica y los equipos. Identifica dos problemas comunes en el desarrollo de aplicaciones móviles de grandes empresas y presenta la arquitectura modular como una solución, pero señala que para que su implementación tenga éxito, también es necesario respetar los límites de dominio de la aplicación y la experiencia de los desarrolladores.]]></description>
+            <link>https://martinfowler.com/articles/linking-modular-arch.html</link>
+            <guid isPermaLink="true">https://martinfowler.com/articles/linking-modular-arch.html</guid>
+        </item>
+        <item>
+            <title><![CDATA[Non-code contributions are the secret to open source success]]></title>
+            <description><![CDATA[Contribuciones no técnicas en software abierto, como documentación, localización, marketing, diseño gráfico, pruebas y administración, son cruciales para el éxito del proyecto. Aunque las contribuciones de código pueden parecer más glamorosas, las no técnicas pueden ser igual de gratificantes y ofrecen oportunidades para desarrollar habilidades técnicas y no técnicas.]]></description>
+            <link>https://github.com/readme/featured/open-source-non-code-contributions</link>
+            <guid isPermaLink="true">https://github.com/readme/featured/open-source-non-code-contributions</guid>
+        </item>
         <item>
             <title><![CDATA[Modern CSS in Real Life]]></title>
             <description><![CDATA[El autor comparte una versión adaptada de su presentación sobre cómo CSS ha mejorado en los últimos años y su impacto en el mundo real, destacando 5 nuevas características relevantes para el desarrollo. Además, comparte un artículo interesante para ejemplificar estos avances en la práctica.]]></description>
@@ -76,66 +136,6 @@
             <description><![CDATA[El coronavirus ha afectado severamente a las industrias del turismo y la aviación, lo que ha resultado en una disminución significativa en los vuelos y los ingresos económicos relacionados con el turismo. Los expertos predicen que la recuperación total puede tardar años.]]></description>
             <link>https://youtu.be/sUsn15lz03k</link>
             <guid isPermaLink="true">https://youtu.be/sUsn15lz03k</guid>
-        </item>
-        <item>
-            <title><![CDATA[How a CTO builds a team]]></title>
-            <description><![CDATA[Gerald Weinberg destaca en su libro "The Secrets of Consulting" que, sin importar cómo se vea en un principio, siempre se trata de un problema de personas. Cuando se une a una startup como CTO, a menudo se enfocan en tecnología y procesos, descuidando la composición del equipo. Es importante considerar la construcción del equipo desde el punto de vista del CTO al desarrollar software.]]></description>
-            <link>https://madewithlove.com/blog/how-a-cto-builds-a-team/</link>
-            <guid isPermaLink="true">https://madewithlove.com/blog/how-a-cto-builds-a-team/</guid>
-        </item>
-        <item>
-            <title><![CDATA[A Guide to Problem-Solving for Software Developers with Examples]]></title>
-            <description><![CDATA[En este artículo se destaca la importancia de que los desarrolladores solucionen problemas como la parte más importante y difícil de su trabajo, ya que incluso si su código es perfecto, no tendrá utilidad si no resuelve el problema que estaba destinado a solucionar.]]></description>
-            <link>https://thevaluable.dev/problem_solving_guide_software_developer/</link>
-            <guid isPermaLink="true">https://thevaluable.dev/problem_solving_guide_software_developer/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Domain Driven Design Reference - Definitions and Pattern Summaries]]></title>
-            <description><![CDATA[El estudio muestra que los dueños de mascotas tienen menos probabilidades de sufrir enfermedades cardiovasculares y que tener un perro es particularmente beneficioso para la salud del corazón. Estos hallazgos sugieren que los animales pueden tener un efecto positivo en la salud física de las personas.]]></description>
-            <link>https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf</link>
-            <guid isPermaLink="true">https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf</guid>
-        </item>
-        <item>
-            <title><![CDATA[Repositories and their true purpose]]></title>
-            <description><![CDATA[El patrón de Repositorio ha vuelto a resurgir en publicaciones y tweets recientes, pero muchas veces se malinterpreta su uso y se plantean preguntas irrelevantes que obstaculizan su implementación. Este artículo aclara los hechos alrededor de este patrón y su importancia en la capa de dominio de la arquitectura de software.]]></description>
-            <link>https://muhammedsari.me/repositories-and-their-true-purpose</link>
-            <guid isPermaLink="true">https://muhammedsari.me/repositories-and-their-true-purpose</guid>
-        </item>
-        <item>
-            <title><![CDATA[Aggregates for Those Familiar with ActiveRecord]]></title>
-            <description><![CDATA[El estudio de la Universidad de California ha descubierto que el cambio climático está provocando un declive acelerado de la especie de salamandras en el noreste de Estados Unidos. Los investigadores afirman que esto podría afectar el ecosistema de la región y tiene implicaciones más amplias para la biodiversidad y la salud del planeta.]]></description>
-            <link>https://shawnmc.cool/2023-05-11_aggregates-for-those-familiar-with-activerecord</link>
-            <guid isPermaLink="true">https://shawnmc.cool/2023-05-11_aggregates-for-those-familiar-with-activerecord</guid>
-        </item>
-        <item>
-            <title><![CDATA[6 Liberating Structures to spice up your retrospectives]]></title>
-            <description><![CDATA[Las retrospectivas pueden ser una herramienta muy efectiva para mejorar la dinámica y la eficacia del equipo, pero a menudo caen en la trampa de repetir los mismos elementos y discutir de manera vaga los puntos de acción. Para hacerlas más productivas, es necesario explorar técnicas de facilitación como las que ofrece Liberating Structures, que van más allá de las dinámicas comunes y se enfocan en aprovechar al máximo el conocimiento colectivo del grupo.]]></description>
-            <link>https://blog.logrocket.com/product-management/6-liberating-structures-to-spice-up-your-retrospectives/</link>
-            <guid isPermaLink="true">https://blog.logrocket.com/product-management/6-liberating-structures-to-spice-up-your-retrospectives/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Democratic leadership style: Definition, examples, pros and cons]]></title>
-            <description><![CDATA[Para crear un producto exitoso es importante contar con un líder excepcional y un equipo empoderado e involucrado. Se necesita más que buenas ideas para mantener un producto en el camino correcto. La adopción de un estilo de liderazgo democrático puede apoyar este proceso al fomentar la participación y opinión de todos los miembros del equipo.]]></description>
-            <link>https://blog.logrocket.com/product-management/democratic-leadership-style/</link>
-            <guid isPermaLink="true">https://blog.logrocket.com/product-management/democratic-leadership-style/</guid>
-        </item>
-        <item>
-            <title><![CDATA[9 tips to go from attendee to speaker at a tech conference]]></title>
-            <description><![CDATA[GitHub Universe es un evento global para desarrolladores y clientes que regresa en persona y en línea este año el 8 y 9 de noviembre. Si estás pensando en asistir, ¡asegúrate de marcar la fecha en tu calendario! Además, si tienes una idea de sesión sobre IA, seguridad o experiencia de desarrollador, ¡no dudes en enviarla para tener la oportunidad de ser seleccionado como orador!]]></description>
-            <link>https://github.blog/2023-05-18-9-tips-to-go-from-attendee-to-speaker-at-a-tech-conference/</link>
-            <guid isPermaLink="true">https://github.blog/2023-05-18-9-tips-to-go-from-attendee-to-speaker-at-a-tech-conference/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Porcelains]]></title>
-            <description><![CDATA[El patrón de porcelana es una forma ingeniosa de agregar funcionalidad a una capa de desarrollo existente sin crear una capa envolvente adicional. En lugar de agregar nueva fontanería, se agrega una herramienta de porcelana diseñada específicamente para una necesidad particular, lo que lo hace más fácil de probar y mantener.]]></description>
-            <link>https://glazkov.com/2023/04/17/porcelains/</link>
-            <guid isPermaLink="true">https://glazkov.com/2023/04/17/porcelains/</guid>
-        </item>
-        <item>
-            <title><![CDATA[11 things good managers do that bad managers don’t in 1-on-1's]]></title>
-            <description><![CDATA[La realización de reuniones 1 a 1 es una práctica común entre los gerentes, pero pocos lo hacen bien. Los buenos gerentes se centran en las cuestiones más críticas para los reportes y ofrecen ayuda y apoyo mientras que los malos gerentes se enfocan en triviales asuntos superficiales y evitan temas reales.]]></description>
-            <link>https://threadreaderapp.com/thread/1658445946500571136.html</link>
-            <guid isPermaLink="true">https://threadreaderapp.com/thread/1658445946500571136.html</guid>
         </item>
     </channel>
 </rss>
