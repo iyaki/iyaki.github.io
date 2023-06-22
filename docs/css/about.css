@@ -1,27 +1,31 @@
-@import "utils/base.css";
-@import "utils/dark.css";
-@import "components/contacts.css";
+@layer reset, defaults, pages, components, utils, overrides;
 
-nav {
-	width: 100vw;
-	margin: 0 2em;
-}
+@import "utils/base.css" layer(defaults);
+@import "components/contacts.css" layer(components);
+@import "utils/dark.css" layer(utils);
 
-nav ul {
-	width: 100%;
-	margin: 0 1em;
-	padding: 0;
-	list-style-type: none;
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-}
+@layer pages {
+	nav {
+		width: 100vw;
+		margin: 0 2em;
+	}
 
-nav ul > li {
-	padding: 0.3em 0;
-}
+	nav ul {
+		width: 100%;
+		margin: 0 1em;
+		padding: 0;
+		list-style-type: none;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-nav a, nav a:hover, nav a:active, nav a:visited {
-	text-decoration: none;
+	nav ul > li {
+		padding: 0.3em 0;
+	}
+
+	nav a, nav a:hover, nav a:active, nav a:visited {
+		text-decoration: none;
+	}
 }
