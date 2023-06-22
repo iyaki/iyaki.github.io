@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 22 Jun 2023 00:38:56 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 22 Jun 2023 08:08:30 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Vim for The VS Code User: Part 1]]></title>
+            <description><![CDATA[El autor comparte su experiencia personal sobre cómo se enganchó con Neovim y cómo quiere enseñar a otros cómo empezar con él y personalizarlo para mejorar su flujo de trabajo y convertir su IDE en un PDE. Pese a los desafíos, el esfuerzo vale la pena y se puede lograr un gran editor de código personalizado.]]></description>
+            <link>https://itnext.io/vim-for-the-vs-code-user-part-1-initial-setup-53617a4905f4</link>
+            <guid isPermaLink="true">https://itnext.io/vim-for-the-vs-code-user-part-1-initial-setup-53617a4905f4</guid>
+        </item>
+        <item>
+            <title><![CDATA[The Work-From-Home Future Is Destroying Bosses' Brains]]></title>
+            <description><![CDATA[La pandemia ha traído consigo la normalización del trabajo remoto, pero también plantea un desafío en cuanto a las expectativas de los empleadores sobre la propiedad que creen tener sobre sus trabajadores bajo contrato. La noción de "trabajo a tiempo completo" a menudo se utiliza para capturar la atención, el tiempo y la energía de una persona durante las horas de trabajo, pero con el trabajo remoto, esta dinámica cambia y las empresas luchan por el control de sus empleados.]]></description>
+            <link>https://wheresyoured.at/p/the-work-from-home-future-is-destroying</link>
+            <guid isPermaLink="true">https://wheresyoured.at/p/the-work-from-home-future-is-destroying</guid>
+        </item>
+        <item>
+            <title><![CDATA[Compound Startups]]></title>
+            <description><![CDATA[Este artículo plantea cómo el mercado del software ha pasado de la tendencia de descomponer tareas específicas para que sean abordadas por startups especializadas, a una nueva tendencia en la que se construyen empresas compuestas que ofrecen soluciones múltiples en un solo producto. Esta transición se debe al surgimiento de nuevas tecnologías que simplifican la entrega de software y al aumento de inversión de capital de riesgo en el mercado del software.]]></description>
+            <link>https://nandu.substack.com/p/compound-startups</link>
+            <guid isPermaLink="true">https://nandu.substack.com/p/compound-startups</guid>
+        </item>
         <item>
             <title><![CDATA[Generating income from open source]]></title>
             <description><![CDATA[Ink, un proyecto de código abierto, no genera ingresos y esto es algo que afecta a muchos otros proyectos también. Las donaciones individuales pueden ser una forma de expresar gratitud, pero no son una fuente de ingresos estable. Los mantenedores de proyectos de código abierto deben considerar establecer relaciones comerciales con empresas que se benefician de su trabajo.]]></description>
@@ -118,24 +136,6 @@
             <description><![CDATA[Esta guía comparte estrategias y tácticas para obtener mejores resultados de los GPT. Se alienta a la experimentación para encontrar los métodos que funcionen mejor para cada uno y se sugiere considerar un modelo más capaz en caso de que el actual no funcione para una tarea en particular. Además, se recomienda proporcionar textos de referencia para ayudar a los GPT a proporcionar respuestas más precisas.]]></description>
             <link>https://platform.openai.com/docs/guides/gpt-best-practices</link>
             <guid isPermaLink="true">https://platform.openai.com/docs/guides/gpt-best-practices</guid>
-        </item>
-        <item>
-            <title><![CDATA[De directory driven a DDD paso a paso]]></title>
-            <description><![CDATA[El artículo plantea la necesidad de evolucionar la organización del código acorde a Domain Driven Design, para lograr un diseño más sólido y una mejor comprensión del dominio, y proporciona un plan estructurado para lograrlo.]]></description>
-            <link>https://franiglesias.github.io/the-way-to-ddd-1/</link>
-            <guid isPermaLink="true">https://franiglesias.github.io/the-way-to-ddd-1/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Using the Needs Stack for competitive strategy]]></title>
-            <description><![CDATA[Este artículo explica cómo una persona está comprando infraestructura en AWS para poder configurar un sitio de WordPress funcional, ya que es la forma más popular de crear y publicar contenido en línea y conectar con el software de marketing en línea. El autor argumenta que la compra de infraestructura es solo un medio para un fin y el verdadero objetivo es tener un sitio web exitoso. Además, el autor sugiere que esta estrategia puede ayudar a posicionar el producto de esta persona como más valioso en comparación con sus competidores.]]></description>
-            <link>https://longform.asmartbear.com/needs-stack/</link>
-            <guid isPermaLink="true">https://longform.asmartbear.com/needs-stack/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Conociendo unFIX la nueva propuesta de escalado y organización de equipos Ágiles (Webinar)]]></title>
-            <description><![CDATA[El coronavirus ha afectado severamente a las industrias del turismo y la aviación, lo que ha resultado en una disminución significativa en los vuelos y los ingresos económicos relacionados con el turismo. Los expertos predicen que la recuperación total puede tardar años.]]></description>
-            <link>https://youtu.be/sUsn15lz03k</link>
-            <guid isPermaLink="true">https://youtu.be/sUsn15lz03k</guid>
         </item>
     </channel>
 </rss>
