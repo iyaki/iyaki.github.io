@@ -31,12 +31,6 @@
 		font-family: 'Arsenal', sans-serif;
 	}
 
-	@media screen and (max-height: 600px) {
-		body {
-			max-height: 180vh;
-		}
-	}
-
 	.main-panel {
 		padding: 0 2em;
 	}

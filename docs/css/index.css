@@ -8,8 +8,8 @@
 
 @layer components {
 	.titles {
-		background: linear-gradient(180deg, black 75%, var(--background-color) 100%) !important;
-		height: 105vh;
+		background: linear-gradient(180deg, black 70%, var(--background-color) 100%) !important;
+		height: 105lvh;
 		width: 100vw;
 		font-family: Arial, Helvetica, sans-serif;
 		padding: 0 2em;
@@ -17,7 +17,7 @@
 	}
 
 	.titles__container {
-		height: 85vh;
+		height: 88svh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
