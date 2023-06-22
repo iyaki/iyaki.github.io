@@ -1,0 +1,11 @@
+on:
+    workflow_dispatch:
+    page_build:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: atymic/sitemap-ping-action@1.1.0
+        with:
+          sitemap-url: https://iyaki.ar/sitemap.xml
