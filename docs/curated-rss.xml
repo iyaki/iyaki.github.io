@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 22 Jun 2023 08:08:30 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 22 Jun 2023 16:07:45 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Cyclic Dependency Space Toggles]]></title>
+            <description><![CDATA[En este artículo, se presenta una técnica llamada "cambio cíclico" que permite seleccionar un valor de una lista en CSS a través de una única propiedad personalizada. Esta técnica se basa en el popular "cambio de espacio" y se pueden pasar los valores a través de múltiples métodos, tales como un pseudo-elemento o una API adicional.]]></description>
+            <link>https://kizu.dev/cyclic-toggles/</link>
+            <guid isPermaLink="true">https://kizu.dev/cyclic-toggles/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Flexible systems]]></title>
+            <description><![CDATA[La capacidad de adaptarse y cambiar decisiones en el futuro es más importante que la perfección en cada decisión tomada al diseñar sistemas. Aunque cada decisión individual es importante, enfocarse en la facilidad de modificar decisiones en lugar de lograr la perfección en cada momento es más prudente para adaptarse a los requisitos cambiantes y reducir la incertidumbre en el dominio del problema.]]></description>
+            <link>https://jordankaye.dev/posts/flexible-systems/</link>
+            <guid isPermaLink="true">https://jordankaye.dev/posts/flexible-systems/</guid>
+        </item>
+        <item>
+            <title><![CDATA[A Complete Guide to CSS Cascade Layers]]></title>
+            <description><![CDATA[Este artículo explica cómo el color de un párrafo puede variar dependiendo de la prioridad de las capas y la importancia de los estilos en cascada. Incluso un selector universal puede tomar precedencia si está en una capa superior.]]></description>
+            <link>https://css-tricks.com/css-cascade-layers/</link>
+            <guid isPermaLink="true">https://css-tricks.com/css-cascade-layers/</guid>
+        </item>
         <item>
             <title><![CDATA[Vim for The VS Code User: Part 1]]></title>
             <description><![CDATA[El autor comparte su experiencia personal sobre cómo se enganchó con Neovim y cómo quiere enseñar a otros cómo empezar con él y personalizarlo para mejorar su flujo de trabajo y convertir su IDE en un PDE. Pese a los desafíos, el esfuerzo vale la pena y se puede lograr un gran editor de código personalizado.]]></description>
@@ -118,24 +136,6 @@
             <description><![CDATA[El autor del artículo comparte su experiencia como ingeniero de backend y cómo, al principio de su carrera, trabajó con sistemas monolíticos, sin conocer el término de sistemas distribuidos hasta que un compañero lo mencionó. Después de investigar y estudiar el tema durante algunos años, ahora comparte su conocimiento sobre sistemas distribuidos. Advierte que la discusión de los temas puede ser avanzada para programadores principiantes y da algunas recomendaciones para estar preparados.]]></description>
             <link>https://www.freecodecamp.org/news/design-patterns-for-distributed-systems/</link>
             <guid isPermaLink="true">https://www.freecodecamp.org/news/design-patterns-for-distributed-systems/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Qué son los mapas de Wardley, cómo hacerlos y para qué]]></title>
-            <description><![CDATA[El uso de un mapa de Wardley es una herramienta útil para visualizar la evolución y relaciones entre los diferentes aspectos de tu producto o servicio, permitiendo identificar fortalezas y debilidades competitivas, áreas de innovación o externalización y tomar decisiones estratégicas basadas en la posición competitiva y necesidades del usuario.]]></description>
-            <link>https://iyaki.notion.site/Qu-son-los-mapas-de-Wardley-c-mo-hacerlos-y-para-qu-07f28b94a08a4e48b8808342ee5e4bc4?pvs=4</link>
-            <guid isPermaLink="true">https://iyaki.notion.site/Qu-son-los-mapas-de-Wardley-c-mo-hacerlos-y-para-qu-07f28b94a08a4e48b8808342ee5e4bc4?pvs=4</guid>
-        </item>
-        <item>
-            <title><![CDATA[Mapa de Técnicas Ágiles de Product Management]]></title>
-            <description><![CDATA[El estudio muestra cómo la naturaleza puede ser un factor clave en la salud y el bienestar de las personas, especialmente en áreas urbanas. Es importante seguir trabajando en la creación de espacios verdes accesibles y habitables para todos.]]></description>
-            <link>https://embed.filekitcdn.com/e/kwbvsHgjrihdSB2SVJ6CJm/oMAZy8V3rh4NfMVuMxUkdD</link>
-            <guid isPermaLink="true">https://embed.filekitcdn.com/e/kwbvsHgjrihdSB2SVJ6CJm/oMAZy8V3rh4NfMVuMxUkdD</guid>
-        </item>
-        <item>
-            <title><![CDATA[GPT best practices - OpenAI]]></title>
-            <description><![CDATA[Esta guía comparte estrategias y tácticas para obtener mejores resultados de los GPT. Se alienta a la experimentación para encontrar los métodos que funcionen mejor para cada uno y se sugiere considerar un modelo más capaz en caso de que el actual no funcione para una tarea en particular. Además, se recomienda proporcionar textos de referencia para ayudar a los GPT a proporcionar respuestas más precisas.]]></description>
-            <link>https://platform.openai.com/docs/guides/gpt-best-practices</link>
-            <guid isPermaLink="true">https://platform.openai.com/docs/guides/gpt-best-practices</guid>
         </item>
     </channel>
 </rss>
