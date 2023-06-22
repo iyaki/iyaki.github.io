@@ -3,9 +3,9 @@ on:
     page_build:
 
 jobs:
-  publish:
+  ping:
     runs-on: ubuntu-latest
     steps:
-      - uses: atymic/sitemap-ping-action@1.1.0
+      - uses: atymic/sitemap-ping-action@master
         with:
           sitemap-url: https://iyaki.ar/sitemap.xml
