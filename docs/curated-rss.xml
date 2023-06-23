@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 22 Jun 2023 16:07:45 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 23 Jun 2023 00:41:12 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,18 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[How "Exit Traps" Can Make Your Bash Scripts Way More Robust And Reliable]]></title>
+            <description><![CDATA[Este artículo ofrece un tip útil para hacer que tus scripts de bash sean más resistentes, garantizando que se realicen las operaciones de limpieza necesarias, incluso si ocurre algo inesperado. La clave es usar el pseudo-signal EXIT proporcionado por bash para atrapar comandos o funciones que se deben ejecutar cuando el script se cierra por cualquier motivo.]]></description>
+            <link>http://redsymbol.net/articles/bash-exit-traps/</link>
+            <guid isPermaLink="true">http://redsymbol.net/articles/bash-exit-traps/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Ikigai - Meaning and Purpose]]></title>
+            <description><![CDATA[El artículo presentado ofrece una exploración interesante sobre la relación entre el tiempo libre y la felicidad de los trabajadores. Las conclusiones destacan la importancia de promover una mayor equidad en la distribución del tiempo libre y el cuidado de la salud mental de los empleados.]]></description>
+            <link>https://unfix.com/blog/ikigai</link>
+            <guid isPermaLink="true">https://unfix.com/blog/ikigai</guid>
+        </item>
         <item>
             <title><![CDATA[Cyclic Dependency Space Toggles]]></title>
             <description><![CDATA[En este artículo, se presenta una técnica llamada "cambio cíclico" que permite seleccionar un valor de una lista en CSS a través de una única propiedad personalizada. Esta técnica se basa en el popular "cambio de espacio" y se pueden pasar los valores a través de múltiples métodos, tales como un pseudo-elemento o una API adicional.]]></description>
@@ -124,18 +136,6 @@
             <description><![CDATA[La documentación es la columna vertebral de una organización efectiva. Desde el inicio de una startup, compartir información y conocimiento puede ser fácil, pero a medida que la empresa se expande, la cantidad de personas, proyectos y complejidades aumentan exponencialmente. La documentación puede ser una fuente de verdad universal que capture y preserve la sabiduría colectiva, y así ayudar a todo el equipo a solucionar problemas que antes eran imposibles de resolver.]]></description>
             <link>https://vadimkravcenko.com/shorts/proper-documentation/</link>
             <guid isPermaLink="true">https://vadimkravcenko.com/shorts/proper-documentation/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Satisficing vs Maximizing]]></title>
-            <description><![CDATA[Es importante elegir sabiamente entre "Maximizar" o "Satisfacer" al momento de tomar decisiones. Aunque los maximizadores suelen tomar decisiones más acertadas, los satisfactores disfrutan más de sus elecciones y ahorran tiempo y estrés al no buscar la perfección. Es necesario saber cuándo maximizar y cuándo satisfacer, y en muchos casos la velocidad y la satisfacción son más importantes que la perfección.]]></description>
-            <link>https://longform.asmartbear.com/maximizing/</link>
-            <guid isPermaLink="true">https://longform.asmartbear.com/maximizing/</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Design Patterns for Distributed Systems Handbook – Key Concepts Every Developer Should Know]]></title>
-            <description><![CDATA[El autor del artículo comparte su experiencia como ingeniero de backend y cómo, al principio de su carrera, trabajó con sistemas monolíticos, sin conocer el término de sistemas distribuidos hasta que un compañero lo mencionó. Después de investigar y estudiar el tema durante algunos años, ahora comparte su conocimiento sobre sistemas distribuidos. Advierte que la discusión de los temas puede ser avanzada para programadores principiantes y da algunas recomendaciones para estar preparados.]]></description>
-            <link>https://www.freecodecamp.org/news/design-patterns-for-distributed-systems/</link>
-            <guid isPermaLink="true">https://www.freecodecamp.org/news/design-patterns-for-distributed-systems/</guid>
         </item>
     </channel>
 </rss>
