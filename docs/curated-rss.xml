@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 23 Jun 2023 08:09:52 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 23 Jun 2023 16:09:20 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Style your RSS feed]]></title>
+            <description><![CDATA[RSS sigue siendo un protocolo activo y en uso, aunque no está en el mainstream y muchas personas no saben cómo usarlo. Este post explica cómo dar estilo a los feeds RSS para educar a los lectores y hacerlos más atractivos al mismo tiempo.]]></description>
+            <link>https://darekkay.com/blog/rss-styling/</link>
+            <guid isPermaLink="true">https://darekkay.com/blog/rss-styling/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Modelos para entender el problema... antes de proponer una solución Ágil]]></title>
+            <description><![CDATA[El modelo "Perro, Vaca, Estrella" puede ser una herramienta útil para priorizar funcionalidades o productos en una empresa, pero es importante recordar que las soluciones deben estar acordes a los problemas y que las situaciones cambian constantemente. Es esencial conocer y entender el problema antes de plantear cualquier solución, independientemente de si se trata de una metodología ágil o no.]]></description>
+            <link>https://iyaki.notion.site/Modelos-para-entender-el-problema-antes-de-proponer-una-soluci-n-gil-b5488c7541db4bd1b1db4947bdf4dcca?pvs=4</link>
+            <guid isPermaLink="true">https://iyaki.notion.site/Modelos-para-entender-el-problema-antes-de-proponer-una-soluci-n-gil-b5488c7541db4bd1b1db4947bdf4dcca?pvs=4</guid>
+        </item>
+        <item>
+            <title><![CDATA[Go slow to move fast]]></title>
+            <description><![CDATA[Los equipos de ingeniería pueden mejorar a largo plazo su velocidad de desarrollo al reducir la velocidad a corto plazo. El término "deuda técnica" puede generar debate, pero es importante entender que implica una elección consciente en el desarrollo del producto, y no solo una etiqueta para los problemas que los ingenieros se enfrentan en el camino.]]></description>
+            <link>https://jordankaye.dev/posts/go-slow-move-fast/</link>
+            <guid isPermaLink="true">https://jordankaye.dev/posts/go-slow-move-fast/</guid>
+        </item>
         <item>
             <title><![CDATA[How "Exit Traps" Can Make Your Bash Scripts Way More Robust And Reliable]]></title>
             <description><![CDATA[Este artículo ofrece un tip útil para hacer que tus scripts de bash sean más resistentes, garantizando que se realicen las operaciones de limpieza necesarias, incluso si ocurre algo inesperado. La clave es usar el pseudo-signal EXIT proporcionado por bash para atrapar comandos o funciones que se deben ejecutar cuando el script se cierra por cualquier motivo.]]></description>
@@ -118,24 +136,6 @@
             <description><![CDATA[Este artículo demuestra la relación directa entre los problemas de escalabilidad móvil, la arquitectura técnica y los equipos. Identifica dos problemas comunes en el desarrollo de aplicaciones móviles de grandes empresas y presenta la arquitectura modular como una solución, pero señala que para que su implementación tenga éxito, también es necesario respetar los límites de dominio de la aplicación y la experiencia de los desarrolladores.]]></description>
             <link>https://martinfowler.com/articles/linking-modular-arch.html</link>
             <guid isPermaLink="true">https://martinfowler.com/articles/linking-modular-arch.html</guid>
-        </item>
-        <item>
-            <title><![CDATA[Non-code contributions are the secret to open source success]]></title>
-            <description><![CDATA[Contribuciones no técnicas en software abierto, como documentación, localización, marketing, diseño gráfico, pruebas y administración, son cruciales para el éxito del proyecto. Aunque las contribuciones de código pueden parecer más glamorosas, las no técnicas pueden ser igual de gratificantes y ofrecen oportunidades para desarrollar habilidades técnicas y no técnicas.]]></description>
-            <link>https://github.com/readme/featured/open-source-non-code-contributions</link>
-            <guid isPermaLink="true">https://github.com/readme/featured/open-source-non-code-contributions</guid>
-        </item>
-        <item>
-            <title><![CDATA[Modern CSS in Real Life]]></title>
-            <description><![CDATA[El autor comparte una versión adaptada de su presentación sobre cómo CSS ha mejorado en los últimos años y su impacto en el mundo real, destacando 5 nuevas características relevantes para el desarrollo. Además, comparte un artículo interesante para ejemplificar estos avances en la práctica.]]></description>
-            <link>https://chriscoyier.net/2023/06/06/modern-css-in-real-life/</link>
-            <guid isPermaLink="true">https://chriscoyier.net/2023/06/06/modern-css-in-real-life/</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Surprising Power of Documentation]]></title>
-            <description><![CDATA[La documentación es la columna vertebral de una organización efectiva. Desde el inicio de una startup, compartir información y conocimiento puede ser fácil, pero a medida que la empresa se expande, la cantidad de personas, proyectos y complejidades aumentan exponencialmente. La documentación puede ser una fuente de verdad universal que capture y preserve la sabiduría colectiva, y así ayudar a todo el equipo a solucionar problemas que antes eran imposibles de resolver.]]></description>
-            <link>https://vadimkravcenko.com/shorts/proper-documentation/</link>
-            <guid isPermaLink="true">https://vadimkravcenko.com/shorts/proper-documentation/</guid>
         </item>
     </channel>
 </rss>
