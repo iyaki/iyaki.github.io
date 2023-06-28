@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 28 Jun 2023 00:42:41 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 28 Jun 2023 08:10:00 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,18 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[How Platform Engineering Works]]></title>
+            <description><![CDATA[En este artículo, el autor comparte su experiencia como Ingeniero de Plataforma en Sotheby's y las lecciones que ha aprendido sobre cómo hacer que la Ingeniería de Plataforma funcione. Destaca la importancia de la velocidad, la estabilidad y una mentalidad de producto en este tipo de trabajo.]]></description>
+            <link>https://chadxz.dev/platform/</link>
+            <guid isPermaLink="true">https://chadxz.dev/platform/</guid>
+        </item>
+        <item>
+            <title><![CDATA[CS 242: Programming Languages, Fall 2018]]></title>
+            <description><![CDATA[CS 242 explora modelos de computación, tanto antiguos, como la programación funcional con el cálculo lambda (circa 1930), como nuevos, como la programación segura en memoria con Rust (circa 2010). El estudio de los lenguajes de programación es igualmente teoría y sistemas, observando cómo una comprensión rigurosa de la sintaxis, estructura y semántica de la computación permite el razonamiento formal sobre el comportamiento y las propiedades de sistemas complejos del mundo real. A la luz de la explosión cámbrica de nuevos lenguajes de programación de hoy en día, este curso también busca proporcionar una claridad conceptual sobre cómo comparar y contrastar la multitud de lenguajes de programación, modelos y paradigmas en el panorama de la programación moderna. Ver el cronograma abajo para una lista completa de temas. Prerrequisitos: 103, 110. Iteraciones anteriores de este curso: Otoño 2017.]]></description>
+            <link>https://stanford-cs242.github.io/f18/</link>
+            <guid isPermaLink="true">https://stanford-cs242.github.io/f18/</guid>
+        </item>
         <item>
             <title><![CDATA[A Brief, Incomplete, and Mostly Wrong History of Programming Languages]]></title>
             <description><![CDATA[Este artículo presenta una perspectiva valiosa y bien fundamentada sobre los desafíos que enfrentan los países en desarrollo en relación con la vacunación contra la COVID-19. Es importante tener en cuenta los obstáculos políticos, económicos y sociales que pueden obstaculizar la implementación exitosa de los programas de vacunación en estas regiones.]]></description>
@@ -124,18 +136,6 @@
             <description><![CDATA[Un buen Senior Developer no es solo alguien que conoce los frameworks más recientes, sino que sabe cómo pensar y tomar decisiones estratégicas. En este artículo, se presentan nueve modelos mentales que ayudarán a los desarrolladores a enfocarse en lo que realmente importa y lograr resultados significativos.]]></description>
             <link>https://dev.to/dragosnedelcu/9-senior-developer-mental-models-every-programmer-should-master-1jlk</link>
             <guid isPermaLink="true">https://dev.to/dragosnedelcu/9-senior-developer-mental-models-every-programmer-should-master-1jlk</guid>
-        </item>
-        <item>
-            <title><![CDATA[How to run a good all-hands meeting]]></title>
-            <description><![CDATA[Es recomendable que los nuevos gerentes realicen regularmente una reunión de todo el equipo. Es importante tomar en cuenta que estas reuniones deben ser limitadas en tiempo y enfocadas en comunicar asuntos importantes para toda la audiencia, sin usar diapositivas que distraigan del contenido.]]></description>
-            <link>https://madewithlove.com/blog/how-to-run-a-good-all-hands-meeting/</link>
-            <guid isPermaLink="true">https://madewithlove.com/blog/how-to-run-a-good-all-hands-meeting/</guid>
-        </item>
-        <item>
-            <title><![CDATA[8 principles for effectively scaling engineering teams]]></title>
-            <description><![CDATA[Este artículo trata sobre la nueva tendencia de los perros de terapia digitales y la posibilidad de utilizarlos en entornos como los hospitales. Es interesante ver cómo la tecnología puede ser utilizada para mejorar la salud mental de las personas.]]></description>
-            <link>https://leaddev.com/team/8-principles-effectively-scaling-engineering-teams</link>
-            <guid isPermaLink="true">https://leaddev.com/team/8-principles-effectively-scaling-engineering-teams</guid>
         </item>
     </channel>
 </rss>
