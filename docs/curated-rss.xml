@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 10 Jul 2023 16:09:30 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 11 Jul 2023 00:37:58 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[karanpratapsingh/system-design: Learn how to design systems at scale and prepare for system design interviews]]></title>
+            <description><![CDATA[¡Bienvenidos al curso! Espero que este curso brinde una gran experiencia de aprendizaje. La diseño del sistema es el proceso de definir la arquitectura, interfaces y datos para un sistema que cumpla con requisitos específicos. El diseño del sistema satisface las necesidades de tu empresa u organización a través de sistemas coherentes y eficientes. Requiere un enfoque sistemático para construir e ingeniar sistemas. Un buen diseño del sistema nos exige pensar en todo, desde la infraestructura hasta los datos y cómo se almacenan.]]></description>
+            <link>https://github.com/karanpratapsingh/system-design</link>
+            <guid isPermaLink="true">https://github.com/karanpratapsingh/system-design</guid>
+        </item>
+        <item>
+            <title><![CDATA[Setting engineering org values]]></title>
+            <description><![CDATA[Uber's corporate value "Let Builders Build" can have its challenges when it comes to decision-making within the company, as highlighted in a discussion between an infrastructure engineering employee and a product engineering manager. While values alone may not magically transform a company's culture, they can be beneficial in consolidating cultural changes that have already been made.]]></description>
+            <link>https://lethain.com/setting-engineering-org-values/</link>
+            <guid isPermaLink="true">https://lethain.com/setting-engineering-org-values/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Deciding to leave your (executive) job]]></title>
+            <description><![CDATA[Si dos ejecutivos amigables se encuentran para cenar, es probable que comiencen intercambiando lo desordenadas que están las cosas en el trabajo. Las iniciativas están atrasadas, los despidos están ocurriendo en todas partes, el equipo está en desorden. Luego se reirán y cambiarán de tema. A veces, uno de los ejecutivos no puede hacer ese cambio y seguirá quejándose durante toda la comida. Tener problemas es parte de ser un ejecutivo, pero cuando eres ese segundo ejecutivo que no puede apagar la frustración, es hora de empezar a pensar en irse. Dejar un trabajo ejecutivo es mucho más complicado que dejar un puesto de contribuyente individual y afectará significativamente al equipo y a la empresa a tu alrededor. También puede tener un impacto potencial en tu currículum; frecuentemente hablo con ejecutivos que odian su trabajo, pero no quieren irse porque les preocupa cómo se verá. "Si solo llego a dos años, se verá genial". Las apariencias son reales, y entiendo por qué las personas se envuelven en ellas. Yo mismo me he visto envuelto en mis propias apariencias en ocasiones. Dicho esto, cuanto más avanzo en mi carrera, más convencido estoy de que debemos pensar en dejar roles en el contexto de gestionar nuestra propia energía. Repasaremos: Finalmente, terminaremos con una discusión sobre cómo manejar el aspecto más difícil de todos, la indecisión. Al final, tendrás un marco para tomar la decisión de irte y una estructura para coordinar tu partida. En un sentido literal, decidir dejar tu trabajo es el primer paso para partir. Sin embargo, en una partida sin contratiempos, el primer paso ocurre años antes: construir el equipo para apoyar tu eventual transición fuera del negocio. Incluso si tienes la intención de quedarte en tu empresa actual para siempre, la vida puede sorprenderte rápidamente. Ciertamente, nunca imaginé que tendría un derrame cerebral en mis treinta y tantos años, con un bebé en casa, pero así sucedió. Tuve la suerte de liderar un equipo colaborativo que trabajó bien juntos en mi ausencia, pero eso no fue un accidente, fue el resultado de una planificación de sucesión continua. Esta planificación no necesita ser algo complicado:]]></description>
+            <link>https://lethain.com/leaving-the-executive-job/</link>
+            <guid isPermaLink="true">https://lethain.com/leaving-the-executive-job/</guid>
+        </item>
         <item>
             <title><![CDATA[Janet for Mortals - Janet Lang]]></title>
             <description><![CDATA[Wow, Janet seems like a really interesting and useful language. Its simplicity and compatibility with different systems make it a great option for text-wrangling and scripting. Plus, the fact that you can distribute the programs without the need for additional installations is definitely a convenient feature.]]></description>
@@ -118,24 +136,6 @@
             <description><![CDATA[La capacidad de adaptarse y cambiar decisiones en el futuro es más importante que la perfección en cada decisión tomada al diseñar sistemas. Aunque cada decisión individual es importante, enfocarse en la facilidad de modificar decisiones en lugar de lograr la perfección en cada momento es más prudente para adaptarse a los requisitos cambiantes y reducir la incertidumbre en el dominio del problema.]]></description>
             <link>https://jordankaye.dev/posts/flexible-systems/</link>
             <guid isPermaLink="true">https://jordankaye.dev/posts/flexible-systems/</guid>
-        </item>
-        <item>
-            <title><![CDATA[A Complete Guide to CSS Cascade Layers]]></title>
-            <description><![CDATA[Este artículo explica cómo el color de un párrafo puede variar dependiendo de la prioridad de las capas y la importancia de los estilos en cascada. Incluso un selector universal puede tomar precedencia si está en una capa superior.]]></description>
-            <link>https://css-tricks.com/css-cascade-layers/</link>
-            <guid isPermaLink="true">https://css-tricks.com/css-cascade-layers/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Vim for The VS Code User: Part 1]]></title>
-            <description><![CDATA[El autor comparte su experiencia personal sobre cómo se enganchó con Neovim y cómo quiere enseñar a otros cómo empezar con él y personalizarlo para mejorar su flujo de trabajo y convertir su IDE en un PDE. Pese a los desafíos, el esfuerzo vale la pena y se puede lograr un gran editor de código personalizado.]]></description>
-            <link>https://itnext.io/vim-for-the-vs-code-user-part-1-initial-setup-53617a4905f4</link>
-            <guid isPermaLink="true">https://itnext.io/vim-for-the-vs-code-user-part-1-initial-setup-53617a4905f4</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Work-From-Home Future Is Destroying Bosses' Brains]]></title>
-            <description><![CDATA[La pandemia ha traído consigo la normalización del trabajo remoto, pero también plantea un desafío en cuanto a las expectativas de los empleadores sobre la propiedad que creen tener sobre sus trabajadores bajo contrato. La noción de "trabajo a tiempo completo" a menudo se utiliza para capturar la atención, el tiempo y la energía de una persona durante las horas de trabajo, pero con el trabajo remoto, esta dinámica cambia y las empresas luchan por el control de sus empleados.]]></description>
-            <link>https://wheresyoured.at/p/the-work-from-home-future-is-destroying</link>
-            <guid isPermaLink="true">https://wheresyoured.at/p/the-work-from-home-future-is-destroying</guid>
         </item>
     </channel>
 </rss>
