@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 11 Jul 2023 16:10:04 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 12 Jul 2023 00:43:58 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Business Advice Plagued by Survivor Bias]]></title>
+            <description><![CDATA[La mayoría de los consejos empresariales suelen sufrir de este sesgo de supervivencia. Leemos sobre los éxitos, pero ¿qué hay de los negocios que "nunca llegaron a casa"? ¿Podría el fracaso contener más lecciones que el éxito?]]></description>
+            <link>https://longform.asmartbear.com/survivor-bias/</link>
+            <guid isPermaLink="true">https://longform.asmartbear.com/survivor-bias/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Being a good mentor, a developers guide]]></title>
+            <description><![CDATA[En este artículo se habla sobre el proceso en el cual los experimentados reciben a los inexpertos bajo sus alas e iluminan el camino por delante. A lo largo de mi carrera he sido mentor y mentorizado y puedo decir que mayormente ha sido una experiencia satisfactoria. El mentorazgo es parte integral del crecimiento personal y profesional, tanto para el mentor como para el mentorizado, y marca la diferencia en equipos y personas exitosas.]]></description>
+            <link>https://vadimkravcenko.com/shorts/good-mentor/</link>
+            <guid isPermaLink="true">https://vadimkravcenko.com/shorts/good-mentor/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Migrating a production database without any downtime]]></title>
+            <description><![CDATA[En este artículo se dan algunos consejos para una migración de datos exitosa. Se recomienda utilizar motores de base de datos modernos que incluyan mejoras en el rendimiento de las operaciones DDL, así como realizar modificaciones en horarios de baja actividad y considerar migraciones lentas para tablas muy grandes.]]></description>
+            <link>https://teamplify.com/blog/zero-downtime-DB-migrations/</link>
+            <guid isPermaLink="true">https://teamplify.com/blog/zero-downtime-DB-migrations/</guid>
+        </item>
         <item>
             <title><![CDATA[A Deep Dive Into SVG Path Commands]]></title>
             <description><![CDATA[Si eres como yo, es posible que hayas pasado por alto este atributo en el pasado, asumiendo que no son más que la salida del editor de gráficos vectoriales favorito de tu diseñador. Aunque eso puede ser cierto, también es una simplificación excesiva. Verás, entender el funcionamiento interno de este atributo resultó ser una gran ventaja para mis habilidades de front-end; me permitió hacer cosas que nunca pensé posible, como hacer esta animación de un cuadrado flexible. Esta guía es una inmersión interactiva en el atributo "d", también conocido como datos de trayectoria. ¡Es el artículo que desearía haber tenido cuando aprendí por primera vez sobre las trayectorias SVG! A lo largo del camino, aprenderemos sobre los diferentes tipos de comandos de trayectoria y cómo usarlos para dibujar diversos íconos. ¡Comencemos! Aunque el atributo "d" puede parecer una especie de encantamiento mágico, en realidad es una serie de comandos que le dicen al navegador cómo debe dibujarse la trayectoria. Esto se vuelve un poco más obvio si limpiamos un poco el atributo "d".]]></description>
@@ -118,24 +136,6 @@
             <description><![CDATA[RSS sigue siendo un protocolo activo y en uso, aunque no está en el mainstream y muchas personas no saben cómo usarlo. Este post explica cómo dar estilo a los feeds RSS para educar a los lectores y hacerlos más atractivos al mismo tiempo.]]></description>
             <link>https://darekkay.com/blog/rss-styling/</link>
             <guid isPermaLink="true">https://darekkay.com/blog/rss-styling/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Modelos para entender el problema... antes de proponer una solución Ágil]]></title>
-            <description><![CDATA[El modelo "Perro, Vaca, Estrella" puede ser una herramienta útil para priorizar funcionalidades o productos en una empresa, pero es importante recordar que las soluciones deben estar acordes a los problemas y que las situaciones cambian constantemente. Es esencial conocer y entender el problema antes de plantear cualquier solución, independientemente de si se trata de una metodología ágil o no.]]></description>
-            <link>https://www.javiergarzas.com/2023/06/modelos-para-entender-el-problema-antes-proponer-una-solucion-agil.html</link>
-            <guid isPermaLink="true">https://www.javiergarzas.com/2023/06/modelos-para-entender-el-problema-antes-proponer-una-solucion-agil.html</guid>
-        </item>
-        <item>
-            <title><![CDATA[Go slow to move fast]]></title>
-            <description><![CDATA[Los equipos de ingeniería pueden mejorar a largo plazo su velocidad de desarrollo al reducir la velocidad a corto plazo. El término "deuda técnica" puede generar debate, pero es importante entender que implica una elección consciente en el desarrollo del producto, y no solo una etiqueta para los problemas que los ingenieros se enfrentan en el camino.]]></description>
-            <link>https://jordankaye.dev/posts/go-slow-move-fast/</link>
-            <guid isPermaLink="true">https://jordankaye.dev/posts/go-slow-move-fast/</guid>
-        </item>
-        <item>
-            <title><![CDATA[How "Exit Traps" Can Make Your Bash Scripts Way More Robust And Reliable]]></title>
-            <description><![CDATA[Este artículo ofrece un tip útil para hacer que tus scripts de bash sean más resistentes, garantizando que se realicen las operaciones de limpieza necesarias, incluso si ocurre algo inesperado. La clave es usar el pseudo-signal EXIT proporcionado por bash para atrapar comandos o funciones que se deben ejecutar cuando el script se cierra por cualquier motivo.]]></description>
-            <link>http://redsymbol.net/articles/bash-exit-traps/</link>
-            <guid isPermaLink="true">http://redsymbol.net/articles/bash-exit-traps/</guid>
         </item>
     </channel>
 </rss>
