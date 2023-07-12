@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 12 Jul 2023 00:43:58 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 12 Jul 2023 08:09:53 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,18 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Common pitfalls of GitHub Actions]]></title>
+            <description><![CDATA[Si estás creando GitHub Actions a través de la interfaz de GitHub y utilizando el URL https://github.com///actions/new, ten en cuenta que la plantilla para configurar la construcción está dañada. Afortunadamente, todos los problemas pueden solucionarse. Consideremos una plantilla sencilla generada por GitHub para construir código en Python y mejorémosla.]]></description>
+            <link>https://ashishb.net/tech/common-pitfalls-of-github-actions/</link>
+            <guid isPermaLink="true">https://ashishb.net/tech/common-pitfalls-of-github-actions/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Feature Flags: Theory vs Reality]]></title>
+            <description><![CDATA[Durante la segunda mitad de la década de 2010, el movimiento DevOps ganó impulso masivo en la industria de SaaS. Montado en esta ola y respaldado por los esfuerzos de marketing de LaunchDarkly, los feature toggles se convirtieron rápidamente en una herramienta esencial para las operaciones de ingeniería utilizadas por prácticamente todas las empresas de SaaS. En el contexto de DevOps, las feature flags son especialmente útiles para la implementación continua. Al separar la publicación de la implementación, permiten que el marketing y la ingeniería operen de forma independiente, lo que facilita a los ingenieros implementar continuamente características en progreso. Sin embargo, desde el principio, se hicieron evidentes algunas desventajas. Algunos problemas comunes se pueden observar a medida que la adopción del patrón de feature toggle se ha extendido en la industria.]]></description>
+            <link>https://bpapillon.com/post/feature-flags-theory-vs-reality/</link>
+            <guid isPermaLink="true">https://bpapillon.com/post/feature-flags-theory-vs-reality/</guid>
+        </item>
         <item>
             <title><![CDATA[Business Advice Plagued by Survivor Bias]]></title>
             <description><![CDATA[La mayoría de los consejos empresariales suelen sufrir de este sesgo de supervivencia. Leemos sobre los éxitos, pero ¿qué hay de los negocios que "nunca llegaron a casa"? ¿Podría el fracaso contener más lecciones que el éxito?]]></description>
@@ -124,18 +136,6 @@
             <description><![CDATA[Este artículo habla sobre cómo el XML fue considerado como la solución para todos los problemas de programación, pero resultó ser una deuda técnica y útil solo para ciertas cosas. La lección aprendida es que no hay una bala de plata, cada herramienta debe evaluarse desde el punto de vista de sus pros y contras, y todo tiene un costo y compromisos implícitos.]]></description>
             <link>https://www.bitecode.dev/p/hype-cycles</link>
             <guid isPermaLink="true">https://www.bitecode.dev/p/hype-cycles</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Infinite Hows (or, the Dangers Of The Five Whys)]]></title>
-            <description><![CDATA[En este artículo se cuestiona el método de los 5 porqués y se sugiere una alternativa para una retrospectiva más efectiva que permita recopilar múltiples y diversas perspectivas. Se argumenta que preguntar "por qué" puede llevar a respuestas irrelevantes o simplistas, mientras que preguntar "cómo" resulta más útil para identificar las condiciones que permitieron que se produjera un evento y proporcionar datos operativos ricos.]]></description>
-            <link>https://www.kitchensoap.com/2014/11/14/the-infinite-hows-or-the-dangers-of-the-five-whys/</link>
-            <guid isPermaLink="true">https://www.kitchensoap.com/2014/11/14/the-infinite-hows-or-the-dangers-of-the-five-whys/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Style your RSS feed]]></title>
-            <description><![CDATA[RSS sigue siendo un protocolo activo y en uso, aunque no está en el mainstream y muchas personas no saben cómo usarlo. Este post explica cómo dar estilo a los feeds RSS para educar a los lectores y hacerlos más atractivos al mismo tiempo.]]></description>
-            <link>https://darekkay.com/blog/rss-styling/</link>
-            <guid isPermaLink="true">https://darekkay.com/blog/rss-styling/</guid>
         </item>
     </channel>
 </rss>
