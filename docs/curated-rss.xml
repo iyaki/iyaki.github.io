@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 13 Jul 2023 00:43:21 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 13 Jul 2023 08:10:14 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,30 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Mapa de Empatía: qué es y cómo hacerlo en 6 pasos]]></title>
+            <description><![CDATA[identificar y comprender las necesidades, deseos, dolores y emociones de tu cliente ideal, lo que facilita la creación de estrategias efectivas para satisfacer sus demandas y establecer una conexión emocional con ellos.]]></description>
+            <link>https://www.rdstation.com/blog/es/mapa-de-empatia/</link>
+            <guid isPermaLink="true">https://www.rdstation.com/blog/es/mapa-de-empatia/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Why This Opportunity Solution Tree is Changing the Way Product Teams Work]]></title>
+            <description><![CDATA[He encontrado una herramienta visual que está cambiando profundamente la forma en que los equipos trabajan. Funciona tan bien que me siento compelido a escribir un libro al respecto. Pero eso llevará tiempo y quiero que lo tengan hoy, así que voy a dar una introducción en esta publicación de blog. Sospecho que tendrán una de dos reacciones. O leerán este artículo por encima, concluirán que es obvio y que ya lo hacen, y se perderán el punto por completo. O quedarán con ganas de más. Para aquellos en el primer grupo, les animo a que se detengan y busquen lo nuevo aquí, y lo prueben. He estado entrenando a equipos de productos durante tres años en descubrimiento moderno de productos y este cambio único ha tenido un impacto mayor en la forma en que los equipos trabajan que todo lo demás que hago con ellos combinado. Para aquellos de ustedes en el último grupo que quedarán con ganas de más, estoy escribiendo lo más rápido que puedo. Espero tener el libro listo a principios de 2017 y estaré publicando pequeños fragmentos en el camino. Sigamos adelante. Por favor, ténganme paciencia, ya que esto tomará un poco de preparación. Todo comenzó hace unos meses... Varios equipos, en una o dos semanas, empezaron a decirme que aunque estaban aprendiendo mucho en nuestras sesiones juntos, les costaba ver el panorama general. Pasaríamos de revisar guías de entrevistas una semana a discutir resultados de experimentos la siguiente. Cada parte por sí misma era útil, pero los equipos no estaban aprendiendo cómo unirlo todo por su cuenta. Siempre tenía que decirles qué hacer a continuación. Mi objetivo como entrenador es hacer que los equipos hagan descubrimiento continuo por sí mismos lo más rápido posible. Así que sabía que algo tenía que cambiar. Seguía preguntándome, ¿cómo decido qué sigue? Y, lo que es más importante, ¿cómo enseño esto a los equipos? Comencé intentando ser más explícito acerca de qué es el descubrimiento de productos moderno. Eso llevó a este video.]]></description>
+            <link>https://www.producttalk.org/2016/08/opportunity-solution-tree/</link>
+            <guid isPermaLink="true">https://www.producttalk.org/2016/08/opportunity-solution-tree/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Canvas your way to product vision]]></title>
+            <description><![CDATA[Participé en un ejercicio de lluvia de ideas basado en el lienzo de producto de Roman Pichler mientras vivía en Sydney. Este taller ayudó a dar forma a la dirección de nuestro desarrollo de productos futuros. En ese momento, creo que no entendí completamente el valor de nuestra lluvia de ideas. Sin embargo, el artefacto de ese taller resultó ser increíblemente útil para alinear a nuestro equipo y comunicarnos con los interesados. A lo largo de los años, me he inspirado en ese taller y en plantillas relacionadas de gestión de productos, y he desarrollado mi propia versión del lienzo de visión del producto (desplázate hacia abajo para ver alternativas). Cada sección del lienzo proporcionará los estímulos para un taller que puedes facilitar con tu equipo. Cuando hayas terminado, tendrás una clara visión del producto con evidencia de apoyo que se puede utilizar con tu equipo y los interesados desde el descubrimiento hasta la entrega y el crecimiento.
+
+Creo firmemente que este taller es como una navaja suiza para los equipos de producto. El mismo formato y estímulos se pueden adaptar para enmarcar el desarrollo de funciones futuras, brainstorming de una nueva idea de producto o llevar a cabo un ejercicio de visión a 3 años. Tu taller se puede realizar en persona, utilizando una pared grande, cinta washi y algunas notas adhesivas, o en línea utilizando una herramienta de pizarra virtual como Miro o Mural (obtén la plantilla de Miro). Me gusta bloquear 4 o 6 horas para que la actividad no se sienta apresurada. Esto proporcionará suficiente tiempo para trabajar en grupos pequeños, discutir, compartir, mapear afinidades y luego llegar a un acuerdo. Además, me gusta combinar este taller con otras actividades para crear una semana de inicio perfecta (hay una lista de ideas al final de este artículo).
+
+Si estás realizando este taller de forma virtual, recomiendo dividir tu facilitación en una lluvia de ideas asincrónica y una sincronización de retroalimentación. Puedes permitir que los participantes hagan lluvias de ideas anticipadamente utilizando tu herramienta de pizarra virtual, o para reducir el sesgo, puedes recopilar respuestas a los estímulos utilizando una herramienta como Google Forms. Antes del taller, mapea las notas adhesivas agregadas y etiqueta los grupos por tema. Al comienzo de tu taller, da a los participantes suficiente tiempo para leer las respuestas y agregar nuevas notas adhesivas para construir sobre lo que ya está allí. Enfoca tu tiempo de sincronización en discutir secciones sin una alineación clara.
+
+Independientemente del formato de facilitación, tu lluvia de ideas comenzará con la declaración del problema. A continuación, pasa a tu público objetivo, sus necesidades y características que podrían satisfacer esas necesidades. Luego, mira la propuesta de valor única de tu producto, cómo medirás el éxito y cómo sonarían los usuarios satisfechos. Termina creando principios de experiencia y tu declaración de visión del producto.]]></description>
+            <link>https://uxdesign.cc/canvas-your-way-to-product-vision-79e3250ea278</link>
+            <guid isPermaLink="true">https://uxdesign.cc/canvas-your-way-to-product-vision-79e3250ea278</guid>
+        </item>
         <item>
             <title><![CDATA[Writing an engineering strategy]]></title>
             <description><![CDATA[Una vez te conviertes en un ejecutivo de ingeniería, comienza a correr un cronómetro invisible en segundo plano. Tic, tic, tic. En algún momento, ese cronómetro sonará y alguien se acercará apresuradamente a ti exigiendo una estrategia de ingeniería. No quedará claro lo que quieren, pero lo necesitarán de verdad, mucho. Si tan solo tuviéramos una estrategia de ingeniería, te suplicarán con la mirada, las cosas estarían bien. Durante mucho tiempo, esa mirada suplicante me acechó, porque simplemente no sabía qué darles: ¿qué es una estrategia de ingeniería? Desde las Magnitudes de exploración, que describían el enfoque aspiracional de Stripe para equilibrar la estandarización técnica y la exploración, hasta la redacción de la estrategia de ingeniería del ingeniero del personal (que reescribí cuatro veces desde cero), seguí iterando mi definición. Al operar en el rol ejecutivo, finalmente he podido solidificar mi punto de vista sobre lo que una estrategia de ingeniería debe lograr y cómo un ejecutivo de ingeniería puede guiar la creación de esa estrategia. Comenzando desde donde estaba hace unos años, sin saber muy bien qué era una estrategia de ingeniería, trabajaremos a través de: Si bien la organización de ingeniería puede tener muchas estrategias, solo hay una estrategia de ingeniería general. Este documento, a menudo implícito y nunca escrita, es tu documento constitucional para dirigir la ingeniería y escribirlo es una de las cosas más valiosas que harás como ejecutivo de ingeniería. Estoy comenzando con un ejemplo de estrategia para demostrar los conceptos que trabajaremos en este fragmento. Si prefieres terminar con este ejemplo, te animo a saltar esta sección y volver después de leer el resto. Los principales factores que queremos abordar en nuestra estrategia son (por ejemplo, nuestro diagnóstico de nuestras circunstancias):]]></description>
@@ -118,24 +142,6 @@
             <description><![CDATA[El Libro Conciso de TypeScript ofrece una visión completa y concisa de las capacidades de TypeScript. Ofrece explicaciones claras que cubren todos los aspectos de la última versión del lenguaje, desde su poderoso sistema de tipos hasta características avanzadas. Ya seas un principiante o un desarrollador experimentado, este libro es un recurso inestimable para mejorar tu comprensión y habilidad en TypeScript. Este libro es completamente gratuito y de código abierto. Bienvenido al Libro Conciso de TypeScript. Esta guía te proporciona conocimientos esenciales y habilidades prácticas para el desarrollo efectivo en TypeScript. Descubre conceptos clave y técnicas para escribir un código limpio y robusto. Ya seas un principiante o un desarrollador experimentado, este libro sirve tanto como una guía completa como una referencia útil para aprovechar el poder de TypeScript en tus proyectos. Simone Poggiali es un experimentado Desarrollador Front-end Senior con pasión por escribir código de calidad profesional desde los años 90. A lo largo de su carrera internacional, ha contribuido en numerosos proyectos para una amplia gama de clientes, desde startups hasta grandes organizaciones. Empresas destacadas como HelloFresh, Siemens, O2 y Leroy Merlin han beneficiado de su experiencia y dedicación. Puedes contactar a Simone Poggiali en las siguientes plataformas: [list of platforms]]]></description>
             <link>https://github.com/gibbok/typescript-book?utm_source=tldrnewsletter</link>
             <guid isPermaLink="true">https://github.com/gibbok/typescript-book?utm_source=tldrnewsletter</guid>
-        </item>
-        <item>
-            <title><![CDATA[Special interest infodump: restful is a scam, but browsers are cool"]]></title>
-            <description><![CDATA[Lamentablemente, no puedo realizar comentarios sobre el contenido en este momento, ya que soy una Inteligencia Artificial y no tengo acceso directo a los artículos. Sin embargo, estoy aquí para ayudarte en cualquier otra consulta o duda que tengas.]]></description>
-            <link>https://cohost.org/tef/post/1794038-special-interest-inf</link>
-            <guid isPermaLink="true">https://cohost.org/tef/post/1794038-special-interest-inf</guid>
-        </item>
-        <item>
-            <title><![CDATA[Averiguando la expectativa de mejora o transformación personal que desencadena la compra o el uso: “Jobs to be Done”]]></title>
-            <description><![CDATA[Un ejemplo sería entender que cuando alguien compra un taladro, en realidad está contratando la capacidad de hacer agujeros en sus paredes o muebles, no solo el producto en sí. Esto permite a las empresas crear productos y servicios que satisfagan esas necesidades específicas de los clientes y así tener mayor éxito en el mercado.]]></description>
-            <link>https://iyaki.notion.site/Averiguando-la-expectativa-de-mejora-o-transformaci-n-personal-que-desencadena-la-compra-o-el-uso--8e0442384c70472fbe16f4a57fc46683?pvs=4</link>
-            <guid isPermaLink="true">https://iyaki.notion.site/Averiguando-la-expectativa-de-mejora-o-transformaci-n-personal-que-desencadena-la-compra-o-el-uso--8e0442384c70472fbe16f4a57fc46683?pvs=4</guid>
-        </item>
-        <item>
-            <title><![CDATA[How Platform Engineering Works]]></title>
-            <description><![CDATA[En este artículo, el autor comparte su experiencia como Ingeniero de Plataforma en Sotheby's y las lecciones que ha aprendido sobre cómo hacer que la Ingeniería de Plataforma funcione. Destaca la importancia de la velocidad, la estabilidad y una mentalidad de producto en este tipo de trabajo.]]></description>
-            <link>https://chadxz.dev/platform/</link>
-            <guid isPermaLink="true">https://chadxz.dev/platform/</guid>
         </item>
     </channel>
 </rss>
