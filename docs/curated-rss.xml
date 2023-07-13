@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 13 Jul 2023 08:10:14 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 13 Jul 2023 16:09:21 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Customer Success Is Broken. Here's How to Fix It]]></title>
+            <description><![CDATA[En la última década, el éxito del cliente (CS) ha ganado popularidad como una categoría emergente, pero muchas empresas se están dando cuenta de que no saben qué resultados únicos debe lograr el CS en primer lugar. Sin embargo, cortar el CS no es necesariamente la solución, en su lugar, es importante mantener un enfoque claro en la salud del cliente como indicador principal de los ingresos y productos de la empresa.]]></description>
+            <link>https://a16z.com/2023/07/11/customer-success-is-broken/?utm_source=tldrfounders</link>
+            <guid isPermaLink="true">https://a16z.com/2023/07/11/customer-success-is-broken/?utm_source=tldrfounders</guid>
+        </item>
+        <item>
+            <title><![CDATA[Regex Isn't Hard]]></title>
+            <description><![CDATA[Regex obtiene una mala reputación por ser muy complejo. Eso es justo, pero también creo que si te enfocas en un subconjunto clave de regex, no es tan difícil. La mayoría de la complejidad proviene de varios "atajos" que son difíciles de recordar. Si ignoras esos atajos, el lenguaje en sí es bastante pequeño y portátil en diferentes lenguajes de programación. Vale la pena conocer regex porque puedes hacer MUCHO con muy poco código. Si intento replicar lo que hace mi regex utilizando código procesal normal, a menudo es muy detallado, con errores y significativamente más lento. A menudo lleva horas o días hacerlo mejor que un par de minutos escribiendo regex.]]></description>
+            <link>https://timkellogg.me/blog/2023/07/11/regex</link>
+            <guid isPermaLink="true">https://timkellogg.me/blog/2023/07/11/regex</guid>
+        </item>
+        <item>
+            <title><![CDATA[Plans are just vibes on a spreadsheet. But they are invaluable]]></title>
+            <description><![CDATA[Recientemente charlé con un experimentado consultor de TI. Mucha experiencia. ¿Su consejo? Nunca poner fechas en un plan. Creo que eso suena familiar para muchas personas. Porque sucede: en una organización disfuncional, algunas personas utilizan las fechas para castigar y culpar. Pero lo que me sorprendió es la sumisión como reacción. A veces, los actores maliciosos utilizan una pieza esencial de información, por lo que responden ocultándola a todos. No lo compro. No lo hacemos en Amazon. No lo hicimos en mi última empresa, ni en la empresa anterior a esa (o la anterior). Y no es porque estos lugares fueran iluminados. Es porque las personas en las trincheras construyendo cosas tienen las herramientas para superar a los acusadores. Intentaré explicar estas herramientas aquí, y cómo es tomar el control de tu plan, compartir con confianza las fechas que posees y ajustar el plan según sea necesario sin disculparte.]]></description>
+            <link>https://rexm.substack.com/p/plans-are-just-vibes-on-a-spreadsheet</link>
+            <guid isPermaLink="true">https://rexm.substack.com/p/plans-are-just-vibes-on-a-spreadsheet</guid>
+        </item>
         <item>
             <title><![CDATA[Mapa de Empatía: qué es y cómo hacerlo en 6 pasos]]></title>
             <description><![CDATA[identificar y comprender las necesidades, deseos, dolores y emociones de tu cliente ideal, lo que facilita la creación de estrategias efectivas para satisfacer sus demandas y establecer una conexión emocional con ellos.]]></description>
@@ -124,24 +142,6 @@ Independientemente del formato de facilitación, tu lluvia de ideas comenzará c
             <description><![CDATA[Si dos ejecutivos amigables se encuentran para cenar, es probable que comiencen intercambiando lo desordenadas que están las cosas en el trabajo. Las iniciativas están atrasadas, los despidos están ocurriendo en todas partes, el equipo está en desorden. Luego se reirán y cambiarán de tema. A veces, uno de los ejecutivos no puede hacer ese cambio y seguirá quejándose durante toda la comida. Tener problemas es parte de ser un ejecutivo, pero cuando eres ese segundo ejecutivo que no puede apagar la frustración, es hora de empezar a pensar en irse. Dejar un trabajo ejecutivo es mucho más complicado que dejar un puesto de contribuyente individual y afectará significativamente al equipo y a la empresa a tu alrededor. También puede tener un impacto potencial en tu currículum; frecuentemente hablo con ejecutivos que odian su trabajo, pero no quieren irse porque les preocupa cómo se verá. "Si solo llego a dos años, se verá genial". Las apariencias son reales, y entiendo por qué las personas se envuelven en ellas. Yo mismo me he visto envuelto en mis propias apariencias en ocasiones. Dicho esto, cuanto más avanzo en mi carrera, más convencido estoy de que debemos pensar en dejar roles en el contexto de gestionar nuestra propia energía. Repasaremos: Finalmente, terminaremos con una discusión sobre cómo manejar el aspecto más difícil de todos, la indecisión. Al final, tendrás un marco para tomar la decisión de irte y una estructura para coordinar tu partida. En un sentido literal, decidir dejar tu trabajo es el primer paso para partir. Sin embargo, en una partida sin contratiempos, el primer paso ocurre años antes: construir el equipo para apoyar tu eventual transición fuera del negocio. Incluso si tienes la intención de quedarte en tu empresa actual para siempre, la vida puede sorprenderte rápidamente. Ciertamente, nunca imaginé que tendría un derrame cerebral en mis treinta y tantos años, con un bebé en casa, pero así sucedió. Tuve la suerte de liderar un equipo colaborativo que trabajó bien juntos en mi ausencia, pero eso no fue un accidente, fue el resultado de una planificación de sucesión continua. Esta planificación no necesita ser algo complicado:]]></description>
             <link>https://lethain.com/leaving-the-executive-job/</link>
             <guid isPermaLink="true">https://lethain.com/leaving-the-executive-job/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Janet for Mortals - Janet Lang]]></title>
-            <description><![CDATA[Wow, Janet seems like a really interesting and useful language. Its simplicity and compatibility with different systems make it a great option for text-wrangling and scripting. Plus, the fact that you can distribute the programs without the need for additional installations is definitely a convenient feature.]]></description>
-            <link>https://janet.guide/</link>
-            <guid isPermaLink="true">https://janet.guide/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Building personal and organizational prestige]]></title>
-            <description><![CDATA[En este artículo se discute la importancia de la construcción de marca en el ámbito de la ingeniería, tanto a nivel personal como organizacional. Aunque se enfatiza que el valor de construir una marca puede estar sobrevalorado, se destaca la importancia de mejorar el prestigio y se ofrece un plan de acción para aumentar el prestigio propio y de la organización. Al final del artículo, se le ofrece al lector herramientas para tomar la decisión de invertir en estas áreas.]]></description>
-            <link>https://lethain.com/building-prestige</link>
-            <guid isPermaLink="true">https://lethain.com/building-prestige</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Concise TypeScript Book: A Concise Guide to Effective Development in TypeScript]]></title>
-            <description><![CDATA[El Libro Conciso de TypeScript ofrece una visión completa y concisa de las capacidades de TypeScript. Ofrece explicaciones claras que cubren todos los aspectos de la última versión del lenguaje, desde su poderoso sistema de tipos hasta características avanzadas. Ya seas un principiante o un desarrollador experimentado, este libro es un recurso inestimable para mejorar tu comprensión y habilidad en TypeScript. Este libro es completamente gratuito y de código abierto. Bienvenido al Libro Conciso de TypeScript. Esta guía te proporciona conocimientos esenciales y habilidades prácticas para el desarrollo efectivo en TypeScript. Descubre conceptos clave y técnicas para escribir un código limpio y robusto. Ya seas un principiante o un desarrollador experimentado, este libro sirve tanto como una guía completa como una referencia útil para aprovechar el poder de TypeScript en tus proyectos. Simone Poggiali es un experimentado Desarrollador Front-end Senior con pasión por escribir código de calidad profesional desde los años 90. A lo largo de su carrera internacional, ha contribuido en numerosos proyectos para una amplia gama de clientes, desde startups hasta grandes organizaciones. Empresas destacadas como HelloFresh, Siemens, O2 y Leroy Merlin han beneficiado de su experiencia y dedicación. Puedes contactar a Simone Poggiali en las siguientes plataformas: [list of platforms]]]></description>
-            <link>https://github.com/gibbok/typescript-book?utm_source=tldrnewsletter</link>
-            <guid isPermaLink="true">https://github.com/gibbok/typescript-book?utm_source=tldrnewsletter</guid>
         </item>
     </channel>
 </rss>
