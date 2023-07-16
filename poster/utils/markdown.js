@@ -42,6 +42,16 @@ export function addCommonAbbreviations(markdown) {
 		'IT': 'Information Technology',
 		'CMS': 'Content Management System',
 		'TBD': 'To Be Defined',
+		'SaaS': 'Software as a Service',
+		'PaaS': 'Platform as a Service',
+		'IaaS': 'Infrastructure as a Service',
+		'IaaC': 'Infrastructure as Code',
+		'RR.HH.': 'Recursos Humanos',
+		'O.S.': 'Operating System',
+		'OO.SS.': 'Operating Systems',
+		'DoS': 'Deniegal of Service',
+		'DDoS': 'Distributed Deniegal of Service',
+		'P2P': 'Peer To Peer',
 	}
 
 	let markdownWithAbbreviations = markdown
