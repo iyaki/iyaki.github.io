@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/blog.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 21 Jun 2023 23:02:15 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 16 Jul 2023 16:06:18 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/posts/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,15 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Bibliotecas y librerías]]></title>
+            <description><![CDATA[
+						Una breve anécdota de un suceso irrelevante que ocurrió hace años y que, por razones que no termino de comprender, podría, o no, haber marcado mi uso del lenguaje.
+					]]></description>
+            <link>https://iyaki.ar/posts/20230716_bibliotecas_y_librerias.html</link>
+            <guid isPermaLink="true">https://iyaki.ar/posts/20230716_bibliotecas_y_librerias.html</guid>
+            <pubDate>Sun, 16 Jul 2023 14:52:59 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Compartiendo conocimiento]]></title>
             <description><![CDATA[
