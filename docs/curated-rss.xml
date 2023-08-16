@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 14 Aug 2023 12:33:44 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Aug 2023 11:38:18 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Architecture decision record (ADR) examples for software planning, IT leadership, and template documentation]]></title>
+            <description><![CDATA[Un registro de decisiones de arquitectura (ADR) es un documento que captura una decisión de arquitectura importante junto con su contexto y consecuencias.]]></description>
+            <link>https://github.com/joelparkerhenderson/architecture-decision-record</link>
+            <guid isPermaLink="true">https://github.com/joelparkerhenderson/architecture-decision-record</guid>
+        </item>
+        <item>
+            <title><![CDATA[A Blog Post With Every HTML Element]]></title>
+            <description><![CDATA[Después de aprender un poco más sobre la accesibilidad web el año pasado, he estado explorando algunos de los elementos HTML menos comunes y realizando cambios en este sitio web, como envolver el texto de las publicaciones de este blog en etiquetas  y agregar una etiqueta  en las plantillas de diseño del sitio web (este sitio web está construido con Eleventy). Anteriormente, ya había realizado algunos trabajos para asegurarme de que los elementos y estuvieran bien estructurados para las imágenes con subtítulos asociados, y me había impresionado la implementación de diferentes notas al pie o notas al margen de varios Recursantes, por lo que había estado pensando que sería interesante ver qué otros diseños interesantes eran posibles solo con HTML.]]></description>
+            <link>https://www.patrickweaver.net/blog/a-blog-post-with-every-html-element/</link>
+            <guid isPermaLink="true">https://www.patrickweaver.net/blog/a-blog-post-with-every-html-element/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Git Hooks - A Guide for Programmers]]></title>
+            <description><![CDATA[Los Git Hooks son una función incorporada de Git que permite a los desarrolladores automatizar tareas y hacer cumplir políticas a lo largo del flujo de trabajo de Git. Al escribir scripts personalizados que Git pueda ejecutar en puntos clave del proceso de desarrollo, los Git Hooks permiten a los desarrolladores optimizar su flujo de trabajo, garantizar la calidad del código y hacer cumplir políticas específicas del proyecto. En esta guía, exploraremos los Git Hooks y te mostraremos cómo utilizarlos de manera efectiva.]]></description>
+            <link>https://githooks.com/</link>
+            <guid isPermaLink="true">https://githooks.com/</guid>
+        </item>
         <item>
             <title><![CDATA[7 Steps to Create a Professional Development Plan]]></title>
             <description><![CDATA[Construir una carrera exitosa requiere tiempo, aprendizaje y mucho trabajo duro, al igual que Roma no se construyó en un día y ningún CEO se convirtió en CEO de la noche a la mañana. Si no quieres arriesgar el desarrollo profesional de tus empleados, necesitas contar con un sólido plan de desarrollo profesional. En este artículo te brindamos 7 pasos prácticos para escribir uno, así como ejemplos de un plan de desarrollo profesional para cualquier industria y puesto. Los planes de desarrollo profesional son documentos dinámicos y cambiantes que reflejan las habilidades y metas de cada empleado individual, y que evolucionan a medida que adquieren nuevas habilidades y continúan su educación para alcanzar sus objetivos profesionales. Puede parecer mucho trabajo para tu equipo de recursos humanos, ¿pero por qué deberías considerar crear uno para tus miembros del equipo? Aquí tienes algunas buenas razones.]]></description>
@@ -118,24 +136,6 @@
             <description><![CDATA[Cuando me encuentro con un nuevo producto, una de las primeras cosas que viene a mi mente es cómo implementaron el CSS. Esto no fue diferente cuando me encontré con Threads de Meta. Rápidamente exploré la aplicación móvil y me di cuenta de que podía previsualizar publicaciones públicas en la web. Esto me brindó la oportunidad de investigar más a fondo. Me encontré con algunos hallazgos interesantes, los cuales discutiré en este artículo. ¡Vamos a sumergirnos! Uno de los casos de uso más destacados de CSS Grid en una aplicación de producción se encuentra en Threads. CSS Grid se utiliza para construir el diseño de las publicaciones. Echa un vistazo: Un dato curioso: la primera columna de la cuadrícula se llama --barcelona. Me gustaría saber la razón detrás de esta elección. El diseño de las publicaciones consiste en una cuadrícula de 2 columnas * 4 filas. No hay un contenedor principal; cada elemento dentro de la publicación se coloca manualmente utilizando las propiedades grid-column y grid-row. El avatar se posiciona en la primera columna y abarca las dos primeras filas. Vale la pena mencionar la presencia de padding-top. Aunque no pude encontrar una razón específica en el código de producción, parece afinar la alineación de la interfaz de usuario. Aquí hay una comparación antes y después de un avatar con y sin el tratamiento de padding-top.]]></description>
             <link>https://ishadeed.com/article/threads-app-css/</link>
             <guid isPermaLink="true">https://ishadeed.com/article/threads-app-css/</guid>
-        </item>
-        <item>
-            <title><![CDATA[What we talk about when we talk about System Design]]></title>
-            <description><![CDATA[En mi experiencia como investigador y trabajador de la industria, he descubierto que el proceso de diseño basado en la abstracción es eficaz para resolver problemas complejos tanto en entornos de investigación como en entornos de producción. Este enfoque permite manejar la complejidad de manera organizada y facilita la consecución de los objetivos de producción de manera rápida y segura.]]></description>
-            <link>https://maheshba.bitbucket.io/blog/2023/07/12/Design.html</link>
-            <guid isPermaLink="true">https://maheshba.bitbucket.io/blog/2023/07/12/Design.html</guid>
-        </item>
-        <item>
-            <title><![CDATA[10 Tips How to Evaluate Leadership Skills When Hiring]]></title>
-            <description><![CDATA[Al buscar a un gran líder, es importante encontrar a alguien que pueda llevar a cabo una visión y obtener resultados. Algunos de los habilidades clave de liderazgo incluyen la capacidad de comunicación, la toma de decisiones, la motivación y la resolución de problemas.]]></description>
-            <link>https://toggl.com/blog/evaluate-leadership-skills</link>
-            <guid isPermaLink="true">https://toggl.com/blog/evaluate-leadership-skills</guid>
-        </item>
-        <item>
-            <title><![CDATA[Customer Success Is Broken. Here's How to Fix It]]></title>
-            <description><![CDATA[En la última década, el éxito del cliente (CS) ha ganado popularidad como una categoría emergente, pero muchas empresas se están dando cuenta de que no saben qué resultados únicos debe lograr el CS en primer lugar. Sin embargo, cortar el CS no es necesariamente la solución, en su lugar, es importante mantener un enfoque claro en la salud del cliente como indicador principal de los ingresos y productos de la empresa.]]></description>
-            <link>https://a16z.com/2023/07/11/customer-success-is-broken/?utm_source=tldrfounders</link>
-            <guid isPermaLink="true">https://a16z.com/2023/07/11/customer-success-is-broken/?utm_source=tldrfounders</guid>
         </item>
     </channel>
 </rss>
