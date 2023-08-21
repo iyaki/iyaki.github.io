@@ -7,7 +7,7 @@ function main() {
 	const args = process.argv.slice(2)
 
 	if (args.length === 0) {
-		throw 'ERROR: El script requiere un argumento, el path al post en markdown'
+		throw new Error('ERROR: El script requiere, por lo menos, un argumento; el path al post en markdown')
 	}
 
 	const markdownPostPath = args[0]
