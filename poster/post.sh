@@ -8,7 +8,7 @@ if [ "$#" = "0" ]
 then
 		printf 'post.sh - prepares posts to be published
 Usage:
-	post.sh path_to_md_post [path_to_md_post...]
+	post.sh path/to/post.md [path/to/other_post.md]...
 '
 fi
 
