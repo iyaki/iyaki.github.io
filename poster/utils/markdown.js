@@ -33,7 +33,9 @@ export function firstTitleFrom(markdown) {
 
 export function addCommonAbbreviations(markdown) {
 	const abbreviations = {
+		'FTP': 'File Transfer Protocol',
 		'RSS': 'Really Simple Sindication',
+		'HTTP': 'HyperText Transfer Protocol',
 		'HTML': 'Hyper Text Markup Language',
 		'CSS': 'Cascading Style Sheets',
 		'JS': 'Javascript',
@@ -41,6 +43,7 @@ export function addCommonAbbreviations(markdown) {
 		'PHP': 'PHP: Hypertext Preprocessor',
 		'IT': 'Information Technology',
 		'CMS': 'Content Management System',
+		'CRM': 'Customer Relationship Management',
 		'TBD': 'To Be Defined',
 		'SaaS': 'Software as a Service',
 		'PaaS': 'Platform as a Service',
@@ -52,6 +55,28 @@ export function addCommonAbbreviations(markdown) {
 		'DoS': 'Deniegal of Service',
 		'DDoS': 'Distributed Deniegal of Service',
 		'P2P': 'Peer To Peer',
+		'SQL': 'Structured Query Language',
+		'ISP': 'Internet Service Provider',
+		'DNS': 'Domain Name System',
+		'IRC': 'Internet Relay Chat',
+		'DOM': 'Document Object Model',
+		'OOP': 'Object Oriented Programming',
+		'POO': 'Programación Orientada a Objetos',
+		'FP': 'Functional Programming',
+		'DRY': 'Don\'t Repeat Yourself (programming principal)',
+		'KISS': 'Keep it Simple, Stupid',
+		'XSS': 'Cross Site Scripting',
+		'SEO': 'Search Engine Optimization',
+		'UI': 'User Interface',
+		'UX': 'User Experience',
+		"API": "Application Programming Interface",
+		"JSON": "JavaScript Object Notation",
+		"RPC": "Remote Procedure Call",
+		"SDK": "Software Development Kit",
+		"REST": "Representational State Transfer",
+		"RESTful": "Representational State Transfer",
+		"URI": "Uniform Resource Identifier",
+		"URL": "Uniform Resource Locator",
 	}
 
 	let markdownWithAbbreviations = markdown
