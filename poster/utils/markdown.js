@@ -69,14 +69,15 @@ export function addCommonAbbreviations(markdown) {
 		'SEO': 'Search Engine Optimization',
 		'UI': 'User Interface',
 		'UX': 'User Experience',
-		"API": "Application Programming Interface",
-		"JSON": "JavaScript Object Notation",
-		"RPC": "Remote Procedure Call",
-		"SDK": "Software Development Kit",
-		"REST": "Representational State Transfer",
-		"RESTful": "Representational State Transfer",
-		"URI": "Uniform Resource Identifier",
-		"URL": "Uniform Resource Locator",
+		'API': 'Application Programming Interface',
+		'JSON': 'JavaScript Object Notation',
+		'RPC': 'Remote Procedure Call',
+		'SDK': 'Software Development Kit',
+		'REST': 'Representational State Transfer',
+		'RESTful': 'Representational State Transfer',
+		'URI': 'Uniform Resource Identifier',
+		'URL': 'Uniform Resource Locator',
+		'a.k.a.': 'also known as',
 	}
 
 	let markdownWithAbbreviations = markdown
