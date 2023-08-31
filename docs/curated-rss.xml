@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 30 Aug 2023 12:34:18 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 31 Aug 2023 01:15:38 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Descifrando las Leyes de la Estimación Ágil]]></title>
+            <description><![CDATA[La estimación ágil es una disciplina llena de desafíos que desempeña un papel fundamental en el éxito de los proyectos. Es importante recordar la importancia de establecer plazos realistas y evitar caer en la tendencia de sobre estimar o subestimar, ya que esto puede llevar a retrasos y pérdida de calidad en el producto final.]]></description>
+            <link>https://www.javiergarzas.com/2023/07/descifrando-las-leyes-de-la-estimacion-agil.html</link>
+            <guid isPermaLink="true">https://www.javiergarzas.com/2023/07/descifrando-las-leyes-de-la-estimacion-agil.html</guid>
+        </item>
+        <item>
+            <title><![CDATA[Declarative Shadow DOM]]></title>
+            <description><![CDATA[¡Esta nueva forma de implementar y utilizar Shadow DOM directamente en HTML es increíblemente innovadora! Proporciona a los desarrolladores una mayor flexibilidad y control sobre la estructura y los estilos de los elementos web, lo cual es muy beneficioso.]]></description>
+            <link>https://developer.chrome.com/articles/declarative-shadow-dom/</link>
+            <guid isPermaLink="true">https://developer.chrome.com/articles/declarative-shadow-dom/</guid>
+        </item>
+        <item>
+            <title><![CDATA[12 Response Templates for Tricky Customer Service Emails]]></title>
+            <description><![CDATA[In situaciones como esta, es importante comunicar de manera clara y amable que, si bien no podemos ofrecer soporte telefónico, estamos disponibles para ayudar a través de otros canales de comunicación para resolver sus problemas de la mejor manera posible. Nuestro objetivo principal es garantizar la satisfacción del cliente y encontrar una solución adecuada a sus necesidades.]]></description>
+            <link>https://www.helpscout.com/customer-service-examples/</link>
+            <guid isPermaLink="true">https://www.helpscout.com/customer-service-examples/</guid>
+        </item>
         <item>
             <title><![CDATA[Creating an integrated business and technology strategy]]></title>
             <description><![CDATA[A menudo se sigue un enfoque convencional para crear una estrategia tecnológica, que sugiere comenzar con el estado actual, determinar el estado futuro y construir el plan para llegar allí. Sin embargo, este enfoque a menudo resulta en una lista de deseos de todas las cosas que podrían hacerse. Una estrategia tecnológica poderosa se trata tanto de lo que se excluye como de lo que se incluye.]]></description>
@@ -118,24 +136,6 @@
             <description><![CDATA[Me alegra ver que el proyecto simpy cuenta con una Defensa de Diseño (DoD). Todos los lenguajes y proyectos tienen características peculiares que pueden no tener sentido a primera vista, pero en muchos casos existen razones válidas detrás de estas decisiones de diseño. Es importante comprender que los diseñadores no son tontos, sino que están resolviendo problemas específicos o trabajando dentro de ciertas restricciones.]]></description>
             <link>https://buttondown.email/hillelwayne/archive/more-software-projects-need-defenses-of-design/</link>
             <guid isPermaLink="true">https://buttondown.email/hillelwayne/archive/more-software-projects-need-defenses-of-design/</guid>
-        </item>
-        <item>
-            <title><![CDATA[The 11 Aspects of Good Code]]></title>
-            <description><![CDATA[Las lecciones sobre la calidad del código comienzan en las primeras semanas de aprendizaje de programación, cuando a alguien nuevo en el campo se le enseñan los conceptos básicos de la nomenclatura de variables y se le explica por qué los lenguajes de programación tienen comentarios. Continúan en innumerables publicaciones de blogs y en cada debate sobre una solicitud de extracción. La formación en calidad de código impregna toda la carrera de una persona, pero es muy fácil perder de vista el motivo.]]></description>
-            <link>https://www.pathsensitive.com/2023/07/the-11-aspects-of-good-code.html</link>
-            <guid isPermaLink="true">https://www.pathsensitive.com/2023/07/the-11-aspects-of-good-code.html</guid>
-        </item>
-        <item>
-            <title><![CDATA[How to Use AI to Do Stuff: An Opinionated Guide]]></title>
-            <description><![CDATA[Los sistemas de IA cada vez más poderosos se están lanzando a un ritmo cada vez más rápido. Esta semana vio el debut de Claude 2, probablemente el segundo sistema de IA más capaz disponible para el público. Sin embargo, aún ninguna empresa de IA parece haber proporcionado documentación para el usuario, en su lugar, las únicas guías de usuario disponibles parecen ser hilos de influenciadores en Twitter. La documentación por rumor es una elección extraña para organizaciones que dicen estar preocupadas por el uso adecuado de sus tecnologías, pero aquí estamos.]]></description>
-            <link>https://www.oneusefulthing.org/p/how-to-use-ai-to-do-stuff-an-opinionated</link>
-            <guid isPermaLink="true">https://www.oneusefulthing.org/p/how-to-use-ai-to-do-stuff-an-opinionated</guid>
-        </item>
-        <item>
-            <title><![CDATA[I don't know how I feel about email]]></title>
-            <description><![CDATA[Recientemente he estado intentando usar correo electrónico y simplemente no sé cómo debería sentirme al respecto. Hay muchos problemas fundamentales con él que parecen filtrarse en cada parte del protocolo, experiencia de usuario y todo esto simplemente me deja incierto acerca de su futuro.]]></description>
-            <link>https://xeiaso.net/blog/idk-about-email</link>
-            <guid isPermaLink="true">https://xeiaso.net/blog/idk-about-email</guid>
         </item>
     </channel>
 </rss>
