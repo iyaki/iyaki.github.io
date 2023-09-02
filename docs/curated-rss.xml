@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 01 Sep 2023 12:33:57 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 02 Sep 2023 01:12:31 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,12 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Debugging speculation rules]]></title>
+            <description><![CDATA[Las reglas de especulación se pueden utilizar para precargar y prerrenderizar las navegaciones a páginas posteriores, lo que permite cargas de página mucho más rápidas, e incluso instantáneas, mejorando en gran medida los Core Web Vitals para estas navegaciones adicionales. Depurar las reglas de especulación puede ser complicado, especialmente para las páginas prerrenderizadas, ya que estas se renderizan en un renderizador independiente, como una pestaña oculta en segundo plano que reemplaza la pestaña actual cuando se activa. Por lo tanto, las opciones habituales de DevTools no siempre se pueden utilizar para depurar problemas. El equipo de Chrome ha estado trabajando duro para mejorar el soporte de las DevTools para la depuración de reglas de especulación. En esta publicación, verás todas las diferentes formas de utilizar estas herramientas para entender las reglas de especulación de una página, por qué pueden no estar funcionando y cuándo los desarrolladores pueden utilizar las opciones más familiares de DevTools, y cuándo no. Hay muchos términos con "pre-" que pueden ser fácilmente confundidos, así que vamos a empezar con una explicación de estos. Para más detalles, consulta este documento del panorama tecnológico de precarga. Las reglas de especulación se pueden utilizar para precargar el documento de la próxima navegación. Por ejemplo, al insertar el siguiente JSON en una página, next.html y next2.html serán precargados. Las reglas de especulación utilizadas para prefetches de navegación tienen algunas ventajas sobre la antigua sintaxis , como una API más expresiva y los resultados almacenados en la memoria caché en lugar de la caché de disco HTTP.]]></description>
+            <link>https://developer.chrome.com/en/blog/debugging-speculation-rules</link>
+            <guid isPermaLink="true">https://developer.chrome.com/en/blog/debugging-speculation-rules</guid>
+        </item>
         <item>
             <title><![CDATA[The Tao of Go]]></title>
             <description><![CDATA[El Tao de Go implica trabajar en armonía con el lenguaje y el problema en lugar de intentar forzarlos a adaptarse a nuestras necesidades. Es escribir código con amabilidad y compasión, pensando en los seres humanos que lo utilizarán y facilitándoles la vida a través de un diseño cuidadoso y detalles bien pensados. Además, implica ser generosos con aquellos que leerán nuestro código, creando nombres descriptivos, abstracciones profundas y brindando claridad y simplicidad en nuestras implementaciones.]]></description>
@@ -130,12 +136,6 @@
             <description><![CDATA[El libro Advanced Web Application Architecture (AWAA) de Matthias Noback es excelente en su totalidad. Deberías comprarlo y seguir sus consejos. Es un maravilloso compañero o continuación de mi propio libro Modernizing Legacy Applications in PHP, que aún es gratuito, aunque por supuesto estaré encantado de recibir tu dinero.]]></description>
             <link>https://paul-m-jones.com/post/2022/12/09/contra-noback-on-application-services/</link>
             <guid isPermaLink="true">https://paul-m-jones.com/post/2022/12/09/contra-noback-on-application-services/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Self-Organizing Teams]]></title>
-            <description><![CDATA[Los equipos autoorganizados se basan en la confianza, la colaboración y el empoderamiento de los individuos. Estos equipos tienen la capacidad de tomar decisiones, definir sus propios procesos y trabajar de forma autónoma, permitiendo a cada miembro contribuir con sus habilidades y experiencia únicas. A través de este artículo, espero inspirar y capacitar a los lectores para explorar nuevas formas de gestionar equipos y promover el éxito sostenible en un mundo en constante cambio.]]></description>
-            <link>https://management30.com/blog/self-organizing-team/</link>
-            <guid isPermaLink="true">https://management30.com/blog/self-organizing-team/</guid>
         </item>
     </channel>
 </rss>
