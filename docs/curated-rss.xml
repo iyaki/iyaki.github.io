@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 08 Sep 2023 12:33:59 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 09 Sep 2023 01:13:12 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Don’t Create Chaos]]></title>
+            <description><![CDATA[Uno de los comportamientos más perjudiciales que he observado en un liderazgo ineficaz es la tendencia a agregar caos cuando alguien entra a una habitación. El caos puede presentarse de muchas formas: se llegó a una decisión sobre una importante pregunta de arquitectura hace semanas, pero de repente alguien insiste en volver a visitar los objetivos fundamentales del proyecto en el último momento. Un ejecutivo insiste en que su proyecto es el más importante y lo incluye en la hoja de ruta. O tal vez sales de una reunión productiva sin pasos concretos a seguir y vuelves al punto de partida en una semana. Nadie se emociona cuando este tipo entra a la habitación. Mi prueba de fuego para un liderazgo efectivo: cualquier habitación a la que ingreses debería tener más certeza y un plan más sólido para cuando la dejes. Los buenos líderes pueden entrar en una situación en la que las personas han perdido de vista sus objetivos y logran que todos se alineen en un camino claro hacia adelante. Eliminan detalles irrelevantes, destilan situaciones complejas a su esencia y hacen que la persona adecuada tome una decisión, incluso si no son ellos. Son capaces no solo de detener planes malos antes de que sea demasiado tarde, sino de hacer que vuelvan a avanzar en la dirección correcta. Por lo general, el comportamiento que causa caos es involuntario y proviene de un buen lugar. A menudo, las personas simplemente carecen de contexto o no han desarrollado un ritmo para asegurarse de que los proyectos y planes se mantengan organizados. En casos raros, puede surgir por razones menos dignas: alguien quiere imponerse a los demás desviando la conversación hacia un tema favorito o forzando un cambio de planes. He sido culpable de causar mi parte de caos innecesario y siempre me he arrepentido. Sin embargo, tuve la suerte de contar con varios compañeros de equipo que no dudaron en señalarme esto a lo largo de los años. Desde entonces, he construido una caja de herramientas de prácticas para mejorar.]]></description>
+            <link>https://staysaasy.com/management/2020/07/07/dont-create-chaos.html</link>
+            <guid isPermaLink="true">https://staysaasy.com/management/2020/07/07/dont-create-chaos.html</guid>
+        </item>
+        <item>
+            <title><![CDATA[On Achieving Goals]]></title>
+            <description><![CDATA[Lograr tus metas, en su forma más básica, puede ser un proceso muy simple. La receta es: personas, equipos y empresas alrededor del mundo fallan en esto todos los días, constantemente, desastrosamente, al no seguir esta simple ecuación. La principal razón por la que las metas fallan es simplemente la falta de uno de los elementos mencionados anteriormente, es decir, tener metas malas o malas revisiones. Metas malas son las siguientes: tu velocidad de sprint aumentó, completaste todos los tickets, lograste el 70% de tus OKRs en lugar del 62% - ¿a quién le importa? Sin otro contexto, estos son simplemente números que no tienen nada que ver con el valor comercial. Las metas valiosas tienen resultados obviamente valiosos. Cuantas más personas, equipos y empresas se centren en resultados de segundo orden, más se encamina tu empresa hacia una burocracia donde se valora más la narración que el impacto. Deberías tener una constante inquietud existencial que solo puede satisfacerse al confirmar que tus metas realmente importan. Revisar que tus metas importen es a menudo más rápido de lo que piensas, y es tiempo bien invertido. Otro problema principal en el establecimiento de metas es elegir metas que en realidad no son una prioridad.]]></description>
+            <link>https://staysaasy.com/management/2023/07/03/Achieving-Goals.html</link>
+            <guid isPermaLink="true">https://staysaasy.com/management/2023/07/03/Achieving-Goals.html</guid>
+        </item>
+        <item>
+            <title><![CDATA[CSS Selectors: A Visual Guide & Reference]]></title>
+            <description><![CDATA[Esta guía visual proporciona una visión clara de los selectores CSS más populares. Con ella, podrás entender y aplicar estilos a elementos HTML específicos, incluyendo tanto selectores tradicionales como pseudo-clases y pseudo-elementos.]]></description>
+            <link>https://fffuel.co/css-selectors/</link>
+            <guid isPermaLink="true">https://fffuel.co/css-selectors/</guid>
+        </item>
         <item>
             <title><![CDATA[A Practical Guide of GNU grep With Examples]]></title>
             <description><![CDATA[El artículo se enfoca en el uso de GNU grep y algunas alternativas más modernas para buscar archivos y solucionar problemas relacionados con la búsqueda de información en ellos. Además, se menciona la importancia de tener instalado GNU grep, ya que ofrece más funcionalidades que otras herramientas similares.]]></description>
@@ -118,24 +136,6 @@
             <description><![CDATA[Construir una carrera exitosa requiere tiempo, aprendizaje y mucho trabajo duro, al igual que Roma no se construyó en un día y ningún CEO se convirtió en CEO de la noche a la mañana. Si no quieres arriesgar el desarrollo profesional de tus empleados, necesitas contar con un sólido plan de desarrollo profesional. En este artículo te brindamos 7 pasos prácticos para escribir uno, así como ejemplos de un plan de desarrollo profesional para cualquier industria y puesto. Los planes de desarrollo profesional son documentos dinámicos y cambiantes que reflejan las habilidades y metas de cada empleado individual, y que evolucionan a medida que adquieren nuevas habilidades y continúan su educación para alcanzar sus objetivos profesionales. Puede parecer mucho trabajo para tu equipo de recursos humanos, ¿pero por qué deberías considerar crear uno para tus miembros del equipo? Aquí tienes algunas buenas razones.]]></description>
             <link>https://toggl.com/blog/examples-of-a-professional-development-plan</link>
             <guid isPermaLink="true">https://toggl.com/blog/examples-of-a-professional-development-plan</guid>
-        </item>
-        <item>
-            <title><![CDATA[Retrospective Prompts - Explicit questions elicit answers that people don’t always think of on their own]]></title>
-            <description><![CDATA[Este artículo proporciona información valiosa sobre el impacto de la contaminación plástica en los océanos y la importancia de tomar medidas urgentes para combatirla.]]></description>
-            <link>https://two-wrongs.com/retro-prompts.html</link>
-            <guid isPermaLink="true">https://two-wrongs.com/retro-prompts.html</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Regular Expressions Book – RegEx for JavaScript Developers]]></title>
-            <description><![CDATA[Si quieres dominar las expresiones regulares y entender cómo funcionan en JavaScript, este libro es para ti. Las expresiones regulares pueden ser intimidantes al principio, pero este libro te enseñará de manera clara y concisa cómo utilizarlas no solo en herramientas de prueba de regex, sino también en JavaScript. Además, podrás aplicar lo aprendido en otros lenguajes de programación como Python y PHP. ¡Disfruta de la lectura!]]></description>
-            <link>https://www.freecodecamp.org/news/regular-expressions-for-javascript-developers</link>
-            <guid isPermaLink="true">https://www.freecodecamp.org/news/regular-expressions-for-javascript-developers</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Nuance of “Domain” (in URI)]]></title>
-            <description><![CDATA[Me encantan las visualizaciones como esta: ese era mi modelo mental de las URL hasta que indexé los enlaces de mi blog y me di cuenta de que hay más en "dominio" de lo que se ve a simple vista.]]></description>
-            <link>https://blog.jim-nielsen.com/2023/domain-nuance/</link>
-            <guid isPermaLink="true">https://blog.jim-nielsen.com/2023/domain-nuance/</guid>
         </item>
     </channel>
 </rss>
