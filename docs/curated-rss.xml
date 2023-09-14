@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 14 Sep 2023 01:15:03 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 14 Sep 2023 12:35:01 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Designing for Performance - Weighing Aesthetics and Speed]]></title>
+            <description><![CDATA[Como diseñador web, te enfrentas a decisiones difíciles a la hora de equilibrar estética y rendimiento. El contenido, diseño, imágenes e interactividad son esenciales para captar la atención de tu audiencia, y cada uno de estos elementos tiene un gran impacto en el tiempo de carga de la página y la experiencia del usuario final. En este libro práctico, Lara Callender Hogan te ayuda a enfocar tus proyectos teniendo en cuenta la velocidad de carga, mostrándote cómo probar y medir qué decisiones de diseño son más críticas. Lara está donando todas las ganancias del libro a diversas organizaciones benéficas que se centran en apoyar a personas marginadas en el ámbito tecnológico, como Girl Develop It, Women Who Code, Black Girls Code, #YesWeCode, Latinas in STEM, Hack the Hood y proyectos en DonorsChoose como "Growing Girls with Gadgets" y "Girls Can Code, Too!". Así que si te gusta el libro, por favor considera comprarlo.]]></description>
+            <link>https://designingforperformance.com/</link>
+            <guid isPermaLink="true">https://designingforperformance.com/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Creating A Living Style Guide: A Case Study]]></title>
+            <description><![CDATA[FamilySearch es un sitio de genealogía mundial construido y mantenido por equipos dedicados a diferentes secciones del sitio. Después de darse cuenta de que el sitio ya no estaba unificado debido a los estilos únicos creados por cada equipo, decidieron crear una guía de estilo para solucionar el problema y limpiar el código de CSS.]]></description>
+            <link>https://www.smashingmagazine.com/2016/05/creating-a-living-style-guide-case-study/</link>
+            <guid isPermaLink="true">https://www.smashingmagazine.com/2016/05/creating-a-living-style-guide-case-study/</guid>
+        </item>
+        <item>
+            <title><![CDATA[A Complete Course of the Raku programming language]]></title>
+            <description><![CDATA[El cambio climático es una preocupación global que requiere una acción inmediata y coordinada de todos los países para reducir las emisiones de gases de efecto invernadero y preservar nuestro planeta para las futuras generaciones. Es fundamental que se implementen medidas concretas y se promueva la concienciación sobre este tema tan importante.]]></description>
+            <link>https://course.raku.org/</link>
+            <guid isPermaLink="true">https://course.raku.org/</guid>
+        </item>
         <item>
             <title><![CDATA[Solving the same problem multiple times]]></title>
             <description><![CDATA[Desarrollar una nueva característica, solucionar un bug o iniciar un nuevo proyecto se parece a algo así: la solución inicial es exploratoria, con una hipótesis de cómo se comporta el sistema y el objetivo de encontrar el camino más rápido hacia una solución. Después de la primera iteración, entiendo qué refactorizaciones se necesitan para que el cambio encaje en el código actual y en iteraciones posteriores, mi cambio puede ser más preciso y, en la mayoría de los casos, necesito cambiar menos código de lo que originalmente pensaba, haciendo el cambio más pequeño y fácil de entender.]]></description>
@@ -119,24 +137,6 @@
             <description><![CDATA[El reenvío de puertos local en SSH te permite crear un puerto local que se reenvía a un puerto remoto. Esto es útil cuando quieres acceder a una página web alojada en un servidor remoto que solo es accesible a través de la interfaz de bucle local. Con el reenvío de puertos local, puedes acceder a ese servidor desde tu máquina local. En el caso del reenvío de puertos remoto, es lo contrario: puedes acceder a un servidor remoto desde una máquina local que no tiene acceso directo a ese servidor, utilizando otro servidor como intermediario para establecer la conexión.]]></description>
             <link>https://grahamhelton.com/blog/ssh-cheatsheet/</link>
             <guid isPermaLink="true">https://grahamhelton.com/blog/ssh-cheatsheet/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Debugging speculation rules]]></title>
-            <description><![CDATA[Las reglas de especulación se pueden utilizar para precargar y prerrenderizar las navegaciones a páginas posteriores, lo que permite cargas de página mucho más rápidas, e incluso instantáneas, mejorando en gran medida los Core Web Vitals para estas navegaciones adicionales. Depurar las reglas de especulación puede ser complicado, especialmente para las páginas prerrenderizadas, ya que estas se renderizan en un renderizador independiente, como una pestaña oculta en segundo plano que reemplaza la pestaña actual cuando se activa. Por lo tanto, las opciones habituales de DevTools no siempre se pueden utilizar para depurar problemas. El equipo de Chrome ha estado trabajando duro para mejorar el soporte de las DevTools para la depuración de reglas de especulación. En esta publicación, verás todas las diferentes formas de utilizar estas herramientas para entender las reglas de especulación de una página, por qué pueden no estar funcionando y cuándo los desarrolladores pueden utilizar las opciones más familiares de DevTools, y cuándo no. Hay muchos términos con "pre-" que pueden ser fácilmente confundidos, así que vamos a empezar con una explicación de estos. Para más detalles, consulta este documento del panorama tecnológico de precarga. Las reglas de especulación se pueden utilizar para precargar el documento de la próxima navegación. Por ejemplo, al insertar el siguiente JSON en una página, next.html y next2.html serán precargados. Las reglas de especulación utilizadas para prefetches de navegación tienen algunas ventajas sobre la antigua sintaxis , como una API más expresiva y los resultados almacenados en la memoria caché en lugar de la caché de disco HTTP.]]></description>
-            <link>https://developer.chrome.com/en/blog/debugging-speculation-rules</link>
-            <guid isPermaLink="true">https://developer.chrome.com/en/blog/debugging-speculation-rules</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Tao of Go]]></title>
-            <description><![CDATA[El Tao de Go implica trabajar en armonía con el lenguaje y el problema en lugar de intentar forzarlos a adaptarse a nuestras necesidades. Es escribir código con amabilidad y compasión, pensando en los seres humanos que lo utilizarán y facilitándoles la vida a través de un diseño cuidadoso y detalles bien pensados. Además, implica ser generosos con aquellos que leerán nuestro código, creando nombres descriptivos, abstracciones profundas y brindando claridad y simplicidad en nuestras implementaciones.]]></description>
-            <link>https://bitfieldconsulting.com/golang/tao-of-go</link>
-            <guid isPermaLink="true">https://bitfieldconsulting.com/golang/tao-of-go</guid>
-        </item>
-        <item>
-            <title><![CDATA[Descifrando las Leyes de la Estimación Ágil]]></title>
-            <description><![CDATA[La estimación ágil es una disciplina llena de desafíos que desempeña un papel fundamental en el éxito de los proyectos. Es importante recordar la importancia de establecer plazos realistas y evitar caer en la tendencia de sobre estimar o subestimar, ya que esto puede llevar a retrasos y pérdida de calidad en el producto final.]]></description>
-            <link>https://www.javiergarzas.com/2023/07/descifrando-las-leyes-de-la-estimacion-agil.html</link>
-            <guid isPermaLink="true">https://www.javiergarzas.com/2023/07/descifrando-las-leyes-de-la-estimacion-agil.html</guid>
         </item>
     </channel>
 </rss>
