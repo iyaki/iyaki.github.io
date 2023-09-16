@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 15 Sep 2023 12:34:18 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 16 Sep 2023 01:14:13 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Company culture is the last 50 days]]></title>
+            <description><![CDATA[La cultura de una empresa es el reflejo de todo lo que ha sucedido en los últimos 50 días. Desde cómo tratan a las personas, a quiénes han contratado o despedido, cómo ayudan a los demás, hasta cómo se apoyan mutuamente y cómo se han relacionado con los clientes. Es un relato no ficticio que se va escribiendo por sí mismo.]]></description>
+            <link>https://world.hey.com/jason/company-culture-is-the-last-50-days-dab19416</link>
+            <guid isPermaLink="true">https://world.hey.com/jason/company-culture-is-the-last-50-days-dab19416</guid>
+        </item>
+        <item>
+            <title><![CDATA[A Technical Deep Dive on Event Driven Architectures]]></title>
+            <description><![CDATA[En este artículo, se explorarán los componentes de una arquitectura orientada a eventos, sus características clave, las tecnologías relevantes, los patrones de implementación y los posibles desafíos. El enfoque en las arquitecturas orientadas a eventos ha crecido considerablemente en las últimas dos décadas, especialmente con las cargas de trabajo intensivas en datos y la computación en la nube.]]></description>
+            <link>https://blog.quastor.org/p/tech-dive-event-driven-architectures-a55d</link>
+            <guid isPermaLink="true">https://blog.quastor.org/p/tech-dive-event-driven-architectures-a55d</guid>
+        </item>
+        <item>
+            <title><![CDATA[The Rules of Margin Collapse (CSS)]]></title>
+            <description><![CDATA[En CSS, los márgenes adyacentes pueden superponerse a veces. Esto se conoce como "margin collapse" y tiene fama de ser bastante retorcido.]]></description>
+            <link>https://www.joshwcomeau.com/css/rules-of-margin-collapse/</link>
+            <guid isPermaLink="true">https://www.joshwcomeau.com/css/rules-of-margin-collapse/</guid>
+        </item>
         <item>
             <title><![CDATA[A systematic approach to debugging]]></title>
             <description><![CDATA[Tener una reputación en el trabajo como un solucionador de problemas habilidoso es frecuente que las situaciones extrañas lleguen a mi escritorio después de que otros ingenieros habilidosos hayan pasado por ellas. Decir que mi trabajo consiste en solucionar problemas extraños no sería una exageración y estoy aquí para ello. Mi enfoque es sistemático y se centra en comprender primero y ante todo.]]></description>
@@ -118,25 +136,6 @@
             <description><![CDATA[En este blog post, analizaremos y explicaremos cada parte del meme "The SQL Iceberg", ya que queremos enfocarnos en el PostgreSQL y cómo se relaciona con esta imagen detallada. Aunque originalmente fue creado por los desarrolladores de CockroachDB, es interesante ver cómo se aplica a otros sistemas de gestión de bases de datos.]]></description>
             <link>https://www.avestura.dev/blog/explaining-the-postgres-meme</link>
             <guid isPermaLink="true">https://www.avestura.dev/blog/explaining-the-postgres-meme</guid>
-        </item>
-        <item>
-            <title><![CDATA[A Practical Guide to Executive Presence]]></title>
-            <description><![CDATA[Hablemos de un tema importante y algo controversial: lo que significa tener presencia ejecutiva y cómo puedes desarrollarla. La presencia ejecutiva se define como un conjunto de comportamientos que influirán en los demás para que te escuchen plenamente. Puedes tener siempre la razón y ser el trabajador más duro de la empresa, pero para ser efectivo, las personas deben juzgar tus ideas por sus propios méritos. Esto es especialmente importante cuando tienes un equipo grande o necesitas trabajar de manera interfuncional, ya que lograr las metas requiere que las personas escuchen tus perspectivas. La presencia ejecutiva se vuelve mucho más importante a medida que asciendes en una organización, y para los líderes senior es vital.
-]]></description>
-            <link>https://staysaasy.com/leadership/2023/05/27/executive-presence.html</link>
-            <guid isPermaLink="true">https://staysaasy.com/leadership/2023/05/27/executive-presence.html</guid>
-        </item>
-        <item>
-            <title><![CDATA[Don’t Create Chaos]]></title>
-            <description><![CDATA[Uno de los comportamientos más perjudiciales que he observado en un liderazgo ineficaz es la tendencia a agregar caos cuando alguien entra a una habitación. El caos puede presentarse de muchas formas: se llegó a una decisión sobre una importante pregunta de arquitectura hace semanas, pero de repente alguien insiste en volver a visitar los objetivos fundamentales del proyecto en el último momento. Un ejecutivo insiste en que su proyecto es el más importante y lo incluye en la hoja de ruta. O tal vez sales de una reunión productiva sin pasos concretos a seguir y vuelves al punto de partida en una semana. Nadie se emociona cuando este tipo entra a la habitación. Mi prueba de fuego para un liderazgo efectivo: cualquier habitación a la que ingreses debería tener más certeza y un plan más sólido para cuando la dejes. Los buenos líderes pueden entrar en una situación en la que las personas han perdido de vista sus objetivos y logran que todos se alineen en un camino claro hacia adelante. Eliminan detalles irrelevantes, destilan situaciones complejas a su esencia y hacen que la persona adecuada tome una decisión, incluso si no son ellos. Son capaces no solo de detener planes malos antes de que sea demasiado tarde, sino de hacer que vuelvan a avanzar en la dirección correcta. Por lo general, el comportamiento que causa caos es involuntario y proviene de un buen lugar. A menudo, las personas simplemente carecen de contexto o no han desarrollado un ritmo para asegurarse de que los proyectos y planes se mantengan organizados. En casos raros, puede surgir por razones menos dignas: alguien quiere imponerse a los demás desviando la conversación hacia un tema favorito o forzando un cambio de planes. He sido culpable de causar mi parte de caos innecesario y siempre me he arrepentido. Sin embargo, tuve la suerte de contar con varios compañeros de equipo que no dudaron en señalarme esto a lo largo de los años. Desde entonces, he construido una caja de herramientas de prácticas para mejorar.]]></description>
-            <link>https://staysaasy.com/management/2020/07/07/dont-create-chaos.html</link>
-            <guid isPermaLink="true">https://staysaasy.com/management/2020/07/07/dont-create-chaos.html</guid>
-        </item>
-        <item>
-            <title><![CDATA[On Achieving Goals]]></title>
-            <description><![CDATA[Lograr tus metas, en su forma más básica, puede ser un proceso muy simple. La receta es: personas, equipos y empresas alrededor del mundo fallan en esto todos los días, constantemente, desastrosamente, al no seguir esta simple ecuación. La principal razón por la que las metas fallan es simplemente la falta de uno de los elementos mencionados anteriormente, es decir, tener metas malas o malas revisiones. Metas malas son las siguientes: tu velocidad de sprint aumentó, completaste todos los tickets, lograste el 70% de tus OKRs en lugar del 62% - ¿a quién le importa? Sin otro contexto, estos son simplemente números que no tienen nada que ver con el valor comercial. Las metas valiosas tienen resultados obviamente valiosos. Cuantas más personas, equipos y empresas se centren en resultados de segundo orden, más se encamina tu empresa hacia una burocracia donde se valora más la narración que el impacto. Deberías tener una constante inquietud existencial que solo puede satisfacerse al confirmar que tus metas realmente importan. Revisar que tus metas importen es a menudo más rápido de lo que piensas, y es tiempo bien invertido. Otro problema principal en el establecimiento de metas es elegir metas que en realidad no son una prioridad.]]></description>
-            <link>https://staysaasy.com/management/2023/07/03/Achieving-Goals.html</link>
-            <guid isPermaLink="true">https://staysaasy.com/management/2023/07/03/Achieving-Goals.html</guid>
         </item>
     </channel>
 </rss>
