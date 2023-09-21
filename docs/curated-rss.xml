@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 20 Sep 2023 12:35:21 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 21 Sep 2023 01:15:28 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,25 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[This Page is Designed to Last: A Manifesto for Preserving Content on the Web]]></title>
+            <description><![CDATA[El final del año es una oportunidad para limpiar y reiniciar para el próximo semestre. Sin embargo, el acto nostálgico de ordenar mis marcadores antiguos me llevó a la desesperación, ya que muchos enlaces han desaparecido y se hace cada vez más difícil mantener contenido independiente en la web.]]></description>
+            <link>https://jeffhuang.com/designed_to_last/</link>
+            <guid isPermaLink="true">https://jeffhuang.com/designed_to_last/</guid>
+        </item>
+        <item>
+            <title><![CDATA[How to Build an Effective Dev Portfolio]]></title>
+            <description><![CDATA[Hola,
+Este libro de 70 páginas es una guía para crear un sitio de portafolio que destaque ante los posibles empleadores. Si estás buscando entrar en la industria, mi esperanza es que este libro te brinde una ventaja seria. Tu sitio de portafolio puede ser un arma secreta.]]></description>
+            <link>https://www.joshwcomeau.com/effective-portfolio/</link>
+            <guid isPermaLink="true">https://www.joshwcomeau.com/effective-portfolio/</guid>
+        </item>
+        <item>
+            <title><![CDATA[My Custom CSS Reset]]></title>
+            <description><![CDATA[En este artículo se menciona la importancia de utilizar CSS reset para mejorar la experiencia del usuario y la escritura de CSS. Además, se explica cómo el ancho de un elemento .box se determina por el ancho de su padre y se aplica al cuadro de contenido por defecto.]]></description>
+            <link>https://www.joshwcomeau.com/css/custom-css-reset/</link>
+            <guid isPermaLink="true">https://www.joshwcomeau.com/css/custom-css-reset/</guid>
+        </item>
         <item>
             <title><![CDATA[Company culture is the last 50 days]]></title>
             <description><![CDATA[La cultura de una empresa es el reflejo de todo lo que ha sucedido en los últimos 50 días. Desde cómo tratan a las personas, a quiénes han contratado o despedido, cómo ayudan a los demás, hasta cómo se apoyan mutuamente y cómo se han relacionado con los clientes. Es un relato no ficticio que se va escribiendo por sí mismo.]]></description>
@@ -118,24 +137,6 @@
             <description><![CDATA[En este artículo, se introduce un selector CSS de tres caracteres peculiar y llamativo, conocido como el "selector del búho lobotomizado". Aunque pueda parecer extraño e inútil, el autor demuestra cómo este selector puede reducir el exceso de código, acelerar el desarrollo y ayudar a automatizar el diseño de contenido arbitrario y dinámico.]]></description>
             <link>https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/</link>
             <guid isPermaLink="true">https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Atomic Design]]></title>
-            <description><![CDATA[Hola! Quisiera recomendar el libro "Atomic Design" que explora este tema en más detalle y está disponible en formato ebook. A medida que el diseño web evoluciona, estamos reconociendo la necesidad de desarrollar sistemas de diseño pensados, en lugar de simplemente crear colecciones de páginas web. Muchos han hablado sobre la creación de sistemas de diseño, enfocándose en establecer fundamentos como el color, la tipografía, las cuadrículas, la textura, entre otros. Aunque esto es importante, personalmente me interesa más saber cómo están compuestos nuestros interfaces y cómo podemos construir sistemas de diseño de manera más metódica. De esta forma, podemos descomponer los interfaces completos en bloques de construcción fundamentales y trabajar a partir de ahí. Esto es lo básico de la metodología del diseño atómico. El diseño atómico tiene cinco niveles distintos.]]></description>
-            <link>https://bradfrost.com/blog/post/atomic-web-design/</link>
-            <guid isPermaLink="true">https://bradfrost.com/blog/post/atomic-web-design/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Graham's Guide To Doing Things]]></title>
-            <description><![CDATA[En este artículo se presentan una serie de consejos y estrategias para poder concentrarse en las tareas más importantes. Se sugiere utilizar estas herramientas de manera selectiva, adaptándolas a cada situación, y utilizarlas de forma responsable para evitar el agotamiento.]]></description>
-            <link>https://grahamhelton.com/blog/doingthings/</link>
-            <guid isPermaLink="true">https://grahamhelton.com/blog/doingthings/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Explaining The Postgres Meme]]></title>
-            <description><![CDATA[En este blog post, analizaremos y explicaremos cada parte del meme "The SQL Iceberg", ya que queremos enfocarnos en el PostgreSQL y cómo se relaciona con esta imagen detallada. Aunque originalmente fue creado por los desarrolladores de CockroachDB, es interesante ver cómo se aplica a otros sistemas de gestión de bases de datos.]]></description>
-            <link>https://www.avestura.dev/blog/explaining-the-postgres-meme</link>
-            <guid isPermaLink="true">https://www.avestura.dev/blog/explaining-the-postgres-meme</guid>
         </item>
     </channel>
 </rss>
