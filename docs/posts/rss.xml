@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/blog.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 27 Aug 2023 14:09:44 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 11 Oct 2023 23:43:08 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/posts/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,15 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[El desafío del lenguaje ubicuo en español]]></title>
+            <description><![CDATA[
+						¿El inglés como lenguaje universal? No dentro de mis dominios.
+					]]></description>
+            <link>https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol.html</link>
+            <guid isPermaLink="true">https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol.html</guid>
+            <pubDate>Wed, 11 Oct 2023 23:18:46 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Los atributos id en HTML como parte de la API pública de las páginas web]]></title>
             <description><![CDATA[
