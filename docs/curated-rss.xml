@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 13 Oct 2023 01:18:55 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 13 Oct 2023 12:35:41 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Is Reteaming Something for You?]]></title>
+            <description><![CDATA[El artículo ofrece una visión objetiva y equilibrada de un tema complejo, presentando argumentos sólidos respaldados por evidencia confiable. Es un recurso valioso para aquellos interesados en profundizar en el tema y formarse una opinión informada.]]></description>
+            <link>https://unfix.com/blog/is-reteaming-something-for-you</link>
+            <guid isPermaLink="true">https://unfix.com/blog/is-reteaming-something-for-you</guid>
+        </item>
+        <item>
+            <title><![CDATA[The Internals of Deno]]></title>
+            <description><![CDATA[Este artículo proporciona una visión interesante y perspicaz sobre el tema en cuestión. Los datos y opiniones presentados ayudan a ampliar el entendimiento del lector y a generar una reflexión profunda.]]></description>
+            <link>https://choubey.gitbook.io/internals-of-deno/</link>
+            <guid isPermaLink="true">https://choubey.gitbook.io/internals-of-deno/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Don’t Bring Me Problems, Bring Me Solutions]]></title>
+            <description><![CDATA["Don't bring me problems, bring me solutions" es un mensaje común que uno imagina a un CEO estereotípico diciéndole a su equipo. Aunque esta frase literal no es particularmente común en la vida real, está arraigada en algunas verdades profundas sobre la comunicación con los ejecutivos. En este artículo, analizaremos esta frase como una forma de analizar cómo comunicarse eficazmente hacia arriba, ya sea hacia un gerente senior, jefe de función o CEO.]]></description>
+            <link>https://staysaasy.com/leadership/2023/09/24/dont-bring-me-problems-bring-me-solutions.html</link>
+            <guid isPermaLink="true">https://staysaasy.com/leadership/2023/09/24/dont-bring-me-problems-bring-me-solutions.html</guid>
+        </item>
         <item>
             <title><![CDATA[How-to Evaluate a Product Roadmap, for Engineers]]></title>
             <description><![CDATA[En este artículo se aborda la importancia de contar con un mapa de productos claro y estratégico, que conecte las iniciativas diarias con la visión y misión de la empresa. Se destaca la necesidad de que los líderes de producto sean capaces de explicar cómo se llega al estado o resultado deseado, y de contar con una estrategia bien definida para el producto.]]></description>
@@ -119,24 +137,6 @@ Este libro de 70 páginas es una guía para crear un sitio de portafolio que des
             <description><![CDATA[Desarrollar una nueva característica, solucionar un bug o iniciar un nuevo proyecto se parece a algo así: la solución inicial es exploratoria, con una hipótesis de cómo se comporta el sistema y el objetivo de encontrar el camino más rápido hacia una solución. Después de la primera iteración, entiendo qué refactorizaciones se necesitan para que el cambio encaje en el código actual y en iteraciones posteriores, mi cambio puede ser más preciso y, en la mayoría de los casos, necesito cambiar menos código de lo que originalmente pensaba, haciendo el cambio más pequeño y fácil de entender.]]></description>
             <link>https://blog.fredrb.com/2023/09/08/same-problem-multiple-times/</link>
             <guid isPermaLink="true">https://blog.fredrb.com/2023/09/08/same-problem-multiple-times/</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Source of Readability]]></title>
-            <description><![CDATA[La legibilidad a menudo se trata como algo subjetivo. Cuando alguien dice que el código es más legible, lo que realmente quieren decir es que pueden leerlo más fácilmente. Sin embargo, hay un criterio muy objetivo: tenemos un conjunto de trabajo limitado. Para crecer y mantener programas de manera eficiente, el código que se lee junto debe escribirse junto.]]></description>
-            <link>https://loup-vaillant.fr/articles/source-of-readability</link>
-            <guid isPermaLink="true">https://loup-vaillant.fr/articles/source-of-readability</guid>
-        </item>
-        <item>
-            <title><![CDATA[Plantillas, y técnicas para la ESTRATEGIA en GESTIÓN ÁGIL de PRODUCTOS]]></title>
-            <description><![CDATA[En este artículo se presentan tres plantillas y técnicas potentes que se aplican en la etapa estratégica del Agile Product Management: el círculo dorado de S. Sinek, la técnica del Product Vision Board de R. Pichler y el Business Model Canvas de A. Osterwalder. Estas herramientas permiten definir y comunicar de manera clara y concisa la visión de un producto o negocio. Que la Agilidad os acompañe.]]></description>
-            <link>https://kill-the-newsletter.com/alternates/0iyr2hy38oei8t79.html</link>
-            <guid isPermaLink="true">https://kill-the-newsletter.com/alternates/0iyr2hy38oei8t79.html</guid>
-        </item>
-        <item>
-            <title><![CDATA[Software Architecture Design for Busy Developers]]></title>
-            <description><![CDATA[En este artículo, se discuten algunos de los principios fundamentales del diseño de software que generalmente son aplicados por los diseñadores de manera invisible. La arquitectura de software representa el resultado de una secuencia de decisiones de diseño que ocurren a medida que aumenta la complejidad del sistema de software. Para evitar la acumulación de deuda técnica, es importante abordar la erosión del software a través de elecciones de arquitectura que describan claramente las restricciones sobre cómo los componentes pueden intercambiar información. Estas restricciones se definen mediante límites claros de los componentes, ocultando los datos internos y funcionalidades a otros componentes de la arquitectura. Además, las interacciones entre componentes deben ocurrir en áreas de intercambio de datos restringidas a través de límites de componentes, conocidas como interfaces. Estas interfaces indican las restricciones claras sobre qué información de datos se permite entrar y salir de los componentes correspondientes. Por ejemplo, en una arquitectura de capas, cada componente está restringido a utilizar únicamente la información proporcionada por el componente inmediatamente inferior. Cualquier componente de código fuente que no cumpla con esta restricción representa una violación de los límites de la arquitectura, que debe corregirse lo antes posible.]]></description>
-            <link>https://massimo-nazaria.github.io/software-architecture-design.html</link>
-            <guid isPermaLink="true">https://massimo-nazaria.github.io/software-architecture-design.html</guid>
         </item>
     </channel>
 </rss>
