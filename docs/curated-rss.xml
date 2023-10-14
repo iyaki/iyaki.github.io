@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 14 Oct 2023 01:14:57 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 14 Oct 2023 12:32:23 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[DINÁMICA “Árbol Solución Oportunidad” + “Valores Esperados”]]></title>
+            <description><![CDATA[El Árbol de Soluciones de Oportunidades brinda una forma clara y eficiente de visualizar posibles caminos y enfoques para abordar oportunidades y lograr los resultados deseados. Su combinación con la tipología de cartas llamada Value Agile Blackjack amplifica su efectividad al tipificar diferentes valores que pueden contribuir al éxito.]]></description>
+            <link>https://iyaki.notion.site/DIN-MICA-rbol-Soluci-n-Oportunidad-Valores-Esperados-2f5818d7c9b5435e819db22aabe8d097</link>
+            <guid isPermaLink="true">https://iyaki.notion.site/DIN-MICA-rbol-Soluci-n-Oportunidad-Valores-Esperados-2f5818d7c9b5435e819db22aabe8d097</guid>
+        </item>
+        <item>
+            <title><![CDATA[How I stay motivated as a solo-creator | ᕕ( ᐛ )ᕗ]]></title>
+            <description><![CDATA[Trabajar solo tiene sus dificultades. Por un lado, mi ingreso está en cierta medida ligado a mi productividad, y mi productividad se correlaciona con mi estado mental. Además, no puedo contar con colegas en la trinchera. Y finalmente está la capacidad de no hacer nada, lo cual puede resultar confuso y peligroso si no se gestiona adecuadamente. Una de las ventajas de tener un empleo es que al despertar, ya sabes lo que harás. Vas a trabajar. La elección ha sido tomada. La estructura de ese trabajo y el propósito subyacente lo establecen otros y solo tienes que hacer que suceda. Sí, hay una gran variedad de ocupaciones, pero en general, un empleado tiene que ir a trabajar, recibir instrucciones y ser productivo. Sin embargo, cuando trabajas solo, no hay una tarea específica que debas hacer. No hay una ruta preestablecida que seguir. Si decido no trabajar hoy, nadie lo notará. Pero si continúo haciéndolo durante demasiados días, las cosas comenzarán a desmoronarse. Lentamente al principio, luego rápidamente, hasta que todo lo que he construido se derrumbe a mi alrededor. A continuación, se enumeran algunas formas en las que intento mantenerme motivado como creador solitario: Este es el punto más importante para mí, y tal vez el más difícil de cumplir. Cuando estoy en las primeras etapas del desarrollo de un producto, la pregunta principal en mi mente es: "Si este proyecto tiene éxito, ¿quiero pasar los próximos años trabajando en él?" Si la respuesta es sí, genial. Sigo adelante. Si la respuesta es no... probablemente no tenga éxito de todos modos. Personas más inteligentes que yo han escrito extensamente sobre cómo encontrar un trabajo interesante, por lo que no profundizaré demasiado en ese tema. Sin embargo, puedo recomendar 80,000 Hours para aquellos interesados en el tema de encontrar un trabajo significativo y estimulante. Como no tengo un jefe que garantice que dedique las horas necesarias, debo elegir hacer el trabajo. Esto es sorprendentemente difícil a veces, especialmente cuando tengo que ocuparme de cosas menos interesantes (declaraciones de impuestos/informes de errores/solicitudes de reembolso). Y así, mi día tiene una estructura bastante simple pero dinámica.]]></description>
+            <link>https://herman.bearblog.dev/how-i-stay-motivated-as-a-solo-creator</link>
+            <guid isPermaLink="true">https://herman.bearblog.dev/how-i-stay-motivated-as-a-solo-creator</guid>
+        </item>
+        <item>
+            <title><![CDATA[Database Performance at Scale]]></title>
+            <description><![CDATA[El artículo proporciona información detallada y precisa sobre los efectos del cambio climático en los ecosistemas marinos, destacando la importancia de tomar medidas urgentes para proteger y preservar estos ecosistemas vitales.]]></description>
+            <link>https://link.springer.com/content/pdf/10.1007/978-1-4842-9711-7.pdf</link>
+            <guid isPermaLink="true">https://link.springer.com/content/pdf/10.1007/978-1-4842-9711-7.pdf</guid>
+        </item>
         <item>
             <title><![CDATA[The Software Architecture Chronicles]]></title>
             <description><![CDATA[Este artículo es el primero de una serie de artículos sobre Arquitectura de Software. En ellos, se habla de lo que he aprendido sobre Arquitectura de Software, cómo la pienso y cómo utilizo ese conocimiento. Llamo a esta serie de artículos "Las Crónicas de la Arquitectura de Software", no porque me considere un gran escritor, sino porque encuentro el nombre bastante cursi de una manera divertida.]]></description>
@@ -119,24 +137,6 @@ Este libro de 70 páginas es una guía para crear un sitio de portafolio que des
             <description><![CDATA[En primer lugar, tenía planeado llamar a este artículo "Dominando el arte de las estimaciones: Una guía definitiva para desarrolladores", pero después, ¿quién soy yo para decirte cómo estimar proyectos? Solo puedo darte algunos consejos y describir algunas cosas que me han funcionado bien a lo largo de los años. Así que eso es exactamente lo que haré, darte algunas reglas generales para facilitarte la vida. ¡Ah, las estimaciones de software, la pesadilla de muchos desarrolladores y la plaga de los gestores de proyectos en todas partes! Una batalla constante de "dime cuánto tiempo te llevará" y "dame una descripción clara de la tarea primero". Estoy aquí para traer un poco de realidad a las complejidades del desarrollo real. He tenido mi parte de estimaciones en ambos lados de la moneda. Lo he visto todo. Y estoy aquí para darte las crudas verdades sobre las estimaciones de software, así que prepárate. Y para los desarrolladores junior ahí fuera, presten mucha atención: esto marcará la diferencia entre una carrera exitosa y una vida llena de plazos incumplidos y compañeros de trabajo frustrados.]]></description>
             <link>https://vadimkravcenko.com/shorts/project-estimates</link>
             <guid isPermaLink="true">https://vadimkravcenko.com/shorts/project-estimates</guid>
-        </item>
-        <item>
-            <title><![CDATA[A11Y Style Guide]]></title>
-            <description><![CDATA[Esta aplicación es una guía de estilo o biblioteca de patrones en vivo, generada a partir de estilos documentados en KSS...con un enfoque en accesibilidad. No importa tu nivel de desarrollo o experiencia en accesibilidad, hay formas de ayudar a contribuir a la guía de estilo a11y.]]></description>
-            <link>https://a11y-style-guide.com/style-guide/</link>
-            <guid isPermaLink="true">https://a11y-style-guide.com/style-guide/</guid>
-        </item>
-        <item>
-            <title><![CDATA[ADG - Accessibility Developer Guide]]></title>
-            <description><![CDATA[Si deseas aprender más sobre cómo diseñar e implementar sitios web totalmente accesibles, has llegado al lugar correcto. Todos nuestros contenidos se basan estrictamente en las Pautas de Accesibilidad al Contenido Web (WCAG 2.1) del W3C. Nuestro objetivo es brindarte las mejores prácticas más simples y efectivas sobre cómo diseñar, implementar y probar sitios web teniendo en cuenta la accesibilidad.]]></description>
-            <link>https://www.accessibility-developer-guide.com/</link>
-            <guid isPermaLink="true">https://www.accessibility-developer-guide.com/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Designing for Performance - Weighing Aesthetics and Speed]]></title>
-            <description><![CDATA[Como diseñador web, te enfrentas a decisiones difíciles a la hora de equilibrar estética y rendimiento. El contenido, diseño, imágenes e interactividad son esenciales para captar la atención de tu audiencia, y cada uno de estos elementos tiene un gran impacto en el tiempo de carga de la página y la experiencia del usuario final. En este libro práctico, Lara Callender Hogan te ayuda a enfocar tus proyectos teniendo en cuenta la velocidad de carga, mostrándote cómo probar y medir qué decisiones de diseño son más críticas. Lara está donando todas las ganancias del libro a diversas organizaciones benéficas que se centran en apoyar a personas marginadas en el ámbito tecnológico, como Girl Develop It, Women Who Code, Black Girls Code, #YesWeCode, Latinas in STEM, Hack the Hood y proyectos en DonorsChoose como "Growing Girls with Gadgets" y "Girls Can Code, Too!". Así que si te gusta el libro, por favor considera comprarlo.]]></description>
-            <link>https://designingforperformance.com/</link>
-            <guid isPermaLink="true">https://designingforperformance.com/</guid>
         </item>
     </channel>
 </rss>
