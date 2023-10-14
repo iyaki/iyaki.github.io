@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 13 Oct 2023 12:35:41 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 14 Oct 2023 01:14:57 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[The Software Architecture Chronicles]]></title>
+            <description><![CDATA[Este artículo es el primero de una serie de artículos sobre Arquitectura de Software. En ellos, se habla de lo que he aprendido sobre Arquitectura de Software, cómo la pienso y cómo utilizo ese conocimiento. Llamo a esta serie de artículos "Las Crónicas de la Arquitectura de Software", no porque me considere un gran escritor, sino porque encuentro el nombre bastante cursi de una manera divertida.]]></description>
+            <link>https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/</link>
+            <guid isPermaLink="true">https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/</guid>
+        </item>
+        <item>
+            <title><![CDATA[github/how-engineering-communicates - Tips for leaders]]></title>
+            <description><![CDATA[Para fomentar prácticas asincrónicas más fuertes en su equipo, lo más importante que puede hacer es ser intencional en la creación de un ambiente de seguridad psicológica. Esté abierto a recibir retroalimentación, admita sus errores y muestre vulnerabilidad. Al cultivar un ambiente inclusivo en el cual los miembros de su equipo se sientan seguros para correr riesgos, compartir ideas, expresar preocupaciones y brindar retroalimentación, sin temor a represalias, los empoderará para que trabajen de manera más independiente según el horario que les funcione mejor, sin tener que esperar su aprobación. Además, ser abiertos y poder discutir los temas difíciles entre nosotros significa que siempre estaremos creciendo y mejorando.]]></description>
+            <link>https://github.com/github/how-engineering-communicates/blob/main/tips-for-leaders.md</link>
+            <guid isPermaLink="true">https://github.com/github/how-engineering-communicates/blob/main/tips-for-leaders.md</guid>
+        </item>
+        <item>
+            <title><![CDATA[Database Migrations]]></title>
+            <description><![CDATA[Mi conclusión es que las migraciones de bases de datos son un problema molesto y complejo para los ingenieros de software. Aunque existen frameworks y herramientas que facilitan el proceso, aún hay muchos factores a considerar y posibilidades de errores que pueden generar ansiedad y problemas de consistencia de datos. Además, la necesidad de realizar migraciones sin tiempo de inactividad agrega aún más complejidad a esta tarea.]]></description>
+            <link>https://vadimkravcenko.com/shorts/database-migrations/</link>
+            <guid isPermaLink="true">https://vadimkravcenko.com/shorts/database-migrations/</guid>
+        </item>
         <item>
             <title><![CDATA[Is Reteaming Something for You?]]></title>
             <description><![CDATA[El artículo ofrece una visión objetiva y equilibrada de un tema complejo, presentando argumentos sólidos respaldados por evidencia confiable. Es un recurso valioso para aquellos interesados en profundizar en el tema y formarse una opinión informada.]]></description>
@@ -119,24 +137,6 @@ Este libro de 70 páginas es una guía para crear un sitio de portafolio que des
             <description><![CDATA[Como diseñador web, te enfrentas a decisiones difíciles a la hora de equilibrar estética y rendimiento. El contenido, diseño, imágenes e interactividad son esenciales para captar la atención de tu audiencia, y cada uno de estos elementos tiene un gran impacto en el tiempo de carga de la página y la experiencia del usuario final. En este libro práctico, Lara Callender Hogan te ayuda a enfocar tus proyectos teniendo en cuenta la velocidad de carga, mostrándote cómo probar y medir qué decisiones de diseño son más críticas. Lara está donando todas las ganancias del libro a diversas organizaciones benéficas que se centran en apoyar a personas marginadas en el ámbito tecnológico, como Girl Develop It, Women Who Code, Black Girls Code, #YesWeCode, Latinas in STEM, Hack the Hood y proyectos en DonorsChoose como "Growing Girls with Gadgets" y "Girls Can Code, Too!". Así que si te gusta el libro, por favor considera comprarlo.]]></description>
             <link>https://designingforperformance.com/</link>
             <guid isPermaLink="true">https://designingforperformance.com/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Creating A Living Style Guide: A Case Study]]></title>
-            <description><![CDATA[FamilySearch es un sitio de genealogía mundial construido y mantenido por equipos dedicados a diferentes secciones del sitio. Después de darse cuenta de que el sitio ya no estaba unificado debido a los estilos únicos creados por cada equipo, decidieron crear una guía de estilo para solucionar el problema y limpiar el código de CSS.]]></description>
-            <link>https://www.smashingmagazine.com/2016/05/creating-a-living-style-guide-case-study/</link>
-            <guid isPermaLink="true">https://www.smashingmagazine.com/2016/05/creating-a-living-style-guide-case-study/</guid>
-        </item>
-        <item>
-            <title><![CDATA[A Complete Course of the Raku programming language]]></title>
-            <description><![CDATA[El cambio climático es una preocupación global que requiere una acción inmediata y coordinada de todos los países para reducir las emisiones de gases de efecto invernadero y preservar nuestro planeta para las futuras generaciones. Es fundamental que se implementen medidas concretas y se promueva la concienciación sobre este tema tan importante.]]></description>
-            <link>https://course.raku.org/</link>
-            <guid isPermaLink="true">https://course.raku.org/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Solving the same problem multiple times]]></title>
-            <description><![CDATA[Desarrollar una nueva característica, solucionar un bug o iniciar un nuevo proyecto se parece a algo así: la solución inicial es exploratoria, con una hipótesis de cómo se comporta el sistema y el objetivo de encontrar el camino más rápido hacia una solución. Después de la primera iteración, entiendo qué refactorizaciones se necesitan para que el cambio encaje en el código actual y en iteraciones posteriores, mi cambio puede ser más preciso y, en la mayoría de los casos, necesito cambiar menos código de lo que originalmente pensaba, haciendo el cambio más pequeño y fácil de entender.]]></description>
-            <link>https://blog.fredrb.com/2023/09/08/same-problem-multiple-times/</link>
-            <guid isPermaLink="true">https://blog.fredrb.com/2023/09/08/same-problem-multiple-times/</guid>
         </item>
     </channel>
 </rss>
