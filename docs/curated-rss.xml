@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 17 Oct 2023 01:17:24 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 17 Oct 2023 12:36:36 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Burning money on paid ads for a dev tool – what we've learned]]></title>
+            <description><![CDATA[Desde que comenzamos PostHog en 2020, hemos aprendido mucho sobre lo que funciona y lo que no funciona cuando se trata de marketing para ingenieros. Los anuncios pagados son una área un poco aterradora porque es muy fácil desperdiciar mucho dinero en cosas que no funcionan. Y la mayoría de las veces no funcionan. Este artículo comparte consejos específicos y prácticos para startups en etapas iniciales que desarrollan herramientas para desarrolladores en particular. Supongo que ya has decidido que correr anuncios pagados es algo que tiene sentido para tu empresa.]]></description>
+            <link>https://posthog.com/blog/dev-marketing-paid-ads</link>
+            <guid isPermaLink="true">https://posthog.com/blog/dev-marketing-paid-ads</guid>
+        </item>
+        <item>
+            <title><![CDATA[Organizing multiple Git identities]]></title>
+            <description><![CDATA[Aquí tienes un consejo rápido sobre cómo gestionar múltiples identidades en Git (por ejemplo, personal, trabajo, cliente1, cliente2). Organizo mis repositorios en tres niveles. Mis proyectos personales están en el directorio ~/sources. Todos mis proyectos de trabajo están en ~/work. Eso es el primer nivel. El segundo nivel es el cliente, por ejemplo, ~/work/client1. Naturalmente, el tercer nivel es el repositorio del proyecto: ~/work/client1/foo-api.]]></description>
+            <link>https://garrit.xyz/posts/2023-10-13-organizing-multiple-git-identities</link>
+            <guid isPermaLink="true">https://garrit.xyz/posts/2023-10-13-organizing-multiple-git-identities</guid>
+        </item>
+        <item>
+            <title><![CDATA[Single-use Tests]]></title>
+            <description><![CDATA[En este proyecto se ha realizado un refactorizado que ha cambiado la forma en la que se agregan los middleware a las rutas, pasando de utilizar el constructor del controlador a utilizar el archivo de rutas. Aunque algunos middleware duplicados en los controladores no han sido eliminados, esto no representa un problema ya que Laravel elimina automáticamente los middleware duplicados para ser ejecutados solo una vez.]]></description>
+            <link>https://timacdonald.me/single-use-tests/</link>
+            <guid isPermaLink="true">https://timacdonald.me/single-use-tests/</guid>
+        </item>
         <item>
             <title><![CDATA[How to be a better mentor: 6 guaranteed ways to build trust quickly]]></title>
             <description><![CDATA[Una de las cosas que tal vez no sepas sobre mí es que en 2021 me uní a la plataforma Plato como mentora. Desde entonces, he realizado más de 300 sesiones con personas de todo el mundo. ¡Este año, Plato está trayendo de vuelta la conferencia presencial Plato Elevate - "La conferencia de liderazgo en ingeniería sin tonterías", y fui invitado como ponente! Mi tema este año es... ¡redoble de tambores... "Cómo construir una organización tecnológica anti-burnout". Si quieres asistir, Plato amablemente me ha dado un código del 40% de descuento para que cualquier lector de Caring Techie lo use: ELEVATE2023-IRINA. Reserva tus entradas utilizando el código aquí. Ahora volvamos al artículo.]]></description>
@@ -119,24 +137,6 @@ Este libro de 70 páginas es una guía para crear un sitio de portafolio que des
             <description><![CDATA[En este artículo se menciona la importancia de utilizar CSS reset para mejorar la experiencia del usuario y la escritura de CSS. Además, se explica cómo el ancho de un elemento .box se determina por el ancho de su padre y se aplica al cuadro de contenido por defecto.]]></description>
             <link>https://www.joshwcomeau.com/css/custom-css-reset/</link>
             <guid isPermaLink="true">https://www.joshwcomeau.com/css/custom-css-reset/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Company culture is the last 50 days]]></title>
-            <description><![CDATA[La cultura de una empresa es el reflejo de todo lo que ha sucedido en los últimos 50 días. Desde cómo tratan a las personas, a quiénes han contratado o despedido, cómo ayudan a los demás, hasta cómo se apoyan mutuamente y cómo se han relacionado con los clientes. Es un relato no ficticio que se va escribiendo por sí mismo.]]></description>
-            <link>https://world.hey.com/jason/company-culture-is-the-last-50-days-dab19416</link>
-            <guid isPermaLink="true">https://world.hey.com/jason/company-culture-is-the-last-50-days-dab19416</guid>
-        </item>
-        <item>
-            <title><![CDATA[A Technical Deep Dive on Event Driven Architectures]]></title>
-            <description><![CDATA[En este artículo, se explorarán los componentes de una arquitectura orientada a eventos, sus características clave, las tecnologías relevantes, los patrones de implementación y los posibles desafíos. El enfoque en las arquitecturas orientadas a eventos ha crecido considerablemente en las últimas dos décadas, especialmente con las cargas de trabajo intensivas en datos y la computación en la nube.]]></description>
-            <link>https://blog.quastor.org/p/tech-dive-event-driven-architectures-a55d</link>
-            <guid isPermaLink="true">https://blog.quastor.org/p/tech-dive-event-driven-architectures-a55d</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Rules of Margin Collapse (CSS)]]></title>
-            <description><![CDATA[En CSS, los márgenes adyacentes pueden superponerse a veces. Esto se conoce como "margin collapse" y tiene fama de ser bastante retorcido.]]></description>
-            <link>https://www.joshwcomeau.com/css/rules-of-margin-collapse/</link>
-            <guid isPermaLink="true">https://www.joshwcomeau.com/css/rules-of-margin-collapse/</guid>
         </item>
     </channel>
 </rss>
