@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 23 Oct 2023 12:36:02 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Oct 2023 01:16:37 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,18 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Developing leadership styles]]></title>
+            <description><![CDATA[Durante mucho tiempo, encontré frustrante trabajar con un CEO que fuera un micromanager. A menudo aparecían de la nada, criticaban mi trabajo sin comprender las compensaciones y luego desaparecían cuando quería explicar mis decisiones. En esos momentos, deseaba que confiaran en mí basándose en mi historial de hacer un buen trabajo.]]></description>
+            <link>https://lethain.com/developing-leadership-styles/</link>
+            <guid isPermaLink="true">https://lethain.com/developing-leadership-styles/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Networking as an introvert CTO]]></title>
+            <description><![CDATA[En eventos de networking, no necesitas ser el más ruidoso o impresionar a todos. Lo importante es ser genuino, interesarte en los demás y establecer conexiones significativas. No se trata de cantidad de personas con las que hablas, sino de la calidad de las relaciones que construyes.]]></description>
+            <link>https://vadimkravcenko.com/shorts/networking-introvert-cto/</link>
+            <guid isPermaLink="true">https://vadimkravcenko.com/shorts/networking-introvert-cto/</guid>
+        </item>
         <item>
             <title><![CDATA[Query Objects instead of Repositories]]></title>
             <description><![CDATA[El patrón repository se utiliza frecuentemente para encapsular lógica de consulta simple y a veces bastante compleja. Sin embargo, también se ha transformado en el manejo de la persistencia y se utiliza a menudo como otra capa de abstracción de su capa de mapeo de datos. Este artículo de blog te muestra cómo reducir y simplificar tus repositorios o posiblemente eliminarlos por completo mediante el uso de objetos de consulta.]]></description>
@@ -124,18 +136,6 @@
             <description><![CDATA[Este artículo proporciona una visión interesante y perspicaz sobre el tema en cuestión. Los datos y opiniones presentados ayudan a ampliar el entendimiento del lector y a generar una reflexión profunda.]]></description>
             <link>https://choubey.gitbook.io/internals-of-deno/</link>
             <guid isPermaLink="true">https://choubey.gitbook.io/internals-of-deno/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Don’t Bring Me Problems, Bring Me Solutions]]></title>
-            <description><![CDATA["Don't bring me problems, bring me solutions" es un mensaje común que uno imagina a un CEO estereotípico diciéndole a su equipo. Aunque esta frase literal no es particularmente común en la vida real, está arraigada en algunas verdades profundas sobre la comunicación con los ejecutivos. En este artículo, analizaremos esta frase como una forma de analizar cómo comunicarse eficazmente hacia arriba, ya sea hacia un gerente senior, jefe de función o CEO.]]></description>
-            <link>https://staysaasy.com/leadership/2023/09/24/dont-bring-me-problems-bring-me-solutions.html</link>
-            <guid isPermaLink="true">https://staysaasy.com/leadership/2023/09/24/dont-bring-me-problems-bring-me-solutions.html</guid>
-        </item>
-        <item>
-            <title><![CDATA[How-to Evaluate a Product Roadmap, for Engineers]]></title>
-            <description><![CDATA[En este artículo se aborda la importancia de contar con un mapa de productos claro y estratégico, que conecte las iniciativas diarias con la visión y misión de la empresa. Se destaca la necesidad de que los líderes de producto sean capaces de explicar cómo se llega al estado o resultado deseado, y de contar con una estrategia bien definida para el producto.]]></description>
-            <link>https://stephen.fm/how-to-evaluate-a-product-roadmap</link>
-            <guid isPermaLink="true">https://stephen.fm/how-to-evaluate-a-product-roadmap</guid>
         </item>
     </channel>
 </rss>
