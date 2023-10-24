@@ -100,3 +100,12 @@ propios feeds RSS para que puedan seguir.
 
 Si quieren hacerme algún comentario, hablar, o sienten la irrefrenable necesidad
 de discutir acaloradamente mis opiniones, siéntanse libres de escribirme a: me@iyaki.ar.
+
+## Actualizaciones
+
+Desde Octubre del 2023 Feedly requiere de una suscripción de pago para poder
+utilizar su API REST por lo que no continuaré utilizando ni dando mantenimiento
+a [Feedly Denoiser](https://github.com/iyaki/feedly-denoiser).
+
+*[API]: Application Programming Interface
+*[REST]: Representational State Transfer
