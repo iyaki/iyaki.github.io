@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 25 Oct 2023 12:34:32 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 26 Oct 2023 01:15:21 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,18 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Base64 Encoding, Explained]]></title>
+            <description><![CDATA[Cuando programas, es fácil sobrevivir con una comprensión superficial de muchas cosas. Puedes engañarte fácilmente pensando que estás programando cuando estás copiando y pegando códigos de Stack Overflow o de algún artículo al azar que encontraste. La codificación Base64 era uno de esos temas que me molestaba durante algún tiempo. A menudo me encontraba con imágenes o URL codificadas en Base64, y no tenía idea de lo que significaba o por qué se usaba. Finalmente, decidí investigar para llenar esa brecha de conocimiento, y pasé el domingo leyendo el RFC 4648 (mi idea de un fin de semana divertido). Lo siguiente es todo lo que aprendí sobre la codificación Base64.]]></description>
+            <link>https://www.akshaykhot.com/base64-encoding-explained</link>
+            <guid isPermaLink="true">https://www.akshaykhot.com/base64-encoding-explained</guid>
+        </item>
+        <item>
+            <title><![CDATA[The Startup CTO's Handbook: A book covering leadership, management and technical topics for leaders of software engineering teams]]></title>
+            <description><![CDATA[Aviso: Hasta octubre de 2023, todavía estoy trabajando en convertir el contenido del libro a markdown. Todo está aquí (a través de un conversor automático de .doc a .md), pero la formato está desordenado y necesita mucho trabajo de limpieza, disculpen el desorden en el ínterin. Bienvenidos: ¡Hola, gracias por visitar el Manual del CTO de Startups! Este repositorio tiene la versión más reciente del contenido del libro. Estás invitado y animado a contribuir con problemas o solicitudes de extracciones para añadir/adiciones/cambios/sugerencias/críticas a ser incluidas en futuras ediciones. Si lo haces, no dudes en agregar tu nombre a los AGRADECIMIENTOS. El Autor: Linkedin / Sitio Web / Correo Electrónico. Licencia: Ver el archivo de LICENCIA, pero en resumen, puedes hacer copias, cambios, redistribuir, etc., siempre y cuando no estés revendiendo, mantengas mi nombre/atribución adjunto y mantengas las versiones futuras abiertas bajo una licencia similar/la misma.]]></description>
+            <link>https://github.com/ZachGoldberg/Startup-CTO-Handbook</link>
+            <guid isPermaLink="true">https://github.com/ZachGoldberg/Startup-CTO-Handbook</guid>
+        </item>
         <item>
             <title><![CDATA[Developing leadership styles]]></title>
             <description><![CDATA[Durante mucho tiempo, encontré frustrante trabajar con un CEO que fuera un micromanager. A menudo aparecían de la nada, criticaban mi trabajo sin comprender las compensaciones y luego desaparecían cuando quería explicar mis decisiones. En esos momentos, deseaba que confiaran en mí basándose en mi historial de hacer un buen trabajo.]]></description>
@@ -124,18 +136,6 @@
             <description><![CDATA[Mi conclusión es que las migraciones de bases de datos son un problema molesto y complejo para los ingenieros de software. Aunque existen frameworks y herramientas que facilitan el proceso, aún hay muchos factores a considerar y posibilidades de errores que pueden generar ansiedad y problemas de consistencia de datos. Además, la necesidad de realizar migraciones sin tiempo de inactividad agrega aún más complejidad a esta tarea.]]></description>
             <link>https://vadimkravcenko.com/shorts/database-migrations/</link>
             <guid isPermaLink="true">https://vadimkravcenko.com/shorts/database-migrations/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Is Reteaming Something for You?]]></title>
-            <description><![CDATA[El artículo ofrece una visión objetiva y equilibrada de un tema complejo, presentando argumentos sólidos respaldados por evidencia confiable. Es un recurso valioso para aquellos interesados en profundizar en el tema y formarse una opinión informada.]]></description>
-            <link>https://unfix.com/blog/is-reteaming-something-for-you</link>
-            <guid isPermaLink="true">https://unfix.com/blog/is-reteaming-something-for-you</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Internals of Deno]]></title>
-            <description><![CDATA[Este artículo proporciona una visión interesante y perspicaz sobre el tema en cuestión. Los datos y opiniones presentados ayudan a ampliar el entendimiento del lector y a generar una reflexión profunda.]]></description>
-            <link>https://choubey.gitbook.io/internals-of-deno/</link>
-            <guid isPermaLink="true">https://choubey.gitbook.io/internals-of-deno/</guid>
         </item>
     </channel>
 </rss>
