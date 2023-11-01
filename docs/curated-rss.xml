@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 31 Oct 2023 12:34:29 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 Nov 2023 01:21:33 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,12 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Una selección de Métricas para Agile Product Management]]></title>
+            <description><![CDATA[En Agile Product Management, las métricas juegan un papel fundamental para tomar decisiones basadas en datos. Existen nueve categorías de métricas que representan aspectos clave del aporte e impacto de nuestro producto. En el siguiente extracto del libro "gestionagildeproductos.com", encontrarás una selección de tres métricas por categoría, excepto en la categoría de "impacto", ya que estas métricas varían según el producto específico.]]></description>
+            <link>https://iyaki.notion.site/Una-selecci-n-de-M-tricas-para-Agile-Product-Management-3e85e6027f104612b82d3e300a88a703?pvs=4</link>
+            <guid isPermaLink="true">https://iyaki.notion.site/Una-selecci-n-de-M-tricas-para-Agile-Product-Management-3e85e6027f104612b82d3e300a88a703?pvs=4</guid>
+        </item>
         <item>
             <title><![CDATA[Base64 Encoding, Explained]]></title>
             <description><![CDATA[Cuando programas, es fácil sobrevivir con una comprensión superficial de muchas cosas. Puedes engañarte fácilmente pensando que estás programando cuando estás copiando y pegando códigos de Stack Overflow o de algún artículo al azar que encontraste. La codificación Base64 era uno de esos temas que me molestaba durante algún tiempo. A menudo me encontraba con imágenes o URL codificadas en Base64, y no tenía idea de lo que significaba o por qué se usaba. Finalmente, decidí investigar para llenar esa brecha de conocimiento, y pasé el domingo leyendo el RFC 4648 (mi idea de un fin de semana divertido). Lo siguiente es todo lo que aprendí sobre la codificación Base64.]]></description>
@@ -130,12 +136,6 @@
             <description><![CDATA[Para fomentar prácticas asincrónicas más fuertes en su equipo, lo más importante que puede hacer es ser intencional en la creación de un ambiente de seguridad psicológica. Esté abierto a recibir retroalimentación, admita sus errores y muestre vulnerabilidad. Al cultivar un ambiente inclusivo en el cual los miembros de su equipo se sientan seguros para correr riesgos, compartir ideas, expresar preocupaciones y brindar retroalimentación, sin temor a represalias, los empoderará para que trabajen de manera más independiente según el horario que les funcione mejor, sin tener que esperar su aprobación. Además, ser abiertos y poder discutir los temas difíciles entre nosotros significa que siempre estaremos creciendo y mejorando.]]></description>
             <link>https://github.com/github/how-engineering-communicates/blob/main/tips-for-leaders.md</link>
             <guid isPermaLink="true">https://github.com/github/how-engineering-communicates/blob/main/tips-for-leaders.md</guid>
-        </item>
-        <item>
-            <title><![CDATA[Database Migrations]]></title>
-            <description><![CDATA[Mi conclusión es que las migraciones de bases de datos son un problema molesto y complejo para los ingenieros de software. Aunque existen frameworks y herramientas que facilitan el proceso, aún hay muchos factores a considerar y posibilidades de errores que pueden generar ansiedad y problemas de consistencia de datos. Además, la necesidad de realizar migraciones sin tiempo de inactividad agrega aún más complejidad a esta tarea.]]></description>
-            <link>https://vadimkravcenko.com/shorts/database-migrations/</link>
-            <guid isPermaLink="true">https://vadimkravcenko.com/shorts/database-migrations/</guid>
         </item>
     </channel>
 </rss>
