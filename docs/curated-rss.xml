@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 06 Nov 2023 12:46:51 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 07 Nov 2023 01:19:15 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[How Bear does analytics with CSS]]></title>
+            <description><![CDATA[Bear Blog tiene algunas limitaciones de diseño en cuanto a velocidad, eficiencia y estabilidad. Aunque existen muchas plataformas de análisis de código abierto y centradas en la privacidad, decidí construir una propia para Bear. Una de las restricciones que impuse para Bear es no utilizar JavaScript del lado del cliente, lo cual aplica también al sistema de análisis. Aunque el JavaScript del lado del cliente puede ser ajustado para determinar la autenticidad del tráfico a una página y determinar parcialmente si se trata de tráfico de bots o no, lo cual es muy útil para el análisis, la principal desventaja es que la mayoría de los bloqueadores de anuncios también bloquean scripts de análisis. Y no solo los malos, como Google Analytics. Incluso Fathom y Plausible Analytics tienen dificultades para registrar la actividad en navegadores con bloqueadores de anuncios.]]></description>
+            <link>https://herman.bearblog.dev/how-bear-does-analytics-with-css</link>
+            <guid isPermaLink="true">https://herman.bearblog.dev/how-bear-does-analytics-with-css</guid>
+        </item>
+        <item>
+            <title><![CDATA[7 Types Of Management Styles For Effective Leadership]]></title>
+            <description><![CDATA[En los Estados Unidos, decirle a la gente qué hacer no funciona fuera de las organizaciones tradicionalmente jerárquicas. Es importante adoptar estilos de gestión que fomenten la participación activa de los miembros del equipo y permitan la toma de decisiones colectiva para lograr un mayor éxito y satisfacción de los empleados.]]></description>
+            <link>https://www.radicalcandor.com/blog/types-of-management-styles/</link>
+            <guid isPermaLink="true">https://www.radicalcandor.com/blog/types-of-management-styles/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Basic HTML skeleton file]]></title>
+            <description><![CDATA[Este artículo presenta evidencia sólida sobre el impacto de la contaminación del aire en la salud humana, destacando la necesidad de implementar medidas urgentes para reducir las emisiones y proteger el bienestar de las personas.]]></description>
+            <link>https://www.joshwcomeau.com/snippets/html/html-skeleton/</link>
+            <guid isPermaLink="true">https://www.joshwcomeau.com/snippets/html/html-skeleton/</guid>
+        </item>
         <item>
             <title><![CDATA[Una selección de Métricas para Agile Product Management]]></title>
             <description><![CDATA[En Agile Product Management, las métricas juegan un papel fundamental para tomar decisiones basadas en datos. Existen nueve categorías de métricas que representan aspectos clave del aporte e impacto de nuestro producto. En el siguiente extracto del libro "gestionagildeproductos.com", encontrarás una selección de tres métricas por categoría, excepto en la categoría de "impacto", ya que estas métricas varían según el producto específico.]]></description>
@@ -118,24 +136,6 @@
             <description><![CDATA[Trabajar solo tiene sus dificultades. Por un lado, mi ingreso está en cierta medida ligado a mi productividad, y mi productividad se correlaciona con mi estado mental. Además, no puedo contar con colegas en la trinchera. Y finalmente está la capacidad de no hacer nada, lo cual puede resultar confuso y peligroso si no se gestiona adecuadamente. Una de las ventajas de tener un empleo es que al despertar, ya sabes lo que harás. Vas a trabajar. La elección ha sido tomada. La estructura de ese trabajo y el propósito subyacente lo establecen otros y solo tienes que hacer que suceda. Sí, hay una gran variedad de ocupaciones, pero en general, un empleado tiene que ir a trabajar, recibir instrucciones y ser productivo. Sin embargo, cuando trabajas solo, no hay una tarea específica que debas hacer. No hay una ruta preestablecida que seguir. Si decido no trabajar hoy, nadie lo notará. Pero si continúo haciéndolo durante demasiados días, las cosas comenzarán a desmoronarse. Lentamente al principio, luego rápidamente, hasta que todo lo que he construido se derrumbe a mi alrededor. A continuación, se enumeran algunas formas en las que intento mantenerme motivado como creador solitario: Este es el punto más importante para mí, y tal vez el más difícil de cumplir. Cuando estoy en las primeras etapas del desarrollo de un producto, la pregunta principal en mi mente es: "Si este proyecto tiene éxito, ¿quiero pasar los próximos años trabajando en él?" Si la respuesta es sí, genial. Sigo adelante. Si la respuesta es no... probablemente no tenga éxito de todos modos. Personas más inteligentes que yo han escrito extensamente sobre cómo encontrar un trabajo interesante, por lo que no profundizaré demasiado en ese tema. Sin embargo, puedo recomendar 80,000 Hours para aquellos interesados en el tema de encontrar un trabajo significativo y estimulante. Como no tengo un jefe que garantice que dedique las horas necesarias, debo elegir hacer el trabajo. Esto es sorprendentemente difícil a veces, especialmente cuando tengo que ocuparme de cosas menos interesantes (declaraciones de impuestos/informes de errores/solicitudes de reembolso). Y así, mi día tiene una estructura bastante simple pero dinámica.]]></description>
             <link>https://herman.bearblog.dev/how-i-stay-motivated-as-a-solo-creator</link>
             <guid isPermaLink="true">https://herman.bearblog.dev/how-i-stay-motivated-as-a-solo-creator</guid>
-        </item>
-        <item>
-            <title><![CDATA[Database Performance at Scale]]></title>
-            <description><![CDATA[El artículo proporciona información detallada y precisa sobre los efectos del cambio climático en los ecosistemas marinos, destacando la importancia de tomar medidas urgentes para proteger y preservar estos ecosistemas vitales.]]></description>
-            <link>https://link.springer.com/content/pdf/10.1007/978-1-4842-9711-7.pdf</link>
-            <guid isPermaLink="true">https://link.springer.com/content/pdf/10.1007/978-1-4842-9711-7.pdf</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Software Architecture Chronicles]]></title>
-            <description><![CDATA[Este artículo es el primero de una serie de artículos sobre Arquitectura de Software. En ellos, se habla de lo que he aprendido sobre Arquitectura de Software, cómo la pienso y cómo utilizo ese conocimiento. Llamo a esta serie de artículos "Las Crónicas de la Arquitectura de Software", no porque me considere un gran escritor, sino porque encuentro el nombre bastante cursi de una manera divertida.]]></description>
-            <link>https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/</link>
-            <guid isPermaLink="true">https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/</guid>
-        </item>
-        <item>
-            <title><![CDATA[github/how-engineering-communicates - Tips for leaders]]></title>
-            <description><![CDATA[Para fomentar prácticas asincrónicas más fuertes en su equipo, lo más importante que puede hacer es ser intencional en la creación de un ambiente de seguridad psicológica. Esté abierto a recibir retroalimentación, admita sus errores y muestre vulnerabilidad. Al cultivar un ambiente inclusivo en el cual los miembros de su equipo se sientan seguros para correr riesgos, compartir ideas, expresar preocupaciones y brindar retroalimentación, sin temor a represalias, los empoderará para que trabajen de manera más independiente según el horario que les funcione mejor, sin tener que esperar su aprobación. Además, ser abiertos y poder discutir los temas difíciles entre nosotros significa que siempre estaremos creciendo y mejorando.]]></description>
-            <link>https://github.com/github/how-engineering-communicates/blob/main/tips-for-leaders.md</link>
-            <guid isPermaLink="true">https://github.com/github/how-engineering-communicates/blob/main/tips-for-leaders.md</guid>
         </item>
     </channel>
 </rss>
