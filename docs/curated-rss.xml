@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 07 Nov 2023 12:35:24 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 07 Nov 2023 13:07:24 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Getting started with View Transitions on multi-page apps]]></title>
+            <description><![CDATA[Leer mas]]></description>
+            <link>https://daverupert.com/2023/05/getting-started-view-transitions/</link>
+            <guid isPermaLink="true">https://daverupert.com/2023/05/getting-started-view-transitions/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Confusing git terminology]]></title>
+            <description><![CDATA[¡Hola! Estoy trabajando lentamente en explicar git. Uno de mis mayores problemas es que, después de casi 15 años de usar git, me he acostumbrado mucho a las idiosincrasias de git y es fácil para mí olvidar lo confuso que puede ser. Así que pregunté a la gente en Mastodon: recibí muchas RESPUESTAS GENIALES y trataré de resumirlas aquí. Aquí hay una lista de los términos.]]></description>
+            <link>https://jvns.ca/blog/2023/11/01/confusing-git-terminology</link>
+            <guid isPermaLink="true">https://jvns.ca/blog/2023/11/01/confusing-git-terminology</guid>
+        </item>
+        <item>
+            <title><![CDATA[Cómo sentirme cómodo en producción]]></title>
+            <description><![CDATA[En este artículo se explora la importancia de sentirse cómodo en producción y cómo esto requiere habilidades diferentes a las de escribir código. Se menciona la necesidad de contar con un mentor y de cambiar la forma de pensar para asegurarse de que los cambios en la función sean monitoreados positivamente.]]></description>
+            <link>https://sysarmy.com/blog/posts/sentirme-comodo-produccion/</link>
+            <guid isPermaLink="true">https://sysarmy.com/blog/posts/sentirme-comodo-produccion/</guid>
+        </item>
         <item>
             <title><![CDATA[How Bear does analytics with CSS]]></title>
             <description><![CDATA[Bear Blog tiene algunas limitaciones de diseño en cuanto a velocidad, eficiencia y estabilidad. Aunque existen muchas plataformas de análisis de código abierto y centradas en la privacidad, decidí construir una propia para Bear. Una de las restricciones que impuse para Bear es no utilizar JavaScript del lado del cliente, lo cual aplica también al sistema de análisis. Aunque el JavaScript del lado del cliente puede ser ajustado para determinar la autenticidad del tráfico a una página y determinar parcialmente si se trata de tráfico de bots o no, lo cual es muy útil para el análisis, la principal desventaja es que la mayoría de los bloqueadores de anuncios también bloquean scripts de análisis. Y no solo los malos, como Google Analytics. Incluso Fathom y Plausible Analytics tienen dificultades para registrar la actividad en navegadores con bloqueadores de anuncios.]]></description>
@@ -118,24 +136,6 @@
             <description><![CDATA[Una de las cosas que tal vez no sepas sobre mí es que en 2021 me uní a la plataforma Plato como mentora. Desde entonces, he realizado más de 300 sesiones con personas de todo el mundo. ¡Este año, Plato está trayendo de vuelta la conferencia presencial Plato Elevate - "La conferencia de liderazgo en ingeniería sin tonterías", y fui invitado como ponente! Mi tema este año es... ¡redoble de tambores... "Cómo construir una organización tecnológica anti-burnout". Si quieres asistir, Plato amablemente me ha dado un código del 40% de descuento para que cualquier lector de Caring Techie lo use: ELEVATE2023-IRINA. Reserva tus entradas utilizando el código aquí. Ahora volvamos al artículo.]]></description>
             <link>https://www.thecaringtechie.com/p/how-to-be-a-better-mentor-6-guaranteed</link>
             <guid isPermaLink="true">https://www.thecaringtechie.com/p/how-to-be-a-better-mentor-6-guaranteed</guid>
-        </item>
-        <item>
-            <title><![CDATA[11 years of SaaS product strategy]]></title>
-            <description><![CDATA[En el último año en Tanda, hemos pasado de ser una compañía de un solo producto a lanzar varios nuevos productos que funcionan muy bien juntos. Esto me ha llevado a reflexionar sobre las diferentes fases de estrategia de producto en la última década, desde no tener producto hasta convertirnos en líderes de mercado. Si te resulta interesante, es posible que también disfrutes de los 11 años de alojamiento de un SaaS.]]></description>
-            <link>https://ghiculescu.substack.com/p/11-years-of-saas-product-strategy</link>
-            <guid isPermaLink="true">https://ghiculescu.substack.com/p/11-years-of-saas-product-strategy</guid>
-        </item>
-        <item>
-            <title><![CDATA[DINÁMICA “Árbol Solución Oportunidad” + “Valores Esperados”]]></title>
-            <description><![CDATA[El Árbol de Soluciones de Oportunidades brinda una forma clara y eficiente de visualizar posibles caminos y enfoques para abordar oportunidades y lograr los resultados deseados. Su combinación con la tipología de cartas llamada Value Agile Blackjack amplifica su efectividad al tipificar diferentes valores que pueden contribuir al éxito.]]></description>
-            <link>https://iyaki.notion.site/DIN-MICA-rbol-Soluci-n-Oportunidad-Valores-Esperados-2f5818d7c9b5435e819db22aabe8d097</link>
-            <guid isPermaLink="true">https://iyaki.notion.site/DIN-MICA-rbol-Soluci-n-Oportunidad-Valores-Esperados-2f5818d7c9b5435e819db22aabe8d097</guid>
-        </item>
-        <item>
-            <title><![CDATA[How I stay motivated as a solo-creator | ᕕ( ᐛ )ᕗ]]></title>
-            <description><![CDATA[Trabajar solo tiene sus dificultades. Por un lado, mi ingreso está en cierta medida ligado a mi productividad, y mi productividad se correlaciona con mi estado mental. Además, no puedo contar con colegas en la trinchera. Y finalmente está la capacidad de no hacer nada, lo cual puede resultar confuso y peligroso si no se gestiona adecuadamente. Una de las ventajas de tener un empleo es que al despertar, ya sabes lo que harás. Vas a trabajar. La elección ha sido tomada. La estructura de ese trabajo y el propósito subyacente lo establecen otros y solo tienes que hacer que suceda. Sí, hay una gran variedad de ocupaciones, pero en general, un empleado tiene que ir a trabajar, recibir instrucciones y ser productivo. Sin embargo, cuando trabajas solo, no hay una tarea específica que debas hacer. No hay una ruta preestablecida que seguir. Si decido no trabajar hoy, nadie lo notará. Pero si continúo haciéndolo durante demasiados días, las cosas comenzarán a desmoronarse. Lentamente al principio, luego rápidamente, hasta que todo lo que he construido se derrumbe a mi alrededor. A continuación, se enumeran algunas formas en las que intento mantenerme motivado como creador solitario: Este es el punto más importante para mí, y tal vez el más difícil de cumplir. Cuando estoy en las primeras etapas del desarrollo de un producto, la pregunta principal en mi mente es: "Si este proyecto tiene éxito, ¿quiero pasar los próximos años trabajando en él?" Si la respuesta es sí, genial. Sigo adelante. Si la respuesta es no... probablemente no tenga éxito de todos modos. Personas más inteligentes que yo han escrito extensamente sobre cómo encontrar un trabajo interesante, por lo que no profundizaré demasiado en ese tema. Sin embargo, puedo recomendar 80,000 Hours para aquellos interesados en el tema de encontrar un trabajo significativo y estimulante. Como no tengo un jefe que garantice que dedique las horas necesarias, debo elegir hacer el trabajo. Esto es sorprendentemente difícil a veces, especialmente cuando tengo que ocuparme de cosas menos interesantes (declaraciones de impuestos/informes de errores/solicitudes de reembolso). Y así, mi día tiene una estructura bastante simple pero dinámica.]]></description>
-            <link>https://herman.bearblog.dev/how-i-stay-motivated-as-a-solo-creator</link>
-            <guid isPermaLink="true">https://herman.bearblog.dev/how-i-stay-motivated-as-a-solo-creator</guid>
         </item>
     </channel>
 </rss>
