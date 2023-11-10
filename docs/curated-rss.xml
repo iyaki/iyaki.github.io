@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 09 Nov 2023 12:34:20 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 10 Nov 2023 01:18:10 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,24 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Naming Variables In CSS]]></title>
+            <description><![CDATA[La elección de nombres es complicada, incluso en CSS. En este artículo se presentan diversas ideas relacionadas con la nomenclatura de las propiedades personalizadas de CSS, las cuales pueden ser de utilidad, aunque no se consideren la única forma correcta de nombrar las variables en CSS.]]></description>
+            <link>https://jwdallas.com/posts/namingcssvariables</link>
+            <guid isPermaLink="true">https://jwdallas.com/posts/namingcssvariables</guid>
+        </item>
+        <item>
+            <title><![CDATA[A Guide to Public Speaking for Software Engineers]]></title>
+            <description><![CDATA["El desarrollo de tus habilidades técnicas es adecuado, pero es necesario que mejores en tu comunicación", comentó tu jefe. Esta es una de las críticas más difíciles de escuchar para un ingeniero de software. ¿Por qué? Porque probablemente pensaste que como ingeniero de software solo necesitarías comunicarte a través de código. Pero no, enfocarse únicamente en el código puede limitar tu potencial de crecimiento y ascensos. Centrarse solo en las habilidades de programación hace que alcances un límite. La comunicación desbloquea más potencial. Inspirado en la publicación de Caleb Mellas. Aunque hay muchos aspectos de la comunicación, este post se centra en la habilidad de hablar en público. Específicamente, cubriremos: Estos conceptos se pueden aplicar a: [lista de áreas o situaciones en las que se puede aplicar la comunicación efectiva].]]></description>
+            <link>https://careercutler.substack.com/p/a-guide-to-public-speaking-for-software</link>
+            <guid isPermaLink="true">https://careercutler.substack.com/p/a-guide-to-public-speaking-for-software</guid>
+        </item>
+        <item>
+            <title><![CDATA[Fielding Dissertation: CHAPTER 5: Representational State Transfer (REST)]]></title>
+            <description><![CDATA[Este capítulo introduce y desarrolla el estilo arquitectónico de Transferencia de Estado Representacional (REST) para sistemas distribuidos de hipermedia, describiendo los principios de ingeniería de software que guían a REST y las restricciones de interacción elegidas para retener esos principios, contrastándolos con las restricciones de otros estilos arquitectónicos. REST es un estilo híbrido derivado de varios estilos arquitectónicos basados ​​en redes descritos en el Capítulo 3 y combinados con restricciones adicionales que definen una interfaz de conector uniforme. El marco de arquitectura de software del Capítulo 1 se utiliza para definir los elementos arquitectónicos de REST y examinar ejemplos de procesos, conectores y vistas de datos de arquitecturas prototípicas.]]></description>
+            <link>https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm</link>
+            <guid isPermaLink="true">https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm</guid>
+        </item>
         <item>
             <title><![CDATA[View Transitions API & meta frameworks: a practical guide]]></title>
             <description><![CDATA[Las animaciones fluidas durante la navegación en una aplicación móvil llevan existiendo desde hace tiempo. Sin embargo, lograr el mismo efecto en la web ha sido todo un desafío, a menudo requiriendo enfoques complejos y únicos, hasta ahora. Entra en escena la API de Transiciones de Vista, una solución sencilla y directa basada en el navegador. En este artículo, explicaré qué es esta API y cómo funciona. Aprenderemos a crear transiciones suaves y simples entre estados y páginas. También exploraremos cómo la API de Transiciones de Vista se combina con meta frameworks como Astro y Nuxt. Prepárate para un paseo divertido y emocionante con las transiciones.]]></description>
@@ -118,24 +136,6 @@
             <description><![CDATA[Este artículo explora los argumentos a favor y en contra de una función API monolítica Lambda (conocida como Lambdalith) en comparación con funciones Lambda de un solo propósito por ruta de API. Desafía las "mejores prácticas" y argumenta que en muchos casos una función Lambda monolítica es mejor cuando se trata de una API. Sin embargo, es importante tener en cuenta que este debate solo es aplicable a la función Lambda que enfrenta a la API, para todo lo demás se deben utilizar funciones de un solo propósito. Cabe destacar que este es un tema controvertido y la opinión presentada se respalda en años de experiencia.]]></description>
             <link>https://rehanvdm.com/blog/should-you-use-a-lambda-monolith-lambdalith-for-the-api</link>
             <guid isPermaLink="true">https://rehanvdm.com/blog/should-you-use-a-lambda-monolith-lambdalith-for-the-api</guid>
-        </item>
-        <item>
-            <title><![CDATA[Burning money on paid ads for a dev tool – what we've learned]]></title>
-            <description><![CDATA[Desde que comenzamos PostHog en 2020, hemos aprendido mucho sobre lo que funciona y lo que no funciona cuando se trata de marketing para ingenieros. Los anuncios pagados son una área un poco aterradora porque es muy fácil desperdiciar mucho dinero en cosas que no funcionan. Y la mayoría de las veces no funcionan. Este artículo comparte consejos específicos y prácticos para startups en etapas iniciales que desarrollan herramientas para desarrolladores en particular. Supongo que ya has decidido que correr anuncios pagados es algo que tiene sentido para tu empresa.]]></description>
-            <link>https://posthog.com/blog/dev-marketing-paid-ads</link>
-            <guid isPermaLink="true">https://posthog.com/blog/dev-marketing-paid-ads</guid>
-        </item>
-        <item>
-            <title><![CDATA[Organizing multiple Git identities]]></title>
-            <description><![CDATA[Aquí tienes un consejo rápido sobre cómo gestionar múltiples identidades en Git (por ejemplo, personal, trabajo, cliente1, cliente2). Organizo mis repositorios en tres niveles. Mis proyectos personales están en el directorio ~/sources. Todos mis proyectos de trabajo están en ~/work. Eso es el primer nivel. El segundo nivel es el cliente, por ejemplo, ~/work/client1. Naturalmente, el tercer nivel es el repositorio del proyecto: ~/work/client1/foo-api.]]></description>
-            <link>https://garrit.xyz/posts/2023-10-13-organizing-multiple-git-identities</link>
-            <guid isPermaLink="true">https://garrit.xyz/posts/2023-10-13-organizing-multiple-git-identities</guid>
-        </item>
-        <item>
-            <title><![CDATA[Single-use Tests]]></title>
-            <description><![CDATA[En este proyecto se ha realizado un refactorizado que ha cambiado la forma en la que se agregan los middleware a las rutas, pasando de utilizar el constructor del controlador a utilizar el archivo de rutas. Aunque algunos middleware duplicados en los controladores no han sido eliminados, esto no representa un problema ya que Laravel elimina automáticamente los middleware duplicados para ser ejecutados solo una vez.]]></description>
-            <link>https://timacdonald.me/single-use-tests/</link>
-            <guid isPermaLink="true">https://timacdonald.me/single-use-tests/</guid>
         </item>
     </channel>
 </rss>
