@@ -1,0 +1,10 @@
+:root {
+	font-size: 16px;
+	--main-content-width: 35rem;
+}
+
+@media screen and (min-width: 1919px) {
+	:root {
+		font-size: 21px;
+	}
+}

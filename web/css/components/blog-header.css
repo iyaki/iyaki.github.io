@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+.blog-header {
+	background: #656561;
+	display: flex;
+	align-items: flex-end;
+	flex-flow: row wrap;
+}
+
+.blog-header a {
+	color: snow;
+	text-decoration: none;
+}
+
+.blog-header a:hover {
+	color: white;
+	text-shadow: white 1px 1px 0.5em;
+}
+
+.blog-header a:visited {
+	color: snow;
+}
+
+.blog-header__title {
+	padding : 2em;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 2em;
+	align-items: center;
+}
+
+.blog-header h1 {
+	margin: 0;
+	font-size: 5em;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.blog-header img {
+	width: 7em;
+}

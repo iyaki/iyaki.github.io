@@ -1,0 +1,11 @@
+{
+  "name": "iyaki.ar",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "author": "iyaki",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

@@ -1,0 +1,59 @@
+@layer reset, defaults, pages, components, utils, overrides;
+
+@import "utils/base.css" layer(defaults);
+@import "components/contacts.css" layer(components);
+@import "utils/dark.css" layer(utils);
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap') layer(pages);
+
+@layer components {
+	.titles {
+		background: linear-gradient(180deg, black 70%, var(--background-color) 100%) !important;
+		height: 105lvh;
+		width: 100vw;
+		font-family: Arial, Helvetica, sans-serif;
+		padding: 0 2em;
+		text-align: center;
+	}
+
+	.titles__container {
+		height: 88svh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.titles__h1 {
+		font-size: 4em;
+	}
+
+	.titles__h1--hola {
+		font-family: "Rock Salt";
+		font-size: 3.5rem;
+	}
+
+	.titles__h2 {
+		font-size: 2em;
+	}
+
+	.titles__h3 {
+		font-size: 1.5em;
+	}
+
+	.chevron-arrow-down {
+		display: inline-block;
+		border-right: 0.25rem solid white;
+		border-bottom: 0.25rem solid white;
+		width: 2rem;
+		height: 2rem;
+		border-radius: 0.25rem;
+		transform: rotate(-315deg);
+	}
+
+	.projects__project {
+		border: 0.15em solid var(--box-border-color);
+		border-radius: 0.2em;
+		padding: 0 3em !important;
+		margin: 0.75rem 0;
+	}
+}
