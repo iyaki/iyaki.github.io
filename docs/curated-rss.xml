@@ -9,7 +9,7 @@
             <link>https://iyaki.ar/curated.html</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 10 Nov 2023 01:18:10 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 10 Nov 2023 12:34:25 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated-rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <webMaster><![CDATA[Ivan Yaki]]></webMaster>
@@ -17,6 +17,12 @@
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Command Line Interface Guidelines]]></title>
+            <description><![CDATA[Un excelente recurso de código abierto que combina principios tradicionales de UNIX con las actualizaciones necesarias para escribir mejores programas de línea de comandos en la era moderna.]]></description>
+            <link>https://clig.dev</link>
+            <guid isPermaLink="true">https://clig.dev</guid>
+        </item>
         <item>
             <title><![CDATA[Naming Variables In CSS]]></title>
             <description><![CDATA[La elección de nombres es complicada, incluso en CSS. En este artículo se presentan diversas ideas relacionadas con la nomenclatura de las propiedades personalizadas de CSS, las cuales pueden ser de utilidad, aunque no se consideren la única forma correcta de nombrar las variables en CSS.]]></description>
@@ -130,12 +136,6 @@
             <description><![CDATA[htmx es una excelente biblioteca que mejora la capacidad de respuesta de los sitios web renderizados en el servidor. Sin embargo, el manejo de errores sigue siendo un tema en el que se debe trabajar. Cuando se utiliza htmx, los errores de conexión o de solicitud se registran en la consola, pero el usuario se queda con un botón que no tiene ningún efecto visible. Como diseñador de UI, debes decidir cuándo y cómo mostrar los errores a tus usuarios.]]></description>
             <link>https://xvello.net/blog/htmx-error-handling/</link>
             <guid isPermaLink="true">https://xvello.net/blog/htmx-error-handling/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Should you use a Lambda Monolith, aka Lambdalith, for your API?]]></title>
-            <description><![CDATA[Este artículo explora los argumentos a favor y en contra de una función API monolítica Lambda (conocida como Lambdalith) en comparación con funciones Lambda de un solo propósito por ruta de API. Desafía las "mejores prácticas" y argumenta que en muchos casos una función Lambda monolítica es mejor cuando se trata de una API. Sin embargo, es importante tener en cuenta que este debate solo es aplicable a la función Lambda que enfrenta a la API, para todo lo demás se deben utilizar funciones de un solo propósito. Cabe destacar que este es un tema controvertido y la opinión presentada se respalda en años de experiencia.]]></description>
-            <link>https://rehanvdm.com/blog/should-you-use-a-lambda-monolith-lambdalith-for-the-api</link>
-            <guid isPermaLink="true">https://rehanvdm.com/blog/should-you-use-a-lambda-monolith-lambdalith-for-the-api</guid>
         </item>
     </channel>
 </rss>
