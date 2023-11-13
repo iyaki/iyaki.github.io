@@ -3,7 +3,7 @@ import { parse } from 'node-html-parser'
 
 // TODO: Agregar propagandas
 
-const HTML_PATH = '../docs/curated.html'
+const HTML_PATH = '../docs/curated/index.html'
 
 const rootElement = parse(
 	fs.readFileSync(HTML_PATH, { encoding: 'utf8' }),

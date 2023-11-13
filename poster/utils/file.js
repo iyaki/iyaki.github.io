@@ -37,7 +37,7 @@ export function getDateForFilename() {
 }
 
 export function cleanPostFilename(filename) {
-	let index = 0
+	let index
 	for (index = 0; index < filename.length; ++index) {
 		if (
 			isNaN(filename[index]) &&

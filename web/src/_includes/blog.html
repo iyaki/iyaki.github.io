@@ -1,0 +1,25 @@
+---
+layout: default.html
+---
+<header class="header-panel blog-header">
+	<div class="blog-header__title">
+		<a href="/" title="Inicio ">
+			<img src="/images-shared/logo.svg" alt="Allons-y!" title="Allons-y!" async>
+		</a>
+		<a href="/blog">
+			<h1>mi<br>Blog</h1>
+		</a>
+	</div>
+</header>
+<main class="main-panel main-content">
+	{{ content }}
+</main>
+<aside class="third-panel">
+	{% if tags contains "post" %}
+	{% else %}
+	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
+	<a href="/posts/rss.xml" target="_blank" class="rss">
+		<iconify-icon icon="mdi:rss-box" width="40" height="40" class="rss__icon">RSS Feed</iconify-icon>
+	</a>
+	{% endif %}
+</aside>
