@@ -1,6 +1,7 @@
 ---
 layout: blog.html
-title: mi Blog | iyaki
+date: "2023-10-11T20:42:48-03:00"
+title: mi Blog
 description: Blog personal de Ivan Yaki donde comparto pensamientos y cosas que encuentro interesantes
 keywords: Ivan Yakimovicz, Ivan Yaki, iyaki, blog
 stylesheet: /css/blog.css
@@ -8,107 +9,16 @@ stylesheet: /css/blog.css
 <header>
 <h1>Últimas publicaciones</h1>
 </header>
-<article>
-	<header>
-		<a href="/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol">
-			<h1>El desafío del lenguaje ubicuo en español</h1>
-		</a>
-		<time datetime="2023-10-11">11/10/2023</time>
-	</header>
-	<p>
-		¿El inglés como lenguaje universal? No dentro de mis dominios.
-	</p>
-</article>
-<article>
-	<header>
-		<a href="/posts/20230827_api_paginas_web"">
-			<h1>Los atributos id en HTML como parte de la API pública de las páginas web</h1>
-		</a>
-		<time datetime="2023-08-27">27/08/2023</time>
-	</header>
-	<p>
-		Desde que el ser humano adquirió el raciocinio suficiente para entender el paso del tiempo siempre le han agradado las cosas predecibles. Los programadores seguimos siendo seres humanos, y nos siguen gustando las cosas predecibles. Sobre todo las API predecibles.
-		<br>
-		¿Y que hay mas predecible que una API que no cambia?
-	</p>
-	<p>Sin embargo, es fácil olvidar lo poco que se requiere para que una API cambie.</p>
-</article>
-<article>
-	<header>
-		<a href="/posts/20230716_bibliotecas_y_librerias">
-			<h1>Bibliotecas y librerías</h1>
-		</a>
-		<time datetime="2023-07-16">16/07/2023</time>
-	</header>
-	<p>
-		Una breve anécdota de un suceso irrelevante que ocurrió hace años y que, por razones que no termino de comprender, podría, o no, haber marcado mi uso del lenguaje.
-	</p>
-</article>
-<article>
-	<header>
-		<a href="/posts/20230621_compartiendo_conocimiento">
-			<h1>Compartiendo conocimiento</h1>
-		</a>
-		<time datetime="2023-06-21">21/06/2023</time>
-	</header>
-	<p>
-		Finalmente, el último de mis artículos sobre como reúno, ordeno, depuro y comparto conocimiento.
-	</p>
-</article>
-<article>
-	<header>
-		<a href="/posts/20230614_habemus_rss">
-			<h1>Habemus RSS</h1>
-		</a>
-		<time datetime="2023-06-14">14/06/2023</time>
-	</header>
-	<p>
-		Noticia de último momento. Interrumpimos la programación habitual para comunicar un mensaje a la comunidad: Es el fin de la hipocresía, finalmente este blog y el recopilador de contenidos tienen feed RSS.
-	</p>
-</article>
-<article>
-	<header>
-		<a href="/posts/20230610_depurando_conocimiento">
-			<h1>Depurando conocimiento</h1>
-		</a>
-		<time datetime="2023-06-10">10/06/2023</time>
-	</header>
-	<p>
-		Tercer post sobre cómo trabajo el conocimiento, esta vez con un plot twist a la mitad de la historia que ni yo me esperaba.
-	</p>
-</article>
-<article>
-	<header>
-		<a href="/posts/20230607_ordenando_conocimiento">
-			<h1>Ordenando conocimiento</h1>
-		</a>
-		<time datetime="2023-06-02">06/06/2023</time>
-	</header>
-	<p>
-		Segundo artículo de la serie en la que explico como gestiono, actualmente, el conocimiento en mi vida.
-	</p>
-</article>
-<article>
-	<header>
-		<a href="/posts/20230514_reuniendo_conocimiento">
-			<h1>Reuniendo conocimiento</h1>
-		</a>
-		<time datetime="2023-05-14">14/05/2023</time>
-	</header>
-	<p>
-		Hace poco comencé a compartir cosas interesantes que encuentro por internet en mi <a href="/curated">Recopilador de contenidos curados</a>.
-		<br>
-		En esta serie de artículos repaso el proceso que sigo para reunir, ordenar, depurar y compartir información.
-	</p>
-</article>
-<article>
-	<header>
-		<a href="/posts/20230422_here_we_go">
-			<h1>Here we go</h1>
-		</a>
-		<time datetime="2023-04-22">22/04/2023</time>
-	</header>
-	<p>
-		Comienza un nuevo día y con él un nuevo blog random donde alguien en internet expresará sus pensamientos.
-	</p>
-</article>
+{% for post in collections.post reversed %}
+	<article>
+		<header>
+			<a href="{{ post.page.url }}">
+				<h1>{{ post.data.title }}</h1>
+			</a>
+			<time datetime="{{ post.data.created | date: "%Y-%m-%d" }}">{{ post.data.created | date: "%d/%m/%Y" }}</time>
+		</header>
+		<p>
+			¿El inglés como lenguaje universal? No dentro de mis dominios.
+		</p>
+	</article>
+{% endfor %}
