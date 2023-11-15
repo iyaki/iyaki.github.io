@@ -3,7 +3,7 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
-    "publish": "npm run build && cp -r ./_site/* ../docs/"
+    "publish": "rm -rf ./_site/ && npm run build && cp -r ./_site/* ../docs/"
   },
   "author": "iyaki",
   "devDependencies": {
