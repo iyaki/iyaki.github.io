@@ -22,7 +22,7 @@ permalink: /posts/feed.xml
 					{% if post.data.epigraph %}
 						<blockquote>{{ post.data.epigraph }}</blockquote>
 					{% endif %}
-					post.content
+					{{ post.content }}
 				{% endcapture %}
 				<description>{{ description | escape }}</description>
 				<pubDate>{{ post.page.date | date: "%a, %d %b %Y %H:%M:%S GMT%z" }}</pubDate>
