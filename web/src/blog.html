@@ -18,7 +18,7 @@ stylesheet: /css/blog.css
 			<time datetime="{{ post.data.created | date: "%Y-%m-%d" }}">{{ post.data.created | date: "%d/%m/%Y" }}</time>
 		</header>
 		<p>
-			¿El inglés como lenguaje universal? No dentro de mis dominios.
+			{{ post.data.epigraph | default: post.data.description }}
 		</p>
 	</article>
 {% endfor %}

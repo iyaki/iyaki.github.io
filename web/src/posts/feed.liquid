@@ -1,0 +1,34 @@
+---
+permalink: /posts/feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+	<channel>
+		<title>mi Blog | iyaki</title>
+		<description>Blog personal donde comparto mis experiencias y pensamientos</description>
+		<link>{{ site.url }}/blog/</link>
+		<language>es</language>
+		<atom:link href="{{ site.url }}/posts/feed.xml" rel="self" type="application/rss+xml" />
+		<image>
+			<url>{{ site.url }}/images/logo.svg</url>
+			<title>mi Blog | iyaki</title>
+			<link>{{ site.url }}/blog.html</link>
+		</image>
+		{% assign posts = collections.post | reverse | slice: 0, 10 %}
+		{% for post in posts %}
+			<item>
+				<title>{{ post.data.title }}</title>
+				{% capture description %}
+					{% if post.data.epigraph %}
+						<blockquote>{{ post.data.epigraph }}</blockquote>
+					{% endif %}
+					post.content
+				{% endcapture %}
+				<description>{{ description | escape }}</description>
+				<pubDate>{{ post.page.date | date: "%a, %d %b %Y %H:%M:%S GMT%z" }}</pubDate>
+				<link>{{ post.page.url }}</link>
+				<guid isPermaLink="true">{{ post.page.url }}</guid>
+			</item>
+		{% endfor %}
+	</channel>
+</rss>
