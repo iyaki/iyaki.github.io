@@ -2,111 +2,81 @@
 <html lang="es-AR">
 
 <head>
-	<title>mi Blog | iyaki</title>
+	
+	<title>Índice de artículos | iyaki</title>
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="description" content="Pensamientos y cosas que encuentro interesantes">
+	<meta name="description" content="Índice de artículos de iyaki">
 	<meta name="author" content="iyaki">
-	<meta name="keywords" content="Ivan Yaki, blog, tecnología, management">
+	<meta name="keywords" content="Ivan Yakimovicz, Ivan Yaki, iyaki">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-	<link rel="manifest" href="/images/favicon/site.webmanifest">
-	<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="/images/favicon/favicon.ico">
-	<meta name="apple-mobile-web-app-title" content="iyaki">
-	<meta name="application-name" content="iyaki">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
-	<meta name="color-scheme" content="light dark">
+	<link rel="icon" type="image/svg+xml" href="images/logo.svg">
+	
 	<!-- PostHog -->
 	<script>
 		!function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
 		posthog.init('phc_GiyRIzw94jjfJLj7Wm2KozJ1LnuFPY81cc3HymGjqd4', { api_host: 'https://app.posthog.com' })
 	</script>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QF72BWC0NV"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-QF72BWC0NV');
-	</script>
 </head>
 
 <body>
 	<header>
-		<h1>Artículos de mi Blog</h1>
-	</header>
-	<main>
-		<article>
-			<h1>Índice:</h1>
-			<ul>
-				<template id="article-template">
-					<li>
-						[{{dateAdded}}]
-						<a href="{{articleHtmlLink}}" title="{{articleTitle}}">{{articleTitle}}</a>
-						(<a href="{{articleMdLink}}" title="Artículo en formato markdown">Markdown Version</a>)
-					</li>
-				</template>
-					<li>
-						[11/10/2023]
-						<a href="/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol.html" title="El desafío del lenguaje ubicuo en español">El desafío del lenguaje ubicuo en español</a>
-						(<a href="/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol.md" title="Artículo en formato markdown">Markdown Version</a>)
-					</li>
-				
-					<li>
-						[27/08/2023]
-						<a href="/posts/20230827_api_paginas_web.html" title="Los atributos id en HTML como parte de la API pública de las páginas web">Los atributos id en HTML como parte de la API pública de las páginas web</a>
-						(<a href="/posts/20230827_api_paginas_web.md" title="Artículo en formato markdown">Markdown Version</a>)
-					</li>
-				
-					<li>
-						[16/07/2023]
-						<a href="/posts/20230716_bibliotecas_y_librerias.html" title="Bibliotecas y librerías">Bibliotecas y librerías</a>
-						(<a href="/posts/20230716_bibliotecas_y_librerias.md" title="Artículo en formato markdown">Markdown Version</a>)
-					</li>
-				
-					<li>
-						[21/06/2023]
-						<a href="/posts/20230621_compartiendo_conocimiento.html" title="Compartiendo conocimiento">Compartiendo conocimiento</a>
-						(<a href="/posts/20230621_compartiendo_conocimiento.md" title="Artículo en formato markdown">Markdown Version</a>)
-					</li>
-				
-					<li>
-						[14/06/2023]
-						<a href="/posts/20230614_habemus_rss.html" title="Habemus RSS">Habemus RSS</a>
-						(<a href="/posts/20230614_habemus_rss.md" title="Artículo en formato markdown">Markdown Version</a>)
-					</li>
-
-					<li>
-						[10/06/2023]
-						<a href="/posts/20230610_depurando_conocimiento.html" title="Depurando conocimiento">Depurando conocimiento</a>
-						(<a href="/posts/20230610_depurando_conocimiento.md" title="Artículo en formato markdown">Markdown Version</a>)
-					</li>
-
-					<li>
-						[06/06/2023]
-						<a href="/posts/20230607_ordenando_conocimiento.html" title="Ordenando conocimiento">Ordenando conocimiento</a>
-						(<a href="/posts/20230607_ordenando_conocimiento.md" title="Artículo en formato markdown">Markdown Version</a>)
-					</li>
-
+	<h1>Índice de artículos</h1>
+</header>
+<main>
+	<article>
+		<p><a href="https://github.com/iyaki/iyaki.github.io/tree/main/drafts"
+				title="Artículos en formato markdown" target="_blank">Versión markdown de los artículos disponible en Github</a></p>
+		<ul>
+			
 				<li>
-					[14/05/2023]
-					<a href="/posts/20230514_reuniendo_conocimiento.html">Reuniendo conocimiento</a>
-					(<a href="/posts/20230514_reuniendo_conocimiento.md">Markdown version</a>)
+					[11/10/2023]
+					<a href="/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/">El desafío del lenguaje ubicuo en español</a>
 				</li>
+			
+				<li>
+					[27/08/2023]
+					<a href="/posts/20230827_api_paginas_web/">Los atributos id en HTML como parte de la API pública de las páginas web</a>
+				</li>
+			
+				<li>
+					[16/07/2023]
+					<a href="/posts/20230716_bibliotecas_y_librerias/">Bibliotecas y librerías</a>
+				</li>
+			
+				<li>
+					[21/06/2023]
+					<a href="/posts/20230621_compartiendo_conocimiento/">Compartiendo conocimiento</a>
+				</li>
+			
+				<li>
+					[14/06/2023]
+					<a href="/posts/20230614_habemus_rss/">Habemus RSS</a>
+				</li>
+			
+				<li>
+					[10/06/2023]
+					<a href="/posts/20230610_depurando_conocimiento/">Depurando conocimiento</a>
+				</li>
+			
+				<li>
+					[07/06/2023]
+					<a href="/posts/20230607_ordenando_conocimiento/">Ordenando conocimiento</a>
+				</li>
+			
 				<li>
 					[22/04/2023]
-					<a href="/posts/20230422_here_we_go.html">Here we go</a>
-					(<a href="/posts/20230422_here_we_go.md">Markdown version</a>)
+					<a href="/posts/20230514_reuniendo_conocimiento/">Reuniendo conocimiento</a>
 				</li>
-			</ul>
-		</article>
-	</main>
-</body>
+			
+				<li>
+					[22/04/2023]
+					<a href="/posts/20230422_here_we_go/">Here we go</a>
+				</li>
+			
+		</ul>
+	</article>
+</main>
 
+</body>
 </html>
