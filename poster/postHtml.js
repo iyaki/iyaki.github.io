@@ -10,6 +10,7 @@ const POSTS_PATH = '../web/src/posts/'
 export function publish(articleMd) {
 	const content = POST_TEMPLATE
 		.replaceAll('{{title}}', articleMd.title)
+		.replaceAll('{{created}}', (new Date()).toISOString())
 		.replaceAll('{{article}}', htmlFrom(articleMd.content))
 
 	const filename = getFilenameWithoutExtension(articleMd.path)

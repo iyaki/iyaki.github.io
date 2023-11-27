@@ -16,7 +16,7 @@ function main() {
 
 	/* const articleHtml =  */publishHtml(articleMd)
 
-	publishMd(articleMd)
+	// publishMd(articleMd)
 	// if (articleHtml.newPublication) {
 	// 	updatePostsIndexWithArticle(articleHtml)
 

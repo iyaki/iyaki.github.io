@@ -5,8 +5,12 @@ export function read(path) {
 	return fs.readFileSync(path, { encoding: 'utf8' })
 }
 
-export function write(path, content) {
-	fs.writeFileSync(path, content);
+export function write(_path, content) {
+	const dir = path.dirname(_path)
+	if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir)
+}
+	fs.writeFileSync(_path, content);
 }
 
 export function removeUtf8Bom(string) {
