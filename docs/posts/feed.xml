@@ -14,6 +14,74 @@
 		
 		
 			<item>
+				<title>Migrando ando</title>
+				
+				<description>
+					
+						&lt;blockquote&gt;Puede que sea un poco apresurado, pero creo que me volví a enamorar.&lt;/blockquote&gt;
+					
+					&lt;article class=&#34;main-content&#34;&gt;
+	&lt;h1&gt;Migrando ando&lt;/h1&gt;
+&lt;p&gt;Hace varias semanas que quiero hacer algunos cambios en mi página web, quiero
+experimentar con algunos conceptos interesantes que he conocido recientemente
+como &lt;a href=&#34;https://indieweb.org/&#34; target=&#34;_blank&#34;&gt;IndieWeb&lt;/a&gt; o embellecer más el diseño.&lt;/p&gt;
+&lt;p&gt;Pero cada vez que pensaba en hacerlo me desalentaba el tedioso trabajo que
+significaba tener que editar cada página a mano, porque sí, hasta ahora todas
+las páginas de mi sitio web estaban escritas a mano en archivos individuales sin
+ningún tipo de componentes o posibilidad de reutilizar código.&lt;br&gt;
+Cuando comencé con este proyecto de tener un sitio web (blog incluido) esto era
+algo de lo que me enorgullecía (tal como explico en &lt;a href=&#34;/&#34; target=&#34;_blank&#34;&gt;mi página principal&lt;/a&gt;).
+Pero, si bien, en un principio la opción de “buscar y reemplazar” de mi editor
+de texto era suficiente a medida que la cantidad de páginas crecía, empezó a
+parecerme cada vez menos escalable.&lt;/p&gt;
+&lt;p&gt;Ciertamente con solo 14 páginas publicadas, entre índices, &lt;i title=&#34;Landing page&#34; lang=&#34;en&#34;&gt;landings&lt;/i&gt; y &lt;i lang=&#34;en&#34;&gt;posts&lt;/i&gt;, aún
+era completamente manejable con “buscar y reemplaza” (y alguna eventual &lt;abbr title=&#34;Expresión regular&#34;&gt;regex&lt;/abbr&gt;)
+pero aun pudiendo estar pecando de optimización prematura decidí migrar a alguna
+herramienta que me permitiera reutilizar componentes y escribir menos código
+cada vez que quería publicar un post.&lt;/p&gt;
+&lt;p&gt;Y luego de investigar un poco, la herramienta que ganó mi atención (y aunque aún
+es pronto para decirlo, puede que también mi corazón) fue:
+&lt;a href=&#34;https://www.11ty.dev/&#34; target=&#34;_blank&#34; lang=&#34;en&#34; hreflang=&#34;en&#34;&gt;Eleventy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Es un generador de sitios estáticos tan simple que no deja de sorprenderme todo
+lo que facilita mi flujo de trabajo. Los partidarios de &lt;i lang=&#34;en&#34;&gt;React&lt;/i&gt; dirán que hay
+que aprender un nuevo lenguaje para poder utilizarlo, que &lt;i lang=&#34;en&#34;&gt;JSX&lt;/i&gt; es mejor porque es
+un lenguaje que uno ya maneja (&lt;span lang=&#34;en&#34;&gt;Javascript, &lt;i&gt;kinda…&lt;/i&gt;&lt;/span&gt;) y tienen razón. Hay que
+aprender un lenguaje nuevo, pero no importa. La &lt;abbr title=&#34;Application Programming Interface&#34; lang=&#34;en&#34;&gt;API&lt;/abbr&gt; de
+&lt;a href=&#34;https://liquidjs.com/index.html&#34; target=&#34;_blank&#34; lang=&#34;en&#34; hreflang=&#34;en&#34;&gt;LiquidJS&lt;/a&gt; (el motor de templates que Eleventy
+&lt;a href=&#34;https://www.11ty.dev/docs/languages/html/&#34; target=&#34;_blank&#34;&gt;asigna por defecto a archivos .html&lt;/a&gt;)
+es tan pequeña que se puede aprender y usar en unos pocos minutos sin ningún
+problema.&lt;/p&gt;
+&lt;p&gt;Si les interesa como va quedando la migración pueden echarle un ojo al
+&lt;a href=&#34;https://github.com/iyaki/iyaki.github.io/&#34; target=&#34;_blank&#34;&gt;repositorio de esta web&lt;/a&gt; en &lt;span lang=&#34;en&#34;&gt;Github&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;De momento a lo que más provecho le estoy sacando es a los
+&lt;a href=&#34;https://www.11ty.dev/docs/layouts/&#34; target=&#34;_blank&#34;&gt;layouts&lt;/a&gt; e &lt;a href=&#34;https://www.11ty.dev/docs/languages/liquid/#quoted-include-paths&amp;gt;&#34; target=&#34;_blank&#34;&gt;include&lt;/a&gt; (Nota: según la
+&lt;a href=&#34;https://liquidjs.com/tags/include.html&#34; target=&#34;_blank&#34;&gt;documentación de LiquidJS&lt;/a&gt; el uso de
+&lt;em&gt;include&lt;/em&gt; se encuentra obsoleto y debe preferirse &lt;em&gt;render&lt;/em&gt;) que resuelven el
+principal problema que tenía al escribir todos los archivos &lt;abbr title=&#34;Hyper Text Markup Language&#34;&gt;HTML&lt;/abbr&gt; por separado,
+sin posibilidad de compartir contenido.&lt;/p&gt;
+&lt;p&gt;También las &lt;a href=&#34;https://www.11ty.dev/docs/collections/&#34; target=&#34;_blank&#34;&gt;collections&lt;/a&gt; me están
+resultando de lo más útiles y han resultado ser una excelente herramienta para
+simplificar bastante la &lt;a href=&#34;https://github.com/iyaki/iyaki.github.io/tree/main/poster&#34; target=&#34;_blank&#34;&gt;herramienta que había desarrollado en &lt;abbr title=&#34;Javascript&#34;&gt;JS&lt;/abbr&gt; para publicar mis posts&lt;/a&gt;.
+O para mejorar el armado automático del sitemap.&lt;/p&gt;
+&lt;p&gt;Aún faltan algunos detalles por pulir como el armado de los &lt;span lang=&#34;en&#34;&gt;feeds &lt;abbr title=&#34;Really Simple Sindication&#34;&gt;RSS&lt;/abbr&gt;&lt;/span&gt; a partir
+de collections o resolver como adecuar mi
+&lt;a href=&#34;https://iyaki.ar/curated/&#34; target=&#34;_blank&#34;&gt;Recopilador de contenido curado&lt;/a&gt; para poder seguir
+alimentándolo de manera automática a partir del contenido que cargo en
+&lt;a href=&#34;https://iyaki.notion.site/iyaki/066daa9a7abb4c029724323209c85ca6?v=0a0294da7e734adcb9e4e5413c1db1da&#34; target=&#34;_blank&#34;&gt;mi Notion&lt;/a&gt;. Y tengo bastantes expectativas por
+descubrir como puede ayudarme a mejorar la gestión de recursos &lt;span lang=&#34;en&#34;&gt;Javascript&lt;/span&gt; o &lt;abbr title=&#34;Cascading Style Sheets&#34; lang=&#34;en&#34;&gt;CSS&lt;/abbr&gt;
+o explorar algunos de sus Plugins.&lt;/p&gt;
+&lt;p&gt;En cuanto tenga novedades las estaré compartiendo por este medio, mi blog.&lt;/p&gt;
+&lt;p lang=&#34;ja&#34;&gt;Matane!&lt;/p&gt;
+
+&lt;/article&gt;
+
+				</description>
+				<pubDate>Mon, 27 Nov 2023 21:51:13 GMT-0300</pubDate>
+				<link>/posts/20231127_migrando_ando/</link>
+				<guid isPermaLink="true">/posts/20231127_migrando_ando/</guid>
+			</item>
+		
+			<item>
 				<title>El desafío del lenguaje ubicuo en español</title>
 				
 				<description>
