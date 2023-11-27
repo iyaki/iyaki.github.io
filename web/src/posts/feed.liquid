@@ -10,9 +10,9 @@ permalink: /posts/feed.xml
 		<language>es</language>
 		<atom:link href="{{ site.url }}/posts/feed.xml" rel="self" type="application/rss+xml" />
 		<image>
-			<url>{{ site.url }}/images/logo.svg</url>
+			<url>{{ site.url }}/blog/logo.svg</url>
 			<title>mi Blog | iyaki</title>
-			<link>{{ site.url }}/blog.html</link>
+			<link>{{ site.url }}/blog/</link>
 		</image>
 		{% assign posts = collections.post | reverse | slice: 0, 10 %}
 		{% for post in posts %}
@@ -25,9 +25,9 @@ permalink: /posts/feed.xml
 					{{ post.content }}
 				{% endcapture %}
 				<description>{{ description | escape }}</description>
-				<pubDate>{{ post.page.date | date: "%a, %d %b %Y %H:%M:%S GMT%z" }}</pubDate>
-				<link>{{ post.page.url }}</link>
-				<guid isPermaLink="true">{{ post.page.url }}</guid>
+				<pubDate>{{ post.page.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+				<link>{{ site.url }}{{ post.page.url | url }}</link>
+				<guid isPermaLink="true">{{ site.url }}{{ post.page.url | url }}</guid>
 			</item>
 		{% endfor %}
 	</channel>

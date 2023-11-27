@@ -7,9 +7,9 @@
 		<language>es</language>
 		<atom:link href="https://iyaki.ar/posts/feed.xml" rel="self" type="application/rss+xml" />
 		<image>
-			<url>https://iyaki.ar/images/logo.svg</url>
+			<url>https://iyaki.ar/blog/logo.svg</url>
 			<title>mi Blog | iyaki</title>
-			<link>https://iyaki.ar/blog.html</link>
+			<link>https://iyaki.ar/blog/</link>
 		</image>
 		
 		
@@ -76,9 +76,9 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 &lt;/article&gt;
 
 				</description>
-				<pubDate>Mon, 27 Nov 2023 21:51:13 GMT-0300</pubDate>
-				<link>/posts/20231127_migrando_ando/</link>
-				<guid isPermaLink="true">/posts/20231127_migrando_ando/</guid>
+				<pubDate>Mon, 27 Nov 2023 21:51:13 -0300</pubDate>
+				<link>https://iyaki.ar/posts/20231127_migrando_ando/</link>
+				<guid isPermaLink="true">https://iyaki.ar/posts/20231127_migrando_ando/</guid>
 			</item>
 		
 			<item>
@@ -164,9 +164,9 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 &lt;/article&gt;
 
 				</description>
-				<pubDate>Wed, 11 Oct 2023 00:00:00 GMT-0300</pubDate>
-				<link>/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</link>
-				<guid isPermaLink="true">/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</guid>
+				<pubDate>Wed, 11 Oct 2023 00:00:00 -0300</pubDate>
+				<link>https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</link>
+				<guid isPermaLink="true">https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</guid>
 			</item>
 		
 			<item>
@@ -290,9 +290,9 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 &lt;/article&gt;
 
 				</description>
-				<pubDate>Sun, 27 Aug 2023 00:00:00 GMT-0300</pubDate>
-				<link>/posts/20230827_api_paginas_web/</link>
-				<guid isPermaLink="true">/posts/20230827_api_paginas_web/</guid>
+				<pubDate>Sun, 27 Aug 2023 00:00:00 -0300</pubDate>
+				<link>https://iyaki.ar/posts/20230827_api_paginas_web/</link>
+				<guid isPermaLink="true">https://iyaki.ar/posts/20230827_api_paginas_web/</guid>
 			</item>
 		
 			<item>
@@ -356,9 +356,9 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 &lt;/article&gt;
 
 				</description>
-				<pubDate>Sun, 16 Jul 2023 00:00:00 GMT-0300</pubDate>
-				<link>/posts/20230716_bibliotecas_y_librerias/</link>
-				<guid isPermaLink="true">/posts/20230716_bibliotecas_y_librerias/</guid>
+				<pubDate>Sun, 16 Jul 2023 00:00:00 -0300</pubDate>
+				<link>https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</link>
+				<guid isPermaLink="true">https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</guid>
 			</item>
 		
 			<item>
@@ -448,9 +448,9 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 &lt;/article&gt;
 
 				</description>
-				<pubDate>Wed, 21 Jun 2023 00:00:00 GMT-0300</pubDate>
-				<link>/posts/20230621_compartiendo_conocimiento/</link>
-				<guid isPermaLink="true">/posts/20230621_compartiendo_conocimiento/</guid>
+				<pubDate>Wed, 21 Jun 2023 00:00:00 -0300</pubDate>
+				<link>https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</link>
+				<guid isPermaLink="true">https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</guid>
 			</item>
 		
 			<item>
@@ -539,9 +539,9 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 &lt;/article&gt;
 
 				</description>
-				<pubDate>Wed, 14 Jun 2023 00:00:00 GMT-0300</pubDate>
-				<link>/posts/20230614_habemus_rss/</link>
-				<guid isPermaLink="true">/posts/20230614_habemus_rss/</guid>
+				<pubDate>Wed, 14 Jun 2023 00:00:00 -0300</pubDate>
+				<link>https://iyaki.ar/posts/20230614_habemus_rss/</link>
+				<guid isPermaLink="true">https://iyaki.ar/posts/20230614_habemus_rss/</guid>
 			</item>
 		
 			<item>
@@ -676,9 +676,9 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 &lt;/article&gt;
 
 				</description>
-				<pubDate>Sat, 10 Jun 2023 00:00:00 GMT-0300</pubDate>
-				<link>/posts/20230610_depurando_conocimiento/</link>
-				<guid isPermaLink="true">/posts/20230610_depurando_conocimiento/</guid>
+				<pubDate>Sat, 10 Jun 2023 00:00:00 -0300</pubDate>
+				<link>https://iyaki.ar/posts/20230610_depurando_conocimiento/</link>
+				<guid isPermaLink="true">https://iyaki.ar/posts/20230610_depurando_conocimiento/</guid>
 			</item>
 		
 			<item>
@@ -820,9 +820,9 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 &lt;/article&gt;
 
 				</description>
-				<pubDate>Wed, 07 Jun 2023 00:00:00 GMT-0300</pubDate>
-				<link>/posts/20230607_ordenando_conocimiento/</link>
-				<guid isPermaLink="true">/posts/20230607_ordenando_conocimiento/</guid>
+				<pubDate>Wed, 07 Jun 2023 00:00:00 -0300</pubDate>
+				<link>https://iyaki.ar/posts/20230607_ordenando_conocimiento/</link>
+				<guid isPermaLink="true">https://iyaki.ar/posts/20230607_ordenando_conocimiento/</guid>
 			</item>
 		
 			<item>
@@ -922,9 +922,9 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 &lt;/article&gt;
 
 				</description>
-				<pubDate>Sat, 22 Apr 2023 00:00:00 GMT-0300</pubDate>
-				<link>/posts/20230514_reuniendo_conocimiento/</link>
-				<guid isPermaLink="true">/posts/20230514_reuniendo_conocimiento/</guid>
+				<pubDate>Sat, 22 Apr 2023 00:00:00 -0300</pubDate>
+				<link>https://iyaki.ar/posts/20230514_reuniendo_conocimiento/</link>
+				<guid isPermaLink="true">https://iyaki.ar/posts/20230514_reuniendo_conocimiento/</guid>
 			</item>
 		
 			<item>
@@ -1019,9 +1019,9 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 &lt;/article&gt;
 
 				</description>
-				<pubDate>Sat, 22 Apr 2023 00:00:00 GMT-0300</pubDate>
-				<link>/posts/20230422_here_we_go/</link>
-				<guid isPermaLink="true">/posts/20230422_here_we_go/</guid>
+				<pubDate>Sat, 22 Apr 2023 00:00:00 -0300</pubDate>
+				<link>https://iyaki.ar/posts/20230422_here_we_go/</link>
+				<guid isPermaLink="true">https://iyaki.ar/posts/20230422_here_we_go/</guid>
 			</item>
 		
 	</channel>
