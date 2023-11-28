@@ -7,7 +7,7 @@
 		<language>es</language>
 		<atom:link href="https://iyaki.ar/posts/feed.xml" rel="self" type="application/rss+xml" />
 		<image>
-			<url>https://iyaki.ar/blog/logo.svg</url>
+			<url>https://iyaki.ar/blog/logo.png</url>
 			<title>mi Blog | iyaki</title>
 			<link>https://iyaki.ar/blog/</link>
 		</image>
@@ -15,6 +15,7 @@
 		
 			<item>
 				<title>Migrando ando</title>
+				
 				
 				<description>
 					
@@ -24,18 +25,18 @@
 	&lt;h1&gt;Migrando ando&lt;/h1&gt;
 &lt;p&gt;Hace varias semanas que quiero hacer algunos cambios en mi página web, quiero
 experimentar con algunos conceptos interesantes que he conocido recientemente
-como &lt;a href=&#34;https://indieweb.org/&#34; target=&#34;_blank&#34;&gt;IndieWeb&lt;/a&gt; o embellecer más el diseño.&lt;/p&gt;
+como &lt;a href=&#34;https://indieweb.org/&#34; target=&#34;_blank&#34; lang=&#34;en&#34; hreflang=&#34;en&#34;&gt;IndieWeb&lt;/a&gt; o embellecer más el diseño.&lt;/p&gt;
 &lt;p&gt;Pero cada vez que pensaba en hacerlo me desalentaba el tedioso trabajo que
 significaba tener que editar cada página a mano, porque sí, hasta ahora todas
 las páginas de mi sitio web estaban escritas a mano en archivos individuales sin
 ningún tipo de componentes o posibilidad de reutilizar código.&lt;br&gt;
 Cuando comencé con este proyecto de tener un sitio web (blog incluido) esto era
-algo de lo que me enorgullecía (tal como explico en &lt;a href=&#34;/&#34; target=&#34;_blank&#34;&gt;mi página principal&lt;/a&gt;).
+algo de lo que me enorgullecía (tal como explico en &lt;a href=&#34;https://iyaki.ar/&#34;&#34; target=&#34;_blank&#34;&gt;mi página principal&lt;/a&gt;).
 Pero, si bien, en un principio la opción de “buscar y reemplazar” de mi editor
 de texto era suficiente a medida que la cantidad de páginas crecía, empezó a
 parecerme cada vez menos escalable.&lt;/p&gt;
 &lt;p&gt;Ciertamente con solo 14 páginas publicadas, entre índices, &lt;i title=&#34;Landing page&#34; lang=&#34;en&#34;&gt;landings&lt;/i&gt; y &lt;i lang=&#34;en&#34;&gt;posts&lt;/i&gt;, aún
-era completamente manejable con “buscar y reemplaza” (y alguna eventual &lt;abbr title=&#34;Expresión regular&#34;&gt;regex&lt;/abbr&gt;)
+era completamente manejable con “buscar y reemplazar” (y alguna eventual &lt;abbr title=&#34;Expresión regular&#34;&gt;regex&lt;/abbr&gt;)
 pero aun pudiendo estar pecando de optimización prematura decidí migrar a alguna
 herramienta que me permitiera reutilizar componentes y escribir menos código
 cada vez que quería publicar un post.&lt;/p&gt;
@@ -48,18 +49,18 @@ que aprender un nuevo lenguaje para poder utilizarlo, que &lt;i lang=&#34;en&#34
 un lenguaje que uno ya maneja (&lt;span lang=&#34;en&#34;&gt;Javascript, &lt;i&gt;kinda…&lt;/i&gt;&lt;/span&gt;) y tienen razón. Hay que
 aprender un lenguaje nuevo, pero no importa. La &lt;abbr title=&#34;Application Programming Interface&#34; lang=&#34;en&#34;&gt;API&lt;/abbr&gt; de
 &lt;a href=&#34;https://liquidjs.com/index.html&#34; target=&#34;_blank&#34; lang=&#34;en&#34; hreflang=&#34;en&#34;&gt;LiquidJS&lt;/a&gt; (el motor de templates que Eleventy
-&lt;a href=&#34;https://www.11ty.dev/docs/languages/html/&#34; target=&#34;_blank&#34;&gt;asigna por defecto a archivos .html&lt;/a&gt;)
+&lt;a href=&#34;https://www.11ty.dev/docs/languages/html/&#34; target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;asigna por defecto a archivos .html&lt;/a&gt;)
 es tan pequeña que se puede aprender y usar en unos pocos minutos sin ningún
 problema.&lt;/p&gt;
 &lt;p&gt;Si les interesa como va quedando la migración pueden echarle un ojo al
 &lt;a href=&#34;https://github.com/iyaki/iyaki.github.io/&#34; target=&#34;_blank&#34;&gt;repositorio de esta web&lt;/a&gt; en &lt;span lang=&#34;en&#34;&gt;Github&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;De momento a lo que más provecho le estoy sacando es a los
-&lt;a href=&#34;https://www.11ty.dev/docs/layouts/&#34; target=&#34;_blank&#34;&gt;layouts&lt;/a&gt; e &lt;a href=&#34;https://www.11ty.dev/docs/languages/liquid/#quoted-include-paths&amp;gt;&#34; target=&#34;_blank&#34;&gt;include&lt;/a&gt; (Nota: según la
-&lt;a href=&#34;https://liquidjs.com/tags/include.html&#34; target=&#34;_blank&#34;&gt;documentación de LiquidJS&lt;/a&gt; el uso de
+&lt;a href=&#34;https://www.11ty.dev/docs/layouts/&#34; target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;layouts&lt;/a&gt; e &lt;a href=&#34;https://www.11ty.dev/docs/languages/liquid/#quoted-include-paths&amp;gt;&#34; target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;include&lt;/a&gt; (Nota: según la
+&lt;a href=&#34;https://liquidjs.com/tags/include.html&#34; target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;documentación de LiquidJS&lt;/a&gt; el uso de
 &lt;em&gt;include&lt;/em&gt; se encuentra obsoleto y debe preferirse &lt;em&gt;render&lt;/em&gt;) que resuelven el
 principal problema que tenía al escribir todos los archivos &lt;abbr title=&#34;Hyper Text Markup Language&#34;&gt;HTML&lt;/abbr&gt; por separado,
 sin posibilidad de compartir contenido.&lt;/p&gt;
-&lt;p&gt;También las &lt;a href=&#34;https://www.11ty.dev/docs/collections/&#34; target=&#34;_blank&#34;&gt;collections&lt;/a&gt; me están
+&lt;p&gt;También las &lt;a href=&#34;https://www.11ty.dev/docs/collections/&#34; target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;collections&lt;/a&gt; me están
 resultando de lo más útiles y han resultado ser una excelente herramienta para
 simplificar bastante la &lt;a href=&#34;https://github.com/iyaki/iyaki.github.io/tree/main/poster&#34; target=&#34;_blank&#34;&gt;herramienta que había desarrollado en &lt;abbr title=&#34;Javascript&#34;&gt;JS&lt;/abbr&gt; para publicar mis posts&lt;/a&gt;.
 O para mejorar el armado automático del sitemap.&lt;/p&gt;
@@ -84,6 +85,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 			<item>
 				<title>El desafío del lenguaje ubicuo en español</title>
 				
+				
 				<description>
 					
 						&lt;blockquote&gt;¿El inglés como lenguaje universal? No dentro de mis dominios.&lt;/blockquote&gt;
@@ -96,7 +98,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 		esté blog, mi intención era escribir, por lo menos, un artículo al mes.
 	&lt;/p&gt;
 	&lt;p&gt;
-		Como podrán notar si revisar las fechas en el &lt;a href=&#34;/blog&#34; target=&#34;_blank&#34;&gt;índice del blog&lt;/a&gt;, durante septiembre no publiqué nada.
+		Como podrán notar si revisar las fechas en el &lt;a href=&#34;https://iyaki.ar/&#34;blog&#34; target=&#34;_blank&#34;&gt;índice del blog&lt;/a&gt;, durante septiembre no publiqué nada.
 	&lt;/p&gt;
 	&lt;p&gt;
 		Estoy participando en varios proyectos y se me presentaron nuevos desafíos también en mi trabajo “formal” que me motivan mucho, pero también consumen más tiempo de lo habitual, pero pienso que ya conseguí acomodar mi agenda para poder seguir escribiendo (y disfrutando de hacerlo).
@@ -172,6 +174,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 			<item>
 				<title>Los atributos id en HTML como parte de la API pública de las páginas web</title>
 				
+				
 				<description>
 					
 						&lt;blockquote&gt;Desde que el ser humano adquirió el raciocinio suficiente para entender el paso del tiempo siempre le han agradado las cosas predecibles. Los programadores seguimos siendo seres humanos, y nos siguen gustando las cosas predecibles. Sobre todo las API predecibles.&lt;br&gt; ¿Y que hay mas predecible que una API que no cambia? &lt;br&gt;&lt;br&gt; Sin embargo, es fácil olvidar lo poco que se requiere para que una API cambie.&lt;/blockquote&gt;
@@ -232,7 +235,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 		Se conforman de múltiples partes, siendo una de ellas (y en la que nos centraremos) el &lt;em&gt;fragmento&lt;/em&gt;.
 	&lt;/p&gt;
 	&lt;figure&gt;
-		&lt;img src=&#34;./URI_syntax_diagram_es.png&#34; alt=&#34;Diagrama de las partes de un URI&#34;&gt;
+		&lt;img src=&#34;https://iyaki.ar/posts/20230827_api_paginas_web/URI_syntax_diagram_es.png&#34; alt=&#34;Diagrama de las partes de un URI&#34;&gt;
 		&lt;figcaption&gt;Partes de un &lt;abbr title=&#34;Uniform Resource Identifier&#34; lang=&#34;en&#34;&gt;URI&lt;/abbr&gt;&lt;/figcaption&gt;
 	&lt;/figure&gt;
 	&lt;p&gt;
@@ -297,6 +300,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 		
 			<item>
 				<title>Bibliotecas y librerías</title>
+				
 				
 				<description>
 					
@@ -364,6 +368,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 			<item>
 				<title>Compartiendo conocimiento</title>
 				
+				
 				<description>
 					
 						&lt;blockquote&gt;Finalmente, el último de mis artículos sobre como reúno, ordeno, depuro y comparto conocimiento.&lt;/blockquote&gt;
@@ -409,7 +414,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 	&lt;/p&gt;
 	&lt;p&gt;
 		Sobre cómo utilizo &lt;a href=&#34;https://www.notion.so/&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Notion&lt;/a&gt; para mantener una base de
-		conocimiento ya les hablé en mi post &lt;a href=&#34;/posts/20230607_ordenando_conocimiento.md&#34; target=&#34;_blank&#34;&gt;Ordenando
+		conocimiento ya les hablé en mi post &lt;a href=&#34;https://iyaki.ar/&#34;posts/20230607_ordenando_conocimiento.md&#34; target=&#34;_blank&#34;&gt;Ordenando
 			conocimiento&lt;/a&gt;, por lo que ahora nos centraremos en su capacidad para compartir contenido.
 	&lt;/p&gt;
 	&lt;p&gt;
@@ -425,7 +430,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 	&lt;/p&gt;
 	&lt;p&gt;
 		Este esquema funciona bastante bien para compartir información con conocidos, pero puede no ser muy práctico para
-		compartir información de manera masiva. Es por eso que, hace ya algún tiempo, monté mi &lt;a href=&#34;/curated&#34;
+		compartir información de manera masiva. Es por eso que, hace ya algún tiempo, monté mi &lt;a href=&#34;https://iyaki.ar/&#34;curated&#34;
 			target=&#34;_blank&#34;&gt;Recopilador de contenidos curados&lt;/a&gt;.
 	&lt;/p&gt;
 	&lt;p&gt;
@@ -455,6 +460,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 		
 			<item>
 				<title>Habemus RSS</title>
+				
 				
 				<description>
 					
@@ -486,7 +492,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 				title=&#34;Really Simple Syndication&#34;&gt;RSS&lt;/abbr&gt;&lt;/span&gt;.
 	&lt;/p&gt;
 	&lt;figure&gt;
-		&lt;img src=&#34;./rss-logo.svg&#34; alt=&#34;Logo RSS&#34;&gt;
+		&lt;img src=&#34;https://iyaki.ar/posts/20230614_habemus_rss/rss-logo.svg&#34; alt=&#34;Logo RSS&#34;&gt;
 		&lt;figcaption&gt;Logo &lt;abbr title=&#34;Really Simple Syndication&#34; lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt;, no confundir con el icono del &lt;span
 			lang=&#34;en&#34;&gt;WiFi&lt;/span&gt;.&lt;/figcaption&gt;
 	&lt;/figure&gt;
@@ -546,6 +552,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 		
 			<item>
 				<title>Depurando conocimiento</title>
+				
 				
 				<description>
 					
@@ -625,7 +632,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 			href=&#34;https://elvisitantedigital.com/camaras-de-eco-filtros-burbuja-sesgo-de-confirmacion/&#34; target=&#34;_blank&#34;&gt;filtro
 			de burbuja, la cámara de eco o el sesgo de confirmación&lt;/a&gt;.&lt;br&gt; En cuanto a curadores de contenido, llegado este
 		punto, me veo contractualmente obligado conmigo mismo a comentarles que si les interesa la programación o el
-		management puede interesarles mi &lt;a href=&#34;/curated&#34; target=&#34;_blank&#34;&gt;Recopilador de contenido curado&lt;/a&gt;.
+		management puede interesarles mi &lt;a href=&#34;https://iyaki.ar/&#34;curated&#34; target=&#34;_blank&#34;&gt;Recopilador de contenido curado&lt;/a&gt;.
 	&lt;/p&gt;
 	&lt;h2&gt;Sobre filtrar noticias con Javascript y otras yerbas&lt;/h2&gt;
 	&lt;p&gt;
@@ -654,12 +661,12 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 	&lt;h2&gt;Terminando&lt;/h2&gt;
 	&lt;p&gt;
 		Estimados, esto fue todo por hoy. En breve seguramente esté actualizando la lista de &lt;i lang=&#34;en&#34;&gt;feeds&lt;/i&gt; &lt;abbr
-			title=&#34;Really Simple Syndication&#34; lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt; de mí &lt;a href=&#34;/posts/20230514_reuniendo_conocimiento&#34;
+			title=&#34;Really Simple Syndication&#34; lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt; de mí &lt;a href=&#34;https://iyaki.ar/&#34;posts/20230514_reuniendo_conocimiento&#34;
 			target=&#34;_blank&#34;&gt;post anterior&lt;/a&gt;.
 	&lt;/p&gt;
 	&lt;p&gt;
-		Y si todo sigue según el plan muy pronto, tanto &lt;a href=&#34;/blog&#34; target=&#34;_blank&#34;&gt;este blog&lt;/a&gt;, como el &lt;a
-			href=&#34;/curated&#34; target=&#34;_blank&#34;&gt;recopilador de contenidos curados&lt;/a&gt;, deberían contar con sus propios &lt;i
+		Y si todo sigue según el plan muy pronto, tanto &lt;a href=&#34;https://iyaki.ar/&#34;blog&#34; target=&#34;_blank&#34;&gt;este blog&lt;/a&gt;, como el &lt;a
+			href=&#34;https://iyaki.ar/&#34;curated&#34; target=&#34;_blank&#34;&gt;recopilador de contenidos curados&lt;/a&gt;, deberían contar con sus propios &lt;i
 			lang=&#34;en&#34;&gt;feeds&lt;/i&gt; &lt;abbr title=&#34;Really Simple Syndication&#34;&gt;RSS&lt;/abbr&gt; para que puedan seguir.
 	&lt;/p&gt;
 	&lt;p&gt;
@@ -684,6 +691,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 			<item>
 				<title>Ordenando conocimiento</title>
 				
+				
 				<description>
 					
 						&lt;blockquote&gt;Segundo artículo de la serie en la que explico como gestiono, actualmente, el conocimiento en mi vida.&lt;/blockquote&gt;
@@ -701,7 +709,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 			target=&#34;_blank&#34;&gt;base de conocimiento&lt;/a&gt;.
 	&lt;/p&gt;
 	&lt;p&gt;
-		En mi post anterior, &lt;a href=&#34;/posts/20230514_reuniendo_conocimiento&#34; target=&#34;_blank&#34;&gt;Reuniendo
+		En mi post anterior, &lt;a href=&#34;https://iyaki.ar/&#34;posts/20230514_reuniendo_conocimiento&#34; target=&#34;_blank&#34;&gt;Reuniendo
 			conocimiento&lt;/a&gt;, expliqué cómo, actualmente, recopilo información de internet, me informo y aprendo. Ahora ha
 		llegado la hora de saber cómo ordeno toda esa información en algo que me pueda servir de referencia en el futuro
 		cuando necesite refrescar la memoria o compartir conocimiento con otras personas. Aunque, en este caso, el relato
@@ -828,9 +836,10 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 			<item>
 				<title>Reuniendo conocimiento</title>
 				
+				
 				<description>
 					
-						&lt;blockquote&gt;Hace poco comencé a compartir cosas interesantes que encuentro por internet en mi &lt;a href=&#34;/curated&#34;&gt;Recopilador de contenidos curados&lt;/a&gt;. &lt;br&gt; En esta serie de artículos repaso el proceso que sigo para reunir, ordenar, depurar y compartir información.&lt;/blockquote&gt;
+						&lt;blockquote&gt;Hace poco comencé a compartir cosas interesantes que encuentro por internet en mi &lt;a href=&#34;https://iyaki.ar/&#34;curated&#34;&gt;Recopilador de contenidos curados&lt;/a&gt;. &lt;br&gt; En esta serie de artículos repaso el proceso que sigo para reunir, ordenar, depurar y compartir información.&lt;/blockquote&gt;
 					
 					&lt;article class=&#34;main-content&#34;&gt;
 	&lt;h1&gt;Reuniendo conocimiento&lt;/h1&gt;
@@ -929,6 +938,7 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 		
 			<item>
 				<title>Here we go</title>
+				
 				
 				<description>
 					
