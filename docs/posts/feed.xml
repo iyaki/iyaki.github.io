@@ -17,66 +17,64 @@
 				<title>Migrando ando</title>
 				
 				
-				<description>
-					
-						&lt;blockquote&gt;Puede que sea un poco apresurado, pero creo que me volví a enamorar.&lt;/blockquote&gt;
-					
-					&lt;article class=&#34;main-content&#34;&gt;
-	&lt;h1&gt;Migrando ando&lt;/h1&gt;
-&lt;p&gt;Hace varias semanas que quiero hacer algunos cambios en mi página web, quiero
+				<description><![CDATA[
+					<blockquote>Puede que sea un poco apresurado, pero creo que me volví a enamorar.</blockquote>
+					<article class="main-content">
+	<h1>Migrando ando</h1>
+<p>Hace varias semanas que quiero hacer algunos cambios en mi página web, quiero
 experimentar con algunos conceptos interesantes que he conocido recientemente
-como &lt;a href=&#34;https://indieweb.org/&#34; target=&#34;_blank&#34; lang=&#34;en&#34; hreflang=&#34;en&#34;&gt;IndieWeb&lt;/a&gt; o embellecer más el diseño.&lt;/p&gt;
-&lt;p&gt;Pero cada vez que pensaba en hacerlo me desalentaba el tedioso trabajo que
+como <a href="https://indieweb.org/" target="_blank" lang="en" hreflang="en">IndieWeb</a> o embellecer más el diseño.</p>
+<p>Pero cada vez que pensaba en hacerlo me desalentaba el tedioso trabajo que
 significaba tener que editar cada página a mano, porque sí, hasta ahora todas
 las páginas de mi sitio web estaban escritas a mano en archivos individuales sin
-ningún tipo de componentes o posibilidad de reutilizar código.&lt;br&gt;
+ningún tipo de componentes o posibilidad de reutilizar código.<br>
 Cuando comencé con este proyecto de tener un sitio web (blog incluido) esto era
-algo de lo que me enorgullecía (tal como explico en &lt;a href=&#34;https://iyaki.ar/&#34;&#34; target=&#34;_blank&#34;&gt;mi página principal&lt;/a&gt;).
+algo de lo que me enorgullecía (tal como explico en <a href="https://iyaki.ar/"" target="_blank">mi página principal</a>).
 Pero, si bien, en un principio la opción de “buscar y reemplazar” de mi editor
 de texto era suficiente a medida que la cantidad de páginas crecía, empezó a
-parecerme cada vez menos escalable.&lt;/p&gt;
-&lt;p&gt;Ciertamente con solo 14 páginas publicadas, entre índices, &lt;i title=&#34;Landing page&#34; lang=&#34;en&#34;&gt;landings&lt;/i&gt; y &lt;i lang=&#34;en&#34;&gt;posts&lt;/i&gt;, aún
-era completamente manejable con “buscar y reemplazar” (y alguna eventual &lt;abbr title=&#34;Expresión regular&#34;&gt;regex&lt;/abbr&gt;)
+parecerme cada vez menos escalable.</p>
+<p>Ciertamente con solo 14 páginas publicadas, entre índices, <i title="Landing page" lang="en">landings</i> y <i lang="en">posts</i>, aún
+era completamente manejable con “buscar y reemplazar” (y alguna eventual <abbr title="Expresión regular">regex</abbr>)
 pero aun pudiendo estar pecando de optimización prematura decidí migrar a alguna
 herramienta que me permitiera reutilizar componentes y escribir menos código
-cada vez que quería publicar un post.&lt;/p&gt;
-&lt;p&gt;Y luego de investigar un poco, la herramienta que ganó mi atención (y aunque aún
+cada vez que quería publicar un post.</p>
+<p>Y luego de investigar un poco, la herramienta que ganó mi atención (y aunque aún
 es pronto para decirlo, puede que también mi corazón) fue:
-&lt;a href=&#34;https://www.11ty.dev/&#34; target=&#34;_blank&#34; lang=&#34;en&#34; hreflang=&#34;en&#34;&gt;Eleventy&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Es un generador de sitios estáticos tan simple que no deja de sorprenderme todo
-lo que facilita mi flujo de trabajo. Los partidarios de &lt;i lang=&#34;en&#34;&gt;React&lt;/i&gt; dirán que hay
-que aprender un nuevo lenguaje para poder utilizarlo, que &lt;i lang=&#34;en&#34;&gt;JSX&lt;/i&gt; es mejor porque es
-un lenguaje que uno ya maneja (&lt;span lang=&#34;en&#34;&gt;Javascript, &lt;i&gt;kinda…&lt;/i&gt;&lt;/span&gt;) y tienen razón. Hay que
-aprender un lenguaje nuevo, pero no importa. La &lt;abbr title=&#34;Application Programming Interface&#34; lang=&#34;en&#34;&gt;API&lt;/abbr&gt; de
-&lt;a href=&#34;https://liquidjs.com/index.html&#34; target=&#34;_blank&#34; lang=&#34;en&#34; hreflang=&#34;en&#34;&gt;LiquidJS&lt;/a&gt; (el motor de templates que Eleventy
-&lt;a href=&#34;https://www.11ty.dev/docs/languages/html/&#34; target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;asigna por defecto a archivos .html&lt;/a&gt;)
+<a href="https://www.11ty.dev/" target="_blank" lang="en" hreflang="en">Eleventy</a>.</p>
+<p>Es un generador de sitios estáticos tan simple que no deja de sorprenderme todo
+lo que facilita mi flujo de trabajo. Los partidarios de <i lang="en">React</i> dirán que hay
+que aprender un nuevo lenguaje para poder utilizarlo, que <i lang="en">JSX</i> es mejor porque es
+un lenguaje que uno ya maneja (<span lang="en">Javascript, <i>kinda…</i></span>) y tienen razón. Hay que
+aprender un lenguaje nuevo, pero no importa. La <abbr title="Application Programming Interface" lang="en">API</abbr> de
+<a href="https://liquidjs.com/index.html" target="_blank" lang="en" hreflang="en">LiquidJS</a> (el motor de templates que Eleventy
+<a href="https://www.11ty.dev/docs/languages/html/" target="_blank" hreflang="en">asigna por defecto a archivos .html</a>)
 es tan pequeña que se puede aprender y usar en unos pocos minutos sin ningún
-problema.&lt;/p&gt;
-&lt;p&gt;Si les interesa como va quedando la migración pueden echarle un ojo al
-&lt;a href=&#34;https://github.com/iyaki/iyaki.github.io/&#34; target=&#34;_blank&#34;&gt;repositorio de esta web&lt;/a&gt; en &lt;span lang=&#34;en&#34;&gt;Github&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;De momento a lo que más provecho le estoy sacando es a los
-&lt;a href=&#34;https://www.11ty.dev/docs/layouts/&#34; target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;layouts&lt;/a&gt; e &lt;a href=&#34;https://www.11ty.dev/docs/languages/liquid/#quoted-include-paths&amp;gt;&#34; target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;include&lt;/a&gt; (Nota: según la
-&lt;a href=&#34;https://liquidjs.com/tags/include.html&#34; target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;documentación de LiquidJS&lt;/a&gt; el uso de
-&lt;em&gt;include&lt;/em&gt; se encuentra obsoleto y debe preferirse &lt;em&gt;render&lt;/em&gt;) que resuelven el
-principal problema que tenía al escribir todos los archivos &lt;abbr title=&#34;Hyper Text Markup Language&#34;&gt;HTML&lt;/abbr&gt; por separado,
-sin posibilidad de compartir contenido.&lt;/p&gt;
-&lt;p&gt;También las &lt;a href=&#34;https://www.11ty.dev/docs/collections/&#34; target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;collections&lt;/a&gt; me están
+problema.</p>
+<p>Si les interesa como va quedando la migración pueden echarle un ojo al
+<a href="https://github.com/iyaki/iyaki.github.io/" target="_blank">repositorio de esta web</a> en <span lang="en">Github</span>.</p>
+<p>De momento a lo que más provecho le estoy sacando es a los
+<a href="https://www.11ty.dev/docs/layouts/" target="_blank" hreflang="en">layouts</a> e <a href="https://www.11ty.dev/docs/languages/liquid/#quoted-include-paths&gt;" target="_blank" hreflang="en">include</a> (Nota: según la
+<a href="https://liquidjs.com/tags/include.html" target="_blank" hreflang="en">documentación de LiquidJS</a> el uso de
+<em>include</em> se encuentra obsoleto y debe preferirse <em>render</em>) que resuelven el
+principal problema que tenía al escribir todos los archivos <abbr title="Hyper Text Markup Language">HTML</abbr> por separado,
+sin posibilidad de compartir contenido.</p>
+<p>También las <a href="https://www.11ty.dev/docs/collections/" target="_blank" hreflang="en">collections</a> me están
 resultando de lo más útiles y han resultado ser una excelente herramienta para
-simplificar bastante la &lt;a href=&#34;https://github.com/iyaki/iyaki.github.io/tree/main/poster&#34; target=&#34;_blank&#34;&gt;herramienta que había desarrollado en &lt;abbr title=&#34;Javascript&#34;&gt;JS&lt;/abbr&gt; para publicar mis posts&lt;/a&gt;.
-O para mejorar el armado automático del sitemap.&lt;/p&gt;
-&lt;p&gt;Aún faltan algunos detalles por pulir como el armado de los &lt;span lang=&#34;en&#34;&gt;feeds &lt;abbr title=&#34;Really Simple Sindication&#34;&gt;RSS&lt;/abbr&gt;&lt;/span&gt; a partir
+simplificar bastante la <a href="https://github.com/iyaki/iyaki.github.io/tree/main/poster" target="_blank">herramienta que había desarrollado en <abbr title="Javascript">JS</abbr> para publicar mis posts</a>.
+O para mejorar el armado automático del sitemap.</p>
+<p>Aún faltan algunos detalles por pulir como el armado de los <span lang="en">feeds <abbr title="Really Simple Sindication">RSS</abbr></span> a partir
 de collections o resolver como adecuar mi
-&lt;a href=&#34;https://iyaki.ar/curated/&#34; target=&#34;_blank&#34;&gt;Recopilador de contenido curado&lt;/a&gt; para poder seguir
+<a href="https://iyaki.ar/curated/" target="_blank">Recopilador de contenido curado</a> para poder seguir
 alimentándolo de manera automática a partir del contenido que cargo en
-&lt;a href=&#34;https://iyaki.notion.site/iyaki/066daa9a7abb4c029724323209c85ca6?v=0a0294da7e734adcb9e4e5413c1db1da&#34; target=&#34;_blank&#34;&gt;mi Notion&lt;/a&gt;. Y tengo bastantes expectativas por
-descubrir como puede ayudarme a mejorar la gestión de recursos &lt;span lang=&#34;en&#34;&gt;Javascript&lt;/span&gt; o &lt;abbr title=&#34;Cascading Style Sheets&#34; lang=&#34;en&#34;&gt;CSS&lt;/abbr&gt;
-o explorar algunos de sus Plugins.&lt;/p&gt;
-&lt;p&gt;En cuanto tenga novedades las estaré compartiendo por este medio, mi blog.&lt;/p&gt;
-&lt;p lang=&#34;ja&#34;&gt;Matane!&lt;/p&gt;
+<a href="https://iyaki.notion.site/iyaki/066daa9a7abb4c029724323209c85ca6?v=0a0294da7e734adcb9e4e5413c1db1da" target="_blank">mi Notion</a>. Y tengo bastantes expectativas por
+descubrir como puede ayudarme a mejorar la gestión de recursos <span lang="en">Javascript</span> o <abbr title="Cascading Style Sheets" lang="en">CSS</abbr>
+o explorar algunos de sus Plugins.</p>
+<p>En cuanto tenga novedades las estaré compartiendo por este medio, mi blog.</p>
+<p lang="ja">Matane!</p>
 
-&lt;/article&gt;
+</article>
 
-				</description>
+				]]></description>
 				<pubDate>Sun, 26 Nov 2023 21:51:13 -0300</pubDate>
 				<link>https://iyaki.ar/posts/20231127_migrando_ando/</link>
 				<guid isPermaLink="true">https://iyaki.ar/posts/20231127_migrando_ando/</guid>
@@ -86,86 +84,84 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 				<title>El desafío del lenguaje ubicuo en español</title>
 				
 				
-				<description>
-					
-						&lt;blockquote&gt;¿El inglés como lenguaje universal? No dentro de mis dominios.&lt;/blockquote&gt;
-					
-					&lt;article class=&#34;main-content&#34;&gt;
-	&lt;h1&gt;El desafío del lenguaje ubicuo en español&lt;/h1&gt;
-	&lt;p lang=&#34;ja&#34;&gt;Hisashiburi dana!&lt;/p&gt;
-	&lt;p&gt;
+				<description><![CDATA[
+					<blockquote>¿El inglés como lenguaje universal? No dentro de mis dominios.</blockquote>
+					<article class="main-content">
+	<h1>El desafío del lenguaje ubicuo en español</h1>
+	<p lang="ja">Hisashiburi dana!</p>
+	<p>
 		Creo que nunca lo llegué a escribir esto en un post anterior, pero, cuando monté
 		esté blog, mi intención era escribir, por lo menos, un artículo al mes.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Como podrán notar si revisar las fechas en el &lt;a href=&#34;https://iyaki.ar/&#34;blog&#34; target=&#34;_blank&#34;&gt;índice del blog&lt;/a&gt;, durante septiembre no publiqué nada.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
+		Como podrán notar si revisar las fechas en el <a href="https://iyaki.ar/"blog" target="_blank">índice del blog</a>, durante septiembre no publiqué nada.
+	</p>
+	<p>
 		Estoy participando en varios proyectos y se me presentaron nuevos desafíos también en mi trabajo “formal” que me motivan mucho, pero también consumen más tiempo de lo habitual, pero pienso que ya conseguí acomodar mi agenda para poder seguir escribiendo (y disfrutando de hacerlo).
-	&lt;/p&gt;
-	&lt;p&gt;Sin más novedades, doy paso al tema del artículo de hoy.&lt;/p&gt;
-	&lt;p&gt;😃&lt;/p&gt;
-	&lt;p&gt;
-		La programación y el idioma inglés están fuertemente relacionados. No solo la mayoría de recursos de calidad (documentación, tutoriales y guías, por ejemplo) suelen estar escritas en inglés, sino que los propios lenguajes de programación y bibliotecas suelen exponerse al programador en inglés. Es cierto que existen algunas excepciones (como &lt;a href=&#34;https://www.lenguajelatino.org/&#34; target=&#34;_blank&#34;&gt;Lenguaje Latino&lt;/a&gt;), pero son realmente muy pocas y su uso no se encuentra extendido ni es realmente viable para el desarrollo de &lt;a href=&#34;https://en.wikipedia.org/wiki/Enterprise_software&#34; target=&#34;_blank&#34; lang=&#34;en&#34; hreflang=&#34;en&#34;&gt;Enterprise software&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>Sin más novedades, doy paso al tema del artículo de hoy.</p>
+	<p>😃</p>
+	<p>
+		La programación y el idioma inglés están fuertemente relacionados. No solo la mayoría de recursos de calidad (documentación, tutoriales y guías, por ejemplo) suelen estar escritas en inglés, sino que los propios lenguajes de programación y bibliotecas suelen exponerse al programador en inglés. Es cierto que existen algunas excepciones (como <a href="https://www.lenguajelatino.org/" target="_blank">Lenguaje Latino</a>), pero son realmente muy pocas y su uso no se encuentra extendido ni es realmente viable para el desarrollo de <a href="https://en.wikipedia.org/wiki/Enterprise_software" target="_blank" lang="en" hreflang="en">Enterprise software</a>.
+	</p>
+	<p>
 		Es por esto que muchas organizaciones optan por adoptar la política o convención de escribir absolutamente todo el código fuente de sus software en inglés.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Esta es, en principio, una buena idea para que el código fuente sea lo más coherente y homogéneo posible y evitar potenciales discusiones irrelevantes entre colaboradores por detalles del empleo del lenguaje.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Sin embargo, cuando se siguen los lineamientos de &lt;i lang=&#34;en&#34;&gt;Domain Driven Design&lt;/i&gt; para programar, el empleo del lenguaje deja de ser una discusión irrelevante, ya que este tipo de discusiones son las que dan lugar al descubrimiento del lenguaje ubicuo del dominio de nuestro software.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
+		Sin embargo, cuando se siguen los lineamientos de <i lang="en">Domain Driven Design</i> para programar, el empleo del lenguaje deja de ser una discusión irrelevante, ya que este tipo de discusiones son las que dan lugar al descubrimiento del lenguaje ubicuo del dominio de nuestro software.
+	</p>
+	<p>
 		Entonces, ¿qué hacer cuando el lenguaje ubicuo de nuestro dominio está basado en idiomas distintos del inglés?
-	&lt;/p&gt;
-	&lt;p&gt;Yo, no lo sé.&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>Yo, no lo sé.</p>
+	<p>
 		Existen algunos casos en que, es posible adaptar o traducir todos los términos del dominio, pero, en mi experiencia, tarde o temprano, surgen palabras que no poseen una traducción literal o peor aún, conceptos que no existen en otros idiomas por ser propios del modelo de negocio y país en el que se está trabajando (hecho recurrente si el software debe cubrir regulaciones o normativas específicas).
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		En estos casos, es importante buscar soluciones que permitan adaptar el lenguaje ubicuo a la realidad del equipo de desarrollo.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Esto, en algunos casos, puede significar simplemente aceptar el &lt;i&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Espanglish&#34; target=&#34;_blank&#34;&gt;spanglish&lt;/a&gt;&lt;/i&gt; en nuestro código fuente.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
+		Esto, en algunos casos, puede significar simplemente aceptar el <i><a href="https://es.wikipedia.org/wiki/Espanglish" target="_blank">spanglish</a></i> en nuestro código fuente.
+	</p>
+	<p>
 		Para equipos o proyectos pequeños puede no ser necesario definir ningún tipo de convenciones al respecto, pero, en equipos con gran cantidad de gente involucrada o proyectos de gran duración, puede ser deseable definir algunos lineamientos.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		En estos casos, personalmente, me inclino por aceptar el uso de términos en inglés para toda la jerga de índole técnica o sobre la que existan convenciones ya existentes dentro de la comunidad de programadores.
-	&lt;/p&gt;
-	&lt;p&gt;Los ejemplos más obvios podrían ser términos como:&lt;/p&gt;
-	&lt;ul lang=&#34;en&#34;&gt;
-		&lt;li&gt;Interface&lt;/li&gt;
-		&lt;li&gt;Abstract&lt;/li&gt;
-		&lt;li&gt;Request&lt;/li&gt;
-		&lt;li&gt;Response&lt;/li&gt;
-		&lt;li&gt;Auth&lt;/li&gt;
-		&lt;li&gt;Factory&lt;/li&gt;
-		&lt;li&gt;Value Object&lt;/li&gt;
-		&lt;li&gt;Repository&lt;/li&gt;
-		&lt;li&gt;Exception&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;p&gt;
-		Pero también creo prudente incluir términos como &lt;i lang=&#34;en&#34;&gt;get&lt;/i&gt; y &lt;i lang=&#34;en&#34;&gt;find&lt;/i&gt; por &lt;a href=&#34;https://tuhrig.de/find-vs-get/&#34; target=&#34;_blank&#34;&gt;existir convenciones respecto a su utilización&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Otro punto en el que considero relevante tener cierta flexibilidad es en la aceptación de terminología “común” para satisfacer la &lt;a href=&#34;https://es.wikipedia.org/wiki/Econom%C3%ADa_ling%C3%BC%C3%ADstica&#34; target=&#34;_blank&#34;&gt;economía del lenguaje&lt;/a&gt;. Porque si bien es verdad que &lt;em lang=&#34;en&#34;&gt;get&lt;/em&gt; y &lt;em lang=&#34;en&#34;&gt;find&lt;/em&gt; podrían traducirse como &lt;em&gt;obtener&lt;/em&gt; y &lt;em&gt;buscar&lt;/em&gt;, las versiones en inglés son más cortas, un caso similar podría ser el preferir &lt;em lang=&#34;en&#34; title=&#34;average&#34;&gt;avg&lt;/em&gt; por sobre &lt;em&gt;promedio&lt;/em&gt;, y no tengo dudas de que si uno se sienta a pensar encontrará muchos otros ejemplos similares.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>Los ejemplos más obvios podrían ser términos como:</p>
+	<ul lang="en">
+		<li>Interface</li>
+		<li>Abstract</li>
+		<li>Request</li>
+		<li>Response</li>
+		<li>Auth</li>
+		<li>Factory</li>
+		<li>Value Object</li>
+		<li>Repository</li>
+		<li>Exception</li>
+	</ul>
+	<p>
+		Pero también creo prudente incluir términos como <i lang="en">get</i> y <i lang="en">find</i> por <a href="https://tuhrig.de/find-vs-get/" target="_blank">existir convenciones respecto a su utilización</a>.
+	</p>
+	<p>
+		Otro punto en el que considero relevante tener cierta flexibilidad es en la aceptación de terminología “común” para satisfacer la <a href="https://es.wikipedia.org/wiki/Econom%C3%ADa_ling%C3%BC%C3%ADstica" target="_blank">economía del lenguaje</a>. Porque si bien es verdad que <em lang="en">get</em> y <em lang="en">find</em> podrían traducirse como <em>obtener</em> y <em>buscar</em>, las versiones en inglés son más cortas, un caso similar podría ser el preferir <em lang="en" title="average">avg</em> por sobre <em>promedio</em>, y no tengo dudas de que si uno se sienta a pensar encontrará muchos otros ejemplos similares.
+	</p>
+	<p>
 		El empleo del lenguaje ubicuo fuera del inglés me parece de lo más desafiante, por desgracia no he encontrado muchos recursos o guías específicas sobre cómo abordar esta situación ni he podido llegar a una conclusión firme sobre como resolverlo.
-	&lt;/p&gt;
-	&lt;p&gt;
-		De hecho, al investigar un poco el tema en internet, antes de escribir este artículo, lo único que encontré fue &lt;a href=&#34;http://www.javahispano.org/java-se/post/2468151&#34; target=&#34;_blank&#34;&gt;esta pregunta sin respuestas&lt;/a&gt; realizada en el año 2015 en un foro de Java.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
+		De hecho, al investigar un poco el tema en internet, antes de escribir este artículo, lo único que encontré fue <a href="http://www.javahispano.org/java-se/post/2468151" target="_blank">esta pregunta sin respuestas</a> realizada en el año 2015 en un foro de Java.
+	</p>
+	<p>
 		Si alguien conoce algún otro método para abordar estas situaciones, ha desarrollado convenciones al respecto o tiene opiniones formadas sobre el tema, voy a estar encantado de leerlos y poder intercambiar ideas sobre este desafío que enfrentamos como programadores.
-	&lt;/p&gt;
-&lt;/article&gt;
+	</p>
+</article>
 
-				</description>
+				]]></description>
 				<pubDate>Wed, 11 Oct 2023 00:00:00 -0300</pubDate>
 				<link>https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</link>
 				<guid isPermaLink="true">https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</guid>
@@ -175,124 +171,122 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 				<title>Los atributos id en HTML como parte de la API pública de las páginas web</title>
 				
 				
-				<description>
-					
-						&lt;blockquote&gt;Desde que el ser humano adquirió el raciocinio suficiente para entender el paso del tiempo siempre le han agradado las cosas predecibles. Los programadores seguimos siendo seres humanos, y nos siguen gustando las cosas predecibles. Sobre todo las API predecibles.&lt;br&gt; ¿Y que hay mas predecible que una API que no cambia? &lt;br&gt;&lt;br&gt; Sin embargo, es fácil olvidar lo poco que se requiere para que una API cambie.&lt;/blockquote&gt;
-					
-					&lt;article class=&#34;main-content&#34;&gt;
-	&lt;h1&gt;Los atributos id en HTML como parte de la API pública de las páginas web&lt;/h1&gt;
-	&lt;p&gt;
+				<description><![CDATA[
+					<blockquote>Desde que el ser humano adquirió el raciocinio suficiente para entender el paso del tiempo siempre le han agradado las cosas predecibles. Los programadores seguimos siendo seres humanos, y nos siguen gustando las cosas predecibles. Sobre todo las API predecibles.<br> ¿Y que hay mas predecible que una API que no cambia? <br><br> Sin embargo, es fácil olvidar lo poco que se requiere para que una API cambie.</blockquote>
+					<article class="main-content">
+	<h1>Los atributos id en HTML como parte de la API pública de las páginas web</h1>
+	<p>
 		Va a ser un tanto desafiante escribir el epígrafe de este artículo. Ustedes leen el epígrafe, inmediatamente después
 		del título, pero antes del contenido del artículo; y es lo natural, ya que se encuentran visibles en la página
 		principal de mi blog.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Sin embargo, debido a mi &lt;a href=&#34;https://github.com/iyaki/iyaki.github.io/tree/main/poster&#34; target=&#34;_blank&#34;&gt;proceso
-			de publicación&lt;/a&gt;, yo los agrego después de haber terminado de escribir el contenido del artículo.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
+		Sin embargo, debido a mi <a href="https://github.com/iyaki/iyaki.github.io/tree/main/poster" target="_blank">proceso
+			de publicación</a>, yo los agrego después de haber terminado de escribir el contenido del artículo.
+	</p>
+	<p>
 		Lo particular, en esta ocasión, es que, el título es bastante explícito. Podría terminar este post ahora mismo y,
 		probablemente, solo con el título sería suficiente para que muchos sepan a qué me estoy refiriendo. Por lo que,
 		ahora mismo, no se me ocurre epígrafe alguno que no resulte redundante o aburrido.
-	&lt;/p&gt;
-	&lt;h2&gt;¿API pública de las páginas web?&lt;/h2&gt;
-	&lt;p&gt;
-		Dejando de lado la cuestión del epígrafe, voy a comenzar explicando a que me refiero por &lt;strong&gt;&lt;abbr
-				title=&#34;Application Programming Interface&#34; lang=&#34;en&#34;&gt;API&lt;/abbr&gt; pública de las páginas web&lt;/strong&gt;. Y para esto,
-		primero, voy a ahondar, brevemente, en a que &lt;strong&gt;no&lt;/strong&gt; me estoy refiriendo al hablar de &lt;abbr
-			title=&#34;Application Programming Interface&#34; lang=&#34;en&#34;&gt;API&lt;/abbr&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		A efectos de este artículo, &lt;abbr title=&#34;Application Programming Interface&#34; lang=&#34;en&#34;&gt;API&lt;/abbr&gt; no está funcionando
-		como sinónimo de “servicio web que recibe y responde &lt;abbr title=&#34;JavaScript Object Notation&#34; lang=&#34;en&#34;&gt;JSON&lt;/abbr&gt;
-		(Deliberadamente no voy a emplear el término &lt;abbr title=&#34;Representational State Transfer&#34; lang=&#34;en&#34;&gt;REST&lt;/abbr&gt;
-		para evitar entrar en &lt;a href=&#34;https://htmx.org/essays/how-did-rest-come-to-mean-the-opposite-of-rest/&#34;
-			target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;debates&lt;/a&gt;), ni de “&lt;abbr title=&#34;Remote Procedure Call&#34; lang=&#34;en&#34;&gt;RPC&lt;/abbr&gt; sobre
-		&lt;abbr title=&#34;HyperText Transfer Protocol&#34; lang=&#34;en&#34;&gt;HTTP&lt;/abbr&gt;. Tampoco me refiero a la &lt;abbr
-			title=&#34;Application Programming Interface&#34; lang=&#34;en&#34;&gt;API&lt;/abbr&gt; de un &lt;abbr title=&#34;Software Development Kit&#34;
-			lang=&#34;en&#34;&gt;SDK&lt;/abbr&gt; o &lt;i lang=&#34;en&#34;&gt;framework&lt;/i&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Esta vez, utilizaremos el concepto más genérico que hay de &lt;abbr title=&#34;Application Programming Interface&#34;
-			lang=&#34;en&#34;&gt;API&lt;/abbr&gt;, es decir, la interfaz que utilizan 2 piezas de software para comunicarse.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Armados con esta definición, procederemos a considerar el &lt;abbr title=&#34;Uniform Resource Identifier&#34;
-			lang=&#34;en&#34;&gt;URI&lt;/abbr&gt; de una página web como su principal &lt;abbr title=&#34;Application Programming Interface&#34;
-			lang=&#34;en&#34;&gt;API&lt;/abbr&gt;, ya que es la forma que tiene de que los navegadores web accedan a ella. Bien porque un
-		usuario escribe un &lt;abbr title=&#34;Uniform Resource Identifier&#34; lang=&#34;en&#34;&gt;URI&lt;/abbr&gt; en la barra de navegación o bien
-		porque es redirigido desde otra página web mediante el uso de &lt;a href=&#34;https://es.wikipedia.org/wiki/Hiperenlace&#34;
-			target=&#34;_blank&#34;&gt;hipervínculos&lt;/a&gt; (&lt;abbr title=&#34;also known as&#34; lang=&#34;en&#34;&gt;a.k.a.&lt;/abbr&gt; &lt;i lang=&#34;en&#34;&gt;links&lt;/i&gt;).
-	&lt;/p&gt;
-	&lt;h2&gt;Conociendo un poco mejor los URI&lt;/h2&gt;
-	&lt;p&gt;
-		Los &lt;abbr title=&#34;Uniform Resource Identifier&#34; lang=&#34;en&#34;&gt;URI&lt;/abbr&gt;, o &lt;a
-			href=&#34;https://es.wikipedia.org/wiki/Identificador_de_recursos_uniforme&#34; target=&#34;_blank&#34;&gt;Identificadores de
-			Recursos Uniformes&lt;/a&gt;, son cadenas de texto que identifican un recurso (en este caso, una página web) en la &lt;a
-			href=&#34;https://es.wikipedia.org/wiki/World_Wide_Web&#34; target=&#34;_blank&#34;&gt;web&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Se conforman de múltiples partes, siendo una de ellas (y en la que nos centraremos) el &lt;em&gt;fragmento&lt;/em&gt;.
-	&lt;/p&gt;
-	&lt;figure&gt;
-		&lt;img src=&#34;https://iyaki.ar/posts/20230827_api_paginas_web/URI_syntax_diagram_es.png&#34; alt=&#34;Diagrama de las partes de un URI&#34;&gt;
-		&lt;figcaption&gt;Partes de un &lt;abbr title=&#34;Uniform Resource Identifier&#34; lang=&#34;en&#34;&gt;URI&lt;/abbr&gt;&lt;/figcaption&gt;
-	&lt;/figure&gt;
-	&lt;p&gt;
-		En un &lt;abbr title=&#34;Uniform Resource Identifier&#34; lang=&#34;en&#34;&gt;URI&lt;/abbr&gt;, el fragmento es la parte que sigue al signo de
+	</p>
+	<h2>¿API pública de las páginas web?</h2>
+	<p>
+		Dejando de lado la cuestión del epígrafe, voy a comenzar explicando a que me refiero por <strong><abbr
+				title="Application Programming Interface" lang="en">API</abbr> pública de las páginas web</strong>. Y para esto,
+		primero, voy a ahondar, brevemente, en a que <strong>no</strong> me estoy refiriendo al hablar de <abbr
+			title="Application Programming Interface" lang="en">API</abbr>.
+	</p>
+	<p>
+		A efectos de este artículo, <abbr title="Application Programming Interface" lang="en">API</abbr> no está funcionando
+		como sinónimo de “servicio web que recibe y responde <abbr title="JavaScript Object Notation" lang="en">JSON</abbr>
+		(Deliberadamente no voy a emplear el término <abbr title="Representational State Transfer" lang="en">REST</abbr>
+		para evitar entrar en <a href="https://htmx.org/essays/how-did-rest-come-to-mean-the-opposite-of-rest/"
+			target="_blank" hreflang="en">debates</a>), ni de “<abbr title="Remote Procedure Call" lang="en">RPC</abbr> sobre
+		<abbr title="HyperText Transfer Protocol" lang="en">HTTP</abbr>. Tampoco me refiero a la <abbr
+			title="Application Programming Interface" lang="en">API</abbr> de un <abbr title="Software Development Kit"
+			lang="en">SDK</abbr> o <i lang="en">framework</i>.
+	</p>
+	<p>
+		Esta vez, utilizaremos el concepto más genérico que hay de <abbr title="Application Programming Interface"
+			lang="en">API</abbr>, es decir, la interfaz que utilizan 2 piezas de software para comunicarse.
+	</p>
+	<p>
+		Armados con esta definición, procederemos a considerar el <abbr title="Uniform Resource Identifier"
+			lang="en">URI</abbr> de una página web como su principal <abbr title="Application Programming Interface"
+			lang="en">API</abbr>, ya que es la forma que tiene de que los navegadores web accedan a ella. Bien porque un
+		usuario escribe un <abbr title="Uniform Resource Identifier" lang="en">URI</abbr> en la barra de navegación o bien
+		porque es redirigido desde otra página web mediante el uso de <a href="https://es.wikipedia.org/wiki/Hiperenlace"
+			target="_blank">hipervínculos</a> (<abbr title="also known as" lang="en">a.k.a.</abbr> <i lang="en">links</i>).
+	</p>
+	<h2>Conociendo un poco mejor los URI</h2>
+	<p>
+		Los <abbr title="Uniform Resource Identifier" lang="en">URI</abbr>, o <a
+			href="https://es.wikipedia.org/wiki/Identificador_de_recursos_uniforme" target="_blank">Identificadores de
+			Recursos Uniformes</a>, son cadenas de texto que identifican un recurso (en este caso, una página web) en la <a
+			href="https://es.wikipedia.org/wiki/World_Wide_Web" target="_blank">web</a>.
+	</p>
+	<p>
+		Se conforman de múltiples partes, siendo una de ellas (y en la que nos centraremos) el <em>fragmento</em>.
+	</p>
+	<figure>
+		<img src="https://iyaki.ar/posts/20230827_api_paginas_web/URI_syntax_diagram_es.png" alt="Diagrama de las partes de un URI">
+		<figcaption>Partes de un <abbr title="Uniform Resource Identifier" lang="en">URI</abbr></figcaption>
+	</figure>
+	<p>
+		En un <abbr title="Uniform Resource Identifier" lang="en">URI</abbr>, el fragmento es la parte que sigue al signo de
 		numeral (#) y su función es identificar una sección especifica dentro de la página web.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Es lo que los navegadores utilizan, junto con los hipervínculos, para “saltar” (y también “deslizarse”, gracias a la
-		continua evolución de &lt;abbr title=&#34;Cascading Style Sheets&#34; lang=&#34;en&#34;&gt;CSS&lt;/abbr&gt; y la propiedad &lt;em&gt;&lt;a
-				href=&#34;https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior&#34; target=&#34;_blank&#34; lang=&#34;en&#34;
-				hreflang=&#34;en&#34;&gt;scroll-behavior&lt;/a&gt;&lt;/em&gt;) a una sección dentro de una misma página web (No confundir con
-		hipervínculos que llevan a otra &lt;a href=&#34;https://es.wikipedia.org/wiki/P%C3%A1gina_web&#34; target=&#34;_blank&#34;&gt;página&lt;/a&gt;
-		dentro del mismo &lt;a href=&#34;https://es.wikipedia.org/wiki/Sitio_web&#34; target=&#34;_blank&#34;&gt;sitio web&lt;/a&gt;).
-	&lt;/p&gt;
-	&lt;p&gt;
+		continua evolución de <abbr title="Cascading Style Sheets" lang="en">CSS</abbr> y la propiedad <em><a
+				href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior" target="_blank" lang="en"
+				hreflang="en">scroll-behavior</a></em>) a una sección dentro de una misma página web (No confundir con
+		hipervínculos que llevan a otra <a href="https://es.wikipedia.org/wiki/P%C3%A1gina_web" target="_blank">página</a>
+		dentro del mismo <a href="https://es.wikipedia.org/wiki/Sitio_web" target="_blank">sitio web</a>).
+	</p>
+	<p>
 		Es un comportamiento que todo hemos visto y usado alguna vez al navegar por la web, pero cuyo funcionamiento interno
 		es fácil ignorar o pasar por alto mientras desarrollamos páginas web.
-	&lt;/p&gt;
-	&lt;h2&gt;¿Y los atributos id que pintan en todo esto?&lt;/h2&gt;
-	&lt;p&gt;
+	</p>
+	<h2>¿Y los atributos id que pintan en todo esto?</h2>
+	<p>
 		El mecanismo que emplean los navegadores para brindar esta funcionalidad de navegar entre secciones es
 		extremadamente simple y ubicuo. Cuando creamos una página web, tenemos la opción de asignar identificadores únicos a
-		elementos específicos mediante el atributo &lt;em lang=&#34;en&#34;&gt;id&lt;/em&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
+		elementos específicos mediante el atributo <em lang="en">id</em>.
+	</p>
+	<p>
 		El simple hecho de agregarle un atributo id a un elemento automáticamente lo convierte en un punto de referencia
-		dentro del &lt;abbr title=&#34;Uniform Resource Identifier&#34; lang=&#34;en&#34;&gt;URI&lt;/abbr&gt; de la página web y le permite a los
+		dentro del <abbr title="Uniform Resource Identifier" lang="en">URI</abbr> de la página web y le permite a los
 		navegadores implementar su funcionalidad de “salto entre secciones”.
-	&lt;/p&gt;
-	&lt;h2&gt;Algunas conclusiones&lt;/h2&gt;
-	&lt;p&gt;
-		Sabiendo que los atributos id de los elementos &lt;abbr title=&#34;Hyper Text Markup Language&#34; lang=&#34;en&#34;&gt;HTML&lt;/abbr&gt;
+	</p>
+	<h2>Algunas conclusiones</h2>
+	<p>
+		Sabiendo que los atributos id de los elementos <abbr title="Hyper Text Markup Language" lang="en">HTML</abbr>
 		cumplen un rol especial para los navegadores web; se me ocurren dos corolarios, en forma de consejos a tener en
 		cuneta a la hora de desarrollar páginas web.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		El primero sería evitar el uso del atributo id para otros fines, cómo podría ser el agregado de estilos mediante
-		&lt;abbr title=&#34;Cascading Style Sheets&#34; lang=&#34;en&#34;&gt;CSS&lt;/abbr&gt;. Extendiendo esta idea, y alineados con las directivas de
-		&lt;a href=&#34;https://www.freecodecamp.org/news/semantic-html5-elements/&#34; target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;HTML
-			semántico&lt;/a&gt;, podríamos considerar que el atributo id debe ser agregado únicamente en elementos que representan
+		<abbr title="Cascading Style Sheets" lang="en">CSS</abbr>. Extendiendo esta idea, y alineados con las directivas de
+		<a href="https://www.freecodecamp.org/news/semantic-html5-elements/" target="_blank" hreflang="en">HTML
+			semántico</a>, podríamos considerar que el atributo id debe ser agregado únicamente en elementos que representan
 		secciones importantes o puntos de referencia dentro de una página, o por los menos, los encabezados de estas
 		secciones.
-	&lt;/p&gt;
-	&lt;p&gt;
-		El segundo está relacionado con el versionado de &lt;abbr title=&#34;Application Programming Interface&#34;
-			lang=&#34;en&#34;&gt;API&lt;/abbr&gt; y es que sí, los atributos id de nuestro &lt;abbr title=&#34;Hyper Text Markup Language&#34;
-			lang=&#34;en&#34;&gt;HTML&lt;/abbr&gt; forman parte de la &lt;abbr title=&#34;Application Programming Interface&#34; lang=&#34;en&#34;&gt;API&lt;/abbr&gt; de
-		nuestra página web, eso significa que eliminar un id, representa un cambio retroincompatible en la &lt;abbr
-			title=&#34;Application Programming Interface&#34; lang=&#34;en&#34;&gt;API&lt;/abbr&gt; de nuestra web. Y como es sabido &lt;a
-			href=&#34;https://www.w3.org/Provider/Style/URI&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Cool URIs don’t change&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Esto es todo por hoy, estimadísimos lectores. &lt;i lang=&#34;it&#34;&gt;Ci vediamo.&lt;/i&gt;
-	&lt;/p&gt;
-&lt;/article&gt;
+	</p>
+	<p>
+		El segundo está relacionado con el versionado de <abbr title="Application Programming Interface"
+			lang="en">API</abbr> y es que sí, los atributos id de nuestro <abbr title="Hyper Text Markup Language"
+			lang="en">HTML</abbr> forman parte de la <abbr title="Application Programming Interface" lang="en">API</abbr> de
+		nuestra página web, eso significa que eliminar un id, representa un cambio retroincompatible en la <abbr
+			title="Application Programming Interface" lang="en">API</abbr> de nuestra web. Y como es sabido <a
+			href="https://www.w3.org/Provider/Style/URI" target="_blank" lang="en">Cool URIs don’t change</a>.
+	</p>
+	<p>
+		Esto es todo por hoy, estimadísimos lectores. <i lang="it">Ci vediamo.</i>
+	</p>
+</article>
 
-				</description>
+				]]></description>
 				<pubDate>Sun, 27 Aug 2023 00:00:00 -0300</pubDate>
 				<link>https://iyaki.ar/posts/20230827_api_paginas_web/</link>
 				<guid isPermaLink="true">https://iyaki.ar/posts/20230827_api_paginas_web/</guid>
@@ -302,64 +296,62 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 				<title>Bibliotecas y librerías</title>
 				
 				
-				<description>
-					
-						&lt;blockquote&gt;Una breve anécdota de un suceso irrelevante que ocurrió hace años y que, por razones que no termino de comprender, podría, o no, haber marcado mi uso del lenguaje.&lt;/blockquote&gt;
-					
-					&lt;article class=&#34;main-content&#34;&gt;
-	&lt;h1&gt;Bibliotecas y librerías&lt;/h1&gt;
-	&lt;p&gt;
+				<description><![CDATA[
+					<blockquote>Una breve anécdota de un suceso irrelevante que ocurrió hace años y que, por razones que no termino de comprender, podría, o no, haber marcado mi uso del lenguaje.</blockquote>
+					<article class="main-content">
+	<h1>Bibliotecas y librerías</h1>
+	<p>
 		Hoy vengo a contar un breve e irrelevante anécdota sobre algo que sucedió, hace varios años, mientras cursaba
-		&lt;em&gt;Arquitectura de Computadoras&lt;/em&gt;.
-		&lt;br&gt;
+		<em>Arquitectura de Computadoras</em>.
+		<br>
 		De alguna manera, nuestro profesor; un hombre mayor de unos 65 años, empedernido peronista, con tendencias
-		trotskistas y la voz más áspera que el tabaco puede producir, mencionó las &lt;a
-			href=&#34;https://es.wikipedia.org/wiki/Biblioteca_(inform%C3%A1tica)&#34; target=&#34;_blank&#34;&gt;bibliotecas&lt;/a&gt; como
-		herramienta para compartir información entre distintos programas (refiriéndose a los &lt;a
-			href=&#34;https://es.wikipedia.org/wiki/Biblioteca_de_enlace_din%C3%A1mico&#34; target=&#34;_blank&#34;
-			title=&#34;Dynamic-link library&#34; lang=&#34;en&#34;&gt;.dll&lt;/a&gt; y &lt;a
-			href=&#34;https://en.wikipedia.org/wiki/Library_(computing)#Shared_libraries&#34; target=&#34;_blank&#34; title=&#34;Shared Object&#34;
-			lang=&#34;en&#34; hreflang=&#34;en&#34;&gt;.so&lt;/a&gt;). No tengo muy claro cómo llego a entrar en ese tema, ya que las clases se basaban
+		trotskistas y la voz más áspera que el tabaco puede producir, mencionó las <a
+			href="https://es.wikipedia.org/wiki/Biblioteca_(inform%C3%A1tica)" target="_blank">bibliotecas</a> como
+		herramienta para compartir información entre distintos programas (refiriéndose a los <a
+			href="https://es.wikipedia.org/wiki/Biblioteca_de_enlace_din%C3%A1mico" target="_blank"
+			title="Dynamic-link library" lang="en">.dll</a> y <a
+			href="https://en.wikipedia.org/wiki/Library_(computing)#Shared_libraries" target="_blank" title="Shared Object"
+			lang="en" hreflang="en">.so</a>). No tengo muy claro cómo llego a entrar en ese tema, ya que las clases se basaban
 		principalmente en diseñar circuitos lógicos. Supongo que el no haber estado prestando demasiada atención tampoco
 		ayudó.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Sin embargo, el cómo llegó nuestro profesor al tema no es lo que quiero compartirles. Lo interesante (si es que el
 		suceso que voy a describir puede calificarse de este modo) es lo que ocurrió inmediatamente después.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Alguno de mis compañeros decidió hacer una pregunta al respecto, pero, al formularla, decidió utilizar el término
 		librería en lugar de biblioteca. Y esto, que podría parecer un simple error a la hora de traducir la palabra inglesa
-		&lt;i lang=&#34;en&#34;&gt;Library&lt;/i&gt;, propiciado por la &lt;a
-			href=&#34;https://daily.jstor.org/friend-or-faux-the-linguistic-trickery-of-false-friends/&#34; target=&#34;_blank&#34;
-			title=&#34;False friends&#34; hreflang=&#34;en&#34;&gt;similitud gramática y fonética de ambas palabras&lt;/a&gt;, o un inocente abuso del
+		<i lang="en">Library</i>, propiciado por la <a
+			href="https://daily.jstor.org/friend-or-faux-the-linguistic-trickery-of-false-friends/" target="_blank"
+			title="False friends" hreflang="en">similitud gramática y fonética de ambas palabras</a>, o un inocente abuso del
 		lenguaje, despertó una inesperada cólera en nuestro profesor que, durante la próxima media hora de clase, se dedicó
 		a explicar fervientemente la diferencia conceptual entre ambos términos; apuntando a que múltiples intereses
 		buscaban lograr que algo de dominio público como lo son las bibliotecas y cuyos contenidos se encuentran abiertos a
 		la comunidad sin mayores restricciones se convirtiera en una herramienta de negocio controlada por empresas privadas
-		generando ganancias por algo que históricamente fue de libre acceso, llegando incluso a mencionar el &lt;a
-			href=&#34;https://redinformativa.org.ar/el-plan-atlanta/&#34; target=&#34;_blank&#34;&gt;Plan Atlanta&lt;/a&gt; como parte de su discurso.
+		generando ganancias por algo que históricamente fue de libre acceso, llegando incluso a mencionar el <a
+			href="https://redinformativa.org.ar/el-plan-atlanta/" target="_blank">Plan Atlanta</a> como parte de su discurso.
 		(Aclaración importante: dejando de lado las analogías, el discurso siempre se centró en el ámbito del software. En
 		cuanto a este artículo concierne, no hay nadie con intereses de convertir las bibliotecas públicas en librerías
 		privadas).
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		En el momento no le di mayor importancia a esta diferencia conceptual entre los términos y seguí con mi vida. Años
 		después, sigo sin darle mayor importancia a esa diferencia, sin embargo, ese incidente sigue presente en mi memoria.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Me parece ridícula, o cuando menos irrelevante, la idea de que existe un grupo de personas dedicado a privatizar el
 		software libre minando las bases mismas del lenguaje (y todo esto únicamente en español); y aun así cada vez que
-		hablo de manera consciente sobre alguna &lt;i lang=&#34;en&#34;&gt;Library&lt;/i&gt; con un compañero de trabajo elijo usar la palabra
-		&lt;em&gt;biblioteca&lt;/em&gt; a pesar de que, al menos en los círculos en los que me muevo, se encuentra mucho más extendido
-		el uso del término &lt;em&gt;librería&lt;/em&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
+		hablo de manera consciente sobre alguna <i lang="en">Library</i> con un compañero de trabajo elijo usar la palabra
+		<em>biblioteca</em> a pesar de que, al menos en los círculos en los que me muevo, se encuentra mucho más extendido
+		el uso del término <em>librería</em>.
+	</p>
+	<p>
 		¿Por qué será?
-	&lt;/p&gt;
-&lt;/article&gt;
+	</p>
+</article>
 
-				</description>
+				]]></description>
 				<pubDate>Sun, 16 Jul 2023 00:00:00 -0300</pubDate>
 				<link>https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</link>
 				<guid isPermaLink="true">https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</guid>
@@ -369,90 +361,88 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 				<title>Compartiendo conocimiento</title>
 				
 				
-				<description>
-					
-						&lt;blockquote&gt;Finalmente, el último de mis artículos sobre como reúno, ordeno, depuro y comparto conocimiento.&lt;/blockquote&gt;
-					
-					&lt;article class=&#34;main-content&#34;&gt;
-	&lt;h1&gt;Compartiendo conocimiento&lt;/h1&gt;
-	&lt;p&gt;
+				<description><![CDATA[
+					<blockquote>Finalmente, el último de mis artículos sobre como reúno, ordeno, depuro y comparto conocimiento.</blockquote>
+					<article class="main-content">
+	<h1>Compartiendo conocimiento</h1>
+	<p>
 		Llegamos al final de esta serie de artículos que empecé a escribir hace aproximadamente un mes.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Fue un buen puntapié inicial (al menos para mí), ya que me ayudó ir tomando el hábito de escribir, algo que si bien
 		siempre me gustó, hace mucho que no hacía; Pero, para mi gusto, un mes escribiendo sobre lo mismo (aunque hayan sido
 		solo 4 artículos) es demasiado.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Durante todo este tiempo, describí los distintos procesos que mediante los cuales obtengo conocimiento. Aprender
 		cosas nuevas o desarrollar nuevas ideas con base en nueva información está muy bien; pero, personalmente, considero
 		que ese ciclo de “aprendizaje” no se cierra realmente hasta que el nuevo conocimiento es compartido.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Hay muchas razones para esto. Algunas son de los más altruistas, como desear que la humanidad progrese mediante el
-		libre acceso a la información, pero otras pueden ser de lo más egoístas (&lt;a
-			href=&#34;https://www.frontiersin.org/articles/10.3389/fpsyg.2020.01006/full&#34; target=&#34;_blank&#34;&gt;y no por eso
-			malvadas&lt;/a&gt;) como el hecho de que enseñar es una excelente forma de aprender o bien esperar que alguien más pueda
+		libre acceso a la información, pero otras pueden ser de lo más egoístas (<a
+			href="https://www.frontiersin.org/articles/10.3389/fpsyg.2020.01006/full" target="_blank">y no por eso
+			malvadas</a>) como el hecho de que enseñar es una excelente forma de aprender o bien esperar que alguien más pueda
 		seguir desarrollando las ideas propias para posteriormente retomarlas.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Para mí, hay, además, otra motivación importante. En mi trabajo suelen consultarme sobre programación y diseño de
-		software (sobre todo aquellos que están dando sus primeros pasos en un empleo de informática).&lt;br&gt; Muchas veces
+		software (sobre todo aquellos que están dando sus primeros pasos en un empleo de informática).<br> Muchas veces
 		contestar esas consultas demanda mucho tiempo, ya que es necesario, primero asentar ciertas bases teóricas para
 		después poder dar una respuesta satisfactoria que los ayude a resolver el problema que da origen a sus consultas.
 		Esto a veces puede resultar un poco tedioso.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Al haber aprendido la mayoría de las cosas que sé (sobre informática) de manera autodidacta y mediante la
 		experimentación, carecía de una herramienta que me permitiera redirigir sus consultas a alguna otra fuente y nos
 		ayudara a simplificar su proceso de aprendizaje.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Esa fue mi principal razón para hacer público el acceso a mí &lt;a
-			href=&#34;https://iyaki.notion.site/066daa9a7abb4c029724323209c85ca6?v=0a0294da7e734adcb9e4e5413c1db1da&amp;amp;pvs=4&#34;
-			target=&#34;_blank&#34;&gt;base de conocimiento&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Sobre cómo utilizo &lt;a href=&#34;https://www.notion.so/&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Notion&lt;/a&gt; para mantener una base de
-		conocimiento ya les hablé en mi post &lt;a href=&#34;https://iyaki.ar/&#34;posts/20230607_ordenando_conocimiento.md&#34; target=&#34;_blank&#34;&gt;Ordenando
-			conocimiento&lt;/a&gt;, por lo que ahora nos centraremos en su capacidad para compartir contenido.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Habilitar el acceso público a contenido en &lt;span lang=&#34;en&#34;&gt;Notion&lt;/span&gt; es &lt;a
-			href=&#34;https://www.notion.so/help/public-pages-and-web-publishing&#34; target=&#34;_blank&#34;&gt;muy simple&lt;/a&gt; y al haber
+	</p>
+	<p>
+		Esa fue mi principal razón para hacer público el acceso a mí <a
+			href="https://iyaki.notion.site/066daa9a7abb4c029724323209c85ca6?v=0a0294da7e734adcb9e4e5413c1db1da&amp;pvs=4"
+			target="_blank">base de conocimiento</a>.
+	</p>
+	<p>
+		Sobre cómo utilizo <a href="https://www.notion.so/" target="_blank" lang="en">Notion</a> para mantener una base de
+		conocimiento ya les hablé en mi post <a href="https://iyaki.ar/"posts/20230607_ordenando_conocimiento.md" target="_blank">Ordenando
+			conocimiento</a>, por lo que ahora nos centraremos en su capacidad para compartir contenido.
+	</p>
+	<p>
+		Habilitar el acceso público a contenido en <span lang="en">Notion</span> es <a
+			href="https://www.notion.so/help/public-pages-and-web-publishing" target="_blank">muy simple</a> y al haber
 		incorporado un sistema de etiquetas a los artículos que recopilo se hace posible que cualquiera aplique filtros para
 		poder buscar información sobre alguna temática específica.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Además, cuenta con algunas &lt;a href=&#34;https://www.notion.so/help/page-analytics&#34; target=&#34;_blank&#34;&gt;estadísticas&lt;/a&gt;
-		simples sobre los visitantes. El tracking de &lt;span lang=&#34;en&#34;&gt;Notion&lt;/span&gt; no es para nada avanzado, pero me permite
+	</p>
+	<p>
+		Además, cuenta con algunas <a href="https://www.notion.so/help/page-analytics" target="_blank">estadísticas</a>
+		simples sobre los visitantes. El tracking de <span lang="en">Notion</span> no es para nada avanzado, pero me permite
 		saber que hay algunas (pocas) personas, además de mí, accediendo a la base de conocimiento.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Este esquema funciona bastante bien para compartir información con conocidos, pero puede no ser muy práctico para
-		compartir información de manera masiva. Es por eso que, hace ya algún tiempo, monté mi &lt;a href=&#34;https://iyaki.ar/&#34;curated&#34;
-			target=&#34;_blank&#34;&gt;Recopilador de contenidos curados&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		En él replico los artículos que registro en &lt;span lang=&#34;en&#34;&gt;Notion&lt;/span&gt; con un &lt;a
-			href=&#34;https://github.com/iyaki/iyaki.github.io/tree/main/curator&#34; target=&#34;_blank&#34;&gt;&lt;i lang=&#34;en&#34;&gt;script&lt;/i&gt; en &lt;span
-				lang=&#34;en&#34;&gt;Javascript&lt;/span&gt;&lt;/a&gt; ejecutado de manera programada. 3 veces al día, mediante un &lt;a
-			href=&#34;https://github.com/iyaki/iyaki.github.io/blob/main/.github/workflows/content_curator.yml&#34; target=&#34;_blank&#34;
-			lang=&#34;en&#34;&gt;workflow&lt;/a&gt; de &lt;a href=&#34;https://github.com/features/actions&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Github
-			Actions&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
+		compartir información de manera masiva. Es por eso que, hace ya algún tiempo, monté mi <a href="https://iyaki.ar/"curated"
+			target="_blank">Recopilador de contenidos curados</a>.
+	</p>
+	<p>
+		En él replico los artículos que registro en <span lang="en">Notion</span> con un <a
+			href="https://github.com/iyaki/iyaki.github.io/tree/main/curator" target="_blank"><i lang="en">script</i> en <span
+				lang="en">Javascript</span></a> ejecutado de manera programada. 3 veces al día, mediante un <a
+			href="https://github.com/iyaki/iyaki.github.io/blob/main/.github/workflows/content_curator.yml" target="_blank"
+			lang="en">workflow</a> de <a href="https://github.com/features/actions" target="_blank" lang="en">Github
+			Actions</a>.
+	</p>
+	<p>
 		No es un medio particularmente cómodo para realizar búsquedas específicas, pero funciona muy bien para, todos los
-		días, compartir algo de información que me haya resultado. Y ahora que posee un feed &lt;abbr
-			title=&#34;Really Simple Sindication&#34; lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt;, es incluso más cómodo para aquellos que prefieran este
+		días, compartir algo de información que me haya resultado. Y ahora que posee un feed <abbr
+			title="Really Simple Sindication" lang="en">RSS</abbr>, es incluso más cómodo para aquellos que prefieran este
 		medio.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Hasta aquí llega el artículo de hoy. &lt;i lang=&#34;it&#34;&gt;Arrivederci&lt;/i&gt;.
-	&lt;/p&gt;
-&lt;/article&gt;
+	</p>
+	<p>
+		Hasta aquí llega el artículo de hoy. <i lang="it">Arrivederci</i>.
+	</p>
+</article>
 
-				</description>
+				]]></description>
 				<pubDate>Wed, 21 Jun 2023 00:00:00 -0300</pubDate>
 				<link>https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</link>
 				<guid isPermaLink="true">https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</guid>
@@ -462,89 +452,87 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 				<title>Habemus RSS</title>
 				
 				
-				<description>
-					
-						&lt;blockquote&gt;Noticia de último momento. Interrumpimos la programación habitual para comunicar un mensaje a la comunidad: Es el fin de la hipocresía, finalmente este blog y el recopilador de contenidos tienen feed RSS.&lt;/blockquote&gt;
-					
-					&lt;article class=&#34;main-content&#34;&gt;
-	&lt;h1&gt;Habemus RSS&lt;/h1&gt;
-	&lt;p&gt;
-		Sí, gente, ayer me dio un ataque de inspiración que me permitió, finalmente, agregar &lt;span lang=&#34;en&#34;&gt;feeds &lt;abbr
-				title=&#34;Really Simple Syndication&#34;&gt;RSS&lt;/abbr&gt;&lt;/span&gt;, tanto a mi blog, como al recopilador de contenidos curados.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Si están leyendo esto, supongo que ya saben lo que es &lt;abbr title=&#34;Really Simple Syndication&#34; lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt;,
+				<description><![CDATA[
+					<blockquote>Noticia de último momento. Interrumpimos la programación habitual para comunicar un mensaje a la comunidad: Es el fin de la hipocresía, finalmente este blog y el recopilador de contenidos tienen feed RSS.</blockquote>
+					<article class="main-content">
+	<h1>Habemus RSS</h1>
+	<p>
+		Sí, gente, ayer me dio un ataque de inspiración que me permitió, finalmente, agregar <span lang="en">feeds <abbr
+				title="Really Simple Syndication">RSS</abbr></span>, tanto a mi blog, como al recopilador de contenidos curados.
+	</p>
+	<p>
+		Si están leyendo esto, supongo que ya saben lo que es <abbr title="Really Simple Syndication" lang="en">RSS</abbr>,
 		pero, solo por las dudas, vamos a hacer un breve repaso.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Dejando de lado los aspectos técnicos, &lt;dfn title=&#34;Really Simple Syndication&#34; lang=&#34;en&#34;&gt;RSS&lt;/dfn&gt; es un estándar
-		para publicar noticias y artículos en un formato preestablecido que puede ser comprendido por &lt;i
-			lang=&#34;en&#34;&gt;software&lt;/i&gt; diseñado para este fin (conocido comúnmente como &lt;span lang=&#34;en&#34;&gt;&lt;abbr
-				title=&#34;Really Simple Syndication&#34;&gt;RSS&lt;/abbr&gt; aggregators&lt;/span&gt;, o clientes &lt;abbr
-			title=&#34;Really Simple Syndication&#34; lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt;). El objetivo de &lt;abbr title=&#34;Really Simple Syndication&#34;
-			lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt; es que una persona pueda “suscribirse” a múltiples &lt;i lang=&#34;en&#34;&gt;feeds&lt;/i&gt; para, luego,
+	</p>
+	<p>
+		Dejando de lado los aspectos técnicos, <dfn title="Really Simple Syndication" lang="en">RSS</dfn> es un estándar
+		para publicar noticias y artículos en un formato preestablecido que puede ser comprendido por <i
+			lang="en">software</i> diseñado para este fin (conocido comúnmente como <span lang="en"><abbr
+				title="Really Simple Syndication">RSS</abbr> aggregators</span>, o clientes <abbr
+			title="Really Simple Syndication" lang="en">RSS</abbr>). El objetivo de <abbr title="Really Simple Syndication"
+			lang="en">RSS</abbr> es que una persona pueda “suscribirse” a múltiples <i lang="en">feeds</i> para, luego,
 		mediante un único software poder consumir de manera centralizada toda esa información (y no tener que estar paseando
 		por todo internet para leer los posts que uno quiere).
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Su uso es realmente simple y aunque su popularidad ha disminuido bastante en los últimos años, aun la mayoría de
-		blogs o páginas web dedicadas a compartir contenido cuentan con un &lt;span lang=&#34;en&#34;&gt;feed &lt;abbr
-				title=&#34;Really Simple Syndication&#34;&gt;RSS&lt;/abbr&gt;&lt;/span&gt;.
-	&lt;/p&gt;
-	&lt;figure&gt;
-		&lt;img src=&#34;https://iyaki.ar/posts/20230614_habemus_rss/rss-logo.svg&#34; alt=&#34;Logo RSS&#34;&gt;
-		&lt;figcaption&gt;Logo &lt;abbr title=&#34;Really Simple Syndication&#34; lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt;, no confundir con el icono del &lt;span
-			lang=&#34;en&#34;&gt;WiFi&lt;/span&gt;.&lt;/figcaption&gt;
-	&lt;/figure&gt;
-	&lt;h2&gt;Implementación técnica&lt;/h2&gt;
-	&lt;p&gt;
-		La forma por la que me decanté para crear los &lt;span lang=&#34;en&#34;&gt;&lt;abbr
-				title=&#34;Really Simple Syndication&#34;&gt;RSS&lt;/abbr&gt;&lt;/span&gt; es bastante simple aunque poco convencional.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Cómo todo lo alojado en &lt;a href=&#34;https://iyaki.ar&#34; target=&#34;_blank&#34;&gt;iyaki.ar&lt;/a&gt; es solo contenido estático subido a
-		&lt;a href=&#34;https://github.com/&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt; no hay ningún &lt;i lang=&#34;en&#34;&gt;backend&lt;/i&gt; que pueda actuar
-		como fuente para generar el &lt;abbr title=&#34;eXtensible Markup Language&#34;&gt;XML&lt;/abbr&gt; del feed. Por lo cual el script que
-		armé realiza un pequeño &lt;i lang=&#34;en&#34;&gt;scrapping&lt;/i&gt; del &lt;abbr title=&#34;HyperText Markup Language&#34;&gt;HTML&lt;/abbr&gt; de mis
-		páginas web (mediante la excelente biblioteca &lt;a href=&#34;https://github.com/taoqf/node-html-parser&#34; target=&#34;_blank&#34;
-			lang=&#34;en&#34;&gt;node-html-parser&lt;/a&gt; y a partir de la información recolectada genero el &lt;abbr
-			title=&#34;eXtensible Markup Language&#34; lang=&#34;en&#34;&gt;XML&lt;/abbr&gt; con la ayuda de &lt;a
-			href=&#34;https://github.com/dylang/node-rss&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;node-rss&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		El código fuente de la herramienta pueden encontrarlo &lt;a
-			href=&#34;https://github.com/iyaki/iyaki.github.io/tree/main/rss&#34; target=&#34;_blank&#34;&gt;aquí&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Todo esto es ejecutado mediante &lt;a href=&#34;https://github.com/features/actions&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Github
-			Actions&lt;/a&gt; cada vez que el contenido de alguna de las páginas es modificado.&lt;br&gt; Pueden encontrar la
-		configuración de cada &lt;i lang=&#34;en&#34;&gt;workflow&lt;/i&gt; de &lt;span lang=&#34;en&#34;&gt;Github Actions&lt;/span&gt; en los siguientes enlaces:
-	&lt;/p&gt;
-	&lt;ul&gt;
-		&lt;li&gt;
-			&lt;a href=&#34;https://github.com/iyaki/iyaki.github.io/blob/main/.github/workflows/rss_curated.yml&#34;
-				target=&#34;_blank&#34;&gt;Workflow RSS del recopilador de contenido&lt;/a&gt;
-		&lt;/li&gt;
-		&lt;li&gt;
-			&lt;a href=&#34;https://github.com/iyaki/iyaki.github.io/blob/main/.github/workflows/rss_blog.yml&#34;
-				target=&#34;_blank&#34;&gt;Workflow RSS del blog&lt;/a&gt;
-		&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;p&gt;
-		Volviendo a revisar un poco cómo quedó resuelta la generación de &lt;abbr title=&#34;Really Simple Syndication&#34;
-			lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt; y viendo lo genérica que resultó la solución, creo que podría convertir la herramienta en una
-		&lt;i lang=&#34;en&#34;&gt;Action&lt;/i&gt; y publicarla en el &lt;a href=&#34;https://github.com/marketplace&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Github
-			Marketplace&lt;/a&gt;. Con una &lt;a href=&#34;https://github.com/marketplace?type=actions&amp;amp;query=rss+&#34;
-			target=&#34;_blank&#34;&gt;breve búsqueda&lt;/a&gt; lo único parecido que encontré fue &lt;a
-			href=&#34;https://github.com/marketplace/actions/rssify-any&#34; target=&#34;_blank&#34;
-			title=&#34;Action de Github para crear feeds RSS a partir de código HTML&#34;&gt;esto&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
+		blogs o páginas web dedicadas a compartir contenido cuentan con un <span lang="en">feed <abbr
+				title="Really Simple Syndication">RSS</abbr></span>.
+	</p>
+	<figure>
+		<img src="https://iyaki.ar/posts/20230614_habemus_rss/rss-logo.svg" alt="Logo RSS">
+		<figcaption>Logo <abbr title="Really Simple Syndication" lang="en">RSS</abbr>, no confundir con el icono del <span
+			lang="en">WiFi</span>.</figcaption>
+	</figure>
+	<h2>Implementación técnica</h2>
+	<p>
+		La forma por la que me decanté para crear los <span lang="en"><abbr
+				title="Really Simple Syndication">RSS</abbr></span> es bastante simple aunque poco convencional.
+	</p>
+	<p>
+		Cómo todo lo alojado en <a href="https://iyaki.ar" target="_blank">iyaki.ar</a> es solo contenido estático subido a
+		<a href="https://github.com/" target="_blank">Github</a> no hay ningún <i lang="en">backend</i> que pueda actuar
+		como fuente para generar el <abbr title="eXtensible Markup Language">XML</abbr> del feed. Por lo cual el script que
+		armé realiza un pequeño <i lang="en">scrapping</i> del <abbr title="HyperText Markup Language">HTML</abbr> de mis
+		páginas web (mediante la excelente biblioteca <a href="https://github.com/taoqf/node-html-parser" target="_blank"
+			lang="en">node-html-parser</a> y a partir de la información recolectada genero el <abbr
+			title="eXtensible Markup Language" lang="en">XML</abbr> con la ayuda de <a
+			href="https://github.com/dylang/node-rss" target="_blank" lang="en">node-rss</a>.
+	</p>
+	<p>
+		El código fuente de la herramienta pueden encontrarlo <a
+			href="https://github.com/iyaki/iyaki.github.io/tree/main/rss" target="_blank">aquí</a>.
+	</p>
+	<p>
+		Todo esto es ejecutado mediante <a href="https://github.com/features/actions" target="_blank" lang="en">Github
+			Actions</a> cada vez que el contenido de alguna de las páginas es modificado.<br> Pueden encontrar la
+		configuración de cada <i lang="en">workflow</i> de <span lang="en">Github Actions</span> en los siguientes enlaces:
+	</p>
+	<ul>
+		<li>
+			<a href="https://github.com/iyaki/iyaki.github.io/blob/main/.github/workflows/rss_curated.yml"
+				target="_blank">Workflow RSS del recopilador de contenido</a>
+		</li>
+		<li>
+			<a href="https://github.com/iyaki/iyaki.github.io/blob/main/.github/workflows/rss_blog.yml"
+				target="_blank">Workflow RSS del blog</a>
+		</li>
+	</ul>
+	<p>
+		Volviendo a revisar un poco cómo quedó resuelta la generación de <abbr title="Really Simple Syndication"
+			lang="en">RSS</abbr> y viendo lo genérica que resultó la solución, creo que podría convertir la herramienta en una
+		<i lang="en">Action</i> y publicarla en el <a href="https://github.com/marketplace" target="_blank" lang="en">Github
+			Marketplace</a>. Con una <a href="https://github.com/marketplace?type=actions&amp;query=rss+"
+			target="_blank">breve búsqueda</a> lo único parecido que encontré fue <a
+			href="https://github.com/marketplace/actions/rssify-any" target="_blank"
+			title="Action de Github para crear feeds RSS a partir de código HTML">esto</a>.
+	</p>
+	<p>
 		Hasta aquí el post de hoy estimados, espero que tengan un magnífico día.
-	&lt;/p&gt;
-&lt;/article&gt;
+	</p>
+</article>
 
-				</description>
+				]]></description>
 				<pubDate>Wed, 14 Jun 2023 00:00:00 -0300</pubDate>
 				<link>https://iyaki.ar/posts/20230614_habemus_rss/</link>
 				<guid isPermaLink="true">https://iyaki.ar/posts/20230614_habemus_rss/</guid>
@@ -554,135 +542,133 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 				<title>Depurando conocimiento</title>
 				
 				
-				<description>
-					
-						&lt;blockquote&gt;Tercer post sobre cómo trabajo el conocimiento, esta vez con un plot twist a la mitad de la historia que ni yo me esperaba.&lt;/blockquote&gt;
-					
-					&lt;article class=&#34;main-content&#34;&gt;
-	&lt;h1&gt;Depurando conocimiento&lt;/h1&gt;
-	&lt;p&gt;
-		En esta ocasión les traigo un relato sobre cómo experimenté una sobrecarga de información por seguir demasiados &lt;i
-			lang=&#34;en&#34;&gt;feeds&lt;/i&gt; &lt;abbr title=&#34;Really Simple Syndication&#34; lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt;, llegando a un punto donde la
-		mayoría de los artículos ya no me interesaban para nada y de como lo resolví con un poco de &lt;span
-			lang=&#34;en&#34;&gt;Javascript&lt;/span&gt; cuando podría, simplemente, haber dejado de seguir dichos &lt;i lang=&#34;en&#34;&gt;feeds&lt;/i&gt; (cosa
+				<description><![CDATA[
+					<blockquote>Tercer post sobre cómo trabajo el conocimiento, esta vez con un plot twist a la mitad de la historia que ni yo me esperaba.</blockquote>
+					<article class="main-content">
+	<h1>Depurando conocimiento</h1>
+	<p>
+		En esta ocasión les traigo un relato sobre cómo experimenté una sobrecarga de información por seguir demasiados <i
+			lang="en">feeds</i> <abbr title="Really Simple Syndication" lang="en">RSS</abbr>, llegando a un punto donde la
+		mayoría de los artículos ya no me interesaban para nada y de como lo resolví con un poco de <span
+			lang="en">Javascript</span> cuando podría, simplemente, haber dejado de seguir dichos <i lang="en">feeds</i> (cosa
 		que dicho sea de paso en realidad sí termine haciendo en muchos casos).
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Podría haber dejado de seguirlos, pero… ¿Y si justo entonces decidiesen publicar algo de mi interés? Pues sí, puede
 		pasar; pero ¿realmente va a tener eso un impacto en tu vida? Probablemente no.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Por supuesto, lo mejor, en realidad, sería superar ese miedo ridículo a “perderse algo” y poder tener una &lt;a
-			href=&#34;https://manhattanmentalhealthcounseling.com/the-benefits-of-a-low-information-diet-for-people-with-mental-health-issues/&#34;
-			target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;dieta baja en información&lt;/a&gt; y prácticamente nula en datos, a menos que alguna de
+	</p>
+	<p>
+		Por supuesto, lo mejor, en realidad, sería superar ese miedo ridículo a “perderse algo” y poder tener una <a
+			href="https://manhattanmentalhealthcounseling.com/the-benefits-of-a-low-information-diet-for-people-with-mental-health-issues/"
+			target="_blank" hreflang="en">dieta baja en información</a> y prácticamente nula en datos, a menos que alguna de
 		nuestras actividades lo requiera.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Y ¿Por qué podemos querer información que no necesitamos ahora? La única respuesta legitima que se me ocurre es para
 		poder responder más rápidamente ante alguna necesidad relacionada. Sin embargo, ese argumento se derrumba enseguida
 		si uno sabe realizar búsquedas en internet con, por lo menos, un mínimo de eficacia. ¿Cuánto tardamos hoy en día en
 		acceder a la información que queramos en el momento que la necesitamos con todas las herramientas tecnológicas con
-		las que contamos (las cuales por cierto son cada vez más, ya que a los históricos buscadores web como &lt;a
-			href=&#34;https://www.google.com/&#34; target=&#34;_blank&#34;&gt;Google&lt;/a&gt; ahora se suman nuevas herramientas impulsadas por
-		inteligencia artificial como &lt;a href=&#34;https://chat.openai.com/&#34; target=&#34;_blank&#34;&gt;ChatGPT&lt;/a&gt;)?
-	&lt;/p&gt;
-	&lt;p&gt;
+		las que contamos (las cuales por cierto son cada vez más, ya que a los históricos buscadores web como <a
+			href="https://www.google.com/" target="_blank">Google</a> ahora se suman nuevas herramientas impulsadas por
+		inteligencia artificial como <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>)?
+	</p>
+	<p>
 		Aunque apenas voy escribiendo 4 párrafos de este artículo, hacerlo me está costando más de lo que esperaba y el
-		proceso me está tomando varios días. Días en los cuales me estoy suscribiendo de cada vez más &lt;i lang=&#34;en&#34;&gt;feeds&lt;/i&gt;
+		proceso me está tomando varios días. Días en los cuales me estoy suscribiendo de cada vez más <i lang="en">feeds</i>
 		al darme cuenta de, realmente, no necesito la información que me brindan.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Por un lado, mantenerme al tanto de la actualidad nunca me resultó una prioridad, y si realmente ocurre un hecho que
-		sacude al mundo, de todas formas uno se entera enseguida al hablar con otras personas. Mi mayor interés con los &lt;i
-			lang=&#34;en&#34;&gt;feeds&lt;/i&gt; siempre fue adquirir conocimiento y hasta hace dos días estaba perfectamente preparado para
+		sacude al mundo, de todas formas uno se entera enseguida al hablar con otras personas. Mi mayor interés con los <i
+			lang="en">feeds</i> siempre fue adquirir conocimiento y hasta hace dos días estaba perfectamente preparado para
 		justificar eso en este post. Pero cuanto más lo pienso, más se arraigan dentro de mí varios conceptos que leí
-		recientemente sobre cultivar la &lt;a href=&#34;https://nesslabs.com/selective-ignorance&#34;
-			target=&#34;_blank&#34;&gt;&lt;strong&gt;ignorancia selectiva&lt;/strong&gt;&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
+		recientemente sobre cultivar la <a href="https://nesslabs.com/selective-ignorance"
+			target="_blank"><strong>ignorancia selectiva</strong></a>.
+	</p>
+	<p>
 		Este ejercicio me está resultando de lo más enriquecedor, así que voy a proponerles que lo prueben.
-		&lt;br&gt;
+		<br>
 		Los pasos son los siguientes:
-	&lt;/p&gt;
-	&lt;ol&gt;
-		&lt;li&gt;
-			Infórmense brevemente sobre la ignorancia selectiva, personalmente recomiendo leer el capítulo 6, &lt;em
-				lang=&#34;en&#34;&gt;The Low-Information Diet&lt;/em&gt;, del libro &lt;em lang=&#34;em&#34;&gt;&lt;a
-					href=&#34;https://www.goodreads.com/es/book/show/368593.The_4_Hour_Workweek&#34; target=&#34;_blank&#34; hreflang=&#34;en&#34;&gt;The
-					4-Hour Workweek &lt;/a&gt;&lt;/em&gt; de Tim Ferriss.
-		&lt;/li&gt;
-		&lt;li&gt;
+	</p>
+	<ol>
+		<li>
+			Infórmense brevemente sobre la ignorancia selectiva, personalmente recomiendo leer el capítulo 6, <em
+				lang="en">The Low-Information Diet</em>, del libro <em lang="em"><a
+					href="https://www.goodreads.com/es/book/show/368593.The_4_Hour_Workweek" target="_blank" hreflang="en">The
+					4-Hour Workweek </a></em> de Tim Ferriss.
+		</li>
+		<li>
 			Hagan un repaso mental de todas las fuentes de información que utilizan día a día. Desde diarios en papel hasta
-			redes sociales, pasando por diarios digitales y &lt;abbr title=&#34;Really Simple Syndication&#34; lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt;.
-			Todos cuentan.&lt;/li&gt;
-		&lt;li&gt;
+			redes sociales, pasando por diarios digitales y <abbr title="Really Simple Syndication" lang="en">RSS</abbr>.
+			Todos cuentan.</li>
+		<li>
 			Ahora calculen cuanto tiempo le están dedicando a consumir toda esa información y compárenlo con cuanto tiempo
 			están dedicando a emplear esa información.
-		&lt;/li&gt;
-	&lt;/ol&gt;
-	&lt;p&gt;
+		</li>
+	</ol>
+	<p>
 		Eso es todo, luego de la comparación cada uno debería saber si quiere seguir distribuyendo su tiempo de la misma
 		manera que lo estaba haciendo.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Al menos para mí, deshacerme de toda esa información me genera una inexplicable incomodidad en todo mi ser. Por
 		suerte, no es necesario llegar al extremo de eliminar por completo la “ingesta” de información y existen puntos
 		intermedios como el uso de curadores de contenido. Lo más importante en estos casos es tener el cuidado de no
-		terminar cayendo en sesgos cognitivos como el &lt;a
-			href=&#34;https://elvisitantedigital.com/camaras-de-eco-filtros-burbuja-sesgo-de-confirmacion/&#34; target=&#34;_blank&#34;&gt;filtro
-			de burbuja, la cámara de eco o el sesgo de confirmación&lt;/a&gt;.&lt;br&gt; En cuanto a curadores de contenido, llegado este
+		terminar cayendo en sesgos cognitivos como el <a
+			href="https://elvisitantedigital.com/camaras-de-eco-filtros-burbuja-sesgo-de-confirmacion/" target="_blank">filtro
+			de burbuja, la cámara de eco o el sesgo de confirmación</a>.<br> En cuanto a curadores de contenido, llegado este
 		punto, me veo contractualmente obligado conmigo mismo a comentarles que si les interesa la programación o el
-		management puede interesarles mi &lt;a href=&#34;https://iyaki.ar/&#34;curated&#34; target=&#34;_blank&#34;&gt;Recopilador de contenido curado&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;h2&gt;Sobre filtrar noticias con Javascript y otras yerbas&lt;/h2&gt;
-	&lt;p&gt;
+		management puede interesarles mi <a href="https://iyaki.ar/"curated" target="_blank">Recopilador de contenido curado</a>.
+	</p>
+	<h2>Sobre filtrar noticias con Javascript y otras yerbas</h2>
+	<p>
 		Sí, originalmente este artículo era sobre un pequeño proyecto que desarrollé en Javascript para filtrar noticias en
-		&lt;a href=&#34;https://feedly.com/&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Feedly&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
+		<a href="https://feedly.com/" target="_blank" lang="en">Feedly</a>.
+	</p>
+	<p>
 		Al menos para mí, con el pasar de los párrafos esto ya pasó a un segundo plano, pero si aún les interesa el proyecto
-		(el cual, de hecho, sigo utilizando para filtrar los &lt;i lang=&#34;en&#34;&gt;feeds&lt;/i&gt; a lo que quedé suscripto) pueden
-		encontrar el mismo en su repositorio de &lt;a href=&#34;https://github.com/&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Github&lt;/a&gt;: &lt;a
-			href=&#34;https://github.com/iyaki/feedly-denoiser&#34; target=&#34;_blank&#34;&gt;Feddly Denoiser&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Su funcionamiento es muy simple y se encuentra explicado en el &lt;span lang=&#34;en&#34;&gt;README&lt;/span&gt; del repositorio, pero
-		si tienen dudas, consultas o sugerencias de mejora no duden en contactarme mediante un &lt;a
-			href=&#34;https://github.com/iyaki/feedly-denoiser/issues&#34; target=&#34;_blank&#34;&gt;&lt;span lang=&#34;en&#34;&gt;Issue&lt;/span&gt; en &lt;span
-				lang=&#34;en&#34;&gt;Github&lt;/span&gt;&lt;/a&gt; o directamente, &lt;a href=&#34;mailto:me@iyaki.ar&#34; target=&#34;_blank&#34;&gt;vía e-mail&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Si, como yo, utilizan &lt;span lang=&#34;en&#34;&gt;Feedly&lt;/span&gt; en sus dispositivos móviles, también podría resultarles
-		interesantes una automatización que desarrollé para ejecutar &lt;a href=&#34;https://github.com/iyaki/feedly-denoiser&#34;
-			target=&#34;_blank&#34;&gt;Feedly Denoiser&lt;/a&gt; en &lt;a href=&#34;https://github.com/features/actions&#34; target=&#34;_blank&#34;
-			lang=&#34;en&#34;&gt;Github Actions&lt;/a&gt; pueden encontrar &lt;a href=&#34;https://github.com/iyaki/feedly-denoiser-automation&#34;
-			target=&#34;_blank&#34;&gt;aquí&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;h2&gt;Terminando&lt;/h2&gt;
-	&lt;p&gt;
-		Estimados, esto fue todo por hoy. En breve seguramente esté actualizando la lista de &lt;i lang=&#34;en&#34;&gt;feeds&lt;/i&gt; &lt;abbr
-			title=&#34;Really Simple Syndication&#34; lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt; de mí &lt;a href=&#34;https://iyaki.ar/&#34;posts/20230514_reuniendo_conocimiento&#34;
-			target=&#34;_blank&#34;&gt;post anterior&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Y si todo sigue según el plan muy pronto, tanto &lt;a href=&#34;https://iyaki.ar/&#34;blog&#34; target=&#34;_blank&#34;&gt;este blog&lt;/a&gt;, como el &lt;a
-			href=&#34;https://iyaki.ar/&#34;curated&#34; target=&#34;_blank&#34;&gt;recopilador de contenidos curados&lt;/a&gt;, deberían contar con sus propios &lt;i
-			lang=&#34;en&#34;&gt;feeds&lt;/i&gt; &lt;abbr title=&#34;Really Simple Syndication&#34;&gt;RSS&lt;/abbr&gt; para que puedan seguir.
-	&lt;/p&gt;
-	&lt;p&gt;
+		(el cual, de hecho, sigo utilizando para filtrar los <i lang="en">feeds</i> a lo que quedé suscripto) pueden
+		encontrar el mismo en su repositorio de <a href="https://github.com/" target="_blank" lang="en">Github</a>: <a
+			href="https://github.com/iyaki/feedly-denoiser" target="_blank">Feddly Denoiser</a>.
+	</p>
+	<p>
+		Su funcionamiento es muy simple y se encuentra explicado en el <span lang="en">README</span> del repositorio, pero
+		si tienen dudas, consultas o sugerencias de mejora no duden en contactarme mediante un <a
+			href="https://github.com/iyaki/feedly-denoiser/issues" target="_blank"><span lang="en">Issue</span> en <span
+				lang="en">Github</span></a> o directamente, <a href="mailto:me@iyaki.ar" target="_blank">vía e-mail</a>.
+	</p>
+	<p>
+		Si, como yo, utilizan <span lang="en">Feedly</span> en sus dispositivos móviles, también podría resultarles
+		interesantes una automatización que desarrollé para ejecutar <a href="https://github.com/iyaki/feedly-denoiser"
+			target="_blank">Feedly Denoiser</a> en <a href="https://github.com/features/actions" target="_blank"
+			lang="en">Github Actions</a> pueden encontrar <a href="https://github.com/iyaki/feedly-denoiser-automation"
+			target="_blank">aquí</a>.
+	</p>
+	<h2>Terminando</h2>
+	<p>
+		Estimados, esto fue todo por hoy. En breve seguramente esté actualizando la lista de <i lang="en">feeds</i> <abbr
+			title="Really Simple Syndication" lang="en">RSS</abbr> de mí <a href="https://iyaki.ar/"posts/20230514_reuniendo_conocimiento"
+			target="_blank">post anterior</a>.
+	</p>
+	<p>
+		Y si todo sigue según el plan muy pronto, tanto <a href="https://iyaki.ar/"blog" target="_blank">este blog</a>, como el <a
+			href="https://iyaki.ar/"curated" target="_blank">recopilador de contenidos curados</a>, deberían contar con sus propios <i
+			lang="en">feeds</i> <abbr title="Really Simple Syndication">RSS</abbr> para que puedan seguir.
+	</p>
+	<p>
 		Si quieren hacerme algún comentario, hablar, o sienten la irrefrenable necesidad de discutir acaloradamente mis
-		opiniones, siéntanse libres de escribirme a: &lt;a href=&#34;mailto:me@iyaki.ar&#34; target=&#34;_blank&#34;&gt;me@iyaki.ar&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;h2&gt;Actualizaciones&lt;/h2&gt;
-	&lt;p&gt;
-		Desde &lt;time datetime=&#34;2023-10-18&#34;&gt;Octubre del 2023&lt;/time&gt; Feedly requiere de una suscripción de pago para poder
-		utilizar su &lt;abbr title=&#34;Application Programming Interface&#34; lang=&#34;en&#34;&gt;API&lt;/abbr&gt; &lt;abbr
-			title=&#34;Representational State Transfer&#34; lang=&#34;en&#34;&gt;REST&lt;/abbr&gt; por lo que no continuaré utilizando ni dando
-		mantenimiento a &lt;a href=&#34;https://github.com/iyaki/feedly-denoiser&#34; target=&#34;_blank&#34;&gt;Feedly Denoiser&lt;/a&gt;.
-	&lt;/p&gt;
-&lt;/article&gt;
+		opiniones, siéntanse libres de escribirme a: <a href="mailto:me@iyaki.ar" target="_blank">me@iyaki.ar</a>.
+	</p>
+	<h2>Actualizaciones</h2>
+	<p>
+		Desde <time datetime="2023-10-18">Octubre del 2023</time> Feedly requiere de una suscripción de pago para poder
+		utilizar su <abbr title="Application Programming Interface" lang="en">API</abbr> <abbr
+			title="Representational State Transfer" lang="en">REST</abbr> por lo que no continuaré utilizando ni dando
+		mantenimiento a <a href="https://github.com/iyaki/feedly-denoiser" target="_blank">Feedly Denoiser</a>.
+	</p>
+</article>
 
-				</description>
+				]]></description>
 				<pubDate>Sat, 10 Jun 2023 00:00:00 -0300</pubDate>
 				<link>https://iyaki.ar/posts/20230610_depurando_conocimiento/</link>
 				<guid isPermaLink="true">https://iyaki.ar/posts/20230610_depurando_conocimiento/</guid>
@@ -692,142 +678,140 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 				<title>Ordenando conocimiento</title>
 				
 				
-				<description>
-					
-						&lt;blockquote&gt;Segundo artículo de la serie en la que explico como gestiono, actualmente, el conocimiento en mi vida.&lt;/blockquote&gt;
-					
-					&lt;article class=&#34;main-content&#34;&gt;
-	&lt;h1&gt;Ordenando conocimiento&lt;/h1&gt;
-	&lt;p&gt;
-		En el principio, cuando cree mi &lt;a href=&#34;https://fortelabs.com/blog/basboverview/&#34; target=&#34;_blank&#34;&gt;Segundo
-			cerebro&lt;/a&gt;, reinaba el caos y no había nada en él.
-	&lt;/p&gt;
-	&lt;p&gt;
+				<description><![CDATA[
+					<blockquote>Segundo artículo de la serie en la que explico como gestiono, actualmente, el conocimiento en mi vida.</blockquote>
+					<article class="main-content">
+	<h1>Ordenando conocimiento</h1>
+	<p>
+		En el principio, cuando cree mi <a href="https://fortelabs.com/blog/basboverview/" target="_blank">Segundo
+			cerebro</a>, reinaba el caos y no había nada en él.
+	</p>
+	<p>
 		Esta es la historia de mi viaje a través de múltiples posts sobre toma de notas y sórdidos videos sobre
-		productividad hasta, finalmente, crear lo que hoy es mi &lt;a
-			href=&#34;https://iyaki.notion.site/iyaki/066daa9a7abb4c029724323209c85ca6?v=0a0294da7e734adcb9e4e5413c1db1da&#34;
-			target=&#34;_blank&#34;&gt;base de conocimiento&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		En mi post anterior, &lt;a href=&#34;https://iyaki.ar/&#34;posts/20230514_reuniendo_conocimiento&#34; target=&#34;_blank&#34;&gt;Reuniendo
-			conocimiento&lt;/a&gt;, expliqué cómo, actualmente, recopilo información de internet, me informo y aprendo. Ahora ha
+		productividad hasta, finalmente, crear lo que hoy es mi <a
+			href="https://iyaki.notion.site/iyaki/066daa9a7abb4c029724323209c85ca6?v=0a0294da7e734adcb9e4e5413c1db1da"
+			target="_blank">base de conocimiento</a>.
+	</p>
+	<p>
+		En mi post anterior, <a href="https://iyaki.ar/"posts/20230514_reuniendo_conocimiento" target="_blank">Reuniendo
+			conocimiento</a>, expliqué cómo, actualmente, recopilo información de internet, me informo y aprendo. Ahora ha
 		llegado la hora de saber cómo ordeno toda esa información en algo que me pueda servir de referencia en el futuro
 		cuando necesite refrescar la memoria o compartir conocimiento con otras personas. Aunque, en este caso, el relato
-		comienza mucho antes de mi historia de amor con el &lt;abbr title=&#34;Really Simple Syndication&#34; lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Al dar mis primeros pasos por la &lt;i lang=&#34;en&#34;&gt;world wide web&lt;/i&gt;, la primera arma en mi arsenal fueron, obviamente,
+		comienza mucho antes de mi historia de amor con el <abbr title="Really Simple Syndication" lang="en">RSS</abbr>.
+	</p>
+	<p>
+		Al dar mis primeros pasos por la <i lang="en">world wide web</i>, la primera arma en mi arsenal fueron, obviamente,
 		lo que tenía más a mano. Los favoritos del navegador.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Mientras la información no necesitara estar disponible en múltiples dispositivos (situación que no era para nada
 		frecuente en una época en la que la mayoría de las personas solo contaban con un ordenar con conexión ADSL en el
 		hogar) y fuese relevante para un solo fin, la estructura de carpetas que proponen los favoritos de la mayoría de
 		navegadores web eran más que suficientes.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Los años pasaron y el mundo cambió. El auge de la web y los dispositivos móviles se volvió innegable y, después de
-		ahorrar durante algún tiempo, compré mi primer &lt;i lang=&#34;en&#34;&gt;smartphone&lt;/i&gt;. Ahora ya no era suficiente con tener la
+		ahorrar durante algún tiempo, compré mi primer <i lang="en">smartphone</i>. Ahora ya no era suficiente con tener la
 		información disponible de manera local en un único dispositivo. La información debía estar siempre disponible desde
 		cualquier parte, en cualquier momento, y aún faltaban algunos años para que los navegadores comenzaran a ofrecer
 		sincronización entre dispositivos.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Fue entonces cuando, de algún modo que ya no recuerdo, aunque muy probablemente a través de &lt;a
-			href=&#34;https://www.taringa.net/&#34; target=&#34;_blank&#34;&gt;Taringa!&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn1&#34;
-				id=&#34;fnref1&#34;&gt;[1]&lt;/a&gt;&lt;/sup&gt;, conocí &lt;a href=&#34;https://getpocket.com/es/&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Pocket&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Además del problema de portabilidad, Pocket implementa un esquema en el que los artículos se organizaban mediante &lt;i
-			title=&#34;etiquetas&#34; lang=&#34;en&#34;&gt;tags&lt;/i&gt;. Este esquema permitía asociar una misma pieza de información a múltiples
+	</p>
+	<p>
+		Fue entonces cuando, de algún modo que ya no recuerdo, aunque muy probablemente a través de <a
+			href="https://www.taringa.net/" target="_blank">Taringa!</a><sup class="footnote-ref"><a href="#fn1"
+				id="fnref1">[1]</a></sup>, conocí <a href="https://getpocket.com/es/" target="_blank" lang="en">Pocket</a>.
+	</p>
+	<p>
+		Además del problema de portabilidad, Pocket implementa un esquema en el que los artículos se organizaban mediante <i
+			title="etiquetas" lang="en">tags</i>. Este esquema permitía asociar una misma pieza de información a múltiples
 		conceptos. Por si fuera poco, además, guarda, no solo la URL sino, también, el texto del artículo en cuestión.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Mientras escribo el párrafo anterior no puedo evitar preguntarme por qué es que lo dejé de usar. Porque sí, a pesar
 		de que hasta podría parecer que me pagaron para hacerles propaganda, la verdad es que hace años que no uso Pocket y
 		a día de hoy ya no sé decir por qué fue que deje de usarlo.
-	&lt;/p&gt;
-	&lt;p&gt;En cualquier caso, lo importante es que Pocket no perduró.&lt;/p&gt;
-	&lt;p&gt;
-		Pasó el tiempo y eventualmente conocí la verdadera fe. El &lt;abbr title=&#34;Really Simple Syndication&#34;
-			lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt;. Lo conocí de la mano de Feedly. Aunque parecía haber opciones de software más completas, la
+	</p>
+	<p>En cualquier caso, lo importante es que Pocket no perduró.</p>
+	<p>
+		Pasó el tiempo y eventualmente conocí la verdadera fe. El <abbr title="Really Simple Syndication"
+			lang="en">RSS</abbr>. Lo conocí de la mano de Feedly. Aunque parecía haber opciones de software más completas, la
 		mayoría carecían de la capacidad de sincronizarse entre dispositivos, por lo que terminé decidiéndome por Feedly.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Feedly tiene una funcionalidad llamada &lt;i title=&#34;tableros&#34; lang=&#34;en&#34;&gt;Boards&lt;/i&gt; y aunque resuelve adecuadamente la
+	</p>
+	<p>
+		Feedly tiene una funcionalidad llamada <i title="tableros" lang="en">Boards</i> y aunque resuelve adecuadamente la
 		disponibilidad multidispositivo no es muy amigable para asociar los artículos que se guardan a conceptos útiles o
 		para buscar dentro de ellos.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Nuevamente, me encontraba en la búsqueda de una herramienta que cubriera adecuadamente mis necesidades. Pero esta
 		vez mi mente lo relacionó a algo distinto. El “segundo cerebro”.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Ya había escuchado hace años el término &lt;i title=&#34;Segundo cerebro&#34; lang=&#34;en&#34;&gt;Second Brain&lt;/i&gt; para referirse a una
+	</p>
+	<p>
+		Ya había escuchado hace años el término <i title="Segundo cerebro" lang="en">Second Brain</i> para referirse a una
 		forma de recopilar y ordenar información de manera que fuese útil en el futuro, pero nunca me llamo demasiado la
-		atención. Eso de tener un “segundo” cerebro siempre me pareció (y me sigue pareciendo) pura &lt;a
-			href=&#34;https://neolunfardo.blogspot.com/2010/03/z.html&#34; target=&#34;_blank&#34;&gt;zaraza&lt;/a&gt;. Sin embargo, la idea general
+		atención. Eso de tener un “segundo” cerebro siempre me pareció (y me sigue pareciendo) pura <a
+			href="https://neolunfardo.blogspot.com/2010/03/z.html" target="_blank">zaraza</a>. Sin embargo, la idea general
 		parecía bastante acertada y sentía la necesidad, cada vez más evidente, de lograr algo así.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Luego de una breve investigación terminé con dos candidatos para el trabajo: &lt;a href=&#34;https://obsidian.md/&#34;
-			target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Obsidian&lt;/a&gt; y &lt;a href=&#34;https://www.notion.so/&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Notion&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;
-		&lt;span lang=&#34;en&#34;&gt;Obsidian&lt;/span&gt; realmente tiene algunas propuestas muy interesantes y aunque, al basarse en archivos
-		en texto plano, podría haber creado un esquema de sincronización mediante &lt;a href=&#34;https://git-scm.com/&#34;
-			target=&#34;_blank&#34; lang=&#34;en&#34;&gt;git&lt;/a&gt;+&lt;a href=&#34;https://github.com/&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Github&lt;/a&gt;, &lt;a
-			href=&#34;https://www.google.com/intl/es-419_ar/drive/&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Google Drive&lt;/a&gt;, &lt;a
-			href=&#34;https://mega.io/es&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;MEGA&lt;/a&gt; (O bien pagado por el &lt;a
-			href=&#34;https://obsidian.md/sync&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;servicio de sincronización&lt;/a&gt;); &lt;span
-			lang=&#34;en&#34;&gt;Notion&lt;/span&gt;, en su capa gratuita, ya me brindaba dicha funcionalidad y, en líneas generales, también
-		se parecía una herramienta de lo más interesante y potente&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn2&#34;
-				id=&#34;fnref2&#34;&gt;[2]&lt;/a&gt;&lt;/sup&gt;.
-	&lt;/p&gt;
-	&lt;p&gt;Y así llegamos al presente.&lt;/p&gt;
-	&lt;p&gt;
-		Actualmente, utilizo la extensión &lt;a
-			href=&#34;https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk&#34;
-			target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Notion Web Clipper&lt;/a&gt; en el navegador para guardar de forma rápida páginas que visito y
-		me brinda las mismas ventajas que daba &lt;span lang=&#34;en&#34;&gt;Pocket&lt;/span&gt; (disponibilidad, clasificación mediante &lt;i
-			title=&#34;etiquetas&#34; lang=&#34;en&#34;&gt;tags&lt;/i&gt; y guardado del contenido de los artículos).
-	&lt;/p&gt;
-	&lt;p&gt;
-		Por defecto, todos los artículos y páginas que guardo con el &lt;span lang=&#34;en&#34;&gt;Web Clipper&lt;/span&gt; van primero a una
-		lista de &lt;a href=&#34;https://es.wikipedia.org/wiki/Triaje&#34; target=&#34;_blank&#34; lang=&#34;fr&#34;&gt;triage&lt;/a&gt; desde donde,
+	</p>
+	<p>
+		Luego de una breve investigación terminé con dos candidatos para el trabajo: <a href="https://obsidian.md/"
+			target="_blank" lang="en">Obsidian</a> y <a href="https://www.notion.so/" target="_blank" lang="en">Notion</a>.
+	</p>
+	<p>
+		<span lang="en">Obsidian</span> realmente tiene algunas propuestas muy interesantes y aunque, al basarse en archivos
+		en texto plano, podría haber creado un esquema de sincronización mediante <a href="https://git-scm.com/"
+			target="_blank" lang="en">git</a>+<a href="https://github.com/" target="_blank" lang="en">Github</a>, <a
+			href="https://www.google.com/intl/es-419_ar/drive/" target="_blank" lang="en">Google Drive</a>, <a
+			href="https://mega.io/es" target="_blank" lang="en">MEGA</a> (O bien pagado por el <a
+			href="https://obsidian.md/sync" target="_blank" lang="en">servicio de sincronización</a>); <span
+			lang="en">Notion</span>, en su capa gratuita, ya me brindaba dicha funcionalidad y, en líneas generales, también
+		se parecía una herramienta de lo más interesante y potente<sup class="footnote-ref"><a href="#fn2"
+				id="fnref2">[2]</a></sup>.
+	</p>
+	<p>Y así llegamos al presente.</p>
+	<p>
+		Actualmente, utilizo la extensión <a
+			href="https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk"
+			target="_blank" lang="en">Notion Web Clipper</a> en el navegador para guardar de forma rápida páginas que visito y
+		me brinda las mismas ventajas que daba <span lang="en">Pocket</span> (disponibilidad, clasificación mediante <i
+			title="etiquetas" lang="en">tags</i> y guardado del contenido de los artículos).
+	</p>
+	<p>
+		Por defecto, todos los artículos y páginas que guardo con el <span lang="en">Web Clipper</span> van primero a una
+		lista de <a href="https://es.wikipedia.org/wiki/Triaje" target="_blank" lang="fr">triage</a> desde donde,
 		posteriormente, los clasifico antes de pasarlos a mi base de conocimiento.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Esa última parte del proceso es completamente manual y puede resultar un poco tediosa (sobre todo cuando pasan
 		varios días sin que clasifique los artículos y comienzan a acumularse) pero creo que vale la pena. Además está en
 		mis planes automatizarlo pronto.
-	&lt;/p&gt;
-	&lt;p&gt;Hasta aquí llega el post de hoy. Espero que tengan un excelente día.&lt;/p&gt;
-	&lt;hr class=&#34;footnotes-sep&#34;&gt;
-	&lt;section class=&#34;footnotes&#34;&gt;
-		&lt;ol class=&#34;footnotes-list&#34;&gt;
-			&lt;li id=&#34;fn1&#34; class=&#34;footnote-item&#34;&gt;
-				&lt;p&gt;
-					Taringa en sus años dorados de Inteligencia Colectiva, mucho antes de los &lt;span lang=&#34;en&#34;&gt;Shouts&lt;/span&gt;,
+	</p>
+	<p>Hasta aquí llega el post de hoy. Espero que tengan un excelente día.</p>
+	<hr class="footnotes-sep">
+	<section class="footnotes">
+		<ol class="footnotes-list">
+			<li id="fn1" class="footnote-item">
+				<p>
+					Taringa en sus años dorados de Inteligencia Colectiva, mucho antes de los <span lang="en">Shouts</span>,
 					cuando los verdaderos linces de las estepas ibéricas, machos alfas, lomos plateados, pechos peludos junto con
 					los troesmas galácticos de propulsión a uranio enriquecido hacían aportes de calidad a la comunidad y todavía
-					no habían metido preso a &lt;a href=&#34;https://es.wikipedia.org/wiki/Kim_Dotcom&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Kim
-						Dotcom&lt;/a&gt; ni el FBI se había quedado con todos los servers de &lt;a
-						href=&#34;https://es.wikipedia.org/wiki/Caso_Megaupload&#34; target=&#34;_blank&#34; lang=&#34;en&#34;&gt;Megaupload&lt;/a&gt;. &lt;a
-						href=&#34;#fnref1&#34; class=&#34;footnote-backref&#34;&gt;↩&lt;/a&gt;
-				&lt;/p&gt;
-			&lt;/li&gt;
-			&lt;li id=&#34;fn2&#34; class=&#34;footnote-item&#34;&gt;
-				&lt;p&gt;
-					Luego de usar &lt;span lang=&#34;en&#34;&gt;Notion&lt;/span&gt; durante varios meses, puedo dar fe de que efectivamente es una
-					herramienta realmente versátil y potente. &lt;a href=&#34;#fnref2&#34; class=&#34;footnote-backref&#34;&gt;↩&lt;/a&gt;
-				&lt;/p&gt;
-			&lt;/li&gt;
-		&lt;/ol&gt;
-	&lt;/section&gt;
-&lt;/article&gt;
+					no habían metido preso a <a href="https://es.wikipedia.org/wiki/Kim_Dotcom" target="_blank" lang="en">Kim
+						Dotcom</a> ni el FBI se había quedado con todos los servers de <a
+						href="https://es.wikipedia.org/wiki/Caso_Megaupload" target="_blank" lang="en">Megaupload</a>. <a
+						href="#fnref1" class="footnote-backref">↩</a>
+				</p>
+			</li>
+			<li id="fn2" class="footnote-item">
+				<p>
+					Luego de usar <span lang="en">Notion</span> durante varios meses, puedo dar fe de que efectivamente es una
+					herramienta realmente versátil y potente. <a href="#fnref2" class="footnote-backref">↩</a>
+				</p>
+			</li>
+		</ol>
+	</section>
+</article>
 
-				</description>
+				]]></description>
 				<pubDate>Wed, 07 Jun 2023 00:00:00 -0300</pubDate>
 				<link>https://iyaki.ar/posts/20230607_ordenando_conocimiento/</link>
 				<guid isPermaLink="true">https://iyaki.ar/posts/20230607_ordenando_conocimiento/</guid>
@@ -837,100 +821,98 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 				<title>Reuniendo conocimiento</title>
 				
 				
-				<description>
-					
-						&lt;blockquote&gt;Hace poco comencé a compartir cosas interesantes que encuentro por internet en mi &lt;a href=&#34;https://iyaki.ar/&#34;curated&#34;&gt;Recopilador de contenidos curados&lt;/a&gt;. &lt;br&gt; En esta serie de artículos repaso el proceso que sigo para reunir, ordenar, depurar y compartir información.&lt;/blockquote&gt;
-					
-					&lt;article class=&#34;main-content&#34;&gt;
-	&lt;h1&gt;Reuniendo conocimiento&lt;/h1&gt;
-	&lt;p&gt;
-		Yo, al igual que &lt;a href=&#34;https://trends.google.es/trends/explore?cat=5&amp;amp;date=all&amp;amp;q=rss&amp;amp;hl=es&#34;
-			target=&#34;_blank&#34;&gt;cada vez menos gente&lt;/a&gt;, me informo diariamente de &lt;a
-			href=&#34;https://felixcrux.com/blog/feeds-the-only-civilised-way-to-read-online&#34; target=&#34;_blank&#34;&gt;la única manera
-			civilizada&lt;/a&gt; que existe.
-	&lt;/p&gt;
-	&lt;p&gt;Pero esto no siempre fue así.&lt;/p&gt;
-	&lt;p&gt;Cuando después de algún tiempo en mi primer trabajo como programador comprendí que era realmente mediocre comencé a
+				<description><![CDATA[
+					<blockquote>Hace poco comencé a compartir cosas interesantes que encuentro por internet en mi <a href="https://iyaki.ar/"curated">Recopilador de contenidos curados</a>. <br> En esta serie de artículos repaso el proceso que sigo para reunir, ordenar, depurar y compartir información.</blockquote>
+					<article class="main-content">
+	<h1>Reuniendo conocimiento</h1>
+	<p>
+		Yo, al igual que <a href="https://trends.google.es/trends/explore?cat=5&amp;date=all&amp;q=rss&amp;hl=es"
+			target="_blank">cada vez menos gente</a>, me informo diariamente de <a
+			href="https://felixcrux.com/blog/feeds-the-only-civilised-way-to-read-online" target="_blank">la única manera
+			civilizada</a> que existe.
+	</p>
+	<p>Pero esto no siempre fue así.</p>
+	<p>Cuando después de algún tiempo en mi primer trabajo como programador comprendí que era realmente mediocre comencé a
 		buscar la forma de mejorar. Los cursos y tutoriales nunca fueron realmente lo mío, así que termine decantándome por
-		aprender leyendo artículos de distintos blogs.&lt;/p&gt;
-	&lt;p&gt;
+		aprender leyendo artículos de distintos blogs.</p>
+	<p>
 		Empecé con uno o dos blogs que leía intermitentemente, los dejaba en pestañas del navegador que mantenía siempre
 		abiertas y así me mantenía actualizado. Esto no tardó en escalar y al cabo de algunos meses mantenía de abiertas una
-		o dos decenas de pestañas (antes de que &lt;a href=&#34;https://www.google.com/intl/es-419/chrome/&#34; target=&#34;_blank&#34;&gt;Google
-			Chrome&lt;/a&gt; incorporara los grupos de pestañas).
-	&lt;/p&gt;
-	&lt;p&gt;
-		Entonces supe que ese sistema ya no me servía. Sabía de la existencia del &lt;abbr title=&#34;Really Simple Syndication&#34;
-			lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt; pero creía que era una tecnología vieja y en proceso de extinción (y no estaba muy alejado de
+		o dos decenas de pestañas (antes de que <a href="https://www.google.com/intl/es-419/chrome/" target="_blank">Google
+			Chrome</a> incorporara los grupos de pestañas).
+	</p>
+	<p>
+		Entonces supe que ese sistema ya no me servía. Sabía de la existencia del <abbr title="Really Simple Syndication"
+			lang="en">RSS</abbr> pero creía que era una tecnología vieja y en proceso de extinción (y no estaba muy alejado de
 		la realidad). Aún así decidí darle una oportunidad.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Luego de investigar brevemente sobre las herramientas y servicios disponibles decidí utilizar &lt;a
-			href=&#34;https://feedly.com/&#34; target=&#34;_blank&#34;&gt;Feedly&lt;/a&gt; en su capa gratuita y ya nunca lo abandoné.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Desde hace varios años el &lt;abbr title=&#34;Really Simple Syndication&#34; lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt; se ha convertido en mi forma
+	</p>
+	<p>
+		Luego de investigar brevemente sobre las herramientas y servicios disponibles decidí utilizar <a
+			href="https://feedly.com/" target="_blank">Feedly</a> en su capa gratuita y ya nunca lo abandoné.
+	</p>
+	<p>
+		Desde hace varios años el <abbr title="Really Simple Syndication" lang="en">RSS</abbr> se ha convertido en mi forma
 		predilecta de informarme y en una parte clave de mi rutina.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Este debería ser el primero de una serie de artículos sobre como obtengo, clasifico, depuro y comparto conocimiento.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Para ir cerrando el post les dejo la lista de &lt;i lang=&#34;en&#34;&gt;sources&lt;/i&gt; &lt;abbr title=&#34;Really Simple Syndication&#34;
-			lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt; que sigo actualmente:
-	&lt;/p&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a href=&#34;https://longform.asmartbear.com/&#34; target=&#34;_blank&#34;&gt;A Smart Bear&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://www.genbeta.com/&#34; target=&#34;_blank&#34;&gt;Genbeta&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://lobste.rs/&#34; target=&#34;_blank&#34;&gt;Lobsters&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/PHP&#34; target=&#34;_blank&#34;&gt;PHP reddit&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://franiglesias.github.io/&#34; target=&#34;_blank&#34;&gt;The talking bit&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://blog.10pines.com/&#34; target=&#34;_blank&#34;&gt;10Pines Blog&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://facundoolano.github.io/&#34; target=&#34;_blank&#34;&gt;Apuntes inchequeables&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://brandur.org/&#34; target=&#34;_blank&#34;&gt;brandur.org&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://brianmckenna.org/blog/&#34; target=&#34;_blank&#34;&gt;BAM Weblog&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://unfix.com/blog&#34; target=&#34;_blank&#34;&gt;Blog - unFIX&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://changelog.com/&#34; target=&#34;_blank&#34;&gt;Changelog Master Feed&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://animaomnium.github.io/&#34; target=&#34;_blank&#34;&gt;Crash Lime&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://www.entropywins.wtf/blog/&#34; target=&#34;_blank&#34;&gt;Entropy Wins&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://ferd.ca&#34; target=&#34;_blank&#34;&gt;My bad opinions&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://freek.dev/&#34; target=&#34;_blank&#34;&gt;freek.dev&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://www.javiergarzas.com/&#34; target=&#34;_blank&#34;&gt;Javier Garzas&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://blog.jim-nielsen.com/&#34; target=&#34;_blank&#34;&gt;Jim Nielsen’s Blog&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://leaddev.com/&#34; target=&#34;_blank&#34;&gt;LeadDev&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://lucasfcosta.com/&#34; target=&#34;_blank&#34;&gt;Lucas F. Costa&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://madewithlove.com/blog/&#34; target=&#34;_blank&#34;&gt;madewithlove&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://martinfowler.com/&#34; target=&#34;_blank&#34;&gt;Martin Fowler&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://matthiasnoback.nl/&#34; target=&#34;_blank&#34;&gt;Matthias Noback&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://www.npopov.com/&#34; target=&#34;_blank&#34;&gt;nikic’s blog&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://php.watch/rfcs&#34; target=&#34;_blank&#34;&gt;PHP RFC Watch&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://www.radicalcandor.com/blog/&#34; target=&#34;_blank&#34;&gt;Radical Candor&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://rework.withgoogle.com/&#34; target=&#34;_blank&#34;&gt;re:Work&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://tomasvotruba.com/&#34; target=&#34;_blank&#34;&gt;Tomas Votruba&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://shopify.engineering/&#34; target=&#34;_blank&#34;&gt;Shopify Engineering&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://engineering.atspotify.com/&#34; target=&#34;_blank&#34;&gt;Spotify Engineering&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://stitcher.io/&#34; target=&#34;_blank&#34;&gt;stitcher.io&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://sysarmy.com/blog/&#34; target=&#34;_blank&#34;&gt;Sysarmy&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://blog.cleancoder.com/&#34; target=&#34;_blank&#34;&gt;The Clean Code Blog&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://github.blog/&#34; target=&#34;_blank&#34;&gt;The Github Blog&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://www.spicyweb.dev/&#34; target=&#34;_blank&#34;&gt;The Spicy Web&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://threedots.tech/&#34; target=&#34;_blank&#34;&gt;Three Dots Labs&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://toggl.com/blog/&#34; target=&#34;_blank&#34;&gt;Toggl Blog&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://vadimkravcenko.com/&#34; target=&#34;_blank&#34;&gt;Vadim Kravcenko&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;p&gt;
-		Y no podía terminar sin mencionar una excelente herramienta para seguir mediante &lt;abbr
-			title=&#34;Really Simple Syndication&#34;&gt;RSS&lt;/abbr&gt; Newsletters en formato e-mail: &lt;a
-			href=&#34;https://kill-the-newsletter.com/&#34; target=&#34;_blank&#34;&gt;Kill the newsletter&lt;/a&gt;.
-	&lt;/p&gt;
-	&lt;h2&gt;Actualizaciones&lt;/h2&gt;
-	&lt;p&gt;
-		Este post se actualizó el 10/06/2023 para eliminar múltiples feeds &lt;abbr title=&#34;Really Simple Syndication&#34;
-			lang=&#34;en&#34;&gt;RSS&lt;/abbr&gt; que ya no sigo por no considerarlos de valor.
-	&lt;/p&gt;
-&lt;/article&gt;
+	</p>
+	<p>
+		Para ir cerrando el post les dejo la lista de <i lang="en">sources</i> <abbr title="Really Simple Syndication"
+			lang="en">RSS</abbr> que sigo actualmente:
+	</p>
+	<ul>
+		<li><a href="https://longform.asmartbear.com/" target="_blank">A Smart Bear</a></li>
+		<li><a href="https://www.genbeta.com/" target="_blank">Genbeta</a></li>
+		<li><a href="https://lobste.rs/" target="_blank">Lobsters</a></li>
+		<li><a href="https://www.reddit.com/r/PHP" target="_blank">PHP reddit</a></li>
+		<li><a href="https://franiglesias.github.io/" target="_blank">The talking bit</a></li>
+		<li><a href="https://blog.10pines.com/" target="_blank">10Pines Blog</a></li>
+		<li><a href="https://facundoolano.github.io/" target="_blank">Apuntes inchequeables</a></li>
+		<li><a href="https://brandur.org/" target="_blank">brandur.org</a></li>
+		<li><a href="https://brianmckenna.org/blog/" target="_blank">BAM Weblog</a></li>
+		<li><a href="https://unfix.com/blog" target="_blank">Blog - unFIX</a></li>
+		<li><a href="https://changelog.com/" target="_blank">Changelog Master Feed</a></li>
+		<li><a href="https://animaomnium.github.io/" target="_blank">Crash Lime</a></li>
+		<li><a href="https://www.entropywins.wtf/blog/" target="_blank">Entropy Wins</a></li>
+		<li><a href="https://ferd.ca" target="_blank">My bad opinions</a></li>
+		<li><a href="https://freek.dev/" target="_blank">freek.dev</a></li>
+		<li><a href="https://www.javiergarzas.com/" target="_blank">Javier Garzas</a></li>
+		<li><a href="https://blog.jim-nielsen.com/" target="_blank">Jim Nielsen’s Blog</a></li>
+		<li><a href="https://leaddev.com/" target="_blank">LeadDev</a></li>
+		<li><a href="https://lucasfcosta.com/" target="_blank">Lucas F. Costa</a></li>
+		<li><a href="https://madewithlove.com/blog/" target="_blank">madewithlove</a></li>
+		<li><a href="https://martinfowler.com/" target="_blank">Martin Fowler</a></li>
+		<li><a href="https://matthiasnoback.nl/" target="_blank">Matthias Noback</a></li>
+		<li><a href="https://www.npopov.com/" target="_blank">nikic’s blog</a></li>
+		<li><a href="https://php.watch/rfcs" target="_blank">PHP RFC Watch</a></li>
+		<li><a href="https://www.radicalcandor.com/blog/" target="_blank">Radical Candor</a></li>
+		<li><a href="https://rework.withgoogle.com/" target="_blank">re:Work</a></li>
+		<li><a href="https://tomasvotruba.com/" target="_blank">Tomas Votruba</a></li>
+		<li><a href="https://shopify.engineering/" target="_blank">Shopify Engineering</a></li>
+		<li><a href="https://engineering.atspotify.com/" target="_blank">Spotify Engineering</a></li>
+		<li><a href="https://stitcher.io/" target="_blank">stitcher.io</a></li>
+		<li><a href="https://sysarmy.com/blog/" target="_blank">Sysarmy</a></li>
+		<li><a href="https://blog.cleancoder.com/" target="_blank">The Clean Code Blog</a></li>
+		<li><a href="https://github.blog/" target="_blank">The Github Blog</a></li>
+		<li><a href="https://www.spicyweb.dev/" target="_blank">The Spicy Web</a></li>
+		<li><a href="https://threedots.tech/" target="_blank">Three Dots Labs</a></li>
+		<li><a href="https://toggl.com/blog/" target="_blank">Toggl Blog</a></li>
+		<li><a href="https://vadimkravcenko.com/" target="_blank">Vadim Kravcenko</a></li>
+	</ul>
+	<p>
+		Y no podía terminar sin mencionar una excelente herramienta para seguir mediante <abbr
+			title="Really Simple Syndication">RSS</abbr> Newsletters en formato e-mail: <a
+			href="https://kill-the-newsletter.com/" target="_blank">Kill the newsletter</a>.
+	</p>
+	<h2>Actualizaciones</h2>
+	<p>
+		Este post se actualizó el 10/06/2023 para eliminar múltiples feeds <abbr title="Really Simple Syndication"
+			lang="en">RSS</abbr> que ya no sigo por no considerarlos de valor.
+	</p>
+</article>
 
-				</description>
+				]]></description>
 				<pubDate>Sat, 22 Apr 2023 00:00:00 -0300</pubDate>
 				<link>https://iyaki.ar/posts/20230514_reuniendo_conocimiento/</link>
 				<guid isPermaLink="true">https://iyaki.ar/posts/20230514_reuniendo_conocimiento/</guid>
@@ -940,95 +922,93 @@ o explorar algunos de sus Plugins.&lt;/p&gt;
 				<title>Here we go</title>
 				
 				
-				<description>
-					
-						&lt;blockquote&gt;Comienza un nuevo día y con él un nuevo blog random donde alguien en internet expresará sus pensamientos.&lt;/blockquote&gt;
-					
-					&lt;article class=&#34;main-content&#34;&gt;
-	&lt;h1&gt;Here we go&lt;/h1&gt;
-	&lt;p&gt;Porque &lt;em&gt;Hola Mundo!&lt;/em&gt; está demasiado trillado&lt;/p&gt;
-	&lt;h2&gt;Detalles por pulir&lt;/h2&gt;
-	&lt;p&gt;
+				<description><![CDATA[
+					<blockquote>Comienza un nuevo día y con él un nuevo blog random donde alguien en internet expresará sus pensamientos.</blockquote>
+					<article class="main-content">
+	<h1>Here we go</h1>
+	<p>Porque <em>Hola Mundo!</em> está demasiado trillado</p>
+	<h2>Detalles por pulir</h2>
+	<p>
 		─Pero esto es texto plano! ─Exclamo el lector, incrédulo, al descubrir los caracteres negros sobre un fondo blanco.
-		&lt;br&gt;
+		<br>
 		También es posible que lo haya exclamado al ver caracteres blancos sobre un fondo oscuro (me tomé el atrevimiento de
-		realizar la prueba y, por lo menos &lt;a href=&#34;https://brave.com/&#34; target=&#34;_blank&#34;&gt;Brave&lt;/a&gt;, respeta las preferencias
+		realizar la prueba y, por lo menos <a href="https://brave.com/" target="_blank">Brave</a>, respeta las preferencias
 		del esquema de color del usuario).
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Claro que el lector también puede no haber exclamado nada al encontrarse con este post. Las razones para pueden ser
 		de lo mas variadas. Podría darse que no sea una persona particularmente efusiva, que la falta de estilos al navegar
-		por el internet no le resulte una rareza, que sepa que, en realidad, lo que está leyendo es &lt;a
-			href=&#34;https://es.wikipedia.org/wiki/Markdown&#34; target=&#34;_blank&#34;&gt;Markdown&lt;/a&gt; (o por lo menos algo muy parecido) o
-		que haya leído este articulo por primera vez ya en su formato web con &lt;abbr
-			title=&#34;Hyper Text Markup Language&#34;&gt;HTML&lt;/abbr&gt; y &lt;abbr title=&#34;Cascading Style Sheets&#34;&gt;CSS&lt;/abbr&gt; (&lt;a
-			href=&#34;https://github.com/iyaki/iyaki.github.io/blob/main/drafts/20230422_here_we_go.md&#34;&gt;Link al artículo original
-			en markdown&lt;/a&gt;).
-	&lt;/p&gt;
-	&lt;p&gt;
-		Por supuesto, existen muchas mas razones posibles pero mi objetivo &lt;time datetime=&#34;2023-04-22&#34;
-			title=&#34;2023-04-22&#34;&gt;hoy&lt;/time&gt; no es enumerarlas asi que, al menos por ahora, vamos a dejar el tema de lado y
+		por el internet no le resulte una rareza, que sepa que, en realidad, lo que está leyendo es <a
+			href="https://es.wikipedia.org/wiki/Markdown" target="_blank">Markdown</a> (o por lo menos algo muy parecido) o
+		que haya leído este articulo por primera vez ya en su formato web con <abbr
+			title="Hyper Text Markup Language">HTML</abbr> y <abbr title="Cascading Style Sheets">CSS</abbr> (<a
+			href="https://github.com/iyaki/iyaki.github.io/blob/main/drafts/20230422_here_we_go.md">Link al artículo original
+			en markdown</a>).
+	</p>
+	<p>
+		Por supuesto, existen muchas mas razones posibles pero mi objetivo <time datetime="2023-04-22"
+			title="2023-04-22">hoy</time> no es enumerarlas asi que, al menos por ahora, vamos a dejar el tema de lado y
 		centrarnos en lo que todos esperan de un post como este.
-	&lt;/p&gt;
-	&lt;p&gt;Sí, gente! Empecé a escribir un blog.&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>Sí, gente! Empecé a escribir un blog.</p>
+	<p>
 		¿Sobre qué?
 		No tengo idea, pero tampoco importa ahora mismo. Lo importante (al menos para mí) es que estoy escribiendo, y que,
 		como escribí, ahora puede haber alguien leyendo. Y así es como empiezan los intercambios de ideas, y así es como la
 		humanidad avanza.
-	&lt;/p&gt;
-	&lt;p&gt;¿Hacia donde avanza? De eso tengo todavía menos idea.&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>¿Hacia donde avanza? De eso tengo todavía menos idea.</p>
+	<p>
 		Por lo que entiendo, en estos posts introductorios, muchas personas (sobre todo aquellas relacionadas con el mundo
 		de la programación) explican cómo esta armado su blog, que tecnologías usan y demás.
-		&lt;br&gt;
+		<br>
 		Todo eso, yo lo voy a explicar en algún otro post, después de haberlo decidido.
-	&lt;/p&gt;
-	&lt;p&gt;
-		Depende de cuando y/o desde donde estén leyendo esto la aclaración puede parecer innecesaria, pero &lt;time
-			datetime=&#34;2023-04-22&#34; title=&#34;2023-04-22&#34;&gt;hoy&lt;/time&gt; este post no es mas que texto plano.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
+		Depende de cuando y/o desde donde estén leyendo esto la aclaración puede parecer innecesaria, pero <time
+			datetime="2023-04-22" title="2023-04-22">hoy</time> este post no es mas que texto plano.
+	</p>
+	<p>
 		Mi intención es, pronto, armar algún script simple que tome todo este texto y lo convierta en una bellísima entrada
 		de un blog, pero, de momento, preferí aprovechar el ataque de inspiración que me dió mientras lavaba platos y
 		empezar a escribir sin haber armado absolutamente nada del blog.
-		&lt;br&gt;
+		<br>
 		Y ya que me tomé el trabajo de escribir, ¿Por qué iba a esperar para publicarlo?
-	&lt;/p&gt;
-	&lt;p&gt;
-		Seguramente &lt;a href=&#34;https://misc.l3m.in/txt/maintaining-this-site-fkin-rocks.txt&#34; target=&#34;_blank&#34;&gt;esto&lt;/a&gt; que leí
+	</p>
+	<p>
+		Seguramente <a href="https://misc.l3m.in/txt/maintaining-this-site-fkin-rocks.txt" target="_blank">esto</a> que leí
 		hace poco haya tenido mucho que ver en esta decisión.
-	&lt;/p&gt;
-	&lt;h2&gt;Bueno, todo muy lindo pero… de que trata esto?&lt;/h2&gt;
-	&lt;p&gt;
+	</p>
+	<h2>Bueno, todo muy lindo pero… de que trata esto?</h2>
+	<p>
 		A aquellos valientes que han decidido que mi prosa verborrágica no los va a amedrentar y han leído hasta aquí les
 		voy a compartir mis ideas respecto a lo que será este blog.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		En cuanto a contenido, mi intención es muy simple: compartir. Compartir cosas que aprenda, compartir cosas que me
 		resulten interesantes, compartir experiencias, compartir lo que pase por mi mente.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Teniendo eso en cuenta, y con lo que creo que sé sobre lo que pasa por mi mente, pueden esperar contenido,
-		principalmente, sobre: programación, diseño y arquitectura de sistemas informáticos y &lt;em&gt;management&lt;/em&gt; pero no se
+		principalmente, sobre: programación, diseño y arquitectura de sistemas informáticos y <em>management</em> pero no se
 		sorprendan si algún día encuentran un post sobre literatura o filosofía.
-	&lt;/p&gt;
-	&lt;p&gt;
+	</p>
+	<p>
 		Ya que entramos en confianza y para ir calentando motores en todo este tema de compartir, les dejo dos artículos que
 		leí recientemente y que seguramente incorpore de alguna forma a este blog:
-	&lt;/p&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a href=&#34;https://animaomnium.github.io/keep-stuff-linkable/&#34; target=&#34;_blank&#34;&gt;Keep Stuff Linkable&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&#34;https://tomasvotruba.com/blog/2018/12/03/it-bloggers-deprecate-your-posts-to-stop-spreading-legacy&#34;
-				target=&#34;_blank&#34;&gt;IT Bloggers, Deprecate Your Posts to Stop Spreading Legacy&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;p&gt;
-		Hasta aca llega el post de &lt;time datetime=&#34;2023-04-22&#34; title=&#34;2023-04-22&#34;&gt;hoy&lt;/time&gt;. Espero que tengan un muy buen
+	</p>
+	<ul>
+		<li><a href="https://animaomnium.github.io/keep-stuff-linkable/" target="_blank">Keep Stuff Linkable</a></li>
+		<li><a href="https://tomasvotruba.com/blog/2018/12/03/it-bloggers-deprecate-your-posts-to-stop-spreading-legacy"
+				target="_blank">IT Bloggers, Deprecate Your Posts to Stop Spreading Legacy</a></li>
+	</ul>
+	<p>
+		Hasta aca llega el post de <time datetime="2023-04-22" title="2023-04-22">hoy</time>. Espero que tengan un muy buen
 		día.
-	&lt;/p&gt;
-&lt;/article&gt;
+	</p>
+</article>
 
-				</description>
+				]]></description>
 				<pubDate>Sat, 22 Apr 2023 00:00:00 -0300</pubDate>
 				<link>https://iyaki.ar/posts/20230422_here_we_go/</link>
 				<guid isPermaLink="true">https://iyaki.ar/posts/20230422_here_we_go/</guid>

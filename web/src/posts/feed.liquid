@@ -19,9 +19,7 @@ permalink: /posts/feed.xml
 			<item>
 				<title>{{ post.data.title }}</title>
 				{% capture description %}
-					{% if post.data.epigraph %}
-						<blockquote>{{ post.data.epigraph }}</blockquote>
-					{% endif %}
+					{% if post.data.epigraph %}<blockquote>{{ post.data.epigraph }}</blockquote>{% endif %}
 					{{ post.content }}
 				{% endcapture %}
 				{%liquid
@@ -33,9 +31,9 @@ permalink: /posts/feed.xml
 					assign srcAbsolute = 'src="' | append: baseUriAbsolute | append: '/"'
 					assign srcRelative = 'src="' | append: baseUriRelative
 					assign postUri = baseUriRelative
-					assign description = description | replace: 'href="/', hrefAbsolute | replace: 'href="./', hrefRelative | replace: 'src="/', srcAbsolute | replace: 'src="./', srcRelative | escape
+					assign description = description | replace: 'href="/', hrefAbsolute | replace: 'href="./', hrefRelative | replace: 'src="/', srcAbsolute | replace: 'src="./', srcRelative
 				%}
-				<description>{{ description }}</description>
+				<description><![CDATA[{{ description }}]]></description>
 				<pubDate>{{ post.page.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
 				<link>{{ postUri }}</link>
 				<guid isPermaLink="true">{{ postUri }}</guid>
