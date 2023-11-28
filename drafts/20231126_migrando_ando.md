@@ -15,7 +15,7 @@ de texto era suficiente a medida que la cantidad de páginas crecía, empezó a
 parecerme cada vez menos escalable.
 
 Ciertamente con solo 14 páginas publicadas, entre índices, landings y posts, aún
-era completamente manejable con “buscar y reemplaza” (y alguna eventual regex)
+era completamente manejable con “buscar y reemplazar” (y alguna eventual regex)
 pero aun pudiendo estar pecando de optimización prematura decidí migrar a alguna
 herramienta que me permitiera reutilizar componentes y escribir menos código
 cada vez que quería publicar un post.
