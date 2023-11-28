@@ -10,6 +10,7 @@ Por ahora, este repositorio contiene:
 - En [docs/](docs) todo el contenido estático de [mi website](https://iyaki.ar)
   y sus distintas secciones (incluido mi blog y el recopilador de contenidos
   curados).
+- En [drafts/](drafts) La versión markdown de mis posts.
 - En [curator/](curator) el código fuente de la pequeña aplicación con la que
   replico el contenido de mi [base de conocimiento](https://iyaki.notion.site/066daa9a7abb4c029724323209c85ca6?v=0a0294da7e734adcb9e4e5413c1db1da&pvs=4)
   alojada en [Notion](https://www.notion.so/) al
@@ -17,6 +18,8 @@ Por ahora, este repositorio contiene:
 - Em [poster/](poster) el código fuente de la pequeña aplicación que ejecuto
   manualmente para publicar en [mi blog](https://iyaki.ar/blog.html) los posts
   que escribo, originalmente, en markdown.
+- En [web/](web) El código fuente original de mi página web que "compilo"
+  utilizando [Eleventy](https://www.11ty.dev/) para copiarlo al directorio `docs/`
 - En [rss/](rss) el código fuente de la aplicación con la que actualizo los
   feeds RSS del recopilador de contenidos curados y mi blog.
 
