@@ -9,13 +9,31 @@
             <link>https://iyaki.ar/curated</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 28 Nov 2023 12:35:37 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 29 Nov 2023 01:21:49 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <ttl>60</ttl>
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[We are drowning in Google's magnanimity]]></title>
+            <description><![CDATA[Tengo la sospecha de que OKRs, como Objetivos y Resultados Clave, son en realidad un dispositivo inteligente utilizado por Google para desviar a las startups. La atracción de los OKRs radica en su percebida simplicidad: cualquier problema, grande o pequeño, organizacional o técnico, se puede resolver mediante el establecimiento cuidadoso de objetivos claves. Sin embargo, en la práctica esto nunca funciona como se promete y las startups se preguntan por qué no pueden implementar un sistema aparentemente sencillo.]]></description>
+            <link>https://www.kpassa.me/posts/google/</link>
+            <guid isPermaLink="true">https://www.kpassa.me/posts/google/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Designing Web Design Documentation]]></title>
+            <description><![CDATA[Como desarrollador de software ocasionalmente competente, me encanta la buena documentación. Explica no solo cómo funcionan las cosas, sino también por qué funcionan de la manera en que lo hacen. En su mejor momento, la documentación es mucho más que una guía. Es una declaración de principios y mejores prácticas, brindando a las personas la información que necesitan para no solo entender, sino también creer.]]></description>
+            <link>https://www.smashingmagazine.com/2023/11/designing-web-design-documentation/</link>
+            <guid isPermaLink="true">https://www.smashingmagazine.com/2023/11/designing-web-design-documentation/</guid>
+        </item>
+        <item>
+            <title><![CDATA[11 Ways to Optimize Your Website]]></title>
+            <description><![CDATA[Has invertido semanas de arduo trabajo en construir tu sitio web, ¡y ahora por fin está listo para ser publicado! Sin embargo, para asegurarte de que tu sitio web funcione de la mejor manera posible, hay algunas cosas de las que debes ocuparte. En este artículo, exploraremos diversas formas de optimizar tu sitio web para lograr una mejor experiencia de usuario y tiempos de carga más rápidos, lo que se traduce en un mejor posicionamiento en los motores de búsqueda. Cuando el navegador solicita una página web, primero recibirá un documento HTML. El navegador analizará el documento y cuando el analizador encuentre un archivo externo, el navegador enviará otra solicitud para recuperarlo. Por ejemplo, imagina que tienes un sitio web con la siguiente estructura: Para renderizar el archivo index.html, tu navegador tendría que hacer un total de 12 solicitudes, incluyendo 1 archivo HTML, 3 archivos CSS, 3 archivos JavaScript y 5 imágenes. Este proceso consumirá una gran cantidad de tiempo y recursos, lo que resultará en un mal rendimiento del sitio web. Afortunadamente, existen algunas formas de mejorar la velocidad de carga de este sitio web, como combinar y minimizar los archivos estáticos, optimizar las imágenes, almacenar en caché los recursos, y muchas más. Exploraremos todas estas técnicas en este artículo. Pero primero, comencemos con las imágenes. Para empezar, las imágenes de este sitio web están en formato JPG o PNG, que tienden a tener tamaños de archivo más grandes y un mal rendimiento en comparación con los formatos modernos como WebP y AVIF. Hay muchas herramientas y sitios web basados en la nube que pueden convertir tus imágenes, pero el problema con estas herramientas es que generalmente tienes que cargar los archivos para que sean procesados, y algunos de sus servicios no son gratuitos. En este artículo, me gustaría presentarte un software llamado FFmpeg, que te permite convertir las imágenes localmente con un simple comando. Si estás utilizando Mac, puedes instalar FFmpeg con Homebrew: Si estás utilizando Windows, utiliza Winget en su lugar: Alternativamente, simplemente puedes descargar el instalador desde el sitio web oficial de FFmpeg.]]></description>
+            <link>https://levelup.gitconnected.com/11-ways-to-optimize-your-website-1711b0d42de8</link>
+            <guid isPermaLink="true">https://levelup.gitconnected.com/11-ways-to-optimize-your-website-1711b0d42de8</guid>
+        </item>
         <item>
             <title><![CDATA[URL as UI]]></title>
             <description><![CDATA[Aunque en teoría los usuarios no deberían necesitar conocer las URLs, en la práctica muchas veces acceden a sitios web o páginas individuales a través de mecanismos que exponen las URLs en su forma original. Por lo tanto, es importante asegurarse de que un sitio sea accesible y usable incluso para aquellos usuarios que no estén familiarizados con las direcciones URL.]]></description>
@@ -117,24 +135,6 @@
             <description><![CDATA[Aviso: Hasta octubre de 2023, todavía estoy trabajando en convertir el contenido del libro a markdown. Todo está aquí (a través de un conversor automático de .doc a .md), pero la formato está desordenado y necesita mucho trabajo de limpieza, disculpen el desorden en el ínterin. Bienvenidos: ¡Hola, gracias por visitar el Manual del CTO de Startups! Este repositorio tiene la versión más reciente del contenido del libro. Estás invitado y animado a contribuir con problemas o solicitudes de extracciones para añadir/adiciones/cambios/sugerencias/críticas a ser incluidas en futuras ediciones. Si lo haces, no dudes en agregar tu nombre a los AGRADECIMIENTOS. El Autor: Linkedin / Sitio Web / Correo Electrónico. Licencia: Ver el archivo de LICENCIA, pero en resumen, puedes hacer copias, cambios, redistribuir, etc., siempre y cuando no estés revendiendo, mantengas mi nombre/atribución adjunto y mantengas las versiones futuras abiertas bajo una licencia similar/la misma.]]></description>
             <link>https://github.com/ZachGoldberg/Startup-CTO-Handbook</link>
             <guid isPermaLink="true">https://github.com/ZachGoldberg/Startup-CTO-Handbook</guid>
-        </item>
-        <item>
-            <title><![CDATA[Developing leadership styles]]></title>
-            <description><![CDATA[Durante mucho tiempo, encontré frustrante trabajar con un CEO que fuera un micromanager. A menudo aparecían de la nada, criticaban mi trabajo sin comprender las compensaciones y luego desaparecían cuando quería explicar mis decisiones. En esos momentos, deseaba que confiaran en mí basándose en mi historial de hacer un buen trabajo.]]></description>
-            <link>https://lethain.com/developing-leadership-styles/</link>
-            <guid isPermaLink="true">https://lethain.com/developing-leadership-styles/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Networking as an introvert CTO]]></title>
-            <description><![CDATA[En eventos de networking, no necesitas ser el más ruidoso o impresionar a todos. Lo importante es ser genuino, interesarte en los demás y establecer conexiones significativas. No se trata de cantidad de personas con las que hablas, sino de la calidad de las relaciones que construyes.]]></description>
-            <link>https://vadimkravcenko.com/shorts/networking-introvert-cto/</link>
-            <guid isPermaLink="true">https://vadimkravcenko.com/shorts/networking-introvert-cto/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Query Objects instead of Repositories]]></title>
-            <description><![CDATA[El patrón repository se utiliza frecuentemente para encapsular lógica de consulta simple y a veces bastante compleja. Sin embargo, también se ha transformado en el manejo de la persistencia y se utiliza a menudo como otra capa de abstracción de su capa de mapeo de datos. Este artículo de blog te muestra cómo reducir y simplificar tus repositorios o posiblemente eliminarlos por completo mediante el uso de objetos de consulta.]]></description>
-            <link>https://codeopinion.com/query-objects-instead-of-repositories/</link>
-            <guid isPermaLink="true">https://codeopinion.com/query-objects-instead-of-repositories/</guid>
         </item>
     </channel>
 </rss>
