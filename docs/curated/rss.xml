@@ -9,13 +9,31 @@
             <link>https://iyaki.ar/curated</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 29 Nov 2023 12:16:23 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 29 Nov 2023 12:35:56 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <ttl>60</ttl>
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[Learn Performance]]></title>
+            <description><![CDATA[Este curso está diseñado para aquellos nuevos en el rendimiento web, un aspecto vital de la experiencia del usuario. Cubre conceptos clave y técnicas para mejorar el rendimiento web.]]></description>
+            <link>https://web.dev/learn/performance</link>
+            <guid isPermaLink="true">https://web.dev/learn/performance</guid>
+        </item>
+        <item>
+            <title><![CDATA[Mastering HTML DOM manipulation with vanilla JavaScript]]></title>
+            <description><![CDATA[El desarrollo web avanza a una velocidad impresionante. Aunque existen herramientas modernas como Angular, VueJS, React, Solid y Svelte, aún debemos lidiar con el Document Object Model (DOM). Conocer las APIs del DOM del navegador y cómo utilizarlas es crucial para el desarrollo web. Un sitio web que presente estas APIs, destaque problemas comunes y proporcione respuestas a preguntas populares puede ser increíblemente útil. Es por eso que he recopilado esta colección de recursos. Prepárate para dominar la manipulación del DOM con JavaScript puro. Cambia dinámicamente el favicon basado en las preferencias de esquema de color del usuario. Selecciona una línea determinada en un área de texto.]]></description>
+            <link>https://phuoc.ng/collection/html-dom/</link>
+            <guid isPermaLink="true">https://phuoc.ng/collection/html-dom/</guid>
+        </item>
+        <item>
+            <title><![CDATA[Navigating around in your shell]]></title>
+            <description><![CDATA[Leer mas]]></description>
+            <link>https://blog.meain.io/2023/navigating-around-in-shell/</link>
+            <guid isPermaLink="true">https://blog.meain.io/2023/navigating-around-in-shell/</guid>
+        </item>
         <item>
             <title><![CDATA[We are drowning in Google's magnanimity]]></title>
             <description><![CDATA[Tengo la sospecha de que OKRs, como Objetivos y Resultados Clave, son en realidad un dispositivo inteligente utilizado por Google para desviar a las startups. La atracción de los OKRs radica en su percebida simplicidad: cualquier problema, grande o pequeño, organizacional o técnico, se puede resolver mediante el establecimiento cuidadoso de objetivos claves. Sin embargo, en la práctica esto nunca funciona como se promete y las startups se preguntan por qué no pueden implementar un sistema aparentemente sencillo.]]></description>
@@ -117,24 +135,6 @@
             <description><![CDATA[Este artículo presenta evidencia sólida sobre el impacto de la contaminación del aire en la salud humana, destacando la necesidad de implementar medidas urgentes para reducir las emisiones y proteger el bienestar de las personas.]]></description>
             <link>https://www.joshwcomeau.com/snippets/html/html-skeleton/</link>
             <guid isPermaLink="true">https://www.joshwcomeau.com/snippets/html/html-skeleton/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Una selección de Métricas para Agile Product Management]]></title>
-            <description><![CDATA[En Agile Product Management, las métricas juegan un papel fundamental para tomar decisiones basadas en datos. Existen nueve categorías de métricas que representan aspectos clave del aporte e impacto de nuestro producto. En el siguiente extracto del libro "gestionagildeproductos.com", encontrarás una selección de tres métricas por categoría, excepto en la categoría de "impacto", ya que estas métricas varían según el producto específico.]]></description>
-            <link>https://iyaki.notion.site/Una-selecci-n-de-M-tricas-para-Agile-Product-Management-3e85e6027f104612b82d3e300a88a703?pvs=4</link>
-            <guid isPermaLink="true">https://iyaki.notion.site/Una-selecci-n-de-M-tricas-para-Agile-Product-Management-3e85e6027f104612b82d3e300a88a703?pvs=4</guid>
-        </item>
-        <item>
-            <title><![CDATA[Base64 Encoding, Explained]]></title>
-            <description><![CDATA[Cuando programas, es fácil sobrevivir con una comprensión superficial de muchas cosas. Puedes engañarte fácilmente pensando que estás programando cuando estás copiando y pegando códigos de Stack Overflow o de algún artículo al azar que encontraste. La codificación Base64 era uno de esos temas que me molestaba durante algún tiempo. A menudo me encontraba con imágenes o URL codificadas en Base64, y no tenía idea de lo que significaba o por qué se usaba. Finalmente, decidí investigar para llenar esa brecha de conocimiento, y pasé el domingo leyendo el RFC 4648 (mi idea de un fin de semana divertido). Lo siguiente es todo lo que aprendí sobre la codificación Base64.]]></description>
-            <link>https://www.akshaykhot.com/base64-encoding-explained</link>
-            <guid isPermaLink="true">https://www.akshaykhot.com/base64-encoding-explained</guid>
-        </item>
-        <item>
-            <title><![CDATA[The Startup CTO's Handbook: A book covering leadership, management and technical topics for leaders of software engineering teams]]></title>
-            <description><![CDATA[Aviso: Hasta octubre de 2023, todavía estoy trabajando en convertir el contenido del libro a markdown. Todo está aquí (a través de un conversor automático de .doc a .md), pero la formato está desordenado y necesita mucho trabajo de limpieza, disculpen el desorden en el ínterin. Bienvenidos: ¡Hola, gracias por visitar el Manual del CTO de Startups! Este repositorio tiene la versión más reciente del contenido del libro. Estás invitado y animado a contribuir con problemas o solicitudes de extracciones para añadir/adiciones/cambios/sugerencias/críticas a ser incluidas en futuras ediciones. Si lo haces, no dudes en agregar tu nombre a los AGRADECIMIENTOS. El Autor: Linkedin / Sitio Web / Correo Electrónico. Licencia: Ver el archivo de LICENCIA, pero en resumen, puedes hacer copias, cambios, redistribuir, etc., siempre y cuando no estés revendiendo, mantengas mi nombre/atribución adjunto y mantengas las versiones futuras abiertas bajo una licencia similar/la misma.]]></description>
-            <link>https://github.com/ZachGoldberg/Startup-CTO-Handbook</link>
-            <guid isPermaLink="true">https://github.com/ZachGoldberg/Startup-CTO-Handbook</guid>
         </item>
     </channel>
 </rss>
