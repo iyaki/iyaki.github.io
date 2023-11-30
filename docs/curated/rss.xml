@@ -9,13 +9,25 @@
             <link>https://iyaki.ar/curated</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 29 Nov 2023 12:35:56 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 30 Nov 2023 01:20:57 GMT</lastBuildDate>
         <atom:link href="https://iyaki.ar/curated/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[es]]></language>
         <ttl>60</ttl>
         <category><![CDATA[Tecnología]]></category>
         <category><![CDATA[Diseño de sistemas]]></category>
         <category><![CDATA[Management]]></category>
+        <item>
+            <title><![CDATA[The CodeStitch Page Speed Handbook - Everything you need to know to get a 100/100 Page Speed Score]]></title>
+            <description><![CDATA[Cuando sirves imágenes en tu sitio, deberías utilizar el elemento picture para poder elegir qué tamaño de archivo cargar en cada pantalla. Aquí tienes un ejemplo de cómo utilizarlo: normalmente tengo dos fuentes, una para móviles y otra para el resto. La primera etiqueta de origen tiene una anchura máxima de 600px, por lo que todo lo que esté por debajo de 600px cargará la imagen ex-services1-m.webp y todo lo que esté por encima de 601px cargará la imagen de tamaño normal ex-services1.webp. La etiqueta de imagen al final es donde se colocan la carga perezosa (lazy loading) y los atributos de altura y anchura, así como la imagen de reserva en caso de que algunos navegadores (tosi tosi, safari...) no los admitan completamente. Ahora, en las pantallas móviles se cargará la imagen mucho más pequeña, lo que mejorará drásticamente la velocidad de tu página y los tiempos de carga. Ahora que hemos configurado nuestras imágenes correctamente en HTML, podemos empezar a hacer los recortes de ellas. Cuando estés viendo el boceto de diseño en Figma, Adobe XD o incluso si está en un sitio terminado, obtén las dimensiones exactas del tamaño de pantalla de la imagen. Al pasar el cursor sobre la imagen en el sitio, podemos ver que se muestra a 551px de ancho y 250px de alto. Por lo tanto, el tamaño óptimo para escritorio de esta imagen sería dos veces el tamaño de visualización. Este es el tamaño óptimo de visualización para tener en cuenta todas las posibles pantallas y densidades de píxeles. Por lo tanto, esta imagen debería recortarse a un ancho de 1102px y una altura de 500px. Cuando vayamos a la versión móvil y comprobemos el tamaño allí, veremos que sus dimensiones son más pequeñas: 292px de ancho y 213px de alto (aproximado). Por lo tanto, tendríamos que hacer un recorte móvil de la imagen a un ancho de 584px y una altura de 424px. Guarda esta imagen con el mismo nombre pero agrega una "m" al nombre. Así que si esta imagen se llamaba kitchen.jpg, tendrías una imagen kitchen-m.jpg para la imagen móvil. Es mejor hacer estos recortes mientras construyes el sitio y guardar las fotos de esa manera para que no se sienta tan engorroso al finalizar la construcción.]]></description>
+            <link>https://codestitch.app/page-speed-handbook</link>
+            <guid isPermaLink="true">https://codestitch.app/page-speed-handbook</guid>
+        </item>
+        <item>
+            <title><![CDATA[Email obfuscation: What still works in 2023?]]></title>
+            <description><![CDATA[Estas técnicas protegen un enlace clickeable que abrirá el cliente de correo del usuario (por ejemplo, el correo electrónico). Se espera que el texto del enlace sea genérico; si aparece la dirección de correo electrónico en el texto del enlace, entonces la dirección de correo electrónico también se expone como texto plano, y necesitarás agregar técnicas de ofuscación de texto plano. Bloqueado el 100% de spam. Bloqueado el 50% de spam. Bloqueado el 17% de spam.]]></description>
+            <link>https://spencermortensen.com/articles/email-obfuscation/</link>
+            <guid isPermaLink="true">https://spencermortensen.com/articles/email-obfuscation/</guid>
+        </item>
         <item>
             <title><![CDATA[Learn Performance]]></title>
             <description><![CDATA[Este curso está diseñado para aquellos nuevos en el rendimiento web, un aspecto vital de la experiencia del usuario. Cubre conceptos clave y técnicas para mejorar el rendimiento web.]]></description>
@@ -123,18 +135,6 @@
             <description><![CDATA[Bear Blog tiene algunas limitaciones de diseño en cuanto a velocidad, eficiencia y estabilidad. Aunque existen muchas plataformas de análisis de código abierto y centradas en la privacidad, decidí construir una propia para Bear. Una de las restricciones que impuse para Bear es no utilizar JavaScript del lado del cliente, lo cual aplica también al sistema de análisis. Aunque el JavaScript del lado del cliente puede ser ajustado para determinar la autenticidad del tráfico a una página y determinar parcialmente si se trata de tráfico de bots o no, lo cual es muy útil para el análisis, la principal desventaja es que la mayoría de los bloqueadores de anuncios también bloquean scripts de análisis. Y no solo los malos, como Google Analytics. Incluso Fathom y Plausible Analytics tienen dificultades para registrar la actividad en navegadores con bloqueadores de anuncios.]]></description>
             <link>https://herman.bearblog.dev/how-bear-does-analytics-with-css</link>
             <guid isPermaLink="true">https://herman.bearblog.dev/how-bear-does-analytics-with-css</guid>
-        </item>
-        <item>
-            <title><![CDATA[7 Types Of Management Styles For Effective Leadership]]></title>
-            <description><![CDATA[En los Estados Unidos, decirle a la gente qué hacer no funciona fuera de las organizaciones tradicionalmente jerárquicas. Es importante adoptar estilos de gestión que fomenten la participación activa de los miembros del equipo y permitan la toma de decisiones colectiva para lograr un mayor éxito y satisfacción de los empleados.]]></description>
-            <link>https://www.radicalcandor.com/blog/types-of-management-styles/</link>
-            <guid isPermaLink="true">https://www.radicalcandor.com/blog/types-of-management-styles/</guid>
-        </item>
-        <item>
-            <title><![CDATA[Basic HTML skeleton file]]></title>
-            <description><![CDATA[Este artículo presenta evidencia sólida sobre el impacto de la contaminación del aire en la salud humana, destacando la necesidad de implementar medidas urgentes para reducir las emisiones y proteger el bienestar de las personas.]]></description>
-            <link>https://www.joshwcomeau.com/snippets/html/html-skeleton/</link>
-            <guid isPermaLink="true">https://www.joshwcomeau.com/snippets/html/html-skeleton/</guid>
         </item>
     </channel>
 </rss>
