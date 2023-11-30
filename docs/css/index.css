@@ -4,7 +4,7 @@
 @import "components/contacts.css" layer(components);
 @import "utils/dark.css" layer(utils);
 
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap') layer(pages);
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&t&display=swap') layer(pages);
 
 @layer components {
 	.titles {
