@@ -7,24 +7,14 @@ const notion = new Client({
 	auth: process.env.NOTION_TOKEN,
 })
 
-export async function getNewArticle(publishedArticles) {
-	const lastArticle = publishedArticles[0]
-
-	const notionArticle = await fetchArticleFromNotion(lastArticle)
+export async function getNewArticle(lastArticleId) {
+	const notionArticle = await fetchArticleFromNotion(lastArticleId)
 
 	if (notionArticle === null) {
 		return null
 	}
 
-	if (articleIsPublished(notionArticle, publishedArticles)) {
-		return null
-	}
-
 	return await extractArticleData(notionArticle)
-}
-
-function articleIsPublished(article, publishedArticles) {
-	return publishedArticles.includes(article.id)
 }
 
 async function fetchArticleFromNotion(startCursor) {
