@@ -30,8 +30,10 @@ function _publish() {
 	ln -s feed.xml rss.xml
 
 	# Se copian los archivos html "compilados" al directorio de publicación
-	cp -r "${COMPILATION_DIR}/*" "${PUBLICATION_DIR}"
+	cp -r "${COMPILATION_DIR}/"* "${PUBLICATION_DIR}"
 
 
 	cd "$ORIGINAL_DIR" || exit
 }
+
+_publish
