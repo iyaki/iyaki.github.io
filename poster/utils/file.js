@@ -8,8 +8,8 @@ export function read(path) {
 export function write(_path, content) {
 	const dir = path.dirname(_path)
 	if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir)
-}
+		fs.mkdirSync(dir)
+	}
 	fs.writeFileSync(_path, content);
 }
 
