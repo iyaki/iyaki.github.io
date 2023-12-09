@@ -1,15 +1,17 @@
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-module.exports = function(eleventyConfig) {
-	const BASE_APTH = 'src';
+module.exports = eleventyConfig => {
+	const BASE_PATH = 'src';
 
-	eleventyConfig.addPassthroughCopy(BASE_APTH + '/robots.txt')
-	eleventyConfig.addPassthroughCopy(BASE_APTH + '/css')
-	eleventyConfig.addPassthroughCopy(BASE_APTH + '/images')
-	eleventyConfig.addPassthroughCopy(BASE_APTH + '/**/*.{png,jpg,jpeg,svg,webp,avif,mp4,mp3,ogg}')
+	eleventyConfig.addPlugin(require('./production-eleventy.js'));
+
+	eleventyConfig.addPassthroughCopy(BASE_PATH + '/robots.txt')
+	// eleventyConfig.addPassthroughCopy(BASE_PATH + '/css')
+	eleventyConfig.addPassthroughCopy(BASE_PATH + '/images')
+	eleventyConfig.addPassthroughCopy(BASE_PATH + '/**/*.{png,jpg,jpeg,svg,webp,avif,mp4,mp3,ogg}')
 
 	return {
 		dir: {
-			input: BASE_APTH,
+			input: BASE_PATH,
 		}
 	}
 };

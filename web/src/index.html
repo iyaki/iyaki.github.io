@@ -2,8 +2,10 @@
 layout: default.html
 date: "2023-10-05T09:42:49-03:00"
 titleOverride: iyaki - Allons-y!
-stylesheet: /css/index.css
 ---
+<style>
+	{% if env.ELEVENTY_RUN_MODE == "build" %}{% render 'css/index.css' %}{% else %}@import '/css/index.css';{% endif %}
+</style>
 <header id="welcome" class="titles --dark">
 	<div class="titles__container">
 		<div>
