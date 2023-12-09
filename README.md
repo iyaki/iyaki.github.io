@@ -20,8 +20,6 @@ Por ahora, este repositorio contiene:
   que escribo, originalmente, en markdown.
 - En [web/](web) El código fuente original de mi página web que "compilo"
   utilizando [Eleventy](https://www.11ty.dev/) para copiarlo al directorio `docs/`
-- En [rss/](rss) el código fuente de la aplicación con la que actualizo los
-  feeds RSS del recopilador de contenidos curados y mi blog.
 
 ## Tareas programadas
 
