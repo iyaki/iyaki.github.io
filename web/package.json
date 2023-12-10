@@ -2,8 +2,7 @@
   "name": "iyaki.ar",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
-    "publish": "rm -rf ./_site/ && npm run build && cp -r ./_site/* ../docs/"
+    "serve": "npx @11ty/eleventy --serve"
   },
   "author": "iyaki",
   "devDependencies": {

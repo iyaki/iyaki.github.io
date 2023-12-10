@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-	<channel>
-		<title>mi Blog | iyaki</title>
-		<description>Blog personal donde comparto mis experiencias y pensamientos</description>
-		<link>https://iyaki.ar/blog/</link>
-		<language>es</language>
-		<atom:link href="https://iyaki.ar/posts/feed.xml" rel="self" type="application/rss+xml" />
-		<image>
-			<url>https://iyaki.ar/blog/logo.png</url>
-			<title>mi Blog | iyaki</title>
-			<link>https://iyaki.ar/blog/</link>
-		</image>
-		
-		
-			<item>
-				<title>Migrando ando</title>
-				
-				
-				<description><![CDATA[
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:a="http://www.w3.org/2005/Atom" version="2.0"><channel><title>mi Blog | iyaki</title><description>Blog personal donde comparto mis experiencias y pensamientos</description><link>https://iyaki.ar/blog/</link><language>es</language><a:link href="https://iyaki.ar/posts/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://iyaki.ar/blog/logo.png</url><title>mi Blog | iyaki</title><link>https://iyaki.ar/blog/</link></image><item><title>Migrando ando</title><description><![CDATA[
 					<blockquote>Puede que sea un poco apresurado, pero creo que me volví a enamorar.</blockquote>
 					<article class="main-content">
 	<h1>Migrando ando</h1>
@@ -74,17 +55,7 @@ o explorar algunos de sus Plugins.</p>
 
 </article>
 
-				]]></description>
-				<pubDate>Sun, 26 Nov 2023 21:51:13 -0300</pubDate>
-				<link>https://iyaki.ar/posts/20231127_migrando_ando/</link>
-				<guid isPermaLink="true">https://iyaki.ar/posts/20231127_migrando_ando/</guid>
-			</item>
-		
-			<item>
-				<title>El desafío del lenguaje ubicuo en español</title>
-				
-				
-				<description><![CDATA[
+				]]></description><pubDate>Sun, 26 Nov 2023 21:51:13 -0300</pubDate><link>https://iyaki.ar/posts/20231127_migrando_ando/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231127_migrando_ando/</guid></item><item><title>El desafío del lenguaje ubicuo en español</title><description><![CDATA[
 					<blockquote>¿El inglés como lenguaje universal? No dentro de mis dominios.</blockquote>
 					<article class="main-content">
 	<h1>El desafío del lenguaje ubicuo en español</h1>
@@ -161,17 +132,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description>
-				<pubDate>Wed, 11 Oct 2023 00:00:00 -0300</pubDate>
-				<link>https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</link>
-				<guid isPermaLink="true">https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</guid>
-			</item>
-		
-			<item>
-				<title>Los atributos id en HTML como parte de la API pública de las páginas web</title>
-				
-				
-				<description><![CDATA[
+				]]></description><pubDate>Wed, 11 Oct 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</guid></item><item><title>Los atributos id en HTML como parte de la API pública de las páginas web</title><description><![CDATA[
 					<blockquote>Desde que el ser humano adquirió el raciocinio suficiente para entender el paso del tiempo siempre le han agradado las cosas predecibles. Los programadores seguimos siendo seres humanos, y nos siguen gustando las cosas predecibles. Sobre todo las API predecibles.<br> ¿Y que hay mas predecible que una API que no cambia? <br><br> Sin embargo, es fácil olvidar lo poco que se requiere para que una API cambie.</blockquote>
 					<article class="main-content">
 	<h1>Los atributos id en HTML como parte de la API pública de las páginas web</h1>
@@ -286,17 +247,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description>
-				<pubDate>Sun, 27 Aug 2023 00:00:00 -0300</pubDate>
-				<link>https://iyaki.ar/posts/20230827_api_paginas_web/</link>
-				<guid isPermaLink="true">https://iyaki.ar/posts/20230827_api_paginas_web/</guid>
-			</item>
-		
-			<item>
-				<title>Bibliotecas y librerías</title>
-				
-				
-				<description><![CDATA[
+				]]></description><pubDate>Sun, 27 Aug 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230827_api_paginas_web/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230827_api_paginas_web/</guid></item><item><title>Bibliotecas y librerías</title><description><![CDATA[
 					<blockquote>Una breve anécdota de un suceso irrelevante que ocurrió hace años y que, por razones que no termino de comprender, podría, o no, haber marcado mi uso del lenguaje.</blockquote>
 					<article class="main-content">
 	<h1>Bibliotecas y librerías</h1>
@@ -351,17 +302,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description>
-				<pubDate>Sun, 16 Jul 2023 00:00:00 -0300</pubDate>
-				<link>https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</link>
-				<guid isPermaLink="true">https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</guid>
-			</item>
-		
-			<item>
-				<title>Compartiendo conocimiento</title>
-				
-				
-				<description><![CDATA[
+				]]></description><pubDate>Sun, 16 Jul 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</guid></item><item><title>Compartiendo conocimiento</title><description><![CDATA[
 					<blockquote>Finalmente, el último de mis artículos sobre como reúno, ordeno, depuro y comparto conocimiento.</blockquote>
 					<article class="main-content">
 	<h1>Compartiendo conocimiento</h1>
@@ -442,17 +383,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description>
-				<pubDate>Wed, 21 Jun 2023 00:00:00 -0300</pubDate>
-				<link>https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</link>
-				<guid isPermaLink="true">https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</guid>
-			</item>
-		
-			<item>
-				<title>Habemus RSS</title>
-				
-				
-				<description><![CDATA[
+				]]></description><pubDate>Wed, 21 Jun 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</guid></item><item><title>Habemus RSS</title><description><![CDATA[
 					<blockquote>Noticia de último momento. Interrumpimos la programación habitual para comunicar un mensaje a la comunidad: Es el fin de la hipocresía, finalmente este blog y el recopilador de contenidos tienen feed RSS.</blockquote>
 					<article class="main-content">
 	<h1>Habemus RSS</h1>
@@ -532,17 +463,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description>
-				<pubDate>Wed, 14 Jun 2023 00:00:00 -0300</pubDate>
-				<link>https://iyaki.ar/posts/20230614_habemus_rss/</link>
-				<guid isPermaLink="true">https://iyaki.ar/posts/20230614_habemus_rss/</guid>
-			</item>
-		
-			<item>
-				<title>Depurando conocimiento</title>
-				
-				
-				<description><![CDATA[
+				]]></description><pubDate>Wed, 14 Jun 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230614_habemus_rss/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230614_habemus_rss/</guid></item><item><title>Depurando conocimiento</title><description><![CDATA[
 					<blockquote>Tercer post sobre cómo trabajo el conocimiento, esta vez con un plot twist a la mitad de la historia que ni yo me esperaba.</blockquote>
 					<article class="main-content">
 	<h1>Depurando conocimiento</h1>
@@ -668,17 +589,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description>
-				<pubDate>Sat, 10 Jun 2023 00:00:00 -0300</pubDate>
-				<link>https://iyaki.ar/posts/20230610_depurando_conocimiento/</link>
-				<guid isPermaLink="true">https://iyaki.ar/posts/20230610_depurando_conocimiento/</guid>
-			</item>
-		
-			<item>
-				<title>Ordenando conocimiento</title>
-				
-				
-				<description><![CDATA[
+				]]></description><pubDate>Sat, 10 Jun 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230610_depurando_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230610_depurando_conocimiento/</guid></item><item><title>Ordenando conocimiento</title><description><![CDATA[
 					<blockquote>Segundo artículo de la serie en la que explico como gestiono, actualmente, el conocimiento en mi vida.</blockquote>
 					<article class="main-content">
 	<h1>Ordenando conocimiento</h1>
@@ -811,17 +722,7 @@ o explorar algunos de sus Plugins.</p>
 	</section>
 </article>
 
-				]]></description>
-				<pubDate>Wed, 07 Jun 2023 00:00:00 -0300</pubDate>
-				<link>https://iyaki.ar/posts/20230607_ordenando_conocimiento/</link>
-				<guid isPermaLink="true">https://iyaki.ar/posts/20230607_ordenando_conocimiento/</guid>
-			</item>
-		
-			<item>
-				<title>Reuniendo conocimiento</title>
-				
-				
-				<description><![CDATA[
+				]]></description><pubDate>Wed, 07 Jun 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230607_ordenando_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230607_ordenando_conocimiento/</guid></item><item><title>Reuniendo conocimiento</title><description><![CDATA[
 					<blockquote>Hace poco comencé a compartir cosas interesantes que encuentro por internet en mi <a href="https://iyaki.ar/"curated">Recopilador de contenidos curados</a>. <br> En esta serie de artículos repaso el proceso que sigo para reunir, ordenar, depurar y compartir información.</blockquote>
 					<article class="main-content">
 	<h1>Reuniendo conocimiento</h1>
@@ -912,17 +813,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description>
-				<pubDate>Sat, 22 Apr 2023 00:00:00 -0300</pubDate>
-				<link>https://iyaki.ar/posts/20230514_reuniendo_conocimiento/</link>
-				<guid isPermaLink="true">https://iyaki.ar/posts/20230514_reuniendo_conocimiento/</guid>
-			</item>
-		
-			<item>
-				<title>Here we go</title>
-				
-				
-				<description><![CDATA[
+				]]></description><pubDate>Sat, 22 Apr 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230514_reuniendo_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230514_reuniendo_conocimiento/</guid></item><item><title>Here we go</title><description><![CDATA[
 					<blockquote>Comienza un nuevo día y con él un nuevo blog random donde alguien en internet expresará sus pensamientos.</blockquote>
 					<article class="main-content">
 	<h1>Here we go</h1>
@@ -1008,11 +899,4 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description>
-				<pubDate>Sat, 22 Apr 2023 00:00:00 -0300</pubDate>
-				<link>https://iyaki.ar/posts/20230422_here_we_go/</link>
-				<guid isPermaLink="true">https://iyaki.ar/posts/20230422_here_we_go/</guid>
-			</item>
-		
-	</channel>
-</rss>
+				]]></description><pubDate>Sat, 22 Apr 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230422_here_we_go/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230422_here_we_go/</guid></item></channel></rss>
