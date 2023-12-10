@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/iyaki/iyaki.github.io",
   "dependencies": {
-    "@notionhq/client": "^2.2.3",
+    "@notionhq/client": "^2.2.14",
     "openai": "^3.2.1"
   }
 }
