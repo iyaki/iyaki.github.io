@@ -1,9 +1,10 @@
+'use strict'
 
 const postcss = require('postcss')
 const postcssPresetEnv = require('postcss-preset-env')
 const cssnano = require('cssnano')
 const htmlSyntax = require('postcss-html')
-const { minify } = require('html-minifier-terser');
+const { minify: minifyHtml } = require('html-minifier-terser')
 
 function getPostCss() {
 	const postCssConfig = [
@@ -50,7 +51,7 @@ module.exports = eleventyConfig => {
 				.process(content, {from: this.inputPath, syntax: htmlSyntax})
 		).css
 
-		content = await minify(content, {
+		content = await minifyHtml(content, {
 			minifyJS: true,
 			removeComments: true,
 			removeRedundantAttributes: true,
@@ -59,5 +60,19 @@ module.exports = eleventyConfig => {
 		})
 
 		return content
+	})
+
+	eleventyConfig.addTransform('minify xml', async function(content) {
+		if (process.env.ELEVENTY_RUN_MODE !== 'build') {
+			return content
+		}
+
+		if( !(this.page.outputPath && this.page.outputPath.endsWith(".xml")) ) {
+			return content
+		}
+
+		const xmlMinifier = await import('minify-xml')
+
+		return xmlMinifier.minify(content)
 	})
 }
