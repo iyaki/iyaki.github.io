@@ -1,0 +1,21 @@
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'src'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Dependencies setup
+        run: cd web && npm install --save-exact
+      - name: publish
+        run: web/publish.sh
+      - uses: stefanzweifel/git-auto-commit-action@v4
