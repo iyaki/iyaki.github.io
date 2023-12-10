@@ -13,20 +13,18 @@ jobs:
       - id: files
         uses: jitterbit/get-changed-files@v1
       - run: |
-          echo "${{ steps.files.outputs.added_modified }}"
+          for changed_file in ${{ steps.files.outputs.added_modified }}
+          do
+            if [[ "${changed_file}" == docs/*.html ]] && [ "${changed_file}" != "docs/curated/index.html" ]
+            then
+              ABSOLUTE_PATH_WEB="${changed_file#docs/}"
+              RELATEIVE_PATH_WEB="${ABSOLUTE_PATH_WEB%index\.html}"
 
-          # for changed_file in ${{ steps.files.outputs.added_modified }}
-          # do
-          #   if [[ "${changed_file}" == docs/*.html ]] && [ "${changed_file}" != "docs/curated/index.html" ]
-          #   then
-          #     ABSOLUTE_PATH_WEB="${changed_file#docs/}"
-          #     RELATEIVE_PATH_WEB="${ABSOLUTE_PATH_WEB%index\.html}"
-
-          #     curl --request POST \
-          #     	--url https://web.archive.org/save/ \
-          #     	--header 'Content-Type: application/x-www-form-urlencoded' \
-          #     	--data "url=https://iyaki.ar${RELATEIVE_PATH_WEB}" \
-          #     	--data capture_all=on \
-          #     	--data capture_screenshot=on
-          #   fi
-          # done
+              curl --request POST \
+              	--url https://web.archive.org/save/ \
+              	--header 'Content-Type: application/x-www-form-urlencoded' \
+              	--data "url=https://iyaki.ar${RELATEIVE_PATH_WEB}" \
+              	--data capture_all=on \
+              	--data capture_screenshot=on
+            fi
+          done
