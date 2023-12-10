@@ -1,0 +1,26 @@
+version: 2
+updates:
+
+  # Github Actions
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+
+  # curator
+  - package-ecosystem: npm
+    directory: "/curator/"
+    schedule:
+      interval: monthly
+
+  # poster
+  - package-ecosystem: npm
+    directory: "/poster/"
+    schedule:
+      interval: monthly
+
+  # web
+  - package-ecosystem: npm
+    directory: "/web/"
+    schedule:
+      interval: monthly
