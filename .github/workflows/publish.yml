@@ -18,4 +18,4 @@ jobs:
         run: cd web && npm install --save-exact
       - name: publish
         run: web/publish.sh
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v5
