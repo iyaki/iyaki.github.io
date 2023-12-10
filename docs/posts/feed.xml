@@ -1,4 +1,167 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:a="http://www.w3.org/2005/Atom" version="2.0"><channel><title>mi Blog | iyaki</title><description>Blog personal donde comparto mis experiencias y pensamientos</description><link>https://iyaki.ar/blog/</link><language>es</language><a:link href="https://iyaki.ar/posts/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://iyaki.ar/blog/logo.png</url><title>mi Blog | iyaki</title><link>https://iyaki.ar/blog/</link></image><item><title>Migrando ando</title><description><![CDATA[
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:a="http://www.w3.org/2005/Atom" version="2.0"><channel><title>mi Blog | iyaki</title><description>Blog personal donde comparto mis experiencias y pensamientos</description><link>https://iyaki.ar/blog/</link><language>es</language><a:link href="https://iyaki.ar/posts/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://iyaki.ar/blog/logo.png</url><title>mi Blog | iyaki</title><link>https://iyaki.ar/blog/</link></image><item><title>Sobre el Governace Crew en esquemas unFIX</title><description><![CDATA[
+					<blockquote>El modelo unFIX me pareció muy interesante desde la primera vez que leí sobre él pero intentar implementarlo no me fue tan sencillo como esperaba en un primer momento.</blockquote>
+					<article class="main-content">
+	<h1>Sobre el <span lang="en">Governace Crew</span> en esquemas <span lang="en">unFIX</span></h1>
+<p>Este artículo fue escrito a lo largo de varios meses y mis ideas respecto a
+<i lang="en">unFIX</i> han ido mutando durante todo este tiempo. Este post busca reflejar la
+transformación que fueron sufriendo esas ideas. Si en algún punto encuentran
+inconsistencias o notan que algo se vuelve confuso, por favor háganmelo saber.
+Cualquier aporte es más que bienvenido y voy a estar encantado de poder dialogar
+sobre este tema. Como siempre pueden contactarme a: <a href="mailto:me@iyaki.ar" target="_blank">me@iyaki.ar</a>.</p>
+<h2>Introducción</h2>
+
+<p><a href="https://unfix.com/" lang="en" hreflang="en" target="_blank">UnFIX</a> es un proyecto relativamente nuevo y como tal evoluciona constantemente.
+Lo descubrí hace varios meses y desde entonces lo he seguido desde cerca. Sin
+embargo, hasta hace poco, y sin que me percatara, estaba ignorando uno de sus
+conceptos (en mi opinión) más poderosos.</p>
+<p>El objetivo de este artículo no es brindar una introducción al modelo, sino
+ahondar en algunos de sus aspectos, por lo que si no están familiarizados con
+<i lang="en">unFIX</i> les recomiendo estos dos excelentes artículos introductorios de Javier
+Garzas:</p>
+<ul>
+<li><a href="https://www.javiergarzas.com/2023/02/unfix-innovador-modelo-de-escalado-o-un-refrito-gourmet-parte-i.html" target="_blank">Innovador modelo de escalado o un refrito <span en="en">gourmet</span> parte I</a>.</li>
+<li><a href="https://www.javiergarzas.com/2023/02/unfix-2a-parte-innovador-modelo-de-escalado-o-un-refrito-gourmet-de-antiguos-patrones.html" target="_blank">Innovador modelo de escalado o un refrito <span en="en">gourmet</span> parte II</a>.</li>
+</ul>
+<p>O bien, que vayan al <a href="https://unfix.com/blog/the-unfix-model" hreflang="en" target="_blank">primer post del blog de <i lang="en">unFIX</i></a>
+o a su <a href="https://unfix.com/what-is-unfix" hreflang="en" target="_blank">explicación “oficial”</a> y luego sigan
+recorriendo las distintas secciones del website.</p>
+<h2>Mi motivación</h2>
+<p>Actualmente, trabajo como director del área de Producto y Tecnología de una
+empresa enfocada en proveer un <abbr title="Software as a Service" lang="en">SaaS</abbr> dirigido a la industria de la salud. Es por
+esto que siempre me encuentro buscando nuevas formas de mejorar los procesos y
+la organización para ser más eficientes. Y en ese sentido, desde el comienzo,
+<i lang="en">unFIX</i> me pareció una forma innovadora de organizar el equipo de personas que
+trabaja conmigo.</p>
+<p>Las responsabilidades de mi rol incluyen todo lo relativo al diseño, desarrollo
+y mantenimiento de nuestro <abbr title="Software as a Service" lang="en">SaaS</abbr>, así como los temas relacionados con <abbr title="Recursos Humanos">RR.HH.</abbr> del
+plantel del área de Producto, evaluaciones de desempeño, <i lang="en">coaching</i> o
+acompañamiento en el desarrollo profesional.</p>
+<p>Cuanto más leía respecto al modelo <i lang="en">unFIX</i> más convencido me encontraba de que
+podía aportarnos valor y ayudarnos a seguir creciendo.</p>
+<p>Aunque algunos de sus conceptos podían aplicarse de manera aislada dentro del
+área de Producto, estaba convencido de que el mayor valor que tenía para aportar
+se encontraba en la implementación del modelo en toda la compañía. Pero al
+intentar convertir toda la empresa al modelo <i lang="en">unFIX</i> siempre había un aspecto que
+no podía terminar de acomodar: El <i lang="en">management</i>.</p>
+<p>Este es un organigrama aproximado del esquema de trabajo que manejamos
+actualmente (que probablemente sea vea similar al 90% de los organigramas de
+cualquier empresa pequeña o mediana).</p>
+<figure>
+	<img src="https://iyaki.ar/posts/20231210_sobre_el_governance_crew/organigrama.webp" alt="Organigrama previo a aplicar el modelo unFIX">
+	<figcaption>Estructura básica del organigrama previo a aplicar el modelo <i lang="en">unFIX</i></figcaption>
+</figure>
+<p>Lo más natural (al menos para mí), en una primera aproximación, fue pensar una
+migración al modelo <i lang="en">unFIX</i> de la siguiente manera:</p>
+<figure>
+	<img src="https://iyaki.ar/posts/20231210_sobre_el_governance_crew/base_unfix.webp" alt="Primer intento de aplicar el modelo unFIX">
+	<figcaption>Estructura básica luego de un primer acercamiento al modelo <i lang="en">unFIX</i></figcaption>
+</figure>
+<p>En esta migración, tanto los puestos <i lang="en">C-Level</i>, como los de dirección, pasan a
+conformar el <a href="https://unfix.com/governance-crew" lang="en" hreflang="en" target="_blank">Governance Crew</a>.</p>
+<p>Y hasta acá todo parecía funcionar. Sobre el papel, las piezas encajan. Todo
+puede ser modelado según las reglas de <i lang="en">unFIX</i>. Pero aún sentía que había algunos
+puntos que definir antes de poder implementar este nuevo esquema. Principalmente
+en lo que respecta al <i lang="en">management</i>. Suena tentador (por lo fácil que sería)
+mantener la separación de responsabilidades dentro del personal que forma el
+<i lang="en">Governance Crew</i> igual que hasta ahora. Pero también se siente poco natural al
+observar el nuevo “organigrama” y ver que no existen separaciones fuertes de
+cara al resto de los Crews respecto a las responsabilidades de cada uno de los
+integrantes del <i lang="en">Governance Crew</i>.</p>
+<p><i lang="en">UnFIX</i> propone algunos lineamientos en cuanto a como debería funcionar el
+<i lang="en">management</i>, un resumen de estos lineamientos sería:</p>
+<ol>
+<li>El trabajo de “gestionar gente” solo puede ser realizado por aquellos con el
+rol de <a href="https://unfix.com/chief" lang="en" hreflang="en" target="_blank">Chief</a>.</li>
+<li>Solo los <i lang="en">Chief</i> pueden ser <a href="https://in.indeed.com/career-advice/finding-a-job/what-does-people-manager-do" lang="en" hreflang="en" target="_blank">People managers</a>
+de otras personas.</li>
+<li>Los <i lang="en">Chief</i> únicamente pueden reportar ante otros <i lang="en">Chief</i>.</li>
+<li>Los <i lang="en">Chief</i> son, en última instancia, responsables por todo lo que ocurra en
+la <a href="https://unfix.com/base-types" lang="en" hreflang="en" target="_blank">Base</a>.</li>
+<li>El rol de <i lang="en">Chief</i> solo existe dentro del <i lang="en">Governance Crew</i>.</li>
+<li>El <i lang="en">Governance Crew</i> suele estar compuesto por múltiples <i lang="en">Chief</i>.</li>
+<li>El <i lang="en">Governance Crew</i> es el encargado de asegurar la motivación del resto de
+las personas.</li>
+<li>El <i lang="en">Governance Crew</i> es el responsable del negocio frente a los
+<i lang="en">stakeholders</i> externos.</li>
+<li>El <i lang="en">Governance Crew</i> define el propósito de la <i lang="en">Base</i>.</li>
+<li>Existe un único <i lang="en">Governance Crew</i> por <i lang="en">Base</i>.</li>
+</ol>
+<p>Son buenos lineamientos pero muy generales. Por lo que, me dispuse a agregar
+algunas reglas más para “ordenar” un poco el equipo en nuestro caso particular.</p>
+<p>Así comencé a pensar distintas maneras de separar las responsabilidades de los
+integrantes del <i lang="en">Governance Crew</i>. Y llegué a múltiples opciones, algunas de
+ellas fueron:</p>
+<ul>
+<li>Gobernanza por Perfil: Definir un <i lang="en">Chief</i> en el <i lang="en">Governance Crew</i> por cada área o
+función específica dentro de la organización, como por ejemplo, un <i lang="en">Chief</i> de
+<i lang="en">Marketing</i>, un <i lang="en">Chief</i> de Recursos Humanos, etc.</li>
+<li>Gobernanza por <a href="https://unfix.com/value-streams" lang="en" hreflang="en" target="_blank">Value Stream</a>: Separar las responsabilidades del Governance
+Crew según los diferentes flujos de valor de la organización, lo que
+implicaría tener un <i lang="en">Chief</i> encargado de cada uno de ellos, como por ejemplo,
+un <i lang="en">Chief</i> del proceso de producción, un <i lang="en">Chief</i> del proceso de ventas, etc.</li>
+<li>Gobernanza por <a href="https://unfix.com/investment-horizons" target="_blank">Investment Horizon</a>:
+Dividir las responsabilidades del <i lang="en">Governance Crew</i> según los diferentes
+<i lang="en">Investment Horizon</i> en los que se enfoca la organización.</li>
+<li>Gobernanza por entropía: Tirar dados para decidir como separar las
+responsabilidades de los miembros del <i lang="en">Governance Crew</i>. Aunque es la opción
+menos seria de todas las que pude pensar, finalmente me pareció igual de
+arbitraria que cualquiera de las anteriores.</li>
+</ul>
+<p>Además, al reflexionar en como sería un día normal de trabajo con cualquiera de
+estas nuevas estructuras, no puedo evitar sentir una sensación de inconformidad
+al profundizar en algunos detalles.</p>
+<p>Cuanto más intentaba encontrar una respuesta que me satisficiera, más me
+alejaba de las opciones de gobernanza que había pensado, y es que en múltiples
+artículos del <a href="https://unfix.com/blog" hreflang="en" target="_blank">blog de <i lang="en">unFIX</i></a>
+(<a href="https://unfix.com/blog/manage-the-system" lang="en" hreflang="en" target="_blank">Manage the System, Lead the People</a>,
+<a href="https://unfix.com/blog/agile-and-aligned" lang="en" hreflang="en" target="_blank">How Do We Keep the Business Agile and Aligned?</a>,
+<a href="https://unfix.com/blog/middle-managers-should-stop-coordinating" lang="en" hreflang="en" target="_blank">Middle Managers Should Stop Coordinating</a>
+) y algunos <a href="https://youtu.be/6IRQWT-kxXs" hreflang="en" target="_blank">recursos externos</a> quedaba bastante
+claro que el enfoque que estaba dando al trabajo que debía realizar el
+<i lang="en">Governance Crew</i> era incorrecto y gran parte de las responsabilidades de
+dirección que hoy cubro no tenían lugar en el <i lang="en">Governance Crew</i>.</p>
+<h2>El problema</h2>
+<p>Mi trabajo ya no existía.</p>
+<p>O mejor dicho, para seguir las directivas del modelo <i lang="en">unFIX</i> mi puesto de
+<a href="https://en.wikipedia.org/wiki/Middle_management" lang="en" hreflang="en"  target="_blank">Middle Management</a> no debía
+existir.</p>
+<p>En una primera instancia darme cuenta de esto fue un <i lang="en">shock</i> importante. También
+fue el punto en que dejé este artículo sin terminar durante bastante tiempo y
+pensé en abandonar mi proyecto de implantación del modelo <i lang="en">unFIX</i> en mi trabajo.<br>
+Pero a media que pasaron los días y las semanas, al seguir dándole vueltas al
+asunto, y buscando más información sobre el tema, finalmente, todas las
+piezas encajaron.</p>
+<h2>La revelación</h2>
+<p>Aunque mi puesto no pudiese existir como lo había hecho hasta ahora, eso no
+tenía por qué cambiar mi rol o responsabilidades como individuo. Y es que <i lang="en">unFIX</i>
+contempla la posibilidad de participar en
+<a href="https://unfix.com/blog/the-multiteaming-way" hreflang="en" target="_blank">múltiples equipos a la vez</a>, así
+como distintos <a href="https://unfix.com/participation-levels" lang="en" hreflang="en" target="_blank">Participation Levels</a>,
+<a href="https://unfix.com/blog/no-more-fixed-jobs" lang="en" hreflang="en" target="_blank">Time commitments</a> y la existencia de
+<a href="https://unfix.com/facilitation-crew" lang="en" hreflang="en" target="_blank">Facilitation crews</a>. Mis responsabilidades
+y todo lo que disfruto de mi trabajo seguían ahí, pero ya no englobadas en
+un único puesto.</p>
+<p>Esto permite tomar decisiones sobre la base y su funcionamiento, como parte de
+los miembros del <i lang="en">Governance Crew</i>, pero también seguir participando en el
+<i lang="en">coaching</i> de otros colaboradores como parte de un <i lang="en">Facilitation Crew</i> o colaborar
+en distintos equipos y proyectos de manera más flexible.</p>
+<p>La posibilidad de participar en múltiples equipos es, en mi opinión, una de las
+características más interesantes y liberadoras del modelo <i lang="en">unFIX</i>. Y una de
+las que más lo diferencia de la mayoría de los <i lang="en">frameworks Agile</i> que prohíben
+esta práctica y buscan equipos lo más estables posible. Es cierto que esta
+estabilidad tiene sus ventajas, pero dependiendo de factores como el tamaño de
+la organización o la velocidad a la que cambian los objetivos puede no ser la
+opción más beneficiosa.</p>
+<h2>¿Conclusión?</h2>
+<p>Actualmente, estamos trabajando en adaptar nuestra organización interna a un
+modelo más fluido y fuertemente influenciado por las propuestas de <i lang="en">unFIX</i>, pero
+es una labor que apenas estamos comenzando, por lo que hoy no podría brindar una
+conclusión sobre las ventajas, desventajas o desafíos que esto nos presente.
+Espero tener noticias al respecto pronto para poder compartirlas.</p>
+
+</article>
+
+				]]></description><pubDate>Sun, 10 Dec 2023 20:21:38 +0000</pubDate><link>https://iyaki.ar/posts/20231210_sobre_el_governance_crew/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231210_sobre_el_governance_crew/</guid></item><item><title>Migrando ando</title><description><![CDATA[
 					<blockquote>Puede que sea un poco apresurado, pero creo que me volví a enamorar.</blockquote>
 					<article class="main-content">
 	<h1>Migrando ando</h1>
@@ -55,7 +218,7 @@ o explorar algunos de sus Plugins.</p>
 
 </article>
 
-				]]></description><pubDate>Sun, 26 Nov 2023 21:51:13 -0300</pubDate><link>https://iyaki.ar/posts/20231127_migrando_ando/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231127_migrando_ando/</guid></item><item><title>El desafío del lenguaje ubicuo en español</title><description><![CDATA[
+				]]></description><pubDate>Mon, 27 Nov 2023 00:51:13 +0000</pubDate><link>https://iyaki.ar/posts/20231127_migrando_ando/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231127_migrando_ando/</guid></item><item><title>El desafío del lenguaje ubicuo en español</title><description><![CDATA[
 					<blockquote>¿El inglés como lenguaje universal? No dentro de mis dominios.</blockquote>
 					<article class="main-content">
 	<h1>El desafío del lenguaje ubicuo en español</h1>
@@ -132,7 +295,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Wed, 11 Oct 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</guid></item><item><title>Los atributos id en HTML como parte de la API pública de las páginas web</title><description><![CDATA[
+				]]></description><pubDate>Wed, 11 Oct 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</guid></item><item><title>Los atributos id en HTML como parte de la API pública de las páginas web</title><description><![CDATA[
 					<blockquote>Desde que el ser humano adquirió el raciocinio suficiente para entender el paso del tiempo siempre le han agradado las cosas predecibles. Los programadores seguimos siendo seres humanos, y nos siguen gustando las cosas predecibles. Sobre todo las API predecibles.<br> ¿Y que hay mas predecible que una API que no cambia? <br><br> Sin embargo, es fácil olvidar lo poco que se requiere para que una API cambie.</blockquote>
 					<article class="main-content">
 	<h1>Los atributos id en HTML como parte de la API pública de las páginas web</h1>
@@ -247,7 +410,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Sun, 27 Aug 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230827_api_paginas_web/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230827_api_paginas_web/</guid></item><item><title>Bibliotecas y librerías</title><description><![CDATA[
+				]]></description><pubDate>Sun, 27 Aug 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230827_api_paginas_web/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230827_api_paginas_web/</guid></item><item><title>Bibliotecas y librerías</title><description><![CDATA[
 					<blockquote>Una breve anécdota de un suceso irrelevante que ocurrió hace años y que, por razones que no termino de comprender, podría, o no, haber marcado mi uso del lenguaje.</blockquote>
 					<article class="main-content">
 	<h1>Bibliotecas y librerías</h1>
@@ -302,7 +465,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Sun, 16 Jul 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</guid></item><item><title>Compartiendo conocimiento</title><description><![CDATA[
+				]]></description><pubDate>Sun, 16 Jul 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</guid></item><item><title>Compartiendo conocimiento</title><description><![CDATA[
 					<blockquote>Finalmente, el último de mis artículos sobre como reúno, ordeno, depuro y comparto conocimiento.</blockquote>
 					<article class="main-content">
 	<h1>Compartiendo conocimiento</h1>
@@ -383,7 +546,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Wed, 21 Jun 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</guid></item><item><title>Habemus RSS</title><description><![CDATA[
+				]]></description><pubDate>Wed, 21 Jun 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</guid></item><item><title>Habemus RSS</title><description><![CDATA[
 					<blockquote>Noticia de último momento. Interrumpimos la programación habitual para comunicar un mensaje a la comunidad: Es el fin de la hipocresía, finalmente este blog y el recopilador de contenidos tienen feed RSS.</blockquote>
 					<article class="main-content">
 	<h1>Habemus RSS</h1>
@@ -463,7 +626,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Wed, 14 Jun 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230614_habemus_rss/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230614_habemus_rss/</guid></item><item><title>Depurando conocimiento</title><description><![CDATA[
+				]]></description><pubDate>Wed, 14 Jun 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230614_habemus_rss/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230614_habemus_rss/</guid></item><item><title>Depurando conocimiento</title><description><![CDATA[
 					<blockquote>Tercer post sobre cómo trabajo el conocimiento, esta vez con un plot twist a la mitad de la historia que ni yo me esperaba.</blockquote>
 					<article class="main-content">
 	<h1>Depurando conocimiento</h1>
@@ -589,7 +752,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Sat, 10 Jun 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230610_depurando_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230610_depurando_conocimiento/</guid></item><item><title>Ordenando conocimiento</title><description><![CDATA[
+				]]></description><pubDate>Sat, 10 Jun 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230610_depurando_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230610_depurando_conocimiento/</guid></item><item><title>Ordenando conocimiento</title><description><![CDATA[
 					<blockquote>Segundo artículo de la serie en la que explico como gestiono, actualmente, el conocimiento en mi vida.</blockquote>
 					<article class="main-content">
 	<h1>Ordenando conocimiento</h1>
@@ -722,7 +885,7 @@ o explorar algunos de sus Plugins.</p>
 	</section>
 </article>
 
-				]]></description><pubDate>Wed, 07 Jun 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230607_ordenando_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230607_ordenando_conocimiento/</guid></item><item><title>Reuniendo conocimiento</title><description><![CDATA[
+				]]></description><pubDate>Wed, 07 Jun 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230607_ordenando_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230607_ordenando_conocimiento/</guid></item><item><title>Reuniendo conocimiento</title><description><![CDATA[
 					<blockquote>Hace poco comencé a compartir cosas interesantes que encuentro por internet en mi <a href="https://iyaki.ar/"curated">Recopilador de contenidos curados</a>. <br> En esta serie de artículos repaso el proceso que sigo para reunir, ordenar, depurar y compartir información.</blockquote>
 					<article class="main-content">
 	<h1>Reuniendo conocimiento</h1>
@@ -813,90 +976,4 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Sat, 22 Apr 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230514_reuniendo_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230514_reuniendo_conocimiento/</guid></item><item><title>Here we go</title><description><![CDATA[
-					<blockquote>Comienza un nuevo día y con él un nuevo blog random donde alguien en internet expresará sus pensamientos.</blockquote>
-					<article class="main-content">
-	<h1>Here we go</h1>
-	<p>Porque <em>Hola Mundo!</em> está demasiado trillado</p>
-	<h2>Detalles por pulir</h2>
-	<p>
-		─Pero esto es texto plano! ─Exclamo el lector, incrédulo, al descubrir los caracteres negros sobre un fondo blanco.
-		<br>
-		También es posible que lo haya exclamado al ver caracteres blancos sobre un fondo oscuro (me tomé el atrevimiento de
-		realizar la prueba y, por lo menos <a href="https://brave.com/" target="_blank">Brave</a>, respeta las preferencias
-		del esquema de color del usuario).
-	</p>
-	<p>
-		Claro que el lector también puede no haber exclamado nada al encontrarse con este post. Las razones para pueden ser
-		de lo mas variadas. Podría darse que no sea una persona particularmente efusiva, que la falta de estilos al navegar
-		por el internet no le resulte una rareza, que sepa que, en realidad, lo que está leyendo es <a
-			href="https://es.wikipedia.org/wiki/Markdown" target="_blank">Markdown</a> (o por lo menos algo muy parecido) o
-		que haya leído este articulo por primera vez ya en su formato web con <abbr
-			title="Hyper Text Markup Language">HTML</abbr> y <abbr title="Cascading Style Sheets">CSS</abbr> (<a
-			href="https://github.com/iyaki/iyaki.github.io/blob/main/drafts/20230422_here_we_go.md">Link al artículo original
-			en markdown</a>).
-	</p>
-	<p>
-		Por supuesto, existen muchas mas razones posibles pero mi objetivo <time datetime="2023-04-22"
-			title="2023-04-22">hoy</time> no es enumerarlas asi que, al menos por ahora, vamos a dejar el tema de lado y
-		centrarnos en lo que todos esperan de un post como este.
-	</p>
-	<p>Sí, gente! Empecé a escribir un blog.</p>
-	<p>
-		¿Sobre qué?
-		No tengo idea, pero tampoco importa ahora mismo. Lo importante (al menos para mí) es que estoy escribiendo, y que,
-		como escribí, ahora puede haber alguien leyendo. Y así es como empiezan los intercambios de ideas, y así es como la
-		humanidad avanza.
-	</p>
-	<p>¿Hacia donde avanza? De eso tengo todavía menos idea.</p>
-	<p>
-		Por lo que entiendo, en estos posts introductorios, muchas personas (sobre todo aquellas relacionadas con el mundo
-		de la programación) explican cómo esta armado su blog, que tecnologías usan y demás.
-		<br>
-		Todo eso, yo lo voy a explicar en algún otro post, después de haberlo decidido.
-	</p>
-	<p>
-		Depende de cuando y/o desde donde estén leyendo esto la aclaración puede parecer innecesaria, pero <time
-			datetime="2023-04-22" title="2023-04-22">hoy</time> este post no es mas que texto plano.
-	</p>
-	<p>
-		Mi intención es, pronto, armar algún script simple que tome todo este texto y lo convierta en una bellísima entrada
-		de un blog, pero, de momento, preferí aprovechar el ataque de inspiración que me dió mientras lavaba platos y
-		empezar a escribir sin haber armado absolutamente nada del blog.
-		<br>
-		Y ya que me tomé el trabajo de escribir, ¿Por qué iba a esperar para publicarlo?
-	</p>
-	<p>
-		Seguramente <a href="https://misc.l3m.in/txt/maintaining-this-site-fkin-rocks.txt" target="_blank">esto</a> que leí
-		hace poco haya tenido mucho que ver en esta decisión.
-	</p>
-	<h2>Bueno, todo muy lindo pero… de que trata esto?</h2>
-	<p>
-		A aquellos valientes que han decidido que mi prosa verborrágica no los va a amedrentar y han leído hasta aquí les
-		voy a compartir mis ideas respecto a lo que será este blog.
-	</p>
-	<p>
-		En cuanto a contenido, mi intención es muy simple: compartir. Compartir cosas que aprenda, compartir cosas que me
-		resulten interesantes, compartir experiencias, compartir lo que pase por mi mente.
-	</p>
-	<p>
-		Teniendo eso en cuenta, y con lo que creo que sé sobre lo que pasa por mi mente, pueden esperar contenido,
-		principalmente, sobre: programación, diseño y arquitectura de sistemas informáticos y <em>management</em> pero no se
-		sorprendan si algún día encuentran un post sobre literatura o filosofía.
-	</p>
-	<p>
-		Ya que entramos en confianza y para ir calentando motores en todo este tema de compartir, les dejo dos artículos que
-		leí recientemente y que seguramente incorpore de alguna forma a este blog:
-	</p>
-	<ul>
-		<li><a href="https://animaomnium.github.io/keep-stuff-linkable/" target="_blank">Keep Stuff Linkable</a></li>
-		<li><a href="https://tomasvotruba.com/blog/2018/12/03/it-bloggers-deprecate-your-posts-to-stop-spreading-legacy"
-				target="_blank">IT Bloggers, Deprecate Your Posts to Stop Spreading Legacy</a></li>
-	</ul>
-	<p>
-		Hasta aca llega el post de <time datetime="2023-04-22" title="2023-04-22">hoy</time>. Espero que tengan un muy buen
-		día.
-	</p>
-</article>
-
-				]]></description><pubDate>Sat, 22 Apr 2023 00:00:00 -0300</pubDate><link>https://iyaki.ar/posts/20230422_here_we_go/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230422_here_we_go/</guid></item></channel></rss>
+				]]></description><pubDate>Sat, 22 Apr 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230514_reuniendo_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230514_reuniendo_conocimiento/</guid></item></channel></rss>
