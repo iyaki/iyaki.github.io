@@ -1,33 +1,21 @@
 ---
-permalink: /posts/feed.xml
-eleventyExcludeFromCollections: true
+layout: blog.html
+date: "2023-12-17T21:49:15-03:00"
+created: "2023-12-17T21:49:15-03:00"
+noindex: true
 ---
-<?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-	<channel>
-		<title>mi Blog | iyaki</title>
-		<description>Blog personal donde comparto mis experiencias y pensamientos</description>
-		<link>{{ site.url }}/blog/</link>
-		<language>es</language>
-		<atom:link href="{{ site.url }}/posts/feed.xml" rel="self" type="application/rss+xml" />
-		<image>
-			<url>{{ site.url }}/blog/logo.png</url>
-			<title>mi Blog | iyaki</title>
-			<link>{{ site.url }}/blog/</link>
-		</image>
-		<item>
-				<title>¡IMPORTANTE! Este feed RSS podría dejar de funcionar.</title>
-				<description><![CDATA[
-					<blockquote>Hay nuevos <i lang="en">feeds</i> <abbr title="Really Simple Sindication" lang="en">RSS</abbr> para mi <span lang="en">website</span> (tanto para el recopilador de contenidos curados, como para mis <span lang="en">posts</span>).</p>
-						<p>Las nuevas <abbr title="Uniform Resource Identifier" lang="en">URI</abbr> son:</p>
-						<ul>
-						<li><a href="https://iyaki.ar/curated/feed.xml" target="_blank">Recopilador de contenidos curados: <code>/curated/feed.xml</code></a>.</li>
-						<li><a href="https://iyaki.ar/posts/feed.xml" target="_blank"><span lang="en">Posts</span>: <code>/posts/feed.xml</code></a>.</li>
-						</ul>
-						<>Los <i lang="en">feeds</i> anteriores (<code>/curated-rss.xml</code> y <code>posts/rss.xml</code>) en poco tiempo dejarán de funcionar.</blockquote>
-						<article>
-						<h1>Efectos colaterales de la migración a eleventy</h1>
-						<p>Si siguen mis <span lang="en">posts</span> ya lo sabrán, y si no, se estarán enterando ahora; hace algún tiempo comencé a migrar mi sitio <span lang="en">web</span> <a href="https://iyaki.ar" target="_blank">iyaki.ar</a> para generarlo utilizando <a href="https://www.11ty.dev/" target="_blank" lang="en" hreflang="en">eleventy</a>.</p>
+<article class="main-content">
+	<h1>Efectos colaterales de la migración a eleventy</h1>
+<h2 lang="en" title="Too Long; Didn't Read">TL;DR</h2>
+<p>Hay nuevos <i lang="en">feeds</i> <abbr title="Really Simple Sindication" lang="en">RSS</abbr> para mi <span lang="en">website</span> (tanto para el recopilador de contenidos curados, como para mis <span lang="en">posts</span>).</p>
+<p>Las nuevas <abbr title="Uniform Resource Identifier" lang="en">URI</abbr> son:</p>
+<ul>
+<li><a href="https://iyaki.ar/curated/feed.xml" target="_blank">Recopilador de contenidos curados: <code>/curated/feed.xml</code></a>.</li>
+<li><a href="https://iyaki.ar/posts/feed.xml" target="_blank"><span lang="en">Posts</span>: <code>/posts/feed.xml</code></a>.</li>
+</ul>
+<p>Los <i lang="en">feeds</i> anteriores (<code>/curated-rss.xml</code> y <code>posts/rss.xml</code>) en poco tiempo dejarán de funcionar.</p>
+<h2>El post, posta</h2>
+<p>Si siguen mis <span lang="en">posts</span> ya lo sabrán, y si no, se estarán enterando ahora; hace algún tiempo comencé a migrar mi sitio <span lang="en">web</span> <a href="https://iyaki.ar" target="_blank">iyaki.ar</a> para generarlo utilizando <a href="https://www.11ty.dev/" target="_blank" lang="en" hreflang="en">eleventy</a>.</p>
 <p>Esta migración trajo consigo varios cambios positivos; me ayudo a simplificar bastante mi proceso de publicación de artículos y me ha dado nuevas herramientas con las que seguir mejorando este sitio.</p>
 <p>Una de estas mejoras tiene que ver con el manejo de las <abbr title="Uniform Resource Identifier" lang="en">URI</abbr>, particularmente de su path.</p>
 <p><span lang="en">Eleventy</span>, por defecto, evita incluir la extensión de los archivos <abbr title="Hyper Text Markup Language" lang="en">HTML</abbr> como parte de la ruta. Para esto genera directorios con los nombres de los archivos y, dentro de estos, genera un “index.html”. Este es un patrón bastante común y estándar en la <i lang="en">World Wide Web</i>. <span lang="en">Eleventy</span> no obliga a utilizar este patrón pero <a href="https://www.11ty.dev/docs/permalinks/#cool-uris-dont-change" target="_blank" hreflang="en">sus argumentos a favor</a> (que en realidad son los de <a href="https://www.w3.org/Provider/Style/URI.html.en" target="_blank" hreflang="en">Cool URIs don’t change</a>) me convencieron, a pesar de que eso significara, en lo inmediato, cambiar las <abbr title="Uniform Resource Identifier" lang="en">URI</abbr> de mi web 😱 (pronto publicaré un post sobre como evitar que estos cambios sean un problema).</p>
@@ -51,36 +39,5 @@ Ahora, con eleventy, sin ninguna configuración adicional, si un directorio y un
 </li>
 </ol>
 </section>
+
 </article>
-				]]></description>
-				<pubDate>Sun, 17 Dec 2023 21:49:15 -0300</pubDate>
-				<link>https://iyaki.ar/posts/20231217_cambios_en_feeds_rss/</link>
-				<guid isPermaLink="true">https://iyaki.ar/posts/20231217_cambios_en_feeds_rss/</guid>
-			</item>
-		{% assign posts = collections.post | reverse | slice: 0, 10 %}
-		{% for post in posts %}
-			<item>
-				<title>{{ post.data.title }}</title>
-				{% capture description %}
-					{% if post.data.epigraph %}<blockquote>{{ post.data.epigraph }}</blockquote>{% endif %}
-					{{ post.content }}
-				{% endcapture %}
-				{%liquid
-					assign postUriPath = post.page.url | url
-					assign baseUriAbsolute = site.url
-					assign baseUriRelative = baseUriAbsolute | append: postUriPath
-					assign hrefAbsolute = 'href="' | append: baseUriAbsolute | append: '/"'
-					assign hrefRelative = 'href="' | append: baseUriRelative
-					assign srcAbsolute = 'src="' | append: baseUriAbsolute | append: '/"'
-					assign srcRelative = 'src="' | append: baseUriRelative
-					assign postUri = baseUriRelative
-					assign description = description | replace: 'href="/', hrefAbsolute | replace: 'href="./', hrefRelative | replace: 'src="/', srcAbsolute | replace: 'src="./', srcRelative
-				%}
-				<description><![CDATA[{{ description }}]]></description>
-				<pubDate>{{ post.page.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-				<link>{{ postUri }}</link>
-				<guid isPermaLink="true">{{ postUri }}</guid>
-			</item>
-		{% endfor %}
-	</channel>
-</rss>
