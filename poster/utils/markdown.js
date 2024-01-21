@@ -78,6 +78,7 @@ export function addCommonAbbreviations(markdown) {
 		'URI': 'Uniform Resource Identifier',
 		'URL': 'Uniform Resource Locator',
 		'a.k.a.': 'also known as',
+		'IDE': 'Integrated Development Environment',
 	}
 
 	let markdownWithAbbreviations = markdown
