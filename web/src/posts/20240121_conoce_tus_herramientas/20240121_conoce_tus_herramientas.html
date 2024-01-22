@@ -6,7 +6,10 @@ title: Conoce tus herramientas
 description: Como colaborador individual una de las mejores formas que tenemos de aumentar nuestra eficiencia es aprender a utilizar adecuadamente nuestras herramientas. En este articulo exploro algunos de los puntos que considero centrales para poder aprovecharlas al máximo.
 epigraph: Si quiero terminar mas rápido ese side project que me va a volver millonario (?) puedo aprender mecanografía y escribir código más rápido o puedo buscar la forma de escribir menos código...
 tags:
-	- post
+  - post
+head:
+  - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css" media="(prefers-color-scheme: dark)">'
+  - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.min.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">'
 ---
 <article class="main-content">
 	<h1>Conoce tus herramientas</h1>
@@ -68,7 +71,7 @@ En mi opinión, debemos aspirar más a ser artesanos experimentados que trabajan
 <dt>Autocompletado</dt>
 <dd>Muchas aplicaciones de CLI cuentan automáticamente con autocompletado de argumentos, pero para las que no, es posible definir un script o configuración que permita el autocompletado de forma personalizada.</dd>
 </dl>
-<pre><code class="language-shell"># git checkout remote
+<pre><code class="language-bash"># git checkout remote
 # For usage, execute `gcr` without any argument
 function gcr() {
     local REMOTE='origin'
@@ -131,3 +134,9 @@ Esto nos permitirá ver, a la vez, las configuraciones que nosotros hayamos defi
 <p>¡Hasta pronto!</p>
 
 </article>
+<script type="module">
+	import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
+	import bash from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/bash.min.js';
+	hljs.registerLanguage('bash', bash);
+	hljs.highlightAll()
+</script>
