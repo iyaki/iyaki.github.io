@@ -15,6 +15,10 @@
 		<link href="/css/posts.css" rel="stylesheet">
 	
 	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css" media="(prefers-color-scheme: dark)">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.min.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+  
   
 	<link rel="canonical" href="https://iyaki.ar/posts/20240121_conoce_tus_herramientas/">
 	
@@ -93,7 +97,7 @@ En mi opinión, debemos aspirar más a ser artesanos experimentados que trabajan
 <dt>Autocompletado</dt>
 <dd>Muchas aplicaciones de CLI cuentan automáticamente con autocompletado de argumentos, pero para las que no, es posible definir un script o configuración que permita el autocompletado de forma personalizada.</dd>
 </dl>
-<pre><code class="language-shell"># git checkout remote
+<pre><code class="language-bash"># git checkout remote
 # For usage, execute `gcr` without any argument
 function gcr() {
     local REMOTE='origin'
@@ -156,6 +160,7 @@ Esto nos permitirá ver, a la vez, las configuraciones que nosotros hayamos defi
 <p>¡Hasta pronto!</p>
 
 </article>
+<script type="module">import hljs from"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js";import bash from"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/bash.min.js";hljs.registerLanguage("bash",bash),hljs.highlightAll()</script>
 
 </main>
 <aside class="third-panel">

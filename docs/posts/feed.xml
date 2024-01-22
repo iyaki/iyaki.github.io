@@ -95,7 +95,7 @@ En mi opinión, debemos aspirar más a ser artesanos experimentados que trabajan
 <dt>Autocompletado</dt>
 <dd>Muchas aplicaciones de CLI cuentan automáticamente con autocompletado de argumentos, pero para las que no, es posible definir un script o configuración que permita el autocompletado de forma personalizada.</dd>
 </dl>
-<pre><code class="language-shell"># git checkout remote
+<pre><code class="language-bash"># git checkout remote
 # For usage, execute `gcr` without any argument
 function gcr() {
     local REMOTE='origin'
@@ -158,6 +158,12 @@ Esto nos permitirá ver, a la vez, las configuraciones que nosotros hayamos defi
 <p>¡Hasta pronto!</p>
 
 </article>
+<script type="module">
+	import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
+	import bash from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/bash.min.js';
+	hljs.registerLanguage('bash', bash);
+	hljs.highlightAll()
+</script>
 
 				]]></description><pubDate>Sun, 21 Jan 2024 20:35:55 +0000</pubDate><link>https://iyaki.ar/posts/20240121_conoce_tus_herramientas/</link><guid isPermaLink="true">https://iyaki.ar/posts/20240121_conoce_tus_herramientas/</guid></item><item><title>Sobre el Governace Crew en esquemas unFIX</title><description><![CDATA[
 					<blockquote>El modelo unFIX me pareció muy interesante desde la primera vez que leí sobre él pero intentar implementarlo no me fue tan sencillo como esperaba en un primer momento.</blockquote>
