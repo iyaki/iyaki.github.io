@@ -33,7 +33,28 @@ Ahora, con eleventy, sin ninguna configuración adicional, si un directorio y un
 </ol>
 </section>
 </article>
-				]]></description><pubDate>Sun, 17 Dec 2023 21:49:15 -0300</pubDate><link>https://iyaki.ar/posts/20231217_cambios_en_feeds_rss/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231217_cambios_en_feeds_rss/</guid></item><item><title>Conoce tus herramientas</title><description><![CDATA[
+				]]></description><pubDate>Sun, 17 Dec 2023 21:49:15 -0300</pubDate><link>https://iyaki.ar/posts/20231217_cambios_en_feeds_rss/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231217_cambios_en_feeds_rss/</guid></item><item><title>Breaking Changes</title><description><![CDATA[
+					<blockquote>Algunas lecciones acerca de URIs que me llevo del proceso de migración a eleventy.</blockquote>
+					<article class="main-content">
+	<h1 lang="en">Breaking Changes</h1>
+<p>Si utilizan <abbr title="Really Simple Sindication" lang="en">RSS</abbr> para seguir los artículos que escribo en mi blog personal, es posible que a fines del 2023 se hayan encontrado con <a href="https://iyaki.ar/posts/20231217_cambios_en_feeds_rss/" target="_blank">este post</a> en el que comento algunos cambios importantes sobre mis feeds <abbr title="Really Simple Sindication" lang="en">RSS</abbr>, que acompañan la migración de mi sitio web a <a href="https://www.11ty.dev/" target="_blank" lang="en" hreflang="en">eleventy</a>.</p>
+<p>Hoy vengo a contar un poco sobre como estoy gestionando estos cambios en las <span lang="en">URIs</span> de las distintas páginas de mi <span lang="en">website</span>, siempre con el objetivo de mantener la mayor retrocompatibilidad posible, evitando así <i lang="en">breaking changes</i>.</p>
+<p>Al migrar a <span lang="en">eleventy</span> decidí hacer caso a los consejos de <a href="https://www.w3.org/Provider/Style/URI" target="_blank" lang="en">Cool URIs don’t change</a> y eliminar la extensión <code>.html</code> de las <span lang="en">URIs</span> de mis páginas (el cual es ademas el comportamiento predeterminado de <span lang="en">eleventy</span>). Inmediatamente, comencé a buscar una manera de mantener las antiguas <span lang="en">URIs</span> funcionando.</p>
+<p>Como soy una persona de bien, que respeta el protocolo <abbr title="HyperText Transfer Protocol" lang="en">HTTP</abbr>, mi primera intención fue configurar redirecciones (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/301" target="_blank" lang="en" hreflang="en">301 - Moved Permanently</a>) para que todas las direcciones antiguas redirigiesen de forma automática a las nuevas y el cambio en las <span lang="en">URIs</span> fuese explícito y visible para los visitantes de mi web. Esta era la opción más adecuada, pero, al parecer, <a href="https://pages.github.com/" target="_blank" lang="en" hreflang="en">Github Pages</a> (<i lang="en">hosting</i> que utilizo para mi <span lang="en">website</span>) no tiene soporte para configurar redirecciones más allá del clásico <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404" target="_blank" lang="en" hreflang="en">404 - Not Found</a>.</p>
+<p>Fue entonces cuando revisando los directorios y archivos de mi sitio descubrí cuál sería la primera solución que implementaría: No hacer nada. ¿Nada? ¡Sí, eso mismo!</p>
+<p>El proceso de deploy de este sitio es extremadamente simple, se basa en copiar archivos de un directorio a otro. Y como todos los archivos que <span lang="en">eleventy</span> había generado, tenían rutas distintas a los originales, la primera solución resultó ser seguir sirviendo los antiguos archivos en sus <span lang="en">URIs</span> originales, teniendo así duplicados de muchas de mis páginas.</p>
+<p>Esto servía para salir del paso, pero no me terminaba que convencer como solución, ya que, más pronto que tarde, estos duplicados comenzarían a diferir en contenido, generando inconsistencias. Entonces, me embarqué en la búsqueda de una solución más elegante y sostenible, la cual aún no encuentro.</p>
+<p>Pero esto no significa que no haya mejorado la solución original.</p>
+<p>Actualmente, he cambiado las copias de las páginas por enlaces simbólicos (<i lang="en">symlinks</i>, para los amigos). Los enlaces simbólicos me permiten tener una única versión de cada página, pero mantener accesibles las antiguas <span lang="en">URIs</span>. Esto solo resuelve el problema de la consistencia, ya que el cambio en las <span lang="en">URIs</span> sigue sin hacerse visible para los visitantes. Otro problema que todavía mantiene esta solución es el de la canonicidad de las páginas, al haber múltiples <span lang="en">URIs</span> para un mismo contenido, los motores de búsqueda como <span lang="en">Google</span> no saben cuál deberían sugerir en los resultados porque sus <i lang="en">bots</i> no tienen manera de saber que una de las direcciones corresponde a un enlace simbólico.</p>
+<p>Este problema con los motores de búsqueda, de momento, lo estoy resolviendo, incluyendo, en todas las páginas, tags <abbr title="Hyper Text Markup Language">HTML</abbr> del estilo: <code>&lt;link rel=&quot;canonical&quot; href=&quot;https://iyaki.ar/blog/&quot;&gt;</code> lo que, <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls?hl=es" target="_blank">según <span lang="en">Google</span></a> debería resolver el problema.</p>
+<p>Aún no termino de decidir si eventualmente debería dar de baja las direcciones antiguas de manera definitiva (Opción tentadora para simplificar el mantenimiento, sobre todo teniendo en cuenta que esta web es bastante joven y las posibilidades de que haya enlaces de terceros a sus páginas aún son muy bajos) es por esto que, de manera cautelar, he agregado en la <a href="https://iyaki.ar/404.html" target="_blank">página de 404</a> un script <abbr title="Javascript" lang="en">JS</abbr> del <a href="https://archive.org/" target="_blank" lang="en" hreflang="en">Internet Archive</a> que permite recomendar automáticamente páginas web guardadas con anterioridad en su base de datos en caso de no existir la dirección solicitada.</p>
+<p>Además, aprovechando esta posibilidad que me brinda <a href="https://web.archive.org/" target="_blank" lang="en" hreflang="en">WayBack Machine</a> del <span lang="en">Internet Archive</span>, para asegurarme de que mis posts y páginas queden almacenados, en el <span lang="en">Github Action</span> que se encarga de realizar las publicaciones agregué <a href="https://github.com/iyaki/iyaki.github.io/blob/main/.github/workflows/publish.yml#L21" target="_blank">una sección</a> para respaldar automáticamente el contenido de mi sitio web mediante la <abbr title="Application Programming Interface" lang="en">API</abbr> <abbr title="Representational State Transfer" lang="en">REST</abbr> que exponen.</p>
+<p>Esto es todo por ahora, si tengo novedades sobre esta migración, sus ventajas y desafíos los verán en mis posts.</p>
+<p lang="fr">Au revoir!</p>
+
+</article>
+
+				]]></description><pubDate>Tue, 23 Jan 2024 22:41:44 +0000</pubDate><link>https://iyaki.ar/posts/20240123_breaking_changes/</link><guid isPermaLink="true">https://iyaki.ar/posts/20240123_breaking_changes/</guid></item><item><title>Conoce tus herramientas</title><description><![CDATA[
 					<blockquote>Si quiero terminar mas rápido ese side project que me va a volver millonario (?) puedo aprender mecanografía y escribir código más rápido o puedo buscar la forma de escribir menos código...</blockquote>
 					<article class="main-content">
 	<h1>Conoce tus herramientas</h1>
@@ -918,137 +939,4 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Sat, 10 Jun 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230610_depurando_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230610_depurando_conocimiento/</guid></item><item><title>Ordenando conocimiento</title><description><![CDATA[
-					<blockquote>Segundo artículo de la serie en la que explico como gestiono, actualmente, el conocimiento en mi vida.</blockquote>
-					<article class="main-content">
-	<h1>Ordenando conocimiento</h1>
-	<p>
-		En el principio, cuando cree mi <a href="https://fortelabs.com/blog/basboverview/" target="_blank">Segundo
-			cerebro</a>, reinaba el caos y no había nada en él.
-	</p>
-	<p>
-		Esta es la historia de mi viaje a través de múltiples posts sobre toma de notas y sórdidos videos sobre
-		productividad hasta, finalmente, crear lo que hoy es mi <a
-			href="https://iyaki.notion.site/iyaki/066daa9a7abb4c029724323209c85ca6?v=0a0294da7e734adcb9e4e5413c1db1da"
-			target="_blank">base de conocimiento</a>.
-	</p>
-	<p>
-		En mi post anterior, <a href="https://iyaki.ar/"posts/20230514_reuniendo_conocimiento" target="_blank">Reuniendo
-			conocimiento</a>, expliqué cómo, actualmente, recopilo información de internet, me informo y aprendo. Ahora ha
-		llegado la hora de saber cómo ordeno toda esa información en algo que me pueda servir de referencia en el futuro
-		cuando necesite refrescar la memoria o compartir conocimiento con otras personas. Aunque, en este caso, el relato
-		comienza mucho antes de mi historia de amor con el <abbr title="Really Simple Syndication" lang="en">RSS</abbr>.
-	</p>
-	<p>
-		Al dar mis primeros pasos por la <i lang="en">world wide web</i>, la primera arma en mi arsenal fueron, obviamente,
-		lo que tenía más a mano. Los favoritos del navegador.
-	</p>
-	<p>
-		Mientras la información no necesitara estar disponible en múltiples dispositivos (situación que no era para nada
-		frecuente en una época en la que la mayoría de las personas solo contaban con un ordenar con conexión ADSL en el
-		hogar) y fuese relevante para un solo fin, la estructura de carpetas que proponen los favoritos de la mayoría de
-		navegadores web eran más que suficientes.
-	</p>
-	<p>
-		Los años pasaron y el mundo cambió. El auge de la web y los dispositivos móviles se volvió innegable y, después de
-		ahorrar durante algún tiempo, compré mi primer <i lang="en">smartphone</i>. Ahora ya no era suficiente con tener la
-		información disponible de manera local en un único dispositivo. La información debía estar siempre disponible desde
-		cualquier parte, en cualquier momento, y aún faltaban algunos años para que los navegadores comenzaran a ofrecer
-		sincronización entre dispositivos.
-	</p>
-	<p>
-		Fue entonces cuando, de algún modo que ya no recuerdo, aunque muy probablemente a través de <a
-			href="https://www.taringa.net/" target="_blank">Taringa!</a><sup class="footnote-ref"><a href="#fn1"
-				id="fnref1">[1]</a></sup>, conocí <a href="https://getpocket.com/es/" target="_blank" lang="en">Pocket</a>.
-	</p>
-	<p>
-		Además del problema de portabilidad, Pocket implementa un esquema en el que los artículos se organizaban mediante <i
-			title="etiquetas" lang="en">tags</i>. Este esquema permitía asociar una misma pieza de información a múltiples
-		conceptos. Por si fuera poco, además, guarda, no solo la URL sino, también, el texto del artículo en cuestión.
-	</p>
-	<p>
-		Mientras escribo el párrafo anterior no puedo evitar preguntarme por qué es que lo dejé de usar. Porque sí, a pesar
-		de que hasta podría parecer que me pagaron para hacerles propaganda, la verdad es que hace años que no uso Pocket y
-		a día de hoy ya no sé decir por qué fue que deje de usarlo.
-	</p>
-	<p>En cualquier caso, lo importante es que Pocket no perduró.</p>
-	<p>
-		Pasó el tiempo y eventualmente conocí la verdadera fe. El <abbr title="Really Simple Syndication"
-			lang="en">RSS</abbr>. Lo conocí de la mano de Feedly. Aunque parecía haber opciones de software más completas, la
-		mayoría carecían de la capacidad de sincronizarse entre dispositivos, por lo que terminé decidiéndome por Feedly.
-	</p>
-	<p>
-		Feedly tiene una funcionalidad llamada <i title="tableros" lang="en">Boards</i> y aunque resuelve adecuadamente la
-		disponibilidad multidispositivo no es muy amigable para asociar los artículos que se guardan a conceptos útiles o
-		para buscar dentro de ellos.
-	</p>
-	<p>
-		Nuevamente, me encontraba en la búsqueda de una herramienta que cubriera adecuadamente mis necesidades. Pero esta
-		vez mi mente lo relacionó a algo distinto. El “segundo cerebro”.
-	</p>
-	<p>
-		Ya había escuchado hace años el término <i title="Segundo cerebro" lang="en">Second Brain</i> para referirse a una
-		forma de recopilar y ordenar información de manera que fuese útil en el futuro, pero nunca me llamo demasiado la
-		atención. Eso de tener un “segundo” cerebro siempre me pareció (y me sigue pareciendo) pura <a
-			href="https://neolunfardo.blogspot.com/2010/03/z.html" target="_blank">zaraza</a>. Sin embargo, la idea general
-		parecía bastante acertada y sentía la necesidad, cada vez más evidente, de lograr algo así.
-	</p>
-	<p>
-		Luego de una breve investigación terminé con dos candidatos para el trabajo: <a href="https://obsidian.md/"
-			target="_blank" lang="en">Obsidian</a> y <a href="https://www.notion.so/" target="_blank" lang="en">Notion</a>.
-	</p>
-	<p>
-		<span lang="en">Obsidian</span> realmente tiene algunas propuestas muy interesantes y aunque, al basarse en archivos
-		en texto plano, podría haber creado un esquema de sincronización mediante <a href="https://git-scm.com/"
-			target="_blank" lang="en">git</a>+<a href="https://github.com/" target="_blank" lang="en">Github</a>, <a
-			href="https://www.google.com/intl/es-419_ar/drive/" target="_blank" lang="en">Google Drive</a>, <a
-			href="https://mega.io/es" target="_blank" lang="en">MEGA</a> (O bien pagado por el <a
-			href="https://obsidian.md/sync" target="_blank" lang="en">servicio de sincronización</a>); <span
-			lang="en">Notion</span>, en su capa gratuita, ya me brindaba dicha funcionalidad y, en líneas generales, también
-		se parecía una herramienta de lo más interesante y potente<sup class="footnote-ref"><a href="#fn2"
-				id="fnref2">[2]</a></sup>.
-	</p>
-	<p>Y así llegamos al presente.</p>
-	<p>
-		Actualmente, utilizo la extensión <a
-			href="https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk"
-			target="_blank" lang="en">Notion Web Clipper</a> en el navegador para guardar de forma rápida páginas que visito y
-		me brinda las mismas ventajas que daba <span lang="en">Pocket</span> (disponibilidad, clasificación mediante <i
-			title="etiquetas" lang="en">tags</i> y guardado del contenido de los artículos).
-	</p>
-	<p>
-		Por defecto, todos los artículos y páginas que guardo con el <span lang="en">Web Clipper</span> van primero a una
-		lista de <a href="https://es.wikipedia.org/wiki/Triaje" target="_blank" lang="fr">triage</a> desde donde,
-		posteriormente, los clasifico antes de pasarlos a mi base de conocimiento.
-	</p>
-	<p>
-		Esa última parte del proceso es completamente manual y puede resultar un poco tediosa (sobre todo cuando pasan
-		varios días sin que clasifique los artículos y comienzan a acumularse) pero creo que vale la pena. Además está en
-		mis planes automatizarlo pronto.
-	</p>
-	<p>Hasta aquí llega el post de hoy. Espero que tengan un excelente día.</p>
-	<hr class="footnotes-sep">
-	<section class="footnotes">
-		<ol class="footnotes-list">
-			<li id="fn1" class="footnote-item">
-				<p>
-					Taringa en sus años dorados de Inteligencia Colectiva, mucho antes de los <span lang="en">Shouts</span>,
-					cuando los verdaderos linces de las estepas ibéricas, machos alfas, lomos plateados, pechos peludos junto con
-					los troesmas galácticos de propulsión a uranio enriquecido hacían aportes de calidad a la comunidad y todavía
-					no habían metido preso a <a href="https://es.wikipedia.org/wiki/Kim_Dotcom" target="_blank" lang="en">Kim
-						Dotcom</a> ni el FBI se había quedado con todos los servers de <a
-						href="https://es.wikipedia.org/wiki/Caso_Megaupload" target="_blank" lang="en">Megaupload</a>. <a
-						href="#fnref1" class="footnote-backref">↩</a>
-				</p>
-			</li>
-			<li id="fn2" class="footnote-item">
-				<p>
-					Luego de usar <span lang="en">Notion</span> durante varios meses, puedo dar fe de que efectivamente es una
-					herramienta realmente versátil y potente. <a href="#fnref2" class="footnote-backref">↩</a>
-				</p>
-			</li>
-		</ol>
-	</section>
-</article>
-
-				]]></description><pubDate>Wed, 07 Jun 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230607_ordenando_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230607_ordenando_conocimiento/</guid></item></channel></rss>
+				]]></description><pubDate>Sat, 10 Jun 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230610_depurando_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230610_depurando_conocimiento/</guid></item></channel></rss>
