@@ -9,8 +9,6 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	text-wrap: balance;
-	text-wrap: pretty;
 }
 
 .main-content {
@@ -25,6 +23,7 @@ body {
 .main-content > section > header > h1
 {
 	font-size: 2em;
+	line-height: 1.1;
 	font-family: 'Arsenal', sans-serif;
 	text-align: left;
 }
@@ -34,6 +33,7 @@ main-content > h2,
 .main-content > section > h2,
 .main-content > section > header > h2
 {
+	line-height: 1.1;
 	text-align: left;
 }
 
@@ -45,4 +45,11 @@ main-content > h2,
 
 .main-content p {
 	padding: 0 1em;
+	line-height: 1.5;
+	text-wrap: balance;
+	text-wrap: pretty;
+}
+
+:target {
+	scroll-margin-block: 5ex;
 }
