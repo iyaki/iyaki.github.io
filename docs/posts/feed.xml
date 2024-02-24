@@ -1,4 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:a="http://www.w3.org/2005/Atom" version="2.0"><channel><title>mi Blog | iyaki</title><description>Blog personal donde comparto mis experiencias y pensamientos</description><link>https://iyaki.ar/blog/</link><language>es</language><a:link href="https://iyaki.ar/posts/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://iyaki.ar/blog/logo.png</url><title>mi Blog | iyaki</title><link>https://iyaki.ar/blog/</link></image><item><title>Breaking Changes</title><description><![CDATA[
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:a="http://www.w3.org/2005/Atom" version="2.0"><channel><title>mi Blog | iyaki</title><description>Blog personal donde comparto mis experiencias y pensamientos</description><link>https://iyaki.ar/blog/</link><language>es</language><a:link href="https://iyaki.ar/posts/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://iyaki.ar/blog/logo.png</url><title>mi Blog | iyaki</title><link>https://iyaki.ar/blog/</link></image><item><title>.gitconfig</title><description><![CDATA[
+					<blockquote>Una de las herramientas más útiles para acompañar una sesión de programación es git, pero también puede ser el mayor enemigo de un programador si no se la usa adecuadamente.<br>En este artículo comparto como configuro git para simplificar su uso lo mas posible.</blockquote>
+					<article class="main-content">
+	<h1>.gitconfig</h1>
+<p>Continuando con la temática de herramientas y productividad, y envalentonado por el post de <a href="https://jvns.ca/about/#about-me" target="_blank">Julia Evans</a>: <a href="https://jvns.ca/blog/2024/02/16/popular-git-config-options/" target="_blank">Popular git config options</a>, hoy quiero compartir con ustedes mi configuración de git.</p>
+<pre><code class="language-toml"># ~/.gitconfig
+
+[user]
+    email = ****** # El email que utilizo para github
+    name = iyaki # Usuario coincidiendo con el de github
+    signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFsDjKjz0+2nt9YmqETTLNM9PtxfKP/2ihhcj/q27Mtu # Clave pública correspondiente a la clave privada que utiizo para firmar los commits
+
+[core]
+    pager = delta # https://github.com/dandavison/delta Excelente herramienta para mejorar la experiencia al realizar diffs
+    editor = vim # https://xkcd.com/378/
+    autocrlf = input # \r quien te conoce?
+    excludesfile = ~/.gitignore-global # patrones para excluir de manera global
+    untrackedcache = true # https://github.blog/2022-06-29-improve-git-monorepo-performance-with-a-file-system-monitor/
+    fsmonitor = true # https://github.blog/2022-06-29-improve-git-monorepo-performance-with-a-file-system-monitor/
+
+[color]
+    ui = auto # Colorcitos lindos
+
+[help]
+    autocorrect = prompt # No hay que dejar que la dislexia nos gane
+
+[diff]
+    colorMoved = default # Diferencia (en los diff) lineas movidas de lineas eliminadas y nuevas
+
+[interactive]
+    diffFilter = delta --color-only # https://github.com/dandavison/delta
+[add.interactive]
+    useBuiltin = false # Utilizar delta tambien al ejecutar `git add --interactive` https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
+
+[delta] # Mis configuraciones para delta
+    navigate = true
+    light = false
+    line-numbers = true
+
+[gpg]
+    format = ssh # Formato de la clave utilizada para firmar commits
+[commit]
+    gpgsign = true # Firmado automático de los commits
+    verbose = true
+[tag]
+    gpgsign = true # Firmado automático de los tags
+[gpg &quot;ssh&quot;]
+    allowedSignersFile = ~/.config/git/authorized_signers # Claves publicas consideradas &quot;seguras&quot; para los commits firmados
+
+[init]
+    defaultBranch = main # Branch default
+
+[merge]
+    conflictstyle = diff3 # Mejor resolución de conflictos durante los merge
+
+[diff]
+    tool = difftastic # Herramienta alternativa para hacer diffs &quot;estructurales&quot;. Cuando la conocí me pareció una idea excelente pero la verdad es que despues nunca la usé
+[difftool]
+    prompt = false
+[difftool &quot;difftastic&quot;]
+    cmd = difft &quot;$LOCAL&quot; &quot;$REMOTE&quot;
+
+[pager]
+    difftool = true # Use a pager for large output, just like other git commands
+
+[alias] # Esto necesita explicación?
+    a = add
+    b = branch
+    c = commit -m
+    ca = commit --amend --no-edit
+    cl = clean -fd .
+    co = checkout
+    d = diff
+    dd = difftool
+    dft = difftool
+    l = ! git log --show-signature
+    lo = ! git log --color --pretty=format:'%Cred%H%Creset - %C(blue)(%G? %GT)%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'
+    lol = ! git log --color --graph --pretty=format:'%Cred%h%Creset - %C(blue)(%G? %GT)%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit --
+    p = push
+    psu = push --set-upstream
+    pr = pull --rebase --autostash
+    r = reset
+    s = status
+    td = tag --delete
+    tdr = push --delete
+</code></pre>
+<p>Adicionalmente, esta es mi configuración de exclusiones globales (<code>excludesfile</code>)</p>
+<pre><code class="language-.gitignore"># ~/.gitignore-global
+
+.*.sw? #Vim swap file
+.directory
+.vscode
+</code></pre>
+<p>Esta era mi configuración de git desde hace ya unos años y hasta hace unos pocos días, cuando, en base al artículo que les compartí al principio del post decidí hacer los siguientes cambios y adiciones:</p>
+<pre><code class="language-toml">[merge]
+    conflictstyle = zdiff3 # Mejor x2 resolución de conflictos durante los merge
+
+[rerere]
+    enabled = true
+[push]
+    default = current
+[rebase]
+    autostash = true
+[transfer]
+    fsckobjects = true
+[fetch]
+    fsckobjects = true
+[receive]
+    fsckObjects = true
+[status]
+    submoduleSummary = true
+[branch]
+    sort = -committerdate
+    sort = tag.sort
+[log]
+    date = iso
+</code></pre>
+<p>Estas nuevas configuraciones se ven prometedoras, pero aún no he tenido suficiente tiempo para probarlas a fondo.</p>
+<p>Esto es todo por hoy, espero que puedan aprovechar alguna de estas configuraciones para mejorar sus propios flujos de trabajo.</p>
+<p lang="ru">Пока́!</p>
+
+</article>
+<script type="module">
+	import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
+	import bash from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/bash.min.js';
+	hljs.registerLanguage('bash', bash);
+	hljs.highlightAll()
+</script>
+
+				]]></description><pubDate>Sat, 24 Feb 2024 03:37:25 +0000</pubDate><link>https://iyaki.ar/posts/20240224_gitconfig/</link><guid isPermaLink="true">https://iyaki.ar/posts/20240224_gitconfig/</guid></item><item><title>Breaking Changes</title><description><![CDATA[
 					<blockquote>Algunas lecciones acerca de URIs que me llevo del proceso de migración a eleventy.</blockquote>
 					<article class="main-content">
 	<h1 lang="en">Breaking Changes</h1>
@@ -778,130 +907,4 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Wed, 14 Jun 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230614_habemus_rss/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230614_habemus_rss/</guid></item><item><title>Depurando conocimiento</title><description><![CDATA[
-					<blockquote>Tercer post sobre cómo trabajo el conocimiento, esta vez con un plot twist a la mitad de la historia que ni yo me esperaba.</blockquote>
-					<article class="main-content">
-	<h1>Depurando conocimiento</h1>
-	<p>
-		En esta ocasión les traigo un relato sobre cómo experimenté una sobrecarga de información por seguir demasiados <i
-			lang="en">feeds</i> <abbr title="Really Simple Syndication" lang="en">RSS</abbr>, llegando a un punto donde la
-		mayoría de los artículos ya no me interesaban para nada y de como lo resolví con un poco de <span
-			lang="en">Javascript</span> cuando podría, simplemente, haber dejado de seguir dichos <i lang="en">feeds</i> (cosa
-		que dicho sea de paso en realidad sí termine haciendo en muchos casos).
-	</p>
-	<p>
-		Podría haber dejado de seguirlos, pero… ¿Y si justo entonces decidiesen publicar algo de mi interés? Pues sí, puede
-		pasar; pero ¿realmente va a tener eso un impacto en tu vida? Probablemente no.
-	</p>
-	<p>
-		Por supuesto, lo mejor, en realidad, sería superar ese miedo ridículo a “perderse algo” y poder tener una <a
-			href="https://manhattanmentalhealthcounseling.com/the-benefits-of-a-low-information-diet-for-people-with-mental-health-issues/"
-			target="_blank" hreflang="en">dieta baja en información</a> y prácticamente nula en datos, a menos que alguna de
-		nuestras actividades lo requiera.
-	</p>
-	<p>
-		Y ¿Por qué podemos querer información que no necesitamos ahora? La única respuesta legitima que se me ocurre es para
-		poder responder más rápidamente ante alguna necesidad relacionada. Sin embargo, ese argumento se derrumba enseguida
-		si uno sabe realizar búsquedas en internet con, por lo menos, un mínimo de eficacia. ¿Cuánto tardamos hoy en día en
-		acceder a la información que queramos en el momento que la necesitamos con todas las herramientas tecnológicas con
-		las que contamos (las cuales por cierto son cada vez más, ya que a los históricos buscadores web como <a
-			href="https://www.google.com/" target="_blank">Google</a> ahora se suman nuevas herramientas impulsadas por
-		inteligencia artificial como <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>)?
-	</p>
-	<p>
-		Aunque apenas voy escribiendo 4 párrafos de este artículo, hacerlo me está costando más de lo que esperaba y el
-		proceso me está tomando varios días. Días en los cuales me estoy suscribiendo de cada vez más <i lang="en">feeds</i>
-		al darme cuenta de, realmente, no necesito la información que me brindan.
-	</p>
-	<p>
-		Por un lado, mantenerme al tanto de la actualidad nunca me resultó una prioridad, y si realmente ocurre un hecho que
-		sacude al mundo, de todas formas uno se entera enseguida al hablar con otras personas. Mi mayor interés con los <i
-			lang="en">feeds</i> siempre fue adquirir conocimiento y hasta hace dos días estaba perfectamente preparado para
-		justificar eso en este post. Pero cuanto más lo pienso, más se arraigan dentro de mí varios conceptos que leí
-		recientemente sobre cultivar la <a href="https://nesslabs.com/selective-ignorance"
-			target="_blank"><strong>ignorancia selectiva</strong></a>.
-	</p>
-	<p>
-		Este ejercicio me está resultando de lo más enriquecedor, así que voy a proponerles que lo prueben.
-		<br>
-		Los pasos son los siguientes:
-	</p>
-	<ol>
-		<li>
-			Infórmense brevemente sobre la ignorancia selectiva, personalmente recomiendo leer el capítulo 6, <em
-				lang="en">The Low-Information Diet</em>, del libro <em lang="em"><a
-					href="https://www.goodreads.com/es/book/show/368593.The_4_Hour_Workweek" target="_blank" hreflang="en">The
-					4-Hour Workweek </a></em> de Tim Ferriss.
-		</li>
-		<li>
-			Hagan un repaso mental de todas las fuentes de información que utilizan día a día. Desde diarios en papel hasta
-			redes sociales, pasando por diarios digitales y <abbr title="Really Simple Syndication" lang="en">RSS</abbr>.
-			Todos cuentan.</li>
-		<li>
-			Ahora calculen cuanto tiempo le están dedicando a consumir toda esa información y compárenlo con cuanto tiempo
-			están dedicando a emplear esa información.
-		</li>
-	</ol>
-	<p>
-		Eso es todo, luego de la comparación cada uno debería saber si quiere seguir distribuyendo su tiempo de la misma
-		manera que lo estaba haciendo.
-	</p>
-	<p>
-		Al menos para mí, deshacerme de toda esa información me genera una inexplicable incomodidad en todo mi ser. Por
-		suerte, no es necesario llegar al extremo de eliminar por completo la “ingesta” de información y existen puntos
-		intermedios como el uso de curadores de contenido. Lo más importante en estos casos es tener el cuidado de no
-		terminar cayendo en sesgos cognitivos como el <a
-			href="https://elvisitantedigital.com/camaras-de-eco-filtros-burbuja-sesgo-de-confirmacion/" target="_blank">filtro
-			de burbuja, la cámara de eco o el sesgo de confirmación</a>.<br> En cuanto a curadores de contenido, llegado este
-		punto, me veo contractualmente obligado conmigo mismo a comentarles que si les interesa la programación o el
-		management puede interesarles mi <a href="https://iyaki.ar/"curated" target="_blank">Recopilador de contenido curado</a>.
-	</p>
-	<h2>Sobre filtrar noticias con Javascript y otras yerbas</h2>
-	<p>
-		Sí, originalmente este artículo era sobre un pequeño proyecto que desarrollé en Javascript para filtrar noticias en
-		<a href="https://feedly.com/" target="_blank" lang="en">Feedly</a>.
-	</p>
-	<p>
-		Al menos para mí, con el pasar de los párrafos esto ya pasó a un segundo plano, pero si aún les interesa el proyecto
-		(el cual, de hecho, sigo utilizando para filtrar los <i lang="en">feeds</i> a lo que quedé suscripto) pueden
-		encontrar el mismo en su repositorio de <a href="https://github.com/" target="_blank" lang="en">Github</a>: <a
-			href="https://github.com/iyaki/feedly-denoiser" target="_blank">Feddly Denoiser</a>.
-	</p>
-	<p>
-		Su funcionamiento es muy simple y se encuentra explicado en el <span lang="en">README</span> del repositorio, pero
-		si tienen dudas, consultas o sugerencias de mejora no duden en contactarme mediante un <a
-			href="https://github.com/iyaki/feedly-denoiser/issues" target="_blank"><span lang="en">Issue</span> en <span
-				lang="en">Github</span></a> o directamente, <a href="mailto:me@iyaki.ar" target="_blank">vía e-mail</a>.
-	</p>
-	<p>
-		Si, como yo, utilizan <span lang="en">Feedly</span> en sus dispositivos móviles, también podría resultarles
-		interesantes una automatización que desarrollé para ejecutar <a href="https://github.com/iyaki/feedly-denoiser"
-			target="_blank">Feedly Denoiser</a> en <a href="https://github.com/features/actions" target="_blank"
-			lang="en">Github Actions</a> pueden encontrar <a href="https://github.com/iyaki/feedly-denoiser-automation"
-			target="_blank">aquí</a>.
-	</p>
-	<h2>Terminando</h2>
-	<p>
-		Estimados, esto fue todo por hoy. En breve seguramente esté actualizando la lista de <i lang="en">feeds</i> <abbr
-			title="Really Simple Syndication" lang="en">RSS</abbr> de mí <a href="https://iyaki.ar/"posts/20230514_reuniendo_conocimiento"
-			target="_blank">post anterior</a>.
-	</p>
-	<p>
-		Y si todo sigue según el plan muy pronto, tanto <a href="https://iyaki.ar/"blog" target="_blank">este blog</a>, como el <a
-			href="https://iyaki.ar/"curated" target="_blank">recopilador de contenidos curados</a>, deberían contar con sus propios <i
-			lang="en">feeds</i> <abbr title="Really Simple Syndication">RSS</abbr> para que puedan seguir.
-	</p>
-	<p>
-		Si quieren hacerme algún comentario, hablar, o sienten la irrefrenable necesidad de discutir acaloradamente mis
-		opiniones, siéntanse libres de escribirme a: <a href="mailto:me@iyaki.ar" target="_blank">me@iyaki.ar</a>.
-	</p>
-	<h2>Actualizaciones</h2>
-	<p>
-		Desde <time datetime="2023-10-18">Octubre del 2023</time> Feedly requiere de una suscripción de pago para poder
-		utilizar su <abbr title="Application Programming Interface" lang="en">API</abbr> <abbr
-			title="Representational State Transfer" lang="en">REST</abbr> por lo que no continuaré utilizando ni dando
-		mantenimiento a <a href="https://github.com/iyaki/feedly-denoiser" target="_blank">Feedly Denoiser</a>.
-	</p>
-</article>
-
-				]]></description><pubDate>Sat, 10 Jun 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230610_depurando_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230610_depurando_conocimiento/</guid></item></channel></rss>
+				]]></description><pubDate>Wed, 14 Jun 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230614_habemus_rss/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230614_habemus_rss/</guid></item></channel></rss>
