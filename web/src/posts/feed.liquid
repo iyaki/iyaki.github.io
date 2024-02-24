@@ -18,7 +18,7 @@ eleventyExcludeFromCollections: true
 		{% assign posts = collections.post | reverse | slice: 0, 10 %}
 		{% for post in posts %}
 			<item>
-				<title>{{ post.data.title }}</title>
+				<title><![CDATA[{{ post.data.title }}]]></title>
 				{% capture description %}
 					{% if post.data.epigraph %}<blockquote>{{ post.data.epigraph }}</blockquote>{% endif %}
 					{{ post.content }}
