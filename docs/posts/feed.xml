@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:a="http://www.w3.org/2005/Atom" version="2.0"><channel><title>mi Blog | iyaki</title><description>Blog personal donde comparto mis experiencias y pensamientos</description><link>https://iyaki.ar/blog/</link><language>es</language><a:link href="https://iyaki.ar/posts/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://iyaki.ar/blog/logo.png</url><title>mi Blog | iyaki</title><link>https://iyaki.ar/blog/</link></image><item><title>.gitconfig</title><description><![CDATA[
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:a="http://www.w3.org/2005/Atom" version="2.0"><channel><title>mi Blog | iyaki</title><description>Blog personal donde comparto mis experiencias y pensamientos</description><link>https://iyaki.ar/blog/</link><language>es</language><a:link href="https://iyaki.ar/posts/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://iyaki.ar/blog/logo.png</url><title>mi Blog | iyaki</title><link>https://iyaki.ar/blog/</link></image><item><title><![CDATA[.gitconfig]]></title><description><![CDATA[
 					<blockquote>Una de las herramientas más útiles para acompañar una sesión de programación es git, pero también puede ser el mayor enemigo de un programador si no se la usa adecuadamente.<br>En este artículo comparto como configuro git para simplificar su uso lo mas posible.</blockquote>
 					<article class="main-content">
 	<h1>.gitconfig</h1>
@@ -127,7 +127,7 @@
 	hljs.highlightAll()
 </script>
 
-				]]></description><pubDate>Sat, 24 Feb 2024 03:37:25 +0000</pubDate><link>https://iyaki.ar/posts/20240224_gitconfig/</link><guid isPermaLink="true">https://iyaki.ar/posts/20240224_gitconfig/</guid></item><item><title>Breaking Changes</title><description><![CDATA[
+				]]></description><pubDate>Sat, 24 Feb 2024 03:37:25 +0000</pubDate><link>https://iyaki.ar/posts/20240224_gitconfig/</link><guid isPermaLink="true">https://iyaki.ar/posts/20240224_gitconfig/</guid></item><item><title><![CDATA[Breaking Changes]]></title><description><![CDATA[
 					<blockquote>Algunas lecciones acerca de URIs que me llevo del proceso de migración a eleventy.</blockquote>
 					<article class="main-content">
 	<h1 lang="en">Breaking Changes</h1>
@@ -148,7 +148,7 @@
 
 </article>
 
-				]]></description><pubDate>Tue, 23 Jan 2024 22:41:44 +0000</pubDate><link>https://iyaki.ar/posts/20240123_breaking_changes/</link><guid isPermaLink="true">https://iyaki.ar/posts/20240123_breaking_changes/</guid></item><item><title>Conoce tus herramientas</title><description><![CDATA[
+				]]></description><pubDate>Tue, 23 Jan 2024 22:41:44 +0000</pubDate><link>https://iyaki.ar/posts/20240123_breaking_changes/</link><guid isPermaLink="true">https://iyaki.ar/posts/20240123_breaking_changes/</guid></item><item><title><![CDATA[Conoce tus herramientas]]></title><description><![CDATA[
 					<blockquote>Si quiero terminar mas rápido ese side project que me va a volver millonario (?) puedo aprender mecanografía y escribir código más rápido o puedo buscar la forma de escribir menos código...</blockquote>
 					<article class="main-content">
 	<h1>Conoce tus herramientas</h1>
@@ -280,7 +280,7 @@ Esto nos permitirá ver, a la vez, las configuraciones que nosotros hayamos defi
 	hljs.highlightAll()
 </script>
 
-				]]></description><pubDate>Sun, 21 Jan 2024 20:35:55 +0000</pubDate><link>https://iyaki.ar/posts/20240121_conoce_tus_herramientas/</link><guid isPermaLink="true">https://iyaki.ar/posts/20240121_conoce_tus_herramientas/</guid></item><item><title>Sobre el Governace Crew en esquemas unFIX</title><description><![CDATA[
+				]]></description><pubDate>Sun, 21 Jan 2024 20:35:55 +0000</pubDate><link>https://iyaki.ar/posts/20240121_conoce_tus_herramientas/</link><guid isPermaLink="true">https://iyaki.ar/posts/20240121_conoce_tus_herramientas/</guid></item><item><title><![CDATA[Sobre el Governace Crew en esquemas unFIX]]></title><description><![CDATA[
 					<blockquote>El modelo unFIX me pareció muy interesante desde la primera vez que leí sobre él pero intentar implementarlo no me fue tan sencillo como esperaba en un primer momento.</blockquote>
 					<article class="main-content">
 	<h1>Sobre el <span lang="en">Governace Crew</span> en esquemas <span lang="en">unFIX</span></h1>
@@ -442,7 +442,7 @@ Espero tener noticias al respecto pronto para poder compartirlas.</p>
 
 </article>
 
-				]]></description><pubDate>Sun, 10 Dec 2023 20:21:38 +0000</pubDate><link>https://iyaki.ar/posts/20231210_sobre_el_governance_crew/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231210_sobre_el_governance_crew/</guid></item><item><title>Migrando ando</title><description><![CDATA[
+				]]></description><pubDate>Sun, 10 Dec 2023 20:21:38 +0000</pubDate><link>https://iyaki.ar/posts/20231210_sobre_el_governance_crew/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231210_sobre_el_governance_crew/</guid></item><item><title><![CDATA[Migrando ando]]></title><description><![CDATA[
 					<blockquote>Puede que sea un poco apresurado, pero creo que me volví a enamorar.</blockquote>
 					<article class="main-content">
 	<h1>Migrando ando</h1>
@@ -499,7 +499,7 @@ o explorar algunos de sus Plugins.</p>
 
 </article>
 
-				]]></description><pubDate>Mon, 27 Nov 2023 00:51:13 +0000</pubDate><link>https://iyaki.ar/posts/20231127_migrando_ando/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231127_migrando_ando/</guid></item><item><title>El desafío del lenguaje ubicuo en español</title><description><![CDATA[
+				]]></description><pubDate>Mon, 27 Nov 2023 00:51:13 +0000</pubDate><link>https://iyaki.ar/posts/20231127_migrando_ando/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231127_migrando_ando/</guid></item><item><title><![CDATA[El desafío del lenguaje ubicuo en español]]></title><description><![CDATA[
 					<blockquote>¿El inglés como lenguaje universal? No dentro de mis dominios.</blockquote>
 					<article class="main-content">
 	<h1>El desafío del lenguaje ubicuo en español</h1>
@@ -576,7 +576,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Wed, 11 Oct 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</guid></item><item><title>Los atributos id en HTML como parte de la API pública de las páginas web</title><description><![CDATA[
+				]]></description><pubDate>Wed, 11 Oct 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</link><guid isPermaLink="true">https://iyaki.ar/posts/20231011_el_desafio_del_lenguaje_ubicuo_en_espanol/</guid></item><item><title><![CDATA[Los atributos id en HTML como parte de la API pública de las páginas web]]></title><description><![CDATA[
 					<blockquote>Desde que el ser humano adquirió el raciocinio suficiente para entender el paso del tiempo siempre le han agradado las cosas predecibles. Los programadores seguimos siendo seres humanos, y nos siguen gustando las cosas predecibles. Sobre todo las API predecibles.<br> ¿Y que hay mas predecible que una API que no cambia? <br><br> Sin embargo, es fácil olvidar lo poco que se requiere para que una API cambie.</blockquote>
 					<article class="main-content">
 	<h1>Los atributos id en HTML como parte de la API pública de las páginas web</h1>
@@ -691,7 +691,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Sun, 27 Aug 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230827_api_paginas_web/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230827_api_paginas_web/</guid></item><item><title>Bibliotecas y librerías</title><description><![CDATA[
+				]]></description><pubDate>Sun, 27 Aug 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230827_api_paginas_web/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230827_api_paginas_web/</guid></item><item><title><![CDATA[Bibliotecas y librerías]]></title><description><![CDATA[
 					<blockquote>Una breve anécdota de un suceso irrelevante que ocurrió hace años y que, por razones que no termino de comprender, podría, o no, haber marcado mi uso del lenguaje.</blockquote>
 					<article class="main-content">
 	<h1>Bibliotecas y librerías</h1>
@@ -746,7 +746,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Sun, 16 Jul 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</guid></item><item><title>Compartiendo conocimiento</title><description><![CDATA[
+				]]></description><pubDate>Sun, 16 Jul 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230716_bibliotecas_y_librerias/</guid></item><item><title><![CDATA[Compartiendo conocimiento]]></title><description><![CDATA[
 					<blockquote>Finalmente, el último de mis artículos sobre como reúno, ordeno, depuro y comparto conocimiento.</blockquote>
 					<article class="main-content">
 	<h1>Compartiendo conocimiento</h1>
@@ -827,7 +827,7 @@ o explorar algunos de sus Plugins.</p>
 	</p>
 </article>
 
-				]]></description><pubDate>Wed, 21 Jun 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</guid></item><item><title>Habemus RSS</title><description><![CDATA[
+				]]></description><pubDate>Wed, 21 Jun 2023 03:00:00 +0000</pubDate><link>https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</link><guid isPermaLink="true">https://iyaki.ar/posts/20230621_compartiendo_conocimiento/</guid></item><item><title><![CDATA[Habemus RSS]]></title><description><![CDATA[
 					<blockquote>Noticia de último momento. Interrumpimos la programación habitual para comunicar un mensaje a la comunidad: Es el fin de la hipocresía, finalmente este blog y el recopilador de contenidos tienen feed RSS.</blockquote>
 					<article class="main-content">
 	<h1>Habemus RSS</h1>
