@@ -9,7 +9,7 @@
     "@11ty/eleventy": "^2.0.1",
     "cssnano": "^6.0.5",
     "html-minifier-terser": "^7.2.0",
-    "minify-xml": "^4.3.0",
+    "minify-xml": "^4.4.1",
     "postcss": "^8.4.35",
     "postcss-html": "^1.6.0",
     "postcss-preset-env": "^9.3.0"
