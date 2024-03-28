@@ -65,6 +65,7 @@ export function addCommonAbbreviations(markdown) {
 		'FP': 'Functional Programming',
 		'DRY': 'Don\'t Repeat Yourself (programming principal)',
 		'KISS': 'Keep it Simple, Stupid',
+		'YAGNI': 'You Aren\'t Gonna Need It',
 		'XSS': 'Cross Site Scripting',
 		'SEO': 'Search Engine Optimization',
 		'UI': 'User Interface',
