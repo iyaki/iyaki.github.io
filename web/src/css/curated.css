@@ -3,7 +3,7 @@
 @import "utils/color-schema.css" layer(defaults);
 @import "utils/sizing.css" layer(defaults);
 
-@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=Maitree:wght@400;700&family=Josefin+Sans:wght@600&display=swap') layer(pages);
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=Maitree:wght@400;700&family=Josefin+Sans:wght@600&text=ColeciónprsnadatíusdITyf&display=swap') layer(pages);
 
 @layer pages {
 	body {
