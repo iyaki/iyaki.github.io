@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&text=miBlog&display=swap');
 
 .blog-header {
-	background: #656561;
+	background: #282828;
 	display: flex;
 	align-items: flex-end;
 	flex-flow: row wrap;
@@ -10,6 +10,7 @@
 .blog-header a {
 	color: snow;
 	text-decoration: none;
+	text-shadow: 2px 2px 5px black;
 }
 
 .blog-header a:hover {
