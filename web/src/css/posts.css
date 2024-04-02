@@ -10,12 +10,13 @@
 
 	.main-panel figure {
 		text-align: center;
+
+		img {
+			max-height: 30svh;
+			max-width: 100%;
+		}
 	}
 
-	.main-panel figure img {
-		max-height: 30svh;
-		max-width: 100%;
-	}
 
 	.third-panel {
 		display: none;
@@ -40,7 +41,9 @@
 			width: 50vw;
 			overflow-y: auto;
 
-			h2,h1,h3,h4,h5,h6 {
+			h1, h2, h3, h4, h5, h6 {
+				text-align: left;
+
 				> * {
 					color: var(--text-color);
 					text-decoration: none;
