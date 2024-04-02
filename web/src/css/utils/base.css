@@ -12,15 +12,10 @@ body {
 }
 
 .main-content {
-	max-width: var(--main-content-width);
 	padding: 2em;
-	text-align: justify;
 }
 
-.main-content > h1,
-.main-content > header > h1,
-.main-content > section > h1,
-.main-content > section > header > h1
+.main-content h1
 {
 	font-size: 2em;
 	line-height: 1.1;
@@ -28,10 +23,13 @@ body {
 	text-align: left;
 }
 
-main-content > h2,
-.main-content > header > h2,
-.main-content > section > h2,
-.main-content > section > header > h2
+.main-content header h1
+{
+	font-size: 1.5em;
+	font-family: 'Maitree', serif;
+}
+
+main-content h2
 {
 	line-height: 1.1;
 	text-align: left;
@@ -43,7 +41,9 @@ main-content > h2,
 	padding: 1em 0.25em;
 }
 
-.main-content p {
+.main-content :where(p, ul) {
+	max-width: var(--main-content-width);
+	text-align: justify;
 	padding: 0 1em;
 	line-height: 1.5;
 	text-wrap: balance;

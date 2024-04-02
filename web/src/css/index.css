@@ -51,9 +51,14 @@
 	}
 
 	.projects__project {
+		max-width: 40ch;
 		border: 0.15em solid var(--box-border-color);
 		border-radius: 0.2em;
-		padding: 0 3em !important;
+		padding: 1em 3em 0 3em !important;
 		margin: 0.75rem 0;
+
+		h1 {
+			font-size: unset;
+		}
 	}
 }
