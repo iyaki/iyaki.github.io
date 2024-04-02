@@ -1,3 +1,6 @@
+/* Media queries tomadas de: https://getbootstrap.com/docs/5.3/layout/breakpoints/#media-queries
+Segunda opinión: https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
+
 :root {
 	font-size: 16px;
 	--main-content-width: 35rem;

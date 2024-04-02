@@ -57,7 +57,7 @@
 		align-items: stretch;
 	}
 
-	@media screen and (min-width: 900px) {
+	@media screen and (min-width: 992px) {
 		.header-panel {
 			order: 0;
 			max-width: 12rem;
@@ -96,7 +96,7 @@
 		}
 	}
 
-	@media screen and (max-width: 899px) {
+	@media screen and (max-width: 991.98px) {
 		body {
 			padding: 0 1em;
 			flex-flow: column nowrap;
