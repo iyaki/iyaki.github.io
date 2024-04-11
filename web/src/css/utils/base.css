@@ -3,6 +3,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=Maitree:wght@400;700&display=swap');
 
+::selection {
+	background: #f1e740;
+}
+
 body {
 	margin: 0;
 	font-family: 'Maitree', serif;
