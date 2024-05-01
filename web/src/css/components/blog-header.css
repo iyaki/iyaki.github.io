@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&text=miBlog&display=swap');
 
+:root {
+	--blog-header-background-color: #282828;
+}
+
 .blog-header {
-	background: #282828;
+	background: var(--blog-header-background-color);
 	display: flex;
 	align-items: flex-end;
 	flex-flow: row wrap;
