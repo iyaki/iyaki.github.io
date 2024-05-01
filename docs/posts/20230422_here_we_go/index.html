@@ -33,6 +33,30 @@
 	</div>
 </header>
 <main class="main-panel main-content">
+	<aside aria-label="newsletter-form">
+		<style>
+.newsletter-form{border:.15em solid var(--box-border-color);padding:.5em 3em 1em}
+.newsletter-form,.newsletter-form header *{text-align:center}
+.newsletter-form button,.newsletter-form input{border:1px solid var(--box-border-color);border-radius:3px;font-size:var(--base-font-size);margin:.1em auto;padding:.25em 1em}
+.newsletter-form input{background-color:transparent}
+.newsletter-form button{background-color:var(--blog-header-background-color);color:#f5f5f5;cursor:pointer}
+.newsletter-form button:hover{box-shadow:3px 3px 3px var(--blog-header-background-color);text-shadow:#fff 1px 1px .5em;translate:-2px -2px}
+.newsletter-form button:active{box-shadow:none;translate:none}		</style>
+		<article class="newsletter-form">
+			<header>
+				<h2>No te vuelvas a perder un post!</h2>
+				<p>Subscribite a la newsletter de mi Blog</p>
+			</header>
+			<form action="https://simple-newsletter.com/subscriptions/">
+				<input type="hidden" name="uri" value="https://iyaki.ar/posts/feed.xml">
+				<label>
+					<span lang="en">E-mail</span>:
+					<input type="email" name="email" required>
+				</label>
+				<button type="submit">Subscribirme</button>
+			</form>
+		</article>
+	</aside>
 	<article>
 	<h1>Here we go</h1>
 	<p>Porque <em>Hola Mundo!</em> está demasiado trillado</p>
