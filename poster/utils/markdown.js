@@ -80,6 +80,10 @@ export function addCommonAbbreviations(markdown) {
 		'URL': 'Uniform Resource Locator',
 		'a.k.a.': 'also known as',
 		'IDE': 'Integrated Development Environment',
+		'IA': 'Inteligencia Artificial',
+		'AI': 'Artificial Intelligence',
+		'NLP': 'Natural Language Processing',
+		'LLM': 'Large Language Model',
 	}
 
 	let markdownWithAbbreviations = markdown
