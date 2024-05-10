@@ -2,6 +2,9 @@
 <html lang="es-AR">
 
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{% liquid
 		assign siteTitle = site.name
 
@@ -18,22 +21,19 @@
 		endif
 	%}
 	<title>{{ siteTitle }}</title>
-	<meta charset="utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="description" content="{{description | default: "Pensamientos y cosas que encuentro interesantes"}}">
-	<meta name="author" content="{{ site.author }}">
-	<meta name="keywords" content="{{ keywords | default: "Ivan Yakimovicz, Ivan Yaki, iyaki" }}">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/svg+xml" href="/images/logo.svg">
 	{% if stylesheet %}
 		<link href="{{ stylesheet }}" rel="stylesheet">
 	{% endif %}
+	<meta name="description" content="{{description | default: "Pensamientos y cosas que encuentro interesantes"}}">
+	<meta name="author" content="{{ site.author }}">
+	<meta name="keywords" content="{{ keywords | default: "Ivan Yakimovicz, Ivan Yaki, iyaki" }}">
+	<link rel="icon" type="image/svg+xml" href="/images/logo.svg">
 	{% for h in head %}
-    {{ h }}
-  {% endfor %}
-  {% if noindex %}
-  <meta name="robots" content="noindex">
-  {% endif %}
+	{{ h }}
+	{% endfor %}
+	{% if noindex %}
+	<meta name="robots" content="noindex">
+	{% endif %}
 	<link rel="canonical" href="{{ site.url }}{{ page.url | url }}" />
 	<!-- PostHog -->
 	<script>
