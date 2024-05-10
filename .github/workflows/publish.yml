@@ -18,6 +18,7 @@ jobs:
         run: cd web && npm install --save-exact
       - name: publish
         run: web/publish.sh
+      - uses: stefanzweifel/git-auto-commit-action@v5
       - name: Preserve in Wayback Machine
         run: |
           for changed_file in $(git diff --name-only)
@@ -38,4 +39,3 @@ jobs:
                   --data capture_screenshot=on
             fi
           done
-      - uses: stefanzweifel/git-auto-commit-action@v5
