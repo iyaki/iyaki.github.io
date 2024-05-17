@@ -12,5 +12,3 @@ export OPENAI_API_KEY
 node main.js
 
 cd ../web || exit
-
-npm run build

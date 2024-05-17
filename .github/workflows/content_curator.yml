@@ -13,9 +13,13 @@ jobs:
           node-version: 20
       - name: Dependencies setup
         run: cd curator && npm install --save-exact
-      - name: publish
+      - name: curate
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: curator/curate.sh
+      - name: publish
+        run: |
+          cd web && npm install --save-exact
+          npm run build
       - uses: stefanzweifel/git-auto-commit-action@v5
