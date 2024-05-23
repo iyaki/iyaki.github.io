@@ -8,6 +8,8 @@ function _publish() {
 	local COMPILATION_DIR="${SCRIPT_DIR}/_site"
 	local PUBLICATION_DIR="${SCRIPT_DIR}/../docs"
 
+	cd "${SCRIPT_DIR}" || exit
+
 	rm -rf "${COMPILATION_DIR}"
 
 	npm run build
