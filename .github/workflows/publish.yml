@@ -1,3 +1,5 @@
+name: Deploy website
+
 on:
   workflow_dispatch:
   push:
@@ -6,21 +8,42 @@ on:
     paths:
       - 'web/**'
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  publish:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
           cache-dependency-path: 'web/package-lock.json'
-      - name: Dependencies setup
-        run: cd web && npm install --save-exact
-      - name: publish
-        run: web/publish.sh
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Build
+        run: |
+          cd web
+          npm install --save-exact
+          npm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './web/_site'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+  preserve:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
       - name: Preserve in Wayback Machine
         run: |
           for changed_file in $(git diff --name-only)
