@@ -44,6 +44,7 @@ jobs:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Preserve in Wayback Machine
         run: |
           for changed_file in $(git diff --name-only)
