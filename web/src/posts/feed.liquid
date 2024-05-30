@@ -35,7 +35,7 @@ eleventyExcludeFromCollections: true
 					assign description = description | replace: 'href="/', hrefAbsolute | replace: 'href="./', hrefRelative | replace: 'src="/', srcAbsolute | replace: 'src="./', srcRelative
 				%}
 				<description><![CDATA[{{ description }}]]></description>
-				<pubDate>{{ post.page.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+				<pubDate>{{ post.page.feedDate | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
 				<link>{{ postUri }}</link>
 				<guid isPermaLink="true">{{ postUri }}</guid>
 			</item>

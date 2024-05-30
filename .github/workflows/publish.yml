@@ -49,7 +49,7 @@ jobs:
         run: |
           for changed_file in $(git diff --name-only)
           do
-            if [[ "${changed_file}" == docs/*.html ]] && [ "${changed_file}" != "docs/curated/index.html" ]
+            if [[ "${changed_file}" == docs/*.html ]]
             then
               ABSOLUTE_PATH_WEB="${changed_file#docs/}"
               RELATEIVE_PATH_WEB="${ABSOLUTE_PATH_WEB%index\.html}"

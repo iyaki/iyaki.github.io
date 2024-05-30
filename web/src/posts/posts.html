@@ -14,7 +14,7 @@ description: Índice de artículos de iyaki
 		<ul>
 			{% for post in collections.post reversed %}
 				<li>
-					[{{ post.page.date | date: "%d/%m/%Y" }}]
+					[{{ post.page.created | date: "%d/%m/%Y" }}]
 					<a href="{{ post.page.url }}">{{ post.data.title }}</a>
 				</li>
 			{% endfor %}
