@@ -2,7 +2,8 @@
 module.exports = eleventyConfig => {
 	const BASE_PATH = 'src';
 
-	eleventyConfig.addPlugin(require('./production-eleventy.js'));
+	eleventyConfig.addPlugin(require('./.eleventy/production-tweaks'));
+	eleventyConfig.addPlugin(require('./.eleventy/shortcodes'));
 
 	eleventyConfig.addPassthroughCopy(BASE_PATH + '/robots.txt')
 	// eleventyConfig.addPassthroughCopy(BASE_PATH + '/css')
