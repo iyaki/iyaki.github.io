@@ -1,5 +1,5 @@
 {
-	"liveServer.settings.root": "/docs",
-	"liveServer.settings.file": "/docs/404.html",
+	"liveServer.settings.root": "/web/_site",
+	"liveServer.settings.file": "/web/_site/404.html",
 	"liquid.engine": "11ty"
 }
