@@ -103,7 +103,7 @@ head:
 .vscode
 </code></pre>
 <p>Esta era mi configuración de git desde hace ya unos años y hasta hace unos pocos días, cuando, en base al artículo que les compartí al principio del post decidí hacer los siguientes cambios y adiciones:</p>
-<pre><code class="language-toml">[merge]
+<pre><code class="language-.gitignore">[merge]
     conflictstyle = zdiff3 # Mejor x2 resolución de conflictos durante los merge
 
 [rerere]
@@ -122,7 +122,6 @@ head:
     submoduleSummary = true
 [branch]
     sort = -committerdate
-    sort = tag.sort
 [log]
     date = iso
 </code></pre>
@@ -132,8 +131,6 @@ head:
 
 </article>
 <script type="module">
-	import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
-	import bash from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/bash.min.js';
-	hljs.registerLanguage('bash', bash);
+	import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js'
 	hljs.highlightAll()
 </script>
