@@ -1,0 +1,21 @@
+name: Save pages to Web Archive's Wayback Machine
+
+on:
+  workflow_run:
+    workflows:
+      - Deploy website
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Get web-archiver
+        run: |
+          curl https://github.com/iyaki/web-archiver/releases/latest/download/web-archiver_Linux_x86_64 -Lo web-archiver
+          chmod +x ./web-archiver
+      - name: Save pages to Web Archive's Wayback Machine
+        run: ./web-archiver https://iyaki.ar/sitemap.xml "$(date -I)"
