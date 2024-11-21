@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
 	{% if page.data.noindex != true and page.data.permalink != false %}
 		<url>
 			<loc>{{ site.url }}{{ page.url | url }}</loc>
-			{% capture pageLastModified %}{% gitLastModified page.inputPath %}{% endcapture %}
+			{% capture pageLastModified %}{{ page.inputPath | getGitCommitDateFromPath }}{% endcapture %}
 			<lastmod>{{ pageLastModified | date: "%Y-%m-%d" }}</lastmod>
 		</url>
 	{% endif %}

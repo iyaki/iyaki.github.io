@@ -1,9 +1,13 @@
-/** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-module.exports = eleventyConfig => {
-	const BASE_PATH = 'src';
+import ProductionTweaks from './.eleventy/production-tweaks.js'
+import GitCommitDate from 'eleventy-plugin-git-commit-date'
 
-	eleventyConfig.addPlugin(require('./.eleventy/production-tweaks'));
-	eleventyConfig.addPlugin(require('./.eleventy/shortcodes'));
+/** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
+export default function (eleventyConfig) {
+	const BASE_PATH = 'src'
+
+	eleventyConfig.addPlugin(ProductionTweaks)
+	eleventyConfig.addPlugin(GitCommitDate)
+
 
 	eleventyConfig.addPassthroughCopy(BASE_PATH + '/robots.txt')
 	// eleventyConfig.addPassthroughCopy(BASE_PATH + '/css')
