@@ -5,6 +5,9 @@
     "serve": "npx @11ty/eleventy --serve"
   },
   "author": "iyaki",
+  "engines": {
+    "node": "20"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "cssnano": "^7.0.6",

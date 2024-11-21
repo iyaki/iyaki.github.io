@@ -16,6 +16,9 @@
     "url": "https://github.com/iyaki/iyaki.github.io/issues"
   },
   "homepage": "https://github.com/iyaki/iyaki.github.io",
+  "engines": {
+    "node": "20"
+  },
   "dependencies": {
     "node-html-parser": "^6.1.13",
     "remarkable": "^2.0.1"
