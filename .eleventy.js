@@ -3,7 +3,7 @@ import GitCommitDate from 'eleventy-plugin-git-commit-date'
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default function (eleventyConfig) {
-	const BASE_PATH = 'src'
+	const BASE_PATH = 'web'
 
 	eleventyConfig.addPlugin(ProductionTweaks)
 	eleventyConfig.addPlugin(GitCommitDate)

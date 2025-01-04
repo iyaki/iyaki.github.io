@@ -1,0 +1,149 @@
+/*
+Media queries from:
+- https://getbootstrap.com/docs/5.3/layout/breakpoints/#media-queries
+- https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
+*/
+
+/* ----------------- Start defaults ----------------- */
+
+:root {
+	/* Universal Fonts from https://modernfontstacks.com/ */
+	font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; /* CHANGE THIS */
+	font-size: var(--base-font-size, 16px);
+	--base-font-size: 18px;
+	--main-content-width: 60ch;
+
+	@media screen and (min-width: 1400px) {
+		--base-font-size: 23px;
+	}
+
+	color-scheme: light dark;
+
+	--background-color-light: #fff;
+	--text-color-light: #383838;
+	--link-color-light: #0074d2;
+	--link-hover-color-light: #008cff;
+	--link-visited-color-light: rgb(103, 0, 220);
+	--box-border-color-light: black;
+
+	--background-color-dark: #34342f;
+	--text-color-dark: whitesmoke;
+	--link-color-dark: lightskyblue;
+	--link-hover-color-dark: deepskyblue;
+	--link-visited-color-dark: plum;
+	--box-border-color-dark: darkgray;
+
+	--background-color: Canvas;
+	--text-color: CanvasText;
+	--link-color: LinkText;
+	--link-hover-color: ActiveText;
+	--link-visited-color: VisitedText;
+	--box-border-color: ButtonBorder;
+
+	@media (prefers-color-scheme: light) {
+		--background-color: var(--background-color-light);
+		--text-color: var(--text-color-light);
+		--link-color: var(--link-color-light);
+		--link-hover-color: var(--link-hover-color-light);
+		--link-visited-color: var(--link-visited-color-light);
+		--box-border-color: var(--box-border-color-light);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		--background-color: var(--background-color-dark);
+		--text-color: var(--text-color-dark);
+		--link-color: var(--link-color-dark);
+		--link-hover-color: var(--link-hover-color-dark);
+		--link-visited-color: var(--link-visited-color-dark);
+		--box-border-color: var(--box-border-color-dark);
+	}
+}
+
+::selection {
+	background: #f1e740;
+}
+
+/* Box sizing rules */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	line-height: 1.5;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+	margin-block-end: 0;
+}
+
+/* Balance text wrapping on headings */
+h1, h2, h3, h4 {
+	text-wrap: balance;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4, button, input, label {
+	line-height: 1.1;
+}
+
+/* Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+}
+
+p {
+letter-spacing: 0.03em;
+	hyphens: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button, textarea, select {
+font-family: inherit;
+	font-size: inherit;
+}
+
+a {
+	color: var(--link-color);
+}
+
+a:hover {
+	color: var(--link-hover-color);
+}
+
+a:visited {
+	color: var(--link-visited-color);
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}
+
+/* ----------------- End defaults ----------------- */
+
+
+/* ----------------- Start Utils ----------------- */
+
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* ----------------- End Utils ----------------- */

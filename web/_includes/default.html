@@ -21,9 +21,21 @@
 		endif
 	%}
 	<title>{{ siteTitle }}</title>
+	<!-- TODO: Eliminar antigua implementación de stylesheets -->
 	{% if stylesheet %}
 		<link href="{{ stylesheet }}" rel="stylesheet">
 	{% endif %}
+	{% if embeddedStylesheets %}
+	<style>
+		@layer reset, defaults, pages, components, utils, overrides;
+		{% if env.ELEVENTY_RUN_MODE == "build" %}{% render css/default.css %}{% else %}@import '/css/default.css';{% endif %}
+	</style>
+	{% endif %}
+	{% for style in embeddedStylesheets %}
+	<style>
+		{% if env.ELEVENTY_RUN_MODE == "build" %}{% render style %}{% else %}@import '/{{ style }}';{% endif %}
+	</style>
+	{% endfor %}
 	<meta name="description" content="{{description | default: "Pensamientos y cosas que encuentro interesantes"}}">
 	<meta name="author" content="{{ site.author }}">
 	<meta name="keywords" content="{{ keywords | default: "Ivan Yakimovicz, Ivan Yaki, iyaki" }}">
