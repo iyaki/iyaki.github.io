@@ -1,9 +1,3 @@
-@layer reset, defaults, pages, components, utils, overrides;
-
-@import "utils/base.css" layer(defaults);
-@import "components/contacts.css" layer(components);
-@import "utils/dark.css" layer(utils);
-
 @layer pages {
 	.wayback-machine {
 		margin: 10px;
