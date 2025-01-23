@@ -1,10 +1,45 @@
 ---
 layout: default.html
-date: "2023-10-05T09:42:49-03:00"
-titleOverride: iyaki
-embeddedStylesheets:
- - css/index.css
+date: "2025-01-23T20:04:36-03:00"
 ---
+<style>
+	main {
+		padding: 1em;
+
+		& > header {
+			text-align: center;
+			margin-bottom: 2em;
+
+			img {
+				border: black solid 1px;
+				border-radius: 1000px;
+			}
+
+			h1 {
+				margin: 0;
+				font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+				font-weight: normal;
+			}
+
+			p {
+				margin: 0;
+			}
+		}
+
+		& > section {
+			margin: auto;
+			max-width: 60ch;
+
+			& > p {
+				margin-bottom: 2em;
+			}
+		}
+	}
+	main > header > p::after,
+	main > header > p::before {
+		content: ' – ';
+	}
+</style>
 <main>
 	<header>
 		<figure>
@@ -13,18 +48,18 @@ embeddedStylesheets:
 				alt="Logo de mi web, unos anteojos 3D de cartón blanco con film azul y rojo"
 				loading="lazy"
 				decoding="async"
-				style="height: 10em; aspect-ratio: 1;"
+				style="height: 4em; aspect-ratio: 1;"
 			>
 		</figure>
 		<h1>iyaki</h1>
 		<p>Generalista</p>
 	</header>
 	<section>
-		<p>Encontrarán más información sobre mi carrera profesional en <a href="https://www.linkedin.com/in/ivan-yakimovicz/">Linkedin</a>.</p>
-		<p>Mis proyectos de software están disponibles en <a href="https://github.com/iyaki">Github</a>.</p>
+		<p>Pueden encontrar más información sobre mi carrera profesional en <a href="https://www.linkedin.com/in/ivan-yakimovicz/" lang="en">Linkedin</a>.</p>
+		<p>Mis proyectos de software están disponibles en <a href="https://github.com/iyaki" lang="en">Github</a>.</p>
 		<p>En <a href="https://iyaki.ar/blog/">mi blog</a> escribo ideas que tengo, cosas que encuentro interesantes o cualquier cosa que quiera compartir.</p>
 		<p>Curo y comparto contenido que encuentro útil en mi <a href="https://curated.iyaki.ar/">Recopilador de contenidos curados</a>.</p>
-		<p>Hace un tiempo cree Simple Newsletter, un pequeño servicio de que convierte Feeds RSS a Newsletters enviadas por mail y cualquiera puede utilizar.</p>
-		<p>Para hablar sobre proyectos, ideas, sueños o lo que quieran siempre pueden escribirme a me@iyaki.ar</p>
+		<p>Hace un tiempo cree <a href="https://simple-newsletter.com/" lang="en">Simple Newsletter</a>, un pequeño servicio de que convierte <i lang="en">Feeds RSS</i> a <i lang="en">Newsletters</i> enviadas por email y cualquiera puede utilizar.</p>
+		<p>Para hablar sobre proyectos, ideas, sueños o lo que quieran siempre pueden escribirme a <a href="mailto:me@iyaki.ar">me@iyaki.ar</a>.</p>
 	</section>
 </main>
