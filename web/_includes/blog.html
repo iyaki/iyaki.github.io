@@ -1,8 +1,6 @@
 ---
 layout: default.html
 section: mi Blog
-embeddedStylesheets:
-  - css/posts.css
 ---
 <style>
 body {
@@ -20,14 +18,13 @@ body {
 
 		.header-website {
 			order: 0;
-			/* width: fit-content; */
 
 			figure {
 				margin: 0;
 			}
 
 			h2 {
-				text-align: center;
+				text-align:  !important;
 				margin: 0;
 			}
 		}
@@ -54,16 +51,13 @@ body {
 
 				a {
 					display: flex;
-					text-decoration: none;
-					color: inherit;
 				}
 			}
 		}
 
-		* {
-			text-decoration: none;
-			color: inherit;
-			text-align: left;
+		a {
+			text-decoration: none !important;
+			color: var(--text-color) !important;
 		}
 
 		h1 {
