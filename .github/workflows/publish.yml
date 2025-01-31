@@ -7,6 +7,12 @@ on:
       - 'main'
     paths:
       - 'web/**'
+      - '.github/workflows/publish.yml'
+      - '.eleventy'
+      - '.eleventy.js'
+      - '.npmrc'
+      - 'package-lock.json'
+      - 'package.json'
 
 permissions:
   contents: read
