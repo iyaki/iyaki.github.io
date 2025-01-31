@@ -125,8 +125,6 @@ a:visited {
 
 /* ----------------- End Animations ----------------- */
 
-
-
 /* ----------------- Start Utils ----------------- */
 
 .sr-only {
@@ -136,6 +134,16 @@ a:visited {
 	width: 1px;
 	height: 1px;
 	overflow: hidden;
+}
+
+img.logo {
+	border: var(--box-border-color) solid 1px;
+	border-radius: 1000px;
+}
+
+.iyaki {
+	font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+	font-weight: normal;
 }
 
 /* ----------------- End Utils ----------------- */

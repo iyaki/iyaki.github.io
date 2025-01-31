@@ -10,15 +10,8 @@ date: "2025-01-23T20:04:36-03:00"
 			text-align: center;
 			margin-bottom: 2em;
 
-			img {
-				border: black solid 1px;
-				border-radius: 1000px;
-			}
-
 			h1 {
 				margin: 0;
-				font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
-				font-weight: normal;
 			}
 
 			p {
@@ -28,7 +21,7 @@ date: "2025-01-23T20:04:36-03:00"
 
 		& > section {
 			margin: auto;
-			max-width: 60ch;
+			max-width: var(--main-content-width);
 
 			& > p {
 				margin-bottom: 2em;
@@ -46,10 +39,11 @@ date: "2025-01-23T20:04:36-03:00"
 			<img
 				src="/images/logo.svg"
 				alt="Logo de mi web, unos anteojos 3D de cartón blanco con celofán azul y rojo"
+				class="logo"
 				style="height: 4em; aspect-ratio: 1;"
 			>
 		</figure>
-		<h1>iyaki</h1>
+		<h1 class="iyaki">iyaki</h1>
 		<p>Generalista</p>
 	</header>
 	<section>
