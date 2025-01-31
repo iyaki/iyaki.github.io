@@ -44,5 +44,21 @@
 
 <body>
 	{{ content }}
+	<script type="speculationrules">
+		{
+			"prerender": [
+				{
+					"urls": ["/", "/blog/"],
+					"eagerness": "immediate"
+				},
+				{
+					"where": {
+						"href_matches": "/*"
+					},
+					"eagerness": "moderate"
+				}
+			]
+		}
+	</script>
 </body>
 </html>
