@@ -4,12 +4,6 @@ import cssnano from 'cssnano'
 import htmlSyntax from 'postcss-html'
 import { minify as minifyHtml } from 'html-minifier-terser'
 
-// const postcss = require('postcss')
-// const postcssPresetEnv = require('postcss-preset-env')
-// const cssnano = require('cssnano')
-// const htmlSyntax = require('postcss-html')
-// const { minify: minifyHtml } = require('html-minifier-terser')
-
 function getPostCss() {
 	const postCssConfig = [
 		postcssPresetEnv({
