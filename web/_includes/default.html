@@ -23,7 +23,7 @@
 	<title>{{ siteTitle }}</title>
 	<style>
 		@layer reset, defaults, pages, components, utils, overrides;
-		{% if env.ELEVENTY_RUN_MODE == "build" %}{% render css/default.css %}{% else %}@import '/css/default.css';{% endif %}
+		{% if env.ELEVENTY_RUN_MODE == "build" %}{% render 'css/default.css' %}{% else %}@import '/css/default.css';{% endif %}
 
 		{% for style in embeddedStylesheets %}
 			{% if env.ELEVENTY_RUN_MODE == "build" %}{% render style %}{% else %}@import '/{{ style }}';{% endif %}
