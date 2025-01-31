@@ -5,145 +5,161 @@ embeddedStylesheets:
   - css/posts.css
 ---
 <style>
+body {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: nowrap;
+	justify-content: center;
 
-</style>
-<hgroup>
-	<header style="view-transition-name: header">
-		<a href="/" title="Website personal">
-			<figure>
-				<img
-					src="/images/logo.svg"
-					alt="Logo de mi web, unos anteojos 3D de cartón blanco con celofán azul y rojo"
-					style="height: 4em; aspect-ratio: 1;"
-				>
-			</figure>
-			<h2>iyaki</h2>
-		</a>
-	</header>
-	<header>
-		<a href="/blog" title="Inicio">
-			<h1>mi<br>Blog</h1>
-		</a>
-	</header>
-</hgroup>
-<main>
-	<aside>
-		<details>
-			<summary></summary>
-		</details>
-	</aside>
-	<section>
+	& > hr {
+		position: sticky;
+		--margin-block: 2rem;
+		top: var(--margin-block);
+		height: calc(100vh - calc(2 * var(--margin-block)));
+		margin-block: var(--margin-block);
+		margin-inline: 1.5rem;
+	}
 
-	</section>
-</main>
-<aside>
-	<ul>
-		<li><a>RSS</a></li>
-		<li><a>Website</a></li>
-	</ul>
-</aside>
-<!-- <header class="header-panel blog-header">
-	<div class="blog-header__title">
-		<a href="/" title="Inicio ">
-			<img
-				src="/images/logo.svg"
-				alt="Logo de mi web, unos anteojos 3D de cartón blanco con film azul y rojo"
-				loading="lazy"
-				decoding="async"
-				style="height: 5em; aspect-ratio: 1;"
-			>
-		</a>
-		<a href="/blog">
-			<h1>mi<br>Blog</h1>
-		</a>
-	</div>
-</header>
-<main class="main-panel main-content">
-	<aside aria-label="Newsletter subscription form">
-		<style>
-			.newsletter-form {
-				padding: 1em 3em;
-				padding-top: 0.5em;
-				border: 0.15em solid var(--box-border-color);
-				text-align: center;
+	& > header {
+		position: sticky;
+		top: 0;
+		--padding-block: 3rem;
+		height: calc(100vh - calc(2 * var(--padding-block)));
+		padding-block: var(--padding-block);
 
-				header {
-					h2, p {
-						text-align: center;
-					}
+		& > hgroup {
+			height: inherit;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 1.7rem;
+
+			.header-website {
+				order: 1;
+				width: fit-content;
+
+				figure {
+					margin: 0;
 				}
 
-				input, button {
-					font-size: var(--base-font-size);
-					border: 1px solid var(--box-border-color);
-					border-radius: 3px;
-					padding: 0.25em 1em;
-					margin: 0.1em auto;
+				h2 {
+					text-align: center;
+					margin: 0;
 				}
+			}
 
-				input {
-					background-color: transparent;
-				}
+			.header-blog {
+				order: 3;
+			}
 
-				button {
-					background-color: var(--blog-header-background-color);
-					color: whitesmoke;
-					cursor: pointer;
+			.header-links {
 
-					&:hover {
-						text-shadow: white 1px 1px 0.5em;
-						translate: -2px -2px;
-						box-shadow: 3px 3px 3px var(--blog-header-background-color);
-					}
+				order: 2;
+				flex-grow: 2;
 
-					&:active {
-						translate: none;
-						box-shadow: none;
+				ul {
+					list-style: none;
+					padding-left: 0;
+					text-align: center;
+
+					a {
+						display: flex;
+						text-decoration: none;
+						color: inherit;
 					}
 				}
 			}
-		</style>
-		<article class="newsletter-form">
-			<header>
-				<h2>No te vuelvas a perder un post!</h2>
-				<p>Subscribite a la newsletter de mi Blog</p>
-			</header>
-			<form action="https://simple-newsletter.com/v1/subscriptions/">
-				<input type="hidden" name="uri" value="https://iyaki.ar/posts/feed.xml">
-				<label>
-					<span lang="en">E-mail</span>:
-					<input type="email" name="email" required>
-				</label>
-				<button type="submit">Subscribirme</button>
-			</form>
-		</article>
+
+			* {
+				text-decoration: none;
+				color: inherit;
+				text-align: left;
+			}
+
+			h1 {
+				font-size: 3em;
+				font-family: 'Nimbus Mono PS', 'Courier New', monospace;
+				font-weight: normal;
+			}
+
+		}
+	}
+
+	main {
+		max-width: var(--main-content-width);
+
+		& > section > article {
+			margin-block-end: 3em;
+
+			p {
+				margin-block-start: .7em;
+			}
+		}
+	}
+}
+</style>
+<header>
+	<hgroup>
+		<div class="header-blog">
+			<a href="/blog" title="Inicio">
+				<h1>mi<br>Blog</h1>
+			</a>
+		</div>
+		<div class="header-website" style="view-transition-name: header">
+			<a href="/" title="Website personal de Iván Yaki">
+				<figure>
+					<img
+						src="/images/logo.svg"
+						alt="Logo de mi web, unos anteojos 3D de cartón blanco con celofán azul y rojo"
+						class="logo"
+						style="height: 4em; aspect-ratio: 1;"
+					>
+				</figure>
+				<h2 class="iyaki">iyaki</h2>
+			</a>
+		</div>
+		<nav class="header-links">
+			<ul>
+				<li><a href="/">
+					<svg xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M9.838 18.447c.172.322.345.613.51.87a7.503 7.503 0 0 1-4.32-2.779c.694-.39 1.582-.795 2.65-1.091.303 1.19.731 2.195 1.16 3Zm1.324-.706a11.917 11.917 0 0 1-1.016-2.605A12.61 12.61 0 0 1 12 15c.656 0 1.274.05 1.854.136a11.916 11.916 0 0 1-1.016 2.605c-.299.56-.596 1.007-.838 1.335-.242-.328-.54-.775-.838-1.335ZM9.75 12c0 .584.04 1.139.109 1.662A14.11 14.11 0 0 1 12 13.5c.759 0 1.473.06 2.141.162a12.653 12.653 0 0 0 0-3.324 14.165 14.165 0 0 1-4.282 0A12.54 12.54 0 0 0 9.75 12Zm-1.363-1.971A14.133 14.133 0 0 0 8.25 12c0 .695.05 1.352.137 1.971a13.39 13.39 0 0 0-3.144 1.288A7.47 7.47 0 0 1 4.5 12a7.47 7.47 0 0 1 .743-3.26c.816.465 1.87.947 3.144 1.289Zm1.76-1.165a12.613 12.613 0 0 0 3.707 0 11.918 11.918 0 0 0-1.016-2.605A10.846 10.846 0 0 0 12 4.924c-.242.328-.54.775-.838 1.335a11.918 11.918 0 0 0-1.016 2.605Zm5.466 1.165a14.134 14.134 0 0 1 0 3.942c1.274.342 2.328.824 3.144 1.288A7.471 7.471 0 0 0 19.5 12a7.47 7.47 0 0 0-.743-3.26c-.816.465-1.87.947-3.144 1.289Zm2.359-2.567c-.694.39-1.582.795-2.65 1.091a13.434 13.434 0 0 0-1.67-3.87 7.502 7.502 0 0 1 4.32 2.779ZM8.678 8.553a11.879 11.879 0 0 1-2.65-1.091 7.503 7.503 0 0 1 4.32-2.78c-.165.258-.338.549-.51.871-.429.805-.857 1.81-1.16 3Zm6.644 6.894a13.434 13.434 0 0 1-1.67 3.87 7.503 7.503 0 0 0 4.32-2.779 11.882 11.882 0 0 0-2.65-1.091ZM12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path></svg>
+					iyaki.ar
+				</a></li>
+				<li><a href="/posts/feed.xml" lang="en" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m2.5 12A1.5 1.5 0 0 0 6 16.5A1.5 1.5 0 0 0 7.5 18A1.5 1.5 0 0 0 9 16.5A1.5 1.5 0 0 0 7.5 15M6 10v2a6 6 0 0 1 6 6h2a8 8 0 0 0-8-8m0-4v2a10 10 0 0 1 10 10h2A12 12 0 0 0 6 6"></path></svg>
+					Feed RSS
+				</a></li>
+			</ul>
+		</nav>
+	</hgroup>
+</header>
+<hr>
+<main>
+	<aside>
+		<details>
+			<summary>Subscribirse a la newsletter</summary>
+		</details>
 	</aside>
-	{{ content }}
-	{% if tags contains "post" %}
-	<script
-	src="https://giscus.app/client.js"
-	data-repo="iyaki/iyaki.github.io"
-	data-repo-id="R_kgDOI1fGcg"
-	data-category="Blogpost comments"
-	data-category-id="DIC_kwDOI1fGcs4CdYrB"
-	data-mapping="pathname"
-	data-strict="1"
-	data-reactions-enabled="1"
-	data-emit-metadata="0"
-	data-input-position="top"
-	data-theme="preferred_color_scheme"
-	data-lang="es"
-	data-loading="lazy"
-	crossorigin="anonymous"
-	async
-></script>
-{% endif %}
+	<section>
+		{{ content }}
+		{% if tags contains "post" %}
+			<script
+			src="https://giscus.app/client.js"
+			data-repo="iyaki/iyaki.github.io"
+			data-repo-id="R_kgDOI1fGcg"
+			data-category="Blogpost comments"
+			data-category-id="DIC_kwDOI1fGcs4CdYrB"
+			data-mapping="pathname"
+			data-strict="1"
+			data-reactions-enabled="1"
+			data-emit-metadata="0"
+			data-input-position="top"
+			data-theme="preferred_color_scheme"
+			data-lang="es"
+			data-loading="lazy"
+			crossorigin="anonymous"
+			async
+		></script>
+		{% endif %}
+	</section>
 </main>
-<aside class="third-panel">
-	{% unless tags contains "post" %}
-		<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
-		<a href="/posts/feed.xml" target="_blank" class="rss">
-			<iconify-icon icon="mdi:rss-box" width="40" height="40" class="rss__icon">RSS Feed</iconify-icon>
-		</a>
-	{% endunless %}
-</aside> -->
