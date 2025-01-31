@@ -8,9 +8,10 @@ Media queries from:
 
 :root {
 	/* Universal Fonts from https://modernfontstacks.com/ */
-	font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; /* CHANGE THIS */
-	font-size: var(--base-font-size, 16px);
+	font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
 	--base-font-size: 18px;
+	font-size: var(--base-font-size);
+
 	--main-content-width: 60ch;
 
 	@media screen and (min-width: 1400px) {
@@ -19,20 +20,6 @@ Media queries from:
 
 	color-scheme: light dark;
 
-	--background-color-light: #fff;
-	--text-color-light: #383838;
-	--link-color-light: #0074d2;
-	--link-hover-color-light: #008cff;
-	--link-visited-color-light: rgb(103, 0, 220);
-	--box-border-color-light: black;
-
-	--background-color-dark: #34342f;
-	--text-color-dark: whitesmoke;
-	--link-color-dark: lightskyblue;
-	--link-hover-color-dark: deepskyblue;
-	--link-visited-color-dark: plum;
-	--box-border-color-dark: darkgray;
-
 	--background-color: Canvas;
 	--text-color: CanvasText;
 	--link-color: LinkText;
@@ -40,23 +27,13 @@ Media queries from:
 	--link-visited-color: VisitedText;
 	--box-border-color: ButtonBorder;
 
-	@media (prefers-color-scheme: light) {
-		--background-color: var(--background-color-light);
-		--text-color: var(--text-color-light);
-		--link-color: var(--link-color-light);
-		--link-hover-color: var(--link-hover-color-light);
-		--link-visited-color: var(--link-visited-color-light);
-		--box-border-color: var(--box-border-color-light);
-	}
+	--background-color: light-dark(#fff, #34342f);
+	--text-color: light-dark(#383838, whitesmoke);
+	--link-color: light-dark(#0074d2, lightskyblue);
+	--link-hover-color: light-dark(#008cff, deepskyblue);
+	--link-visited-color: light-dark(#6700dc, plum);
+	--box-border-color: light-dark(black, darkgray);
 
-	@media (prefers-color-scheme: dark) {
-		--background-color: var(--background-color-dark);
-		--text-color: var(--text-color-dark);
-		--link-color: var(--link-color-dark);
-		--link-hover-color: var(--link-hover-color-dark);
-		--link-visited-color: var(--link-visited-color-dark);
-		--box-border-color: var(--box-border-color-dark);
-	}
 }
 
 ::selection {
