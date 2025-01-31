@@ -134,6 +134,21 @@ a:visited {
 
 /* ----------------- End defaults ----------------- */
 
+/* ----------------- Start Animations ----------------- */
+
+@view-transition {
+	navigation: auto;
+}
+
+@media (prefers-reduced-motion) {
+	@view-transition {
+		navigation: none;
+	}
+}
+
+/* ----------------- End Animations ----------------- */
+
+
 
 /* ----------------- Start Utils ----------------- */
 
