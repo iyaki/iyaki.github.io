@@ -8,8 +8,7 @@ epigraph: Algunas lecciones acerca de URIs que me llevo del proceso de migració
 tags:
   - post
 ---
-<article>
-	<h1 lang="en">Breaking Changes</h1>
+<h1 lang="en">Breaking Changes</h1>
 <p>Si utilizan <abbr title="Really Simple Sindication" lang="en">RSS</abbr> para seguir los artículos que escribo en mi blog personal, es posible que a fines del 2023 se hayan encontrado con <a href="https://iyaki.ar/posts/20231217_cambios_en_feeds_rss/" target="_blank">este post</a> en el que comento algunos cambios importantes sobre mis feeds <abbr title="Really Simple Sindication" lang="en">RSS</abbr>, que acompañan la migración de mi sitio web a <a href="https://www.11ty.dev/" target="_blank" lang="en" hreflang="en">eleventy</a>.</p>
 <p>Hoy vengo a contar un poco sobre como estoy gestionando estos cambios en las <span lang="en">URIs</span> de las distintas páginas de mi <span lang="en">website</span>, siempre con el objetivo de mantener la mayor retrocompatibilidad posible, evitando así <i lang="en">breaking changes</i>.</p>
 <p>Al migrar a <span lang="en">eleventy</span> decidí hacer caso a los consejos de <a href="https://www.w3.org/Provider/Style/URI" target="_blank" lang="en">Cool URIs don’t change</a> y eliminar la extensión <code>.html</code> de las <span lang="en">URIs</span> de mis páginas (el cual es ademas el comportamiento predeterminado de <span lang="en">eleventy</span>). Inmediatamente, comencé a buscar una manera de mantener las antiguas <span lang="en">URIs</span> funcionando.</p>
@@ -28,4 +27,3 @@ tags:
 <p>Durante mayo del 2024, después de varios meses de haber implementado WayBack Machine y comprobar su correcto funcionamiento he decidido, eliminar los enlaces simbólicos.</p>
 <p>Esto se debe, principalmente, a que la generación de estos enlaces simbólicos complejizaba el <a href="https://github.com/iyaki/iyaki.github.io/commit/ea6f3a745a3ecf6c740417c7be461789eaa3a00f" target="_blank">nuevo proceso de deploy</a> de este sitio web.</p>
 <p>También como consecuencia de los cambios del proceso de deploy fue necesario cambiar el proceso de archivado de las páginas en <span lang="en">WayBack Machine</span> del <span lang="en">Internet Archive</span> que ahora se realiza en un <a href="https://github.com/iyaki/iyaki.github.io/blob/main/.github/workflows/preserve.yml" target="_blank"><span lang="en">Github Action</span> independiente</a> y utiliza una pequeña <a href="https://github.com/iyaki/web-archiver" target="_blank" hreflang="en">aplicación que desarrollé para archivas páginas a partir de un sitemap</a>.</p>
-</article>
