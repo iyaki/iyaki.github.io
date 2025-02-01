@@ -9,23 +9,18 @@ Media queries from:
 :root {
 	/* Universal Fonts from https://modernfontstacks.com/ */
 	font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+
 	--base-font-size: 18px;
+
 	font-size: var(--base-font-size);
 
 	--main-content-width: 60ch;
 
-	@media screen and (min-width: 1400px) {
+	@media screen and (width >= 1400px) {
 		--base-font-size: 23px;
 	}
 
 	color-scheme: light dark;
-
-	--background-color: Canvas;
-	--text-color: CanvasText;
-	--link-color: LinkText;
-	--link-hover-color: ActiveText;
-	--link-visited-color: VisitedText;
-	--box-border-color: ButtonBorder;
 
 	--background-color: light-dark(#fff, #34342f);
 	--text-color: light-dark(#383838, whitesmoke);
@@ -33,7 +28,6 @@ Media queries from:
 	--link-hover-color: light-dark(#008cff, deepskyblue);
 	--link-visited-color: light-dark(#6700dc, plum);
 	--box-border-color: light-dark(black, darkgray);
-
 }
 
 ::selection {
@@ -47,8 +41,6 @@ Media queries from:
 
 /* Prevent font size inflation */
 html {
-	-moz-text-size-adjust: none;
-	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
 }
 
@@ -142,7 +134,7 @@ img.logo {
 }
 
 .iyaki {
-	font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+	font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', 'P052', serif;
 	font-weight: normal;
 }
 
