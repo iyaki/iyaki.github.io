@@ -4,16 +4,44 @@ permalink: 404.html
 title: "¯\\_(ツ)_/¯ Página no encontrada"
 eleventyExcludeFromCollections: true
 noindex: true
-embeddedStylesheets:
-  - css/404.css
 ---
+<style>
+.wayback-machine {
+	margin: 2rem auto;
+	width: 90%;
+	border: solid 1px;
+}
+
+#wb404 {
+	text-align: center;
+
+	.wb404_imagediv {
+		float: none;
+		padding: 0;
+	}
+}
+
+main {
+	text-align: center;
+}
+</style>
+
 <aside class="wayback-machine">
-	<div id="wb404"></div>
-	<script src="https://archive.org/web/wb404.js" async> </script>
+<div id="wb404"></div>
+<script src="https://archive.org/web/wb404.js" async> </script>
 </aside>
-<main class="main-content">
-	<h1>Página web no encontrada</h1>
-	<h2><span role="img" aria="Carita llorando">(╥﹏╥)</span></h2>
-	<p>La página web que estás buscando no existe.</p>
-	<p><a href="/">Volver al inicio.</a></p>
+
+<main>
+
+<h1>Página web no encontrada</h1>
+
+<svg height="5em" viewBox='0 0 35 15' role="img" aria-label="Carita llorando">
+	<desc>Carita llorando</desc>
+	<text y='1em' font-size='10'>(╥﹏╥)</text>
+</svg>
+
+<p>La página web que estás buscando no existe.
+
+<p><a href="/">Volver al inicio.</a>
+
 </main>

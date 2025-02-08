@@ -1,5 +1,6 @@
 {
 	"liveServer.settings.root": "/_site",
 	"liveServer.settings.file": "/_site/404.html",
-	"liquid.engine": "11ty"
+	"liquid.engine": "11ty",
+	"html.autoClosingTags": false
 }

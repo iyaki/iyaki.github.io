@@ -1,65 +1,56 @@
 <!DOCTYPE html>
 <html lang="es-AR">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	{% liquid
-		assign siteTitle = site.name
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% liquid
+	assign siteTitle = site.name
 
-		if section
-			assign siteTitle = siteTitle | prepend: " | " | prepend: section
-		endif
+	if section
+		assign siteTitle = siteTitle | prepend: " | " | prepend: section
+	endif
 
-		if title
-			assign siteTitle = siteTitle | prepend: " | " | prepend: title
-		endif
+	if title
+		assign siteTitle = siteTitle | prepend: " | " | prepend: title
+	endif
 
-		if titleOverride
-			assign siteTitle = titleOverride
-		endif
-	%}
-	<title>{{ siteTitle }}</title>
-	<style>
-		@layer reset, defaults, pages, components, utils, overrides;
-		{% if env.ELEVENTY_RUN_MODE == "build" %}{% render 'css/default.css' %}{% else %}@import '/css/default.css';{% endif %}
+	if titleOverride
+		assign siteTitle = titleOverride
+	endif
+%}
+<title>{{ siteTitle }}</title>
+<style>
+@layer reset, defaults, pages, components, utils, overrides;
+{% if env.ELEVENTY_RUN_MODE == "build" %}{% render 'css/default.css' %}{% else %}@import '/css/default.css';{% endif %}
+{% for style in embeddedStylesheets %}
+	{% if env.ELEVENTY_RUN_MODE == "build" %}{% render style %}{% else %}@import '/{{ style }}';{% endif %}
+{% endfor %}
+</style>
+<meta name="description" content="{{ description | default: "Pensamientos y cosas que encuentro interesantes" }}">
+<meta name="author" content="{{ site.author }}">
+<meta name="keywords" content="{{ keywords | default: "Ivan Yakimovicz, Ivan Yaki, iyaki" }}">
+<link rel="preload" href="/images/logo.svg" as="image" type="image/svg+xml">
+<link rel="icon" type="image/svg+xml" href="/images/logo.svg">
+{% for h in head %}
+{{ h }}
+{% endfor %}
+{% if noindex %}
+<meta name="robots" content="noindex">
+{% endif %}
+<link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
 
-		{% for style in embeddedStylesheets %}
-			{% if env.ELEVENTY_RUN_MODE == "build" %}{% render style %}{% else %}@import '/{{ style }}';{% endif %}
-		{% endfor %}
-	</style>
-	<meta name="description" content="{{ description | default: "Pensamientos y cosas que encuentro interesantes" }}">
-	<meta name="author" content="{{ site.author }}">
-	<meta name="keywords" content="{{ keywords | default: "Ivan Yakimovicz, Ivan Yaki, iyaki" }}">
-	<link rel="preload" href="/images/logo.svg" as="image" type="image/svg+xml">
-	<link rel="icon" type="image/svg+xml" href="/images/logo.svg">
-	{% for h in head %}
-	{{ h }}
-	{% endfor %}
-	{% if noindex %}
-	<meta name="robots" content="noindex">
-	{% endif %}
-	<link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
-</head>
-
-<body>
-	{{ content }}
-	<script type="speculationrules">
-		{
-			"prerender": [
-				{
-					"urls": ["/", "/blog/"],
-					"eagerness": "immediate"
-				},
-				{
-					"where": {
-						"href_matches": "/*"
-					},
-					"eagerness": "moderate"
-				}
-			]
-		}
-	</script>
-</body>
-</html>
+{{ content }}
+<script type="speculationrules">
+{"prerender": [
+	{
+		"urls": ["/", "/blog/"],
+		"eagerness": "immediate"
+	},
+	{
+		"where": {
+			"href_matches": "/*"
+		},
+		"eagerness": "moderate"
+	}
+]}
+</script>

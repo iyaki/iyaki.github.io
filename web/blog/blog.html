@@ -4,24 +4,18 @@ date: "2025-01-31T20:09:39-03:00"
 description: Blog personal de Ivan Yaki donde comparto pensamientos y cosas que encuentro interesantes
 keywords: Ivan Yakimovicz, Ivan Yaki, iyaki, blog
 ---
-<style>
-	main > section > header > h1 {
-		margin-block: 2.5em 1.5em ;
-	}
-</style>
-<header>
-	<h1>Últimas publicaciones</h1>
-</header>
+<h2>Últimas publicaciones</h2>
+
 {% for post in collections.post reversed %}
-	<article>
-		<header>
-			<a href="{{ post.page.url }}">
-				<h1>{{ post.data.title }}</h1>
-			</a>
-			<time datetime="{{ post.data.created | date: "%Y-%m-%d" }}">{{ post.data.created | date: "%d/%m/%Y" }}</time>
-		</header>
-		<p>
-			{{ post.data.epigraph | default: post.data.description }}
-		</p>
-	</article>
+<article>
+
+<header>
+<h3><a href="{{ post.page.url }}">{{ post.data.title }}</a></h3>
+<time datetime="{{ post.data.created | date: "%Y-%m-%d" }}">{{ post.data.created | date: "%d/%m/%Y" }}</time>
+</header>
+
+<p>
+{{ post.data.epigraph | default: post.data.description }}
+
+</article>
 {% endfor %}

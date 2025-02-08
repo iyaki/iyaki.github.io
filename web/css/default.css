@@ -105,28 +105,15 @@ a:visited {
 
 /* ----------------- Start Animations ----------------- */
 
-@view-transition {
-	navigation: auto;
-}
-
-@media (prefers-reduced-motion) {
+@media screen and (prefers-reduced-motion: no-preference) {
 	@view-transition {
-		navigation: none;
+		navigation: auto;
 	}
 }
 
 /* ----------------- End Animations ----------------- */
 
 /* ----------------- Start Utils ----------------- */
-
-.sr-only {
-	position: absolute;
-	left: -10000px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-}
 
 img.logo {
 	border: var(--box-border-color) solid 1px;
