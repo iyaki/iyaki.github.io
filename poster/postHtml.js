@@ -5,7 +5,7 @@ import { newHtmlArticleFrom } from './article.js';
 const POST_TEMPLATE_PATH = './templates/post.html'
 const POST_TEMPLATE = read(POST_TEMPLATE_PATH)
 
-const POSTS_PATH = '../web/src/posts/'
+const POSTS_PATH = '../web/posts/'
 
 export function publish(articleMd) {
 	const content = POST_TEMPLATE
