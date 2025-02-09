@@ -39,7 +39,7 @@ Esa fue mi principal razón para hacer público el acceso a mí
 [base de conocimiento](https://iyaki.notion.site/066daa9a7abb4c029724323209c85ca6?v=0a0294da7e734adcb9e4e5413c1db1da&pvs=4).
 
 Sobre cómo utilizo [Notion](https://www.notion.so/) para mantener una base de conocimiento ya les
-hablé en mi post [Ordenando conocimiento](/posts/20230607_ordenando_conocimiento.md),
+hablé en mi post [Ordenando conocimiento](/posts/20230607_ordenando_conocimiento/),
 por lo que ahora nos centraremos en su capacidad para compartir contenido.
 
 Habilitar el acceso público a contenido en Notion es

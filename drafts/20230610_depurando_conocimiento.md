@@ -26,7 +26,7 @@ eficacia. ¿Cuánto tardamos hoy en día en acceder a la información que queram
 en el momento que la necesitamos con todas las herramientas tecnológicas con las
 que contamos (las cuales por cierto son cada vez más, ya que a los históricos
 buscadores web como [Google](https://www.google.com/) ahora se suman nuevas
-herramientas impulsadas por inteligencia artificial como [ChatGPT](https://chat.openai.com/))?
+herramientas impulsadas por inteligencia artificial como [ChatGPT](https://chatgpt.com/))?
 
 Aunque apenas voy escribiendo 4 párrafos de este artículo, hacerlo me está
 costando más de lo que esperaba y el proceso me está tomando varios días. Días

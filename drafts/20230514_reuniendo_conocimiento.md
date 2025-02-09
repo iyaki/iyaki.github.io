@@ -1,6 +1,6 @@
 ﻿# Reuniendo conocimiento
 
-Yo, al igual que [cada vez menos gente](https://trends.google.es/trends/explore?cat=5&date=all&q=rss&hl=es),
+Yo, al igual que [cada vez menos gente](https://trends.google.es/trends/explore?date=all&q=rss),
 me informo diariamente de [la única manera civilizada](https://felixcrux.com/blog/feeds-the-only-civilised-way-to-read-online)
 que existe.
 

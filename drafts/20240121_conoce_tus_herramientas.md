@@ -63,7 +63,7 @@ Sobre esta base se pueden seguir incorporando otros elementos que ayuden a organ
 
 - [Atajos de teclado Windows](https://support.microsoft.com/es-es/windows/m%C3%A9todos-abreviados-de-teclado-de-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec)
 - [Atajos de teclado Ubuntu](https://help.ubuntu.com/stable/ubuntu-help/shell-keyboard-shortcuts.html.es)
-- [Atajos de teclado KDE](https://docs.kde.org/stable5/es/khelpcenter/fundamentals/kbd.html) (Ya sé que no es un sistema operativo como tal, ¿pero a quién le importa?)
+- [Atajos de teclado KDE](https://docs.kde.org/stable5/es/plasma-desktop/plasma-desktop/shortcuts.html) (Ya sé que no es un sistema operativo como tal, ¿pero a quién le importa?)
 - [Atajos de teclado Mac](https://support.apple.com/es-es/HT201236)
 
 En cuanto a los respaldos, los sistemas operativos suelen incluir alguna solución nativa para realizar respaldos.

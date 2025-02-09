@@ -28,7 +28,7 @@ múltiples intereses buscaban lograr que algo de dominio público como lo son la
 bibliotecas y cuyos contenidos se encuentran abiertos a la comunidad sin mayores
 restricciones se convirtiera en una herramienta de negocio controlada por
 empresas privadas generando ganancias por algo que históricamente fue de libre
-acceso, llegando incluso a mencionar el [Plan Atlanta](https://redinformativa.org.ar/el-plan-atlanta/)
+acceso, llegando incluso a mencionar el [Plan Atlanta](https://web.archive.org/web/20230327011622/https://redinformativa.org.ar/el-plan-atlanta/)
 como parte de su discurso. (Aclaración importante: dejando de lado las
 analogías, el discurso siempre se centró en el ámbito del software. En cuanto a
 este artículo concierne, no hay nadie con intereses de convertir las bibliotecas

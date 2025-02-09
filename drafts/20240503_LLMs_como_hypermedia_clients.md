@@ -18,7 +18,7 @@ A continuación les comparto una muy informal prueba sobre este potencial uso de
 
 ## El experimento
 
-[Link a la conversación con ChatGPT utilizando WebPilot](https://chat.openai.com/share/50488acd-2741-4121-9da1-22319468abbe).
+[Link a la conversación con ChatGPT utilizando WebPilot](https://chatgpt.com/share/50488acd-2741-4121-9da1-22319468abbe).
 
 El experimento se centró en probar la capacidad de la IA para navegar por una página web e interactuar con la misma, extrayendo información o incluso realizando acciones.
 

@@ -14,7 +14,7 @@ function replaceCommonLinks(markdown) {
 		'Markdown': 'https://es.wikipedia.org/wiki/Markdown',
 		'Notion': 'https://www.notion.so/',
 		'Google': 'https://www.google.com/',
-		'ChatGPT': 'https://chat.openai.com/',
+		'ChatGPT': 'https://chatgpt.com/',
 		'OpenAI': 'https://openai.com/',
 		'Recopilador de contenidos curados': '/curated.html',
 		'iyaki.ar': 'https://iyaki.ar/',
