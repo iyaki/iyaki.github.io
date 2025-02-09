@@ -210,6 +210,39 @@ main {
 	}
 }
 </style>
+{% if tags contains "post" %}
+<style>
+main :where(h1, h2, h3, h4, h5, h6) {
+	> * {
+		color: var(--text-color);
+		text-decoration: none;
+	}
+
+	> a {
+		&:before {
+			display: inline-block;
+			content: "#";
+			color: grey;
+			font-weight: 400;
+			font-size: .8em;
+			margin-left: -.8em;
+			width: .8em;
+			visibility: hidden;
+		}
+
+		&:hover {
+			text-decoration: underline;
+			color: var(--link-color);
+
+			&:before {
+				visibility: visible;
+			}
+		}
+
+	}
+}
+</style>
+{% endif %}
 
 <header>
 
