@@ -11,7 +11,15 @@ export function publish(articleMd) {
 	const content = POST_TEMPLATE
 		.replaceAll('{{title}}', articleMd.title)
 		.replaceAll('{{created}}', (new Date()).toISOString())
-		.replaceAll('{{article}}', htmlFrom(articleMd.content))
+		.replaceAll('{{createdEs}}', (new Date()).toLocaleDateString(
+			'es-AR',
+			{
+				year: 'numeric',
+				month: '2-digit',
+				day: '2-digit',
+			}
+		))
+		.replaceAll('{{article}}', htmlFrom(articleMd.content).replace(`<h1>${articleMd.title}</h1>`, ''))
 
 	const filename = getFilenameWithoutExtension(articleMd.path)
 
