@@ -43,7 +43,7 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="{{ description | default: "Pensamientos y cosas que encuentro interesantes" }}">
 <!-- <meta property="og:image" content="/images/logo.webp"> -->
-<meta property="og:url" content="{{ page.url | url }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url | url }}">
 <meta property="og:site_name" content="{{ site.name }}">
 
 {{ content }}
