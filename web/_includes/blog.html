@@ -350,3 +350,20 @@ main :where(h1, h2, h3, h4, h5, h6) {
 {% endif %}
 
 </main>
+
+<script type="application/ld+json">
+{ "@context": "https://schema.org",
+	"@type": "BlogPosting",
+	"headline": "{{ title }}",
+	"publisher": "iyaki",
+	"url": "{{ site.url }}{{ page.url | url }}",
+	"datePublished": "{{ created | date: "%Y-%m-%d" }}",
+	"dateCreated": "{{ created | date: "%Y-%m-%d" }}",
+	"dateModified": "{{ date | date: "%Y-%m-%d" }}",
+	"description": "{{ description }}",
+	"author": {
+		"@type": "Person",
+		"name": "Ivan Yakimovicz"
+	}
+}
+</script>
