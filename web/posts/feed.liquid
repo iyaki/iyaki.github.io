@@ -2,8 +2,8 @@
 permalink: /posts/feed.xml
 eleventyExcludeFromCollections: true
 ---
-{% assign posts = collections.post | reverse | slice: 0, 10 %}
 <?xml version="1.0" encoding="utf-8"?>
+{% assign posts = collections.post | reverse | slice: 0, 10 %}
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es">
 	<id>{{ site.url }}/</id>
 	<title>mi Blog | iyaki</title>
@@ -37,6 +37,7 @@ eleventyExcludeFromCollections: true
 		<content type="html"><![CDATA[{{ description }}]]></content>
 		<link rel="alternate" href="{{ postUri }}" />
 		<updated>{{ post.page.date | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
+		<published>{{ post.data.created | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
 	</entry>
 	{% endfor %}
 </feed>
