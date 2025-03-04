@@ -14,6 +14,31 @@ head:
 <h1>Devcontainers de cero a cien, en español</h1>
 <p><time datetime="2025-03-04T01:13:04.984Z">03/03/2025</time></p>
 
+<aside aria-label="Índice">
+	<details>
+		<summary>
+			<h2 style="display: inline;">Índice</h2>
+		</summary>
+		<nav aria-label="Índice">
+			<ul>
+				<li><a href="#sobre-esta-guia">Sobre esta guía</a>
+				<li><a href="#nuevo-proyecto">Comenzando un nuevo proyecto con devcontainers</a>
+				<li><a href="#templates-imagenes">Eligiendo templates o imágenes según nuestras necesidades</a>
+				<li><a href="#features">Agregando funcionalidades (Devcontainer Features)</a>
+				<li><a href="#ciclo-de-vida">Ciclo de vida del container de desarrollo, comandos y scripts</a>
+				<li><a href="#montajes-puertos-variables-entorno">Montajes, puertos, variables de entorno y otras hierbas</a>
+				<li><a href="#intermedio">Intermedio</a>
+				<li><a href="#debugging">Debugging y solución de errores</a>
+				<li><a href="#customizations">Customizations</a>
+				<li><a href="#dockerfile">Back to the basics, Dockerfile</a>
+				<li><a href="#docker-compose">Múltiples containers con Docker compose</a>
+				<li><a href="#dotfiles">Sintiendonos como en casa con dotfiles</a>
+				<li><a href="#impresiones-finales">Impresiones finales</a>
+			</ul>
+		</nav>
+	</details>
+</aside>
+
 <p>Los lenguajes de programación evolucionan a una velocidad increíble, esto puede generar que tengamos que trabajar con distintas versiones de un mismo lenguaje de programación para distintos proyectos pero en una misma computadora.</p>
 <p>Este es un problema bien conocido y con algunas soluciones que las distintas comunidades han ido desarrollando con el tiempo, dándonos herramientas específicas como <a href="https://github.com/nvm-sh/nvm" target="_blank" hreflang="en">nvm</a> para node.js o algunas con un mayor alcance como <a href="https://asdf-vm.com/" target="_blank" hreflang="en">asdf-vm</a>.</p>
 <p>Y aunque estas soluciones pueden ser excelentes a la hora de permitirnos cambiar rápidamente entre versiones de nuestros lenguajes de programación, también presentan algunos inconvenientes, ya que, al basar su funcionamiento en el compilado desde el código fuente de las distintas versiones, requieren que uno cuente con todas las dependencias necesarias para poder compilarlas.</p>
@@ -24,7 +49,7 @@ head:
 <p>Y no solo de los lenguajes de programación, sino de todas las herramientas adicionales que se puedan requerir para mejorar la <i lang="en" title="experiencia del programador">Developer eXperience</i>, permitiendo incluso instalar extensiones específicas en tu <abbr title="Integrated Development Environment" lang="en">IDE</abbr> y teniendo todo esto versionado junto con el código fuente del proyecto.</p>
 <p>Pues existe.</p>
 <p>Hoy vengo a compartir una herramienta que uso cada vez más en mis proyectos de desarrollo software: <a href="https://containers.dev/" target="_blank" hreflang="en" lang="en">devcontainers</a>.</p>
-<h2>Sobre esta guía</h2>
+<h2 id="sobre-esta-guia"><a href="#sobre-esta-guia">Sobre esta guía</a></h2>
 <p>Devcontainers utiliza virtualización mediante containers para crear entornos de desarrollo personalizables, replicables y versionables.</p>
 <p>En esta guía exploraremos sus casos de uso y configuraciones sin detenernos en conceptos propios de docker (el motor de containers que utiliza por defecto).</p>
 <p>En los ejemplos utilizaremos <a href="https://code.visualstudio.com/" target="_blank" hreflang="en" lang="en">Visual Studio Code</a>, <a href="https://www.docker.com/" target="_blank" hreflang="en" lang="en">Docker</a> y <a href="https://docs.docker.com/compose/" target="_blank" hreflang="en" lang="en">Docker compose</a>.</p>
@@ -41,7 +66,7 @@ head:
 <p>Mención especial para <a href="https://github.com/michidk/vscli" target="_blank" hreflang="en" lang="en">vscli</a>, una herramienta que aunque no se encuentra listada oficialmente, se ve interesante.</p>
 <p><strong>Para poder seguir los distintos pasos deberán contar con Docker instalado y ejecutándose.</strong></p>
 <p>Por último, para aquellos con experiencia en Docker. Muchos de los “problemas” que solucionaremos a lo largo de esta guía mediante las características y opciones de devcontainers podrían resolverse (a veces, incluso de manera más simple) mediante el uso de Docker puro o eligiendo mejor las imágenes base, pero el objetivo aquí es explorar estas características y opciones.</p>
-<h2>Comenzando un nuevo proyecto con devcontainers</h2>
+<h2 id="nuevo-proyecto"><a href="#nuevo-proyecto">Comenzando un nuevo proyecto con devcontainers</a></h2>
 <p>Como ejemplo para poder explicar el funcionamiento de estos entornos de desarrollo crearemos una pequeña aplicación <abbr title="PHP: Hypertext Preprocessor" lang="en">PHP</abbr>.</p>
 <p>Por lo que en un directorio vacío comenzaremos creando el archivo <code>public/index.php</code> y en el escribiremos:</p>
 <pre><code class="language-php">Hola mundo
@@ -95,7 +120,7 @@ head:
 <p><img-viewer><a href="13-php-builtin-webserver-running.png"><img src="13-php-builtin-webserver-running.png" alt="Terminal ejecutando el servidor web integrado de PHP" loading="lazy" decoding="async"></a></img-viewer></p>
 <p>También deberíamos ser capaces de <i lang="spanglish">commitear</i> e incluso <i lang="spanglish">pushear</i> nuestra aplicación a <span lang="en">Github</span> desde dentro del container, ya que, este se encarga de replicar la configuración de git de nuestro usuario local.</p>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/e81fc42517186ce825c35294bb498b07173fd966" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
-<h2>Eligiendo templates o imágenes según nuestras necesidades</h2>
+<h2 id="templates-imagenes"><a href="#templates-imagenes">Eligiendo templates o imágenes según nuestras necesidades</a></h2>
 <p>El equipo de devcontainers mantiene una serie de templates e imágenes predefinidas para facilitar el despliegue de entornos de desarrollo.</p>
 <p>En <a href="https://containers.dev/templates" target="_blank" hreflang="en">este link</a> pueden encontrar la lista completa de templates.</p>
 <p>Y en <a href="https://github.com/devcontainers/images?tab=readme-ov-file" target="_blank" hreflang="en">este link</a> una lista de las imágenes mantenidas por el equipo de devcontainers.</p>
@@ -127,7 +152,7 @@ Durante la ejecución del <i lang="en">Wizard</i>, y utilizando el template de P
 <p>Una vez que el nuevo container ha sido creado, volvemos a revisar la versión de PHP.</p>
 <p><img-viewer><a href="16-php-version-84.png"><img src="16-php-version-84.png" alt="Captura de pantalla de la terminal mostrando la versión actualizada de PHP, 8.4" loading="lazy" decoding="async"></a></img-viewer></p>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/c061b6510ea02539a714c5c47b4c3715281d35f3" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
-<h2>Agregando funcionalidades (Devcontainer Features)</h2>
+<h2 id="features"><a href="#features">Agregando funcionalidades (Devcontainer Features)</a></h2>
 <p>Ya tenemos la versión de PHP que queremos utilizar, pero si intentamos commitear nuestros cambios nos encontraremos un <em>pequeño</em> inconveniente.</p>
 <p>La imagen oficial de PHP está diseñada para ser utilizada en entornos productivos, por lo que no cuenta con git instalado.</p>
 <p>Por suerte contamos con un mecanismo muy simple para agregar herramientas adicionales a nuestros entornos de desarrollo, mediante las <i lang="en">Features</i> de devcontainers.</p>
@@ -156,7 +181,7 @@ Durante la ejecución del <i lang="en">Wizard</i>, y utilizando el template de P
 <p>Et voila! Una vez que el container se haya reconstruido ya podremos utilizar git.</p>
 <p><img-viewer><a href="19-git-version.png"><img src="19-git-version.png" alt="Captura de pantalla de la terminal, ejecutando git exitosamente" loading="lazy" decoding="async"></a></img-viewer></p>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/5092a1acd9fe0b2ef26d48b24da73105f2c9020f" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
-<h2>Ciclo de vida del container de desarrollo, comandos y scripts</h2>
+<h2 id="ciclo-de-vida"><a href="#ciclo-de-vida">Ciclo de vida del container de desarrollo, comandos y scripts</a></h2>
 <p>Tener un entorno de desarrollo con la versión más nueva de nuestro lenguaje de programación y git está muy bien, pero todavía podemos llevarlo al siguiente nivel.</p>
 <p>El único próximo paso lógico es agregar herramientas de <i lang="en">debugging</i>, porque, enfrentemos la realidad. Nuestra aplicación el día de mañana podría tener millones de usuarios activos. ¿A fin de cuentas, por qué alguien no querría una aplicación diseñada específicamente para saludar al mundo?</p>
 <p>Pero junto con los usuarios llegan los pedidos de nuevas funcionalidades.</p>
@@ -197,7 +222,7 @@ docker-php-ext-enable xdebug
 <p>Luego de ejecutar el comando la terminal devuelva <strong lang="en">xdebug</strong> es indicador de que la extensión se encuentra instalada y activa.</p>
 <p>En la documentación de devcontainers pueden encontrar la <a href="https://containers.dev/implementors/json_reference/#lifecycle-scripts" target="_blank" hreflang="en">lista completa de los puntos del ciclo de vida del container en los que es posible ejecutar comandos personalizados</a>.</p>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/7c8a5cf28b80307a34f12b325469f140e1153d1b" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
-<h2>Montajes, puertos, variables de entorno y otras hierbas</h2>
+<h2 id="montajes-puertos-variables-entorno"><a href="#montajes-puertos-variables-entorno">Montajes, puertos, variables de entorno y otras hierbas</a></h2>
 <p>¡El desarrollo de nuestra aplicación va viento en popa! Pero algo no termina de sentirse correcto.</p>
 <p>¿Cómo es posible que cada vez que abrimos nuestro container de desarrollo debamos iniciar manualmente nuestro servidor web?</p>
 <p>¡Inaceptable!</p>
@@ -319,7 +344,7 @@ docker-php-ext-enable xdebug
 <p>Al haber cambiado el <em>workspaceFolder</em> en la configuración es posible que luego de recrear el container el <span llang="en">Visual Studio Code</span> falle al intentar conectarse. Si esto ocurre solo debemos dar click a <strong lang="en">Open workspace</strong> y buscar el directorio que hemos configurado para ser el nuevo <em>workspaceFolder</em> (<code>/app/</code>).</p>
 </blockquote>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/https://github.com/iyaki/devcontainers-guide-app-example/tree/cc57ef417d3f753114bada6d676c8cd4a99a658a" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
-<h2>Intermedio</h2>
+<h2 id="intermedio"><a href="#intermedio">Intermedio</a></h2>
 <p>Por fin, nuestro entorno de desarrollo es perfecto y estamos listos para seguir agregando valor a la vida de millones mediante nuestra aplicación.</p>
 <p>Nuestra siguiente funcionalidad será recibir un número como parámetro y saludar indicando si el número es par o impar.</p>
 <p><a href="https://sahithyan.dev/post/the-is-odd-npm-package-meme" target="_blank" hreflang="en">Pero como somos desarrolladores que se respetan a sí mismos y siguen las mejores prácticas de comunidades importantes como la de Javascript sabemos que para realizar semejante proeza necesitaremos utilizar alguna biblioteca de terceros</a>.</p>
@@ -342,7 +367,7 @@ Aprecien que alguien se preocupe por ustedes e intente facilitarles las cosas. S
 <p>Quizás para cuando estén leyendo esta guía este problema ya se haya arreglado, pero <abbr title="2025-03-04">hoy</abbr>, al agregar el feature de composer ocurre lo siguiente:</p>
 <p><img-viewer><a href="25-devcontainer-error.png"><img src="25-devcontainer-error.png" alt="Captura de pantalla del Visual Studio Code fallando al intentar compilar el container" loading="lazy" decoding="async"></a></img-viewer></p>
 <p>El container falla.</p>
-<h2>Debugging y solución de errores</h2>
+<h2 id="debugging"><a href="#debugging">Debugging y solución de errores</a></h2>
 <p>Cuando se encuentren con un error que impide que el container compile correctamente, hay algunas cosas que pueden probar.</p>
 <p>Primero pueden dar click a <strong lang="en">Retry</strong>. Si el error proviene de alguna causa externa y temporal (por ejemplo, si se cortó el internet mientras el container se creaba) con esto debería solucionarse.</p>
 <p>Si <i lang="en">Retry</i> no funciona, pueden dar click en <strong lang="en">Edit devcontainer.json Locally</strong> y comenzar a leer, de abajo hacia arriba, el log que se abrirá del lado derecho de la pantalla, mientras rezan para que la causa del error sea comprensible.</p>
@@ -427,7 +452,7 @@ Aplicación saludando con parámetro <em>numero</em> en 1 (número impar)</p>
 <p><img src="29-hello-even.png" alt="Captura de pantalla de la aplicación mostrando el mensaje &quot;Hola par&quot;">
 Aplicación saludando con parámetro <em>numero</em> en 2 (número par)</p>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/0b732647467180125739184120d0967df1e885c6" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
-<h2>Customizations</h2>
+<h2 id="customizations"><a href="#customizations">Customizations</a></h2>
 <p>Algunas de las herramientas y servicios que poseen integración con devcontainers permiten configuraciones específicas para ayudar a configurar ciertos aspectos de nuestro entorno de desarrollo.</p>
 <p>La integración con <span lang="en">Visual Studio Code</span> nos permite definir preferencias que aplicarán al proyecto dentro de nuestro entorno de desarrollo y extensiones que se instalarán de manera automática.</p>
 <p>Siendo que estamos trabajando en un proyecto PHP puede ser deseable agregar lo siguiente a nuestro archivo de configuración para tener un mejor soporte del lenguaje.</p>
@@ -464,7 +489,7 @@ Y una vez allí buscamos <em>dev.containers.defaultExtensions</em>. Con el botó
 <p>Los nombres de las extensiones que debemos agregar corresponden a los IDs de las extensiones. Para saber el ID de una extensión la buscamos en la pestaña de extensiones del VSCode (Ctrl+Shift+x), damos click al icono de engranaje que hay al lado de los botones de instalar y elegimos la opción <strong>Copy Extension ID</strong>. Esto copiará el ID de la extensión al portapapeles.</p>
 <p><img-viewer><a href="31-vscode-extensions-copilot.png"><img src="31-vscode-extensions-copilot.png" alt="Captura de pantalla de una extensión del Visual Studio Code con la opción de copiar su ID desplegada" loading="lazy" decoding="async"></a></img-viewer></p>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/ba8cf78bc09860263976c789ed6f634630a16e22" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
-<h2>Back to the basics, Dockerfile</h2>
+<h2 id="dockerfile"><a href="#dockerfile">Back to the basics, Dockerfile</a></h2>
 <p>Con todo lo que hicimos hasta ahora debería ser suficiente para poder trabajar sin problemas en una amplia variedad de proyectos.</p>
 <p>Pero, en caso de despliegues mas complejos o si necesitásemos contar con muchas herramientas instaladas que no estén disponibles como <i lang="en">features</i>, escalar la creación de estos entornos de desarrollo utilizando exclusivamente características de devcontainers puede ser inviable.</p>
 <p>A partir de este punto trabajaremos en gran medida con características propias de Docker. El objetivo de esta guía no es dar una introducción a Docker ni Docker Compose por lo que no profundizaremos en aspectos que no sean propios de devcontainers.</p>
@@ -517,7 +542,7 @@ RUN pecl install xdebug \
 <p>Reconstruimos el container y todo debería seguir funcionando como hasta ahora.</p>
 <p>Este ejemplo es bastante simple, pero es posible configurar <i lang="en">context</i>, <i lang="en">arguments</i> y <i lang="en">target</i> y prácticamente todos los parámetros que podríamos utilizar al ejecutar <code>docker build</code>. La lista completa de opciones disponibles se encuentra en <a href="https://containers.dev/implementors/json_reference/#image-specific" target="_blank" hreflang="en">este link</a>.</p>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/d1ece3c1b5bd943c6630ec794b0f7590cbcec1ca" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
-<h2>Múltiples containers con Docker compose</h2>
+<h2 id="docker-compose"><a href="#docker-compose">Múltiples containers con Docker compose</a></h2>
 <p>¿Por qué necesitaríamos varios containers en desarrollo?</p>
 <p>Simple, los containers están diseñados para ejecutar únicamente un servicio. Y si bien existen maneras de ejecutar múltiples servicios en un mismo container; si queremos agregar una base de datos a nuestro entorno de desarrollo, suele ser más simple agregar un nuevo container para esta base de datos y orquestar su creación con docker compose.</p>
 <p>Así que eso haremos.</p>
@@ -694,7 +719,7 @@ VALUES
 <p>Si revisan el repositorio de <em>templates</em> de devcontainers encontrarán uno diseñado para aplicaciones <a href="https://github.com/devcontainers/templates/tree/main/src/php-mariadb" target="_blank">PHP con MariaDB</a>. Es bastante similar a la solución a la que hemos llegado pero puede ser interesante verlo y buscar que hemos hecho distinto y por qué.</p>
 </blockquote>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/b933b971fcad6b457dfcef6512da31925d6172b1" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
-<h2>Sintiendonos como en casa con dofiles</h2>
+<h2 id="dotfiles"><a href="#dotfiles">Sintiendonos como en casa con dotfiles</a></h2>
 <p>Aunque no es una característica propiamente de devcontainers, sino del <span lang="en">Visual Studio Code</span>, hay una cosa más puede ayudarnos a que nuestro entorno de desarrollo nos resulte más cómodo: el uso de <a href="https://wiki.archlinux.org/title/Dotfiles_(Espa%C3%B1ol)" target="_blank" hreflang="en" lang="en">dotfiles</a>.</p>
 <p>En linux es bastante común versionar ciertas configuraciones de las computadoras para poder tenerlas sincronizadas entre distintos equipos. A estos repositorios donde se versionan estas configuraciones se los suele llamar <i lang="en">dotfiles</i>.</p>
 <p>Suelen utilizarse para modificar la apariencia de la terminal, agregas aliases, funciones, etc (casi siempre nos ayudará a ser más eficientes trabajando con la terminal).</p>
@@ -706,7 +731,7 @@ VALUES
 <li><strong>dotfiles.targetPath</strong>: El directorio donde se clonará el repositorio. Por defecto <code>~/dotfiles</code>.</li>
 <li><strong>dotfiles.installCommand</strong>: Comando a ejecutar luego de clonar el repositorio. Aquí generalmente se ejecuta un script que mueve o “linkea” los archivos de nuestro repositorio a las ubicaciones donde los archivos de configuración deben encontrarse para surtir efecto. Por defecto intentará ejecutar el primero de estos archivos que encuentre dentro del repositorio (en orden) <code>install.sh</code>, <code>install</code>, <code>bootstrap.sh</code>, <code>bootstrap</code>, <code>setup.sh</code>, <code>setup</code>.</li>
 </ul>
-<h2>Impresiones finales</h2>
+<h2 id="impresiones-finales"><a href="#impresiones-finales">Impresiones finales</a></h2>
 <p>Hemos experimentado con múltiples formas de configurar devcontainers, iniciando por las más simples hasta llegar a las más complejas.</p>
 <p>A medida que la complejidad del deploy crece, el usar devcontainers y no simplemente las tecnologías en las que se basa (Docker compose) va perdiendo sentido, aunque la integración que brinda con ciertas herramientas, como el <span lang="en">Visual Studio Code</span>, puede seguir siendo interesante.</p>
 <p>Por desgracia, la complejidad no puede ser eliminada, pero herramientas como esta nos ayudan a poder tenerla más ordenada e incluso “escondida” de quienes dependen de ella para poder realizar su trabajo.</p>

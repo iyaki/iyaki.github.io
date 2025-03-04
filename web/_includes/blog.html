@@ -117,7 +117,7 @@ main {
 	max-width: var(--main-content-width);
 	margin-inline: 1em;
 
-	aside > details {
+	aside > details.newsletter {
 		margin-top: 1em;
 		padding: .5em;
 		border-radius: 15px;
@@ -232,7 +232,9 @@ main :where(h1, h2, h3, h4, h5, h6) {
 	}
 
 	> a {
-		&:before {
+		color: var(--text-color);
+
+		&::before {
 			display: inline-block;
 			content: "#";
 			color: grey;
@@ -245,15 +247,59 @@ main :where(h1, h2, h3, h4, h5, h6) {
 
 		&:hover {
 			text-decoration: underline;
-			color: var(--link-color);
 
 			&:before {
 				visibility: visible;
 			}
 		}
 
+		&:visited {
+			color: var(--text-color);
+		}
 	}
 }
+
+aside[aria-label="Índice"] {
+	cursor: pointer;
+	padding-top: 2em;
+
+	a {
+		color: var(--text-color);
+	}
+
+	li {
+			padding-top: 0.7em;
+			line-height: 1.3em;
+		}
+
+	@media (width >= 992px) {
+		position: fixed;
+		top: 0;
+		left: 0.5em;
+
+		max-height: 100vh;
+		overflow-y: auto;
+
+		transition: all;
+		transition-duration: 0.2s;
+		filter: opacity(0.25);
+		&:hover {
+			filter: none;
+		}
+
+		ul {
+			padding-inline: 1em;
+		}
+
+		li {
+			max-width: 25ch;
+			padding-top: 0.5em;
+			font-size: .9em;
+			line-height: 1.2em;
+		}
+	}
+}
+
 </style>
 {% endif %}
 
@@ -281,7 +327,7 @@ main :where(h1, h2, h3, h4, h5, h6) {
 
 </div>
 
-<nav class="header-links">
+<nav class="header-links" aria-label="Links a otras secciones de mi website">
 
 <menu>
 	<li><a href="/">
@@ -303,7 +349,7 @@ main :where(h1, h2, h3, h4, h5, h6) {
 <main>
 
 <aside aria-label="widget de suscripción a newsletter">
-<details>
+<details class="newsletter">
 
 <summary><span>Subscribirse a la newsletter</span></summary>
 
@@ -347,6 +393,14 @@ main :where(h1, h2, h3, h4, h5, h6) {
 	async
 ></script>
 </aside>
+
+<script type="module">
+// Script para que el índice se muestre abierto por default en Desktop
+const mql = window.matchMedia('(min-width: 992px)')
+if(mql.matches) {
+		document.querySelector('aside[aria-label="Índice"] details').open = true
+}
+</script>
 {% endif %}
 
 </main>
