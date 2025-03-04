@@ -46,53 +46,53 @@ head:
 <p>Por lo que en un directorio vacío comenzaremos creando el archivo <code>public/index.php</code> y en el escribiremos:</p>
 <pre><code class="language-php">Hola mundo
 </code></pre>
-<p><img src="01-simplest-php-application.png" alt="La aplicación PHP más simple del mundo, una única línea de código: Hola mundo"></p>
+<p><a href="01-simplest-php-application.png"><img src="01-simplest-php-application.png" alt="La aplicación PHP más simple del mundo, una única línea de código: Hola mundo"></a></p>
 <p>¡Excelente! Ya tenemos la aplicación más simple del mundo. Pero para poder ejecutarla necesitamos PHP. Y ahí es en donde entra en juego devcontainers.</p>
 <p>Para utilizarlo comenzaremos por instalar la extensión <em lang="en">Dev Containers</em> del VSCode.</p>
 <p>Pueden buscarla en la pestaña de extensiones.</p>
-<p><img src="02-vscode-extensions-devcontainers.png" alt="Extensión Devcontainers en Visual Studio Code"></p>
+<p><a href="02-vscode-extensions-devcontainers.png"><img src="02-vscode-extensions-devcontainers.png" alt="Extensión Devcontainers en Visual Studio Code"></a></p>
 <p>O bien instalarla mediante el comando <code>ext install ms-vscode-remote.remote-containers</code> en el <em lang="en">Qucik Open</em> (Ctrl+p) del VSCode.</p>
 <p>Ya con la extensión instalada y activa, en la paleta de comandos (Ctrl+Shift+p) ejecutaremos <strong lang="en">Dev Containers: Add Dev Container Configuration Files</strong>.</p>
-<p><img src="03.png" alt="Captura de pantalla del Visual Studio Code al ejecutar el comando mencionado anteriormente"></p>
+<p><a href="03.png"><img src="03.png" alt="Captura de pantalla del Visual Studio Code al ejecutar el comando mencionado anteriormente"></a></p>
 <p>Esto nos desplegará un pequeño <i lang="en">Wizard</i> en el que configuraremos algunas opciones básicas del entorno de desarrollo.</p>
 <blockquote lang="en">
 <p>Where would you like to create your container configuration?<br>
 <strong>&gt; Add configuration to workspace</strong></p>
 </blockquote>
-<p><img src="04.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></p>
+<p><a href="04.png"><img src="04.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></a></p>
 <p>Elegimos esta opción para poder versionar el entorno de desarrollo junto con el resto de la aplicación.</p>
 <blockquote lang="en">
 <p>Select a container configuration template or enter a custom template id<br>
 <strong>&gt; PHP</strong> (devcontainers)</p>
 </blockquote>
-<p><img src="05.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></p>
+<p><a href="05.png"><img src="05.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></a></p>
 <p>Elegimos la plantilla para proyectos PHP publicada por el equipo de devcontainers.</p>
 <blockquote lang="en">
 <p>PHP version (use -bookworm, -bullseye variants on local arm64/Apple Silicon):<br>
 <strong>&gt; 8.2-bullseye</strong> (default)</p>
 </blockquote>
-<p><img src="06.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></p>
+<p><a href="06.png"><img src="06.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></a></p>
 <p>Seleccionamos la versión de PHP que deseamos utilizar. En esta guía usaremos PHP 8.2.</p>
 <p>Los sufijos <em>-bullseye</em> y <em>-bookworm</em> indican la <a href="https://www.debian.org/releases/index.es.html" target="_blank">versión de Debian</a> que el container utilizará como base para el entorno de desarrollo.</p>
 <blockquote lang="en">
 <p>Select additional features to install</p>
 </blockquote>
 <p>De memento no agregaremos ninguna funcionalidad adicional, por lo que solo damos click en <strong>OK</strong> par finalizar la configuración.</p>
-<p><img src="07.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></p>
+<p><a href="07.png"><img src="07.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></a></p>
 <p>Finalmente, se nos preguntará si deseamos configurar <a href="https://docs.github.com/en/code-security/dependabot" target="_blank" hreflang="en" lang="en">Github Dependabot</a> para que actualice automáticamente las dependencias de devcontainers. Para mantener esta guía lo más simple posible continuaremos sin esta opción, pero en proyectos reales puede ser muy recomendable utilizar esta actualización automática de dpenedencias.</p>
-<p><img src="08.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></p>
+<p><a href="08.png"><img src="08.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></a></p>
 <p>Luego de seguir estos pasos se creará el archivo <code>./devcontainer/devcontainer.json</code> y el VSCode nos preguntará si deseamos reabrir el proyecto dentro del container (cartel de abajo a la derecha)</p>
-<p><img src="09-devcontainer-basic-config.png" alt="Captura de pantalla del Visual Studio Code luego de terminar la configuración de devcontainers"></p>
+<p><a href="09-devcontainer-basic-config.png"><img src="09-devcontainer-basic-config.png" alt="Captura de pantalla del Visual Studio Code luego de terminar la configuración de devcontainers"></a></p>
 <p>Damos click al botón <strong lang="en">Reopen in Container</strong>.</p>
 <p>Si por la razón que fuese el cartel dejase de visualizarse, podemos abrir la paleta de comandos y ejecutar <strong lang="en">Dev Containers: Reopen in Container</strong></p>
-<p><img src="10-reopen-in-container.png" alt="Captura de pantalla del comando Reopen in Container"></p>
+<p><a href="10-reopen-in-container.png"><img src="10-reopen-in-container.png" alt="Captura de pantalla del comando Reopen in Container"></a></p>
 <p>Al hacer esto se comenzará a crear el container con el entorno de desarrollo (este proceso puede demorar algunos minutos la primera vez).</p>
 <p>Al terminar de crear el container y conectarse deberíamos tener en pantalla algo así:</p>
-<p><img src="11-vscode-attached.png" alt="Visual Studio Code conectado al contenedor de desarrollo"></p>
+<p><a href="11-vscode-attached.png"><img src="11-vscode-attached.png" alt="Visual Studio Code conectado al contenedor de desarrollo"></a></p>
 <p>Sabemos que nos encontramos conectados al container porque así lo indica en la parte inferior izquierda del VSCode (barra azul) y también el nombre del proyecto (barra superior central).</p>
 <p>Ahora que ya nos encontramos dentro del entorno de desarrollo podemos, desde la terminal integrada del <span lang="en">Visual Studio Code</span>, ejecutar: <code>php -S 0.0.0.0:8080 -t public/</code> y con esto habremos puesto nuestra aplicación en ejecución. Si en una pestaña de nuestro navegador web introducimos la URL <a href="http://localhost:8080/" target="_blank">http://localhost:8080/</a> deberíamos ver:</p>
-<p><img src="12-hello-world.png" alt="Hola mundo, visualizado en el navegador al ingresar a la URL de nuestra aplicación"></p>
-<p><img src="13-php-builtin-webserver-running.png" alt="Terminal ejecutando el servidor web integrado de PHP"></p>
+<p><a href="12-hello-world.png"><img src="12-hello-world.png" alt="Hola mundo, visualizado en el navegador al ingresar a la URL de nuestra aplicación"></a></p>
+<p><a href="13-php-builtin-webserver-running.png"><img src="13-php-builtin-webserver-running.png" alt="Terminal ejecutando el servidor web integrado de PHP"></a></p>
 <p>También deberíamos ser capaces de <i lang="spanglish">commitear</i> e incluso <i lang="spanglish">pushear</i> nuestra aplicación a <span lang="en">Github</span> desde dentro del container, ya que, este se encarga de replicar la configuración de git de nuestro usuario local.</p>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/e81fc42517186ce825c35294bb498b07173fd966" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
 <h2>Eligiendo templates o imágenes según nuestras necesidades</h2>
@@ -107,10 +107,10 @@ Durante la ejecución del <i lang="en">Wizard</i>, y utilizando el template de P
 <p>Primero verificamos la versión actual de PHP ejecutando, desde la terminal integrada del VSCode:</p>
 <pre><code class="language-sh">php -v
 </code></pre>
-<p><img src="14-php-version-82.png" alt="Captura de pantalla de la terminal mostrando la versión de PHP actual, 8.2"></p>
+<p><a href="14-php-version-82.png"><img src="14-php-version-82.png" alt="Captura de pantalla de la terminal mostrando la versión de PHP actual, 8.2"></a></p>
 <p>En nuestro caso, utilizaremos la <a href="https://hub.docker.com/_/php" target="_blank" hreflang="en">imagen oficial de PHP</a>, proveniente de <a href="https://hub.docker.com/" target="_blank" hreflang="en" lang="en">Docker Hub</a>.</p>
 <p>Desde Docker Hub, en la sección de tags buscamos el correspondiente a la versión 8.4.</p>
-<p><img src="15-dockerhub-php.png" alt="Captura de pantalla de la imagen oficial de PHP en Docker Hub"></p>
+<p><a href="15-dockerhub-php.png"><img src="15-dockerhub-php.png" alt="Captura de pantalla de la imagen oficial de PHP en Docker Hub"></a></p>
 <p>Ahora que ya tenemos el nombre de la imagen y tag que deseamos utilizar en nuestro <code>.devcontainer/devcontainer.json</code> modificamos el atributo <em lang="en">image</em>.</p>
 <pre><code class="language-diff">{
         &quot;name&quot;: &quot;PHP&quot;,
@@ -125,7 +125,7 @@ Durante la ejecución del <i lang="en">Wizard</i>, y utilizando el template de P
 <p>Luego de esto, desde la paleta de comandos, ejecutaremos <strong lang="en">Dev Containers: Rebuild Container</strong>.</p>
 <p>Al hacer esto, el antiguo container se destruirá y se creará uno nuevo con los cambios que hemos realizado.</p>
 <p>Una vez que el nuevo container ha sido creado, volvemos a revisar la versión de PHP.</p>
-<p><img src="16-php-version-84.png" alt="Captura de pantalla de la terminal mostrando la versión actualizada de PHP, 8.4"></p>
+<p><a href="16-php-version-84.png"><img src="16-php-version-84.png" alt="Captura de pantalla de la terminal mostrando la versión actualizada de PHP, 8.4"></a></p>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/c061b6510ea02539a714c5c47b4c3715281d35f3" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
 <h2>Agregando funcionalidades (Devcontainer Features)</h2>
 <p>Ya tenemos la versión de PHP que queremos utilizar, pero si intentamos commitear nuestros cambios nos encontraremos un <em>pequeño</em> inconveniente.</p>
@@ -133,9 +133,9 @@ Durante la ejecución del <i lang="en">Wizard</i>, y utilizando el template de P
 <p>Por suerte contamos con un mecanismo muy simple para agregar herramientas adicionales a nuestros entornos de desarrollo, mediante las <i lang="en">Features</i> de devcontainers.</p>
 <p>Para configurar la <i lang="en">features</i>, en la paleta de comandos escribimos <strong lang="en">Dev Container: Configure Container Features</strong>.</p>
 <p>Esto nos desplegará una lista de <i lang="en">features</i> disponibles, similar a la que ya vimos al ejecutar inicialmente el <span lang="en">wizard</span>.</p>
-<p><img src="17-devcontainer-features.png" alt="Lista de features disponibles desde el Visual Studio Code"></p>
+<p><a href="17-devcontainer-features.png"><img src="17-devcontainer-features.png" alt="Lista de features disponibles desde el Visual Studio Code"></a></p>
 <p>Aquí buscamos <strong lang="en">Git (from source)</strong> y marcamos su <span lang="en">checkbox</span>.</p>
-<p><img src="18-devcontainers-features-git.png" alt="Captura de pantalla del feature de git en el Visual Studio Code"></p>
+<p><a href="18-devcontainers-features-git.png"><img src="18-devcontainers-features-git.png" alt="Captura de pantalla del feature de git en el Visual Studio Code"></a></p>
 <p>Luego damos click a <strong>OK</strong> y en el siguiente paso elegimos la opción <strong lang="en">Keep Defaults</strong>.</p>
 <p>Esto nos agregará una nueva sección en nuestro archivo de configuración.</p>
 <pre><code class="language-diff">
@@ -154,7 +154,7 @@ Durante la ejecución del <i lang="en">Wizard</i>, y utilizando el template de P
 <p>Podemos revisar la lista completa de <span lang="en">Features</span> en <a href="https://containers.dev/features" target="_blank" hreflang="en">este link</a>.</p>
 <p>Para reconstruir el container con el agregado de git damos click al botón <strong>Rebuild</strong> que nos debería haber aparecido abajo a la derecha o bien, en la paleta de comandos, ejecutamos <strong>Dev Containers: Rebuild Container</strong></p>
 <p>Et voila! Una vez que el container se haya reconstruido ya podremos utilizar git.</p>
-<p><img src="19-git-version.png" alt="Captura de pantalla de la terminal, ejecutando git exitosamente"></p>
+<p><a href="19-git-version.png"><img src="19-git-version.png" alt="Captura de pantalla de la terminal, ejecutando git exitosamente"></a></p>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/5092a1acd9fe0b2ef26d48b24da73105f2c9020f" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
 <h2>Ciclo de vida del container de desarrollo, comandos y scripts</h2>
 <p>Tener un entorno de desarrollo con la versión más nueva de nuestro lenguaje de programación y git está muy bien, pero todavía podemos llevarlo al siguiente nivel.</p>
@@ -193,7 +193,7 @@ docker-php-ext-enable xdebug
         // &quot;remoteUser&quot;: &quot;root&quot;
 </code></pre>
 <p>Una vez más reconstruimos nuestro container y revisamos que nuestros cambios hayan tenido éxito con <code>php -m | grep xdebug</code>.</p>
-<p><img src="21-php-xdebug.png" alt="Captura de pantalla de xdebug instalado correctamente"></p>
+<p><a href="21-php-xdebug.png"><img src="21-php-xdebug.png" alt="Captura de pantalla de xdebug instalado correctamente"></a></p>
 <p>Luego de ejecutar el comando la terminal devuelva <strong lang="en">xdebug</strong> es indicador de que la extensión se encuentra instalada y activa.</p>
 <p>En la documentación de devcontainers pueden encontrar la <a href="https://containers.dev/implementors/json_reference/#lifecycle-scripts" target="_blank" hreflang="en">lista completa de los puntos del ciclo de vida del container en los que es posible ejecutar comandos personalizados</a>.</p>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/7c8a5cf28b80307a34f12b325469f140e1153d1b" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
@@ -221,7 +221,7 @@ docker-php-ext-enable xdebug
 <p>… <a href="https://12factor.net/" target="_blank" hreflang="en" lang="en">The 12 Factor App</a>, una de las convenciones de DevOps para sistemas cloud…</p>
 <p>… <a href="https://12factor.net/dev-prod-parity" target="_blank" hreflang="en" lang="en">X Factor - Dev/prod parity</a>…</p>
 <p>… El Built-in web server de PHP, tal como indica <a href="https://www.php.net/manual/en/features.commandline.webserver.php#features.commandline.webserver" target="_blank" hreflang="en">su documentación</a>, no debería ser utilizado en entornos productivos.</p>
-<p><img src="22-php-builtin-webserver-docs-warning.png" alt="Captura de pantalla de la documetnación de PHP sobre su webserver"></p>
+<p><a href="22-php-builtin-webserver-docs-warning.png"><img src="22-php-builtin-webserver-docs-warning.png" alt="Captura de pantalla de la documetnación de PHP sobre su webserver"></a></p>
 <p>… Entonces, según el factor <i lang="en">Dev/Prod Parity</i> de los <i lang="en">12 Factor App</i>, tampoco deberíamos estar usándolo en nuestro entorno de desarrollo, ya que debemos buscar que nuestros ambientes de producción y desarrollo sean lo más similares posible…</p>
 <p>😞</p>
 <p>¡No importa! Algo como esto no va a detenernos.</p>
@@ -325,7 +325,7 @@ docker-php-ext-enable xdebug
 <p><a href="https://sahithyan.dev/post/the-is-odd-npm-package-meme" target="_blank" hreflang="en">Pero como somos desarrolladores que se respetan a sí mismos y siguen las mejores prácticas de comunidades importantes como la de Javascript sabemos que para realizar semejante proeza necesitaremos utilizar alguna biblioteca de terceros</a>.</p>
 <p>En PHP se utiliza el gestor de dependencias <a href="https://getcomposer.org/" target="_blank" hreflang="en" lang="en">composer</a> para gestionar bibliotecas de terceros en nuestra aplicación.</p>
 <p>Procedemos a instalar la biblioteca que necesitamos ejecutando en la terminal integrada, <code>composer require kylelamse/is-even</code>.</p>
-<p><img src="23-php-composer-require-iseven.png" alt="Captura de pantalla de la terminal ejecutando el comando anterior y fallando"></p>
+<p><a href="23-php-composer-require-iseven.png"><img src="23-php-composer-require-iseven.png" alt="Captura de pantalla de la terminal ejecutando el comando anterior y fallando"></a></p>
 <p>Otra herramienta que nos falta.</p>
 <p>🫠</p>
 <blockquote>
@@ -335,18 +335,18 @@ Aprecien que alguien se preocupe por ustedes e intente facilitarles las cosas. S
 </blockquote>
 <p>Llegados a este punto creo que ya todos tenemos bastante claro como proceder.</p>
 <p>Buscamos si existe una <i lang="en">feature</i> de composer.</p>
-<p><img src="24-devcontainers-features-list-composer.png" alt="Lista de features de devcontainers, buscando composer"></p>
+<p><a href="24-devcontainers-features-list-composer.png"><img src="24-devcontainers-features-list-composer.png" alt="Lista de features de devcontainers, buscando composer"></a></p>
 <p>Sí, existe.</p>
 <p>La agregamos a nuestro archivo de configuración y reconstruimos el container.</p>
 <p>O tal vez nó…</p>
 <p>Quizás para cuando estén leyendo esta guía este problema ya se haya arreglado, pero <abbr title="2025-03-04">hoy</abbr>, al agregar el feature de composer ocurre lo siguiente:</p>
-<p><img src="25-devcontainer-error.png" alt="Captura de pantalla del Visual Studio Code fallando al intentar compilar el container"></p>
+<p><a href="25-devcontainer-error.png"><img src="25-devcontainer-error.png" alt="Captura de pantalla del Visual Studio Code fallando al intentar compilar el container"></a></p>
 <p>El container falla.</p>
 <h2>Debugging y solución de errores</h2>
 <p>Cuando se encuentren con un error que impide que el container compile correctamente, hay algunas cosas que pueden probar.</p>
 <p>Primero pueden dar click a <strong lang="en">Retry</strong>. Si el error proviene de alguna causa externa y temporal (por ejemplo, si se cortó el internet mientras el container se creaba) con esto debería solucionarse.</p>
 <p>Si <i lang="en">Retry</i> no funciona, pueden dar click en <strong lang="en">Edit devcontainer.json Locally</strong> y comenzar a leer, de abajo hacia arriba, el log que se abrirá del lado derecho de la pantalla, mientras rezan para que la causa del error sea comprensible.</p>
-<p><img src="26-devcontainer-error-log.png" alt="Log de errores en la compilación del container"></p>
+<p><a href="26-devcontainer-error-log.png"><img src="26-devcontainer-error-log.png" alt="Log de errores en la compilación del container"></a></p>
 <blockquote>
 <p>Si conocen mejores maneras de <span lang="spanglish">debuggear</span> estas configuraciones, por favor déjenlo abajo, en los comentarios. Yo ya perdí bastantes horas de mi vida con errores de lo más simple, pero todavía están a tiempo de ayudar a personas que se estén iniciando en este mundo.</p>
 </blockquote>
@@ -460,9 +460,9 @@ Aplicación saludando con parámetro <em>numero</em> en 2 (número par)</p>
 <p>Además de esta opción propia de devcontainer, el <span lang="en">Visual Studio Code</span> nos brinda una manera de configurar, solo para nosotros, extensiones que queremos que se instalen siempre de manera automática en todos nuestros containers de desarrollo.</p>
 <p>Para configurar esto nos dirigimos a las preferencias de VScode (Ctrl+Shift+p &gt; <strong>Preferences: Open Settings (UI)</strong>).<br>
 Y una vez allí buscamos <em>dev.containers.defaultExtensions</em>. Con el botón <strong lang="en">Add Item</strong> podremos agregar las extensiones que deseemos.</p>
-<p><img src="30-vscode-devcontainer-default-extensions.png" alt="Captura de pantalla de la configuración del Visual Studio Code"></p>
+<p><a href="30-vscode-devcontainer-default-extensions.png"><img src="30-vscode-devcontainer-default-extensions.png" alt="Captura de pantalla de la configuración del Visual Studio Code"></a></p>
 <p>Los nombres de las extensiones que debemos agregar corresponden a los IDs de las extensiones. Para saber el ID de una extensión la buscamos en la pestaña de extensiones del VSCode (Ctrl+Shift+x), damos click al icono de engranaje que hay al lado de los botones de instalar y elegimos la opción <strong>Copy Extension ID</strong>. Esto copiará el ID de la extensión al portapapeles.</p>
-<p><img src="31-vscode-extensions-copilot.png" alt="Captura de pantalla de una extensión del Visual Studio Code con la opción de copiar su ID desplegada"></p>
+<p><a href="31-vscode-extensions-copilot.png"><img src="31-vscode-extensions-copilot.png" alt="Captura de pantalla de una extensión del Visual Studio Code con la opción de copiar su ID desplegada"></a></p>
 <p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/ba8cf78bc09860263976c789ed6f634630a16e22" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
 <h2>Back to the basics, Dockerfile</h2>
 <p>Con todo lo que hicimos hasta ahora debería ser suficiente para poder trabajar sin problemas en una amplia variedad de proyectos.</p>
@@ -689,7 +689,7 @@ VALUES
      default =&gt; 'impar',
 </code></pre>
 <p>Y ya tenemos saludos personalizados y configurables mediante la base de datos.</p>
-<p><img src="32-hello-bro.png" alt="Captura de pantalla de nuestra aplicación respondiendo &quot;Hola Bro&quot; cuando se le envía el nombre Matías como parámetro"></p>
+<p><a href="32-hello-bro.png"><img src="32-hello-bro.png" alt="Captura de pantalla de nuestra aplicación respondiendo &quot;Hola Bro&quot; cuando se le envía el nombre Matías como parámetro"></a></p>
 <blockquote>
 <p>Si revisan el repositorio de <em>templates</em> de devcontainers encontrarán uno diseñado para aplicaciones <a href="https://github.com/devcontainers/templates/tree/main/src/php-mariadb" target="_blank">PHP con MariaDB</a>. Es bastante similar a la solución a la que hemos llegado pero puede ser interesante verlo y buscar que hemos hecho distinto y por qué.</p>
 </blockquote>
