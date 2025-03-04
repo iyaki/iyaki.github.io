@@ -54,13 +54,21 @@ no podía terminar de acomodar: El <i lang="en">management</i>.</p>
 actualmente (que probablemente sea vea similar al 90% de los organigramas de
 cualquier empresa pequeña o mediana).</p>
 <figure>
-	<img src="./organigrama.webp" alt="Organigrama previo a aplicar el modelo unFIX">
+	<img-viewer>
+		<a href="./organigrama.webp">
+			<img src="./organigrama.webp" alt="Organigrama previo a aplicar el modelo unFIX">
+		</a>
+	</img-viewer>
 	<figcaption>Estructura básica del organigrama previo a aplicar el modelo <i lang="en">unFIX</i></figcaption>
 </figure>
 <p>Lo más natural (al menos para mí), en una primera aproximación, fue pensar una
 migración al modelo <i lang="en">unFIX</i> de la siguiente manera:</p>
 <figure>
-	<img src="./base_unfix.webp" alt="Primer intento de aplicar el modelo unFIX">
+	<img-viewer>
+		<a href="./base_unfix.webp">
+			<img src="./base_unfix.webp" alt="Primer intento de aplicar el modelo unFIX">
+		</a>
+	</img-viewer>
 	<figcaption>Estructura básica luego de un primer acercamiento al modelo <i lang="en">unFIX</i></figcaption>
 </figure>
 <p>En esta migración, tanto los puestos <i lang="en">C-Level</i>, como los de dirección, pasan a
@@ -165,3 +173,7 @@ modelo más fluido y fuertemente influenciado por las propuestas de <i lang="en"
 es una labor que apenas estamos comenzando, por lo que hoy no podría brindar una
 conclusión sobre las ventajas, desventajas o desafíos que esto nos presente.
 Espero tener noticias al respecto pronto para poder compartirlas.</p>
+<script type="module" defer>
+import ImgViewer from '/components/ImgViewerElement.js'
+customElements.define('img-viewer', ImgViewer);
+</script>
