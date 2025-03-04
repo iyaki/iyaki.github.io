@@ -67,7 +67,11 @@ tags:
 	Se conforman de múltiples partes, siendo una de ellas (y en la que nos centraremos) el <em>fragmento</em>.
 </p>
 <figure>
-	<img src="./URI_syntax_diagram_es.png" alt="Diagrama de las partes de un URI">
+	<img-viewer>
+		<a href="./URI_syntax_diagram_es.svg">
+			<img src="./URI_syntax_diagram_es.svg" alt="Diagrama de las partes de un URI">
+		</a>
+	</img-viewer>
 	<figcaption>Partes de un <abbr title="Uniform Resource Identifier" lang="en">URI</abbr></figcaption>
 </figure>
 <p>
@@ -122,3 +126,7 @@ tags:
 <p>
 	Esto es todo por hoy, estimadísimos lectores. <i lang="it">Ci vediamo.</i>
 </p>
+<script type="module" defer>
+import ImgViewer from '/components/ImgViewerElement.js'
+customElements.define("img-viewer", ImgViewer);
+</script>
