@@ -12,6 +12,9 @@ export default function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy(BASE_PATH + '/robots.txt')
 	// eleventyConfig.addPassthroughCopy(BASE_PATH + '/css')
 	eleventyConfig.addPassthroughCopy(BASE_PATH + '/images')
+	eleventyConfig.addPassthroughCopy(BASE_PATH + '/components')
+	// eleventyConfig.addPassthroughCopy(BASE_PATH + '/scripts')
+	// eleventyConfig.addPassthroughCopy(BASE_PATH + '/**/*.js')
 	eleventyConfig.addPassthroughCopy(BASE_PATH + '/**/*.{png,jpg,jpeg,svg,webp,avif,mp4,mp3,ogg}')
 
 	return {
