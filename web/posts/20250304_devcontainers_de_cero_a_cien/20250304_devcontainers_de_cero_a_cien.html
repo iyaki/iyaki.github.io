@@ -548,7 +548,7 @@ RUN pecl install xdebug \
 <p>Así que eso haremos.</p>
 <p>Agregaremos una base de datos a nuestro proyecto y la utilizaremos para configurar saludos personalizados.</p>
 <p>Comenzaremos migrando las configuraciones presentes en nuestro <code>.devcontiner/devcontainer.json</code> a un archivo de docker compose.</p>
-<p>Primero crearemos el archivo <code>.devcontainer/compose.yaml</code>-</p>
+<p>Primero crearemos el archivo <code>.devcontainer/compose.yaml</code>.</p>
 <pre><code class="language-yaml">services:
 
   app:
@@ -738,7 +738,7 @@ VALUES
 <p>Esto ha sido todo. Espero que les sea de utilidad y como siempre, por dudas, preguntas, consejos, recomendaciones o lo que sea que quieran compartir, tienen disponible la caja de comentarios o pueden escribirme a <a href="mailto:me@iyaki.ar" target="_blank">me@iyaki.ar</a>.</p>
 <p>Hasta pronto!</p>
 
-<script type="module">
+<script type="module" defer>
 import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
 import diff from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/diff.min.js';
 import php from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/php.min.js';
@@ -754,12 +754,7 @@ hljs.registerLanguage('dockerfile', dockerfile);
 hljs.registerLanguage('bash', bash);
 hljs.highlightAll()
 </script>
-<style>
-::backdrop {
-	backdrop-filter: blur(10px);
-}
-</style>
-<script type="module">
+<script type="module" defer>
 import ImgViewer from '/components/ImgViewerElement.js'
 customElements.define("img-viewer", ImgViewer);
 </script>

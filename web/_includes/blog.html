@@ -221,6 +221,16 @@ main {
 			content: "< ";
 		}
 	}
+
+	img, pre {
+		border: 1px solid var(--text-color);
+		border-radius: 3px;
+	}
+
+}
+
+::backdrop {
+	backdrop-filter: blur(10px);
 }
 </style>
 {% if tags contains "post" %}
@@ -394,7 +404,7 @@ aside[aria-label="Índice"] {
 ></script>
 </aside>
 
-<script type="module">
+<script type="module" defer>
 // Script para que el índice se muestre abierto por default en Desktop
 const mql = window.matchMedia('(min-width: 992px)')
 if(mql.matches) {
