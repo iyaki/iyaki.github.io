@@ -11,13 +11,12 @@ export default class ImgViewerElement extends HTMLElement {
 
 		this.addEventListener(
 			'click',
-			(ev) => {
+			ev => {
 				console.log(ev)
 				if (ev.ctrlKey || ev.altKey) {
 					return
 				}
 				ev.preventDefault()
-
 
 				imgViewerDialog.close()
 
@@ -44,7 +43,7 @@ function createViewerDialog(img, newTabAnchor) {
 	dialog.style.overscrollBehavior = 'contain'
 
 	// Close dialog when click on ::backdrop
-	dialog.addEventListener('click', (ev) => {
+	dialog.addEventListener('click', ev => {
 		const rect = ev.target.getBoundingClientRect()
 
 		if (
