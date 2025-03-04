@@ -101,6 +101,11 @@ a:visited {
 	scroll-margin-block: 5ex;
 }
 
+blockquote {
+	box-shadow: -20px 0px 0px -3px var(--text-color);
+	padding-left: 1em;
+}
+
 /* ----------------- End defaults ----------------- */
 
 /* ----------------- Start Animations ----------------- */

@@ -1,0 +1,731 @@
+---
+layout: blog.html
+date: "2025-03-04T01:13:04.984Z"
+created: "2025-03-04T01:13:04.984Z"
+title: Devcontainers de cero a cien, en español
+description: Guía para la implementación de entornos de desarrollo dentro de containers.
+epigraph: Si alguna vez tuviste problemas gestionando múltiples versiones de un mismo lenguaje de programación o distribuyendo herramientas necesarias para los programadores de un proyecto, este post podría interesarte.
+tags:
+  - post
+head:
+  - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css" media="(prefers-color-scheme: dark)">'
+  - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/xcode.min.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">'
+---
+<h1>Devcontainers de cero a cien, en español</h1>
+<p><time datetime="2025-03-04T01:13:04.984Z">03/03/2025</time></p>
+
+<p>Los lenguajes de programación evolucionan a una velocidad increíble, esto puede generar que tengamos que trabajar con distintas versiones de un mismo lenguaje de programación para distintos proyectos pero en una misma computadora.</p>
+<p>Este es un problema bien conocido y con algunas soluciones que las distintas comunidades han ido desarrollando con el tiempo, dándonos herramientas específicas como <a href="https://github.com/nvm-sh/nvm" target="_blank" hreflang="en">nvm</a> para node.js o algunas con un mayor alcance como <a href="https://asdf-vm.com/" target="_blank" hreflang="en">asdf-vm</a>.</p>
+<p>Y aunque estas soluciones pueden ser excelentes a la hora de permitirnos cambiar rápidamente entre versiones de nuestros lenguajes de programación, también presentan algunos inconvenientes, ya que, al basar su funcionamiento en el compilado desde el código fuente de las distintas versiones, requieren que uno cuente con todas las dependencias necesarias para poder compilarlas.</p>
+<p>Esto en muchos casos puede resolverse simplemente con la ayuda de Google, pero en otros casos puede resultar bastante complicado.</p>
+<p>Especialmente si tu sistema operativo ya no provee las versiones específicas de las dependencias necesarias para compilar alguna versión en particular (por ser demasiado nuevas o demasiado viejas).</p>
+<p>Otra complejidad de estas herramientas aparece al tener que trabajar en equipo, ya que requieren que cada uno, de manera individual, configure su computadora según las necesidades del proyecto.</p>
+<p>¿Pero qué tal si existiese una herramienta que permitiera asegurar la replicabilidad de los entornos de desarrollo?</p>
+<p>Y no solo de los lenguajes de programación, sino de todas las herramientas adicionales que se puedan requerir para mejorar la <i lang="en" title="experiencia del programador">Developer eXperience</i>, permitiendo incluso instalar extensiones específicas en tu <abbr title="Integrated Development Environment" lang="en">IDE</abbr> y teniendo todo esto versionado junto con el código fuente del proyecto.</p>
+<p>Pues existe.</p>
+<p>Hoy vengo a compartir una herramienta que uso cada vez más en mis proyectos de desarrollo software: <a href="https://containers.dev/" target="_blank" hreflang="en" lang="en">devcontainers</a>.</p>
+<h2>Sobre esta guía</h2>
+<p>Devcontainers utiliza virtualización mediante containers para crear entornos de desarrollo personalizables, replicables y versionables.</p>
+<p>En esta guía exploraremos sus casos de uso y configuraciones sin detenernos en conceptos propios de docker (el motor de containers que utiliza por defecto).</p>
+<p>En los ejemplos utilizaremos <a href="https://code.visualstudio.com/" target="_blank" hreflang="en" lang="en">Visual Studio Code</a>, <a href="https://www.docker.com/" target="_blank" hreflang="en" lang="en">Docker</a> y <a href="https://docs.docker.com/compose/" target="_blank" hreflang="en" lang="en">Docker compose</a>.</p>
+<p>Tener algunos conocimientos básicos de estas herramientas o de GNU Linux (<abbr title="Sistema Operativo">S.O.</abbr> utilizado dentro de los containers) puede ayudar a facilitar el entendimiento de algunas de las cosas que haremos a lo largo de esta guía.</p>
+<p>Al momento de escribir esto me encuentro utilizando:</p>
+<ul>
+<li><a href="https://neon.kde.org/" target="_blank" hreflang="en" lang="en">KDE Neon</a> 6.3 (Distribución de GNU Linux derivada de Ubuntu).</li>
+<li><a href="https://code.visualstudio.com/" target="_blank" hreflang="en" lang="en">Visual Studio Code</a> 1.97.2.</li>
+<li><a href="https://www.docker.com/products/docker-desktop/" target="_blank" lang="en">Docker Desktop</a> 4.38.0.</li>
+</ul>
+<p>Todos los pasos de esta guía deberían poder seguirse también, sin problemas, tanto utilizando <a href="https://docs.docker.com/engine/" target="_blank" hreflang="en" lang="en">Docker Engine</a> como en los sistemas operativos <span lang="en">Mac</span> o <span lang="en">Windows</span> (utilizando <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux" target="_blank" hreflang="en" lang="en">Windows Subsystem for Linux</a>).</p>
+<p>Para instalar devcontainers en <span lang="en">Windows</span> existe <a href="https://code.visualstudio.com/blogs/2020/07/01/containers-wsl" target="_blank" hreflang="en" lang="en">una guía</a>, escrita por el equipo de <span lang="en">Visual Studio Code</span>.</p>
+<p>Devcontainers posee integraciones con una <a href="https://containers.dev/supporting" target="_blank" hreflang="en" lang="en">amplia lista de IDEs y herramientas de desarrollo</a>, no solo se integra con el <span lang="en">Visual Studio Code</span>.</p>
+<p>Mención especial para <a href="https://github.com/michidk/vscli" target="_blank" hreflang="en" lang="en">vscli</a>, una herramienta que aunque no se encuentra listada oficialmente, se ve interesante.</p>
+<p><strong>Para poder seguir los distintos pasos deberán contar con Docker instalado y ejecutándose.</strong></p>
+<p>Por último, para aquellos con experiencia en Docker. Muchos de los “problemas” que solucionaremos a lo largo de esta guía mediante las características y opciones de devcontainers podrían resolverse (a veces, incluso de manera más simple) mediante el uso de Docker puro o eligiendo mejor las imágenes base, pero el objetivo aquí es explorar estas características y opciones.</p>
+<h2>Comenzando un nuevo proyecto con devcontainers</h2>
+<p>Como ejemplo para poder explicar el funcionamiento de estos entornos de desarrollo crearemos una pequeña aplicación <abbr title="PHP: Hypertext Preprocessor" lang="en">PHP</abbr>.</p>
+<p>Por lo que en un directorio vacío comenzaremos creando el archivo <code>public/index.php</code> y en el escribiremos:</p>
+<pre><code class="language-php">Hola mundo
+</code></pre>
+<p><img src="01-simplest-php-application.png" alt="La aplicación PHP más simple del mundo, una única línea de código: Hola mundo"></p>
+<p>¡Excelente! Ya tenemos la aplicación más simple del mundo. Pero para poder ejecutarla necesitamos PHP. Y ahí es en donde entra en juego devcontainers.</p>
+<p>Para utilizarlo comenzaremos por instalar la extensión <em lang="en">Dev Containers</em> del VSCode.</p>
+<p>Pueden buscarla en la pestaña de extensiones.</p>
+<p><img src="02-vscode-extensions-devcontainers.png" alt="Extensión Devcontainers en Visual Studio Code"></p>
+<p>O bien instalarla mediante el comando <code>ext install ms-vscode-remote.remote-containers</code> en el <em lang="en">Qucik Open</em> (Ctrl+p) del VSCode.</p>
+<p>Ya con la extensión instalada y activa, en la paleta de comandos (Ctrl+Shift+p) ejecutaremos <strong lang="en">Dev Containers: Add Dev Container Configuration Files</strong>.</p>
+<p><img src="03.png" alt="Captura de pantalla del Visual Studio Code al ejecutar el comando mencionado anteriormente"></p>
+<p>Esto nos desplegará un pequeño <i lang="en">Wizard</i> en el que configuraremos algunas opciones básicas del entorno de desarrollo.</p>
+<blockquote lang="en">
+<p>Where would you like to create your container configuration?<br>
+<strong>&gt; Add configuration to workspace</strong></p>
+</blockquote>
+<p><img src="04.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></p>
+<p>Elegimos esta opción para poder versionar el entorno de desarrollo junto con el resto de la aplicación.</p>
+<blockquote lang="en">
+<p>Select a container configuration template or enter a custom template id<br>
+<strong>&gt; PHP</strong> (devcontainers)</p>
+</blockquote>
+<p><img src="05.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></p>
+<p>Elegimos la plantilla para proyectos PHP publicada por el equipo de devcontainers.</p>
+<blockquote lang="en">
+<p>PHP version (use -bookworm, -bullseye variants on local arm64/Apple Silicon):<br>
+<strong>&gt; 8.2-bullseye</strong> (default)</p>
+</blockquote>
+<p><img src="06.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></p>
+<p>Seleccionamos la versión de PHP que deseamos utilizar. En esta guía usaremos PHP 8.2.</p>
+<p>Los sufijos <em>-bullseye</em> y <em>-bookworm</em> indican la <a href="https://www.debian.org/releases/index.es.html" target="_blank">versión de Debian</a> que el container utilizará como base para el entorno de desarrollo.</p>
+<blockquote lang="en">
+<p>Select additional features to install</p>
+</blockquote>
+<p>De memento no agregaremos ninguna funcionalidad adicional, por lo que solo damos click en <strong>OK</strong> par finalizar la configuración.</p>
+<p><img src="07.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></p>
+<p>Finalmente, se nos preguntará si deseamos configurar <a href="https://docs.github.com/en/code-security/dependabot" target="_blank" hreflang="en" lang="en">Github Dependabot</a> para que actualice automáticamente las dependencias de devcontainers. Para mantener esta guía lo más simple posible continuaremos sin esta opción, pero en proyectos reales puede ser muy recomendable utilizar esta actualización automática de dpenedencias.</p>
+<p><img src="08.png" alt="Captura de pantalla del Visual Studio Code mostrando las opciones disponibles"></p>
+<p>Luego de seguir estos pasos se creará el archivo <code>./devcontainer/devcontainer.json</code> y el VSCode nos preguntará si deseamos reabrir el proyecto dentro del container (cartel de abajo a la derecha)</p>
+<p><img src="09-devcontainer-basic-config.png" alt="Captura de pantalla del Visual Studio Code luego de terminar la configuración de devcontainers"></p>
+<p>Damos click al botón <strong lang="en">Reopen in Container</strong>.</p>
+<p>Si por la razón que fuese el cartel dejase de visualizarse, podemos abrir la paleta de comandos y ejecutar <strong lang="en">Dev Containers: Reopen in Container</strong></p>
+<p><img src="10-reopen-in-container.png" alt="Captura de pantalla del comando Reopen in Container"></p>
+<p>Al hacer esto se comenzará a crear el container con el entorno de desarrollo (este proceso puede demorar algunos minutos la primera vez).</p>
+<p>Al terminar de crear el container y conectarse deberíamos tener en pantalla algo así:</p>
+<p><img src="11-vscode-attached.png" alt="Visual Studio Code conectado al contenedor de desarrollo"></p>
+<p>Sabemos que nos encontramos conectados al container porque así lo indica en la parte inferior izquierda del VSCode (barra azul) y también el nombre del proyecto (barra superior central).</p>
+<p>Ahora que ya nos encontramos dentro del entorno de desarrollo podemos, desde la terminal integrada del <span lang="en">Visual Studio Code</span>, ejecutar: <code>php -S 0.0.0.0:8080 -t public/</code> y con esto habremos puesto nuestra aplicación en ejecución. Si en una pestaña de nuestro navegador web introducimos la URL <a href="http://localhost:8080/" target="_blank">http://localhost:8080/</a> deberíamos ver:</p>
+<p><img src="12-hello-world.png" alt="Hola mundo, visualizado en el navegador al ingresar a la URL de nuestra aplicación"></p>
+<p><img src="13-php-builtin-webserver-running.png" alt="Terminal ejecutando el servidor web integrado de PHP"></p>
+<p>También deberíamos ser capaces de <i lang="spanglish">commitear</i> e incluso <i lang="spanglish">pushear</i> nuestra aplicación a <span lang="en">Github</span> desde dentro del container, ya que, este se encarga de replicar la configuración de git de nuestro usuario local.</p>
+<p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/e81fc42517186ce825c35294bb498b07173fd966" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
+<h2>Eligiendo templates o imágenes según nuestras necesidades</h2>
+<p>El equipo de devcontainers mantiene una serie de templates e imágenes predefinidas para facilitar el despliegue de entornos de desarrollo.</p>
+<p>En <a href="https://containers.dev/templates" target="_blank" hreflang="en">este link</a> pueden encontrar la lista completa de templates.</p>
+<p>Y en <a href="https://github.com/devcontainers/images?tab=readme-ov-file" target="_blank" hreflang="en">este link</a> una lista de las imágenes mantenidas por el equipo de devcontainers.</p>
+<p>En caso de que no encuentren ninguno que se ajuste a las necesidades exactas de su proyecto, siempre pueden optar por el template base de Debian y ajustarlo según necesiten.</p>
+<p>Lo más básico y primero que nos enfocaremos en cambiar es la imagen a partir de la cual se genera el entorno de desarrollo.</p>
+<p>Volviendo a nuestra aplicación de ejemplo, supongamos que la versión de PHP que queremos utilizar es la última disponible (a día de <abbr title="2025-03-04">hoy</abbr>, la versión 8.4).<br>
+Durante la ejecución del <i lang="en">Wizard</i>, y utilizando el template de PHP las únicas versiones que se nos ofrecían eran la 8.0, 8.1 y 8.2.</p>
+<p>Lo bueno es que al utilizar una tecnología bien establecida como lo son los containers contamos con muchísimas imágenes ya preparadas en distintos repositorios, que podemos utilizar sin problemas.</p>
+<p>Primero verificamos la versión actual de PHP ejecutando, desde la terminal integrada del VSCode:</p>
+<pre><code class="language-sh">php -v
+</code></pre>
+<p><img src="14-php-version-82.png" alt="Captura de pantalla de la terminal mostrando la versión de PHP actual, 8.2"></p>
+<p>En nuestro caso, utilizaremos la <a href="https://hub.docker.com/_/php" target="_blank" hreflang="en">imagen oficial de PHP</a>, proveniente de <a href="https://hub.docker.com/" target="_blank" hreflang="en" lang="en">Docker Hub</a>.</p>
+<p>Desde Docker Hub, en la sección de tags buscamos el correspondiente a la versión 8.4.</p>
+<p><img src="15-dockerhub-php.png" alt="Captura de pantalla de la imagen oficial de PHP en Docker Hub"></p>
+<p>Ahora que ya tenemos el nombre de la imagen y tag que deseamos utilizar en nuestro <code>.devcontainer/devcontainer.json</code> modificamos el atributo <em lang="en">image</em>.</p>
+<pre><code class="language-diff">{
+        &quot;name&quot;: &quot;PHP&quot;,
+        // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+-       &quot;image&quot;: &quot;mcr.microsoft.com/devcontainers/php:1-8.2-bullseye&quot;,
++       &quot;image&quot;: &quot;php:8.4-cli-bullseye&quot;,
+
+        // Features to add to the dev container. More info: https://containers.dev/features.
+        // &quot;features&quot;: {},
+
+</code></pre>
+<p>Luego de esto, desde la paleta de comandos, ejecutaremos <strong lang="en">Dev Containers: Rebuild Container</strong>.</p>
+<p>Al hacer esto, el antiguo container se destruirá y se creará uno nuevo con los cambios que hemos realizado.</p>
+<p>Una vez que el nuevo container ha sido creado, volvemos a revisar la versión de PHP.</p>
+<p><img src="16-php-version-84.png" alt="Captura de pantalla de la terminal mostrando la versión actualizada de PHP, 8.4"></p>
+<p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/c061b6510ea02539a714c5c47b4c3715281d35f3" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
+<h2>Agregando funcionalidades (Devcontainer Features)</h2>
+<p>Ya tenemos la versión de PHP que queremos utilizar, pero si intentamos commitear nuestros cambios nos encontraremos un <em>pequeño</em> inconveniente.</p>
+<p>La imagen oficial de PHP está diseñada para ser utilizada en entornos productivos, por lo que no cuenta con git instalado.</p>
+<p>Por suerte contamos con un mecanismo muy simple para agregar herramientas adicionales a nuestros entornos de desarrollo, mediante las <i lang="en">Features</i> de devcontainers.</p>
+<p>Para configurar la <i lang="en">features</i>, en la paleta de comandos escribimos <strong lang="en">Dev Container: Configure Container Features</strong>.</p>
+<p>Esto nos desplegará una lista de <i lang="en">features</i> disponibles, similar a la que ya vimos al ejecutar inicialmente el <span lang="en">wizard</span>.</p>
+<p><img src="17-devcontainer-features.png" alt="Lista de features disponibles desde el Visual Studio Code"></p>
+<p>Aquí buscamos <strong lang="en">Git (from source)</strong> y marcamos su <span lang="en">checkbox</span>.</p>
+<p><img src="18-devcontainers-features-git.png" alt="Captura de pantalla del feature de git en el Visual Studio Code"></p>
+<p>Luego damos click a <strong>OK</strong> y en el siguiente paso elegimos la opción <strong lang="en">Keep Defaults</strong>.</p>
+<p>Esto nos agregará una nueva sección en nuestro archivo de configuración.</p>
+<pre><code class="language-diff">
+        // &quot;customizations&quot;: {},
+
+        // Use 'forwardPorts' to make a list of ports inside the container available locally.
+-       &quot;forwardPorts&quot;: [8080]
++       &quot;forwardPorts&quot;: [8080],
++       &quot;features&quot;: {
++               &quot;ghcr.io/devcontainers/features/git:1&quot;: {}
++       }
+
+        // Use 'postCreateCommand' to run commands after the container is created.
+        // &quot;postCreateCommand&quot;: &quot;sudo chmod a+x \&quot;$(pwd)\&quot; &amp;&amp; sudo rm -rf /var/www/html &amp;&amp; sudo ln -s \&quot;$(pwd)\&quot; /var/www/html&quot;
+</code></pre>
+<p>Podemos revisar la lista completa de <span lang="en">Features</span> en <a href="https://containers.dev/features" target="_blank" hreflang="en">este link</a>.</p>
+<p>Para reconstruir el container con el agregado de git damos click al botón <strong>Rebuild</strong> que nos debería haber aparecido abajo a la derecha o bien, en la paleta de comandos, ejecutamos <strong>Dev Containers: Rebuild Container</strong></p>
+<p>Et voila! Una vez que el container se haya reconstruido ya podremos utilizar git.</p>
+<p><img src="19-git-version.png" alt="Captura de pantalla de la terminal, ejecutando git exitosamente"></p>
+<p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/5092a1acd9fe0b2ef26d48b24da73105f2c9020f" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
+<h2>Ciclo de vida del container de desarrollo, comandos y scripts</h2>
+<p>Tener un entorno de desarrollo con la versión más nueva de nuestro lenguaje de programación y git está muy bien, pero todavía podemos llevarlo al siguiente nivel.</p>
+<p>El único próximo paso lógico es agregar herramientas de <i lang="en">debugging</i>, porque, enfrentemos la realidad. Nuestra aplicación el día de mañana podría tener millones de usuarios activos. ¿A fin de cuentas, por qué alguien no querría una aplicación diseñada específicamente para saludar al mundo?</p>
+<p>Pero junto con los usuarios llegan los pedidos de nuevas funcionalidades.</p>
+<p>Saludar al vecino, saludos de cumpleaños, quizás una comunidad de yoga quiera un saludo al sol.</p>
+<p>Y junto con las nuevas funcionalidades llegan los <i lang="en">bugs</i>.</p>
+<p>Definitivamente, necesitamos agregar herramientas de <i lang="en">debugging</i> a nuestro entorno de desarrollo.</p>
+<figure>
+	<img src="20-premature-optimization-meme.jpg" alt="Meme de los Simpsons &quot;Skinner: Am I out of touch?&quot; sobre la optimización prematura">
+	<figcaption>
+		<a href="https://wiki.c2.com/?PrematureOptimization" target="_blank">Optimización prematura</a>, la causa de todos los males. - Donald Knuth.
+	</figcaption>
+</figure>
+<p>Según la documentación de PHP en <span lang="en">Docker Hub</span>, instalar <a href="https://xdebug.org/" target="_blank" hreflang="en" lang="en">xdebug</a> es tan simple como ejecutar 2 comandos.</p>
+<pre><code class="language-sh">pecl install xdebug
+docker-php-ext-enable xdebug
+</code></pre>
+<p>Podríamos simplemente ejecutar esto en nuestra terminal y tendríamos la extensión instalada… Hasta que por alguna razón reconstruyamos nuestro container de desarrollo.</p>
+<p>Podríamos dejar una nota en nuestro <em>README</em> indicando que luego de crearse el container deben ejecutarse dichos comandos… Si tan solo siguiera existiendo gente que leyera la documentación de los proyectos.</p>
+<p>Por suerte para nosotros, devcontainers nos da una mejor solución.</p>
+<p>Podemos configurarlo para que luego de crearse el container ejecute comandos que definamos.</p>
+<p>Esto lo haremos mediante el atributo <em>postCreateCommand</em> de nuestro archivo de configuración.</p>
+<pre><code class="language-diff">
+        &quot;forwardPorts&quot;: [8080],
+        &quot;features&quot;: {
+                &quot;ghcr.io/devcontainers/features/git:1&quot;: {}
+-       }
++       },
+
+        // Use 'postCreateCommand' to run commands after the container is created.
+-       // &quot;postCreateCommand&quot;: &quot;sudo chmod a+x \&quot;$(pwd)\&quot; &amp;&amp; sudo rm -rf /var/www/html &amp;&amp; sudo ln -s \&quot;$(pwd)\&quot; /var/www/html&quot;
++       &quot;postCreateCommand&quot;: &quot;pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug&quot;
+
+        // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+        // &quot;remoteUser&quot;: &quot;root&quot;
+</code></pre>
+<p>Una vez más reconstruimos nuestro container y revisamos que nuestros cambios hayan tenido éxito con <code>php -m | grep xdebug</code>.</p>
+<p><img src="21-php-xdebug.png" alt="Captura de pantalla de xdebug instalado correctamente"></p>
+<p>Luego de ejecutar el comando la terminal devuelva <strong lang="en">xdebug</strong> es indicador de que la extensión se encuentra instalada y activa.</p>
+<p>En la documentación de devcontainers pueden encontrar la <a href="https://containers.dev/implementors/json_reference/#lifecycle-scripts" target="_blank" hreflang="en">lista completa de los puntos del ciclo de vida del container en los que es posible ejecutar comandos personalizados</a>.</p>
+<p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/7c8a5cf28b80307a34f12b325469f140e1153d1b" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
+<h2>Montajes, puertos, variables de entorno y otras hierbas</h2>
+<p>¡El desarrollo de nuestra aplicación va viento en popa! Pero algo no termina de sentirse correcto.</p>
+<p>¿Cómo es posible que cada vez que abrimos nuestro container de desarrollo debamos iniciar manualmente nuestro servidor web?</p>
+<p>¡Inaceptable!</p>
+<p>Aprovecharemos el atributo <em>postStartCommand</em> para arrancar automáticamente nuestro web server.</p>
+<pre><code class="language-diff">
+    },
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+-   &quot;postCreateCommand&quot;: &quot;pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug&quot;
++   &quot;postCreateCommand&quot;: &quot;pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug&quot;,
++
++   &quot;postStartCommand&quot;: &quot;php -S 0.0.0.0:8080 -t public/&quot;
+
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // &quot;remoteUser&quot;: &quot;root&quot;
+</code></pre>
+<p>Reconstruimos nuestro container y podremos acceder a nuestra aplicación en <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> sin necesidad de ejecutar comandos adicionales de manera manual.</p>
+<p>Mientras observamos con aires de victoria como nuestra aplicación saluda al mundo, un pensamiento nos ataca por la retaguardia sin previo aviso.</p>
+<p>Un pensamiento que comenzó a formarse en lo más recóndito de nuestra mente, utilizando memorias distantes, ahora viene a por nosotros.</p>
+<p>Buenas prácticas…</p>
+<p>… <a href="https://12factor.net/" target="_blank" hreflang="en" lang="en">The 12 Factor App</a>, una de las convenciones de DevOps para sistemas cloud…</p>
+<p>… <a href="https://12factor.net/dev-prod-parity" target="_blank" hreflang="en" lang="en">X Factor - Dev/prod parity</a>…</p>
+<p>… El Built-in web server de PHP, tal como indica <a href="https://www.php.net/manual/en/features.commandline.webserver.php#features.commandline.webserver" target="_blank" hreflang="en">su documentación</a>, no debería ser utilizado en entornos productivos.</p>
+<p><img src="22-php-builtin-webserver-docs-warning.png" alt="Captura de pantalla de la documetnación de PHP sobre su webserver"></p>
+<p>… Entonces, según el factor <i lang="en">Dev/Prod Parity</i> de los <i lang="en">12 Factor App</i>, tampoco deberíamos estar usándolo en nuestro entorno de desarrollo, ya que debemos buscar que nuestros ambientes de producción y desarrollo sean lo más similares posible…</p>
+<p>😞</p>
+<p>¡No importa! Algo como esto no va a detenernos.</p>
+<p>Vamos a usar en nuestro entorno de desarrollo el mismo websever que utilizaremos en producción.</p>
+<p>Existen varias opciones perfectamente válidas, pero hoy usaremos <a href="https://frankenphp.dev/" target="_blank" hreflang="en" lang="en">FrankenPHP</a>.</p>
+<p>Para esto, eliminaremos el <em>postStartCommand</em> que acabamos de agregar y cambiaremos la imagen por la de FrankenPHP.</p>
+<pre><code class="language-diff">
+ {
+    &quot;name&quot;: &quot;PHP&quot;,
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+-   &quot;image&quot;: &quot;php:8.4-cli-bullseye&quot;,
++   &quot;image&quot;: &quot;dunglas/frankenphp:1-php8.4&quot;,
+
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // &quot;features&quot;: {},
+@@ -18,9 +18,7 @@
+    },
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+-   &quot;postCreateCommand&quot;: &quot;pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug&quot;,
+-
+-   &quot;postStartCommand&quot;: &quot;php -S 0.0.0.0:8080 -t public/&quot;
++   &quot;postCreateCommand&quot;: &quot;pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug&quot;
+
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // &quot;remoteUser&quot;: &quot;root&quot;
+
+</code></pre>
+<p>La imagen de FrankenPHP, por defecto, tiene su <a href="https://docs.docker.com/reference/dockerfile/#workdir" target="_blank" hreflang="en" lang="en"><i>WORKDIR</i></a> configurado en <code>/app/public/</code> asi que el proyecto intentará montarse allí. Pero nosotros ya contamos con un directorio <code>public/</code> por lo que deberemos configurar tanto el <i lang="en">working dir</i> como el punto de montaje.</p>
+<pre><code class="language-diff">
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    &quot;image&quot;: &quot;dunglas/frankenphp:1-php8.4&quot;,
+
++   &quot;workspaceMount&quot;: &quot;source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached&quot;,
++   &quot;workspaceFolder&quot;: &quot;/app&quot;,
++
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // &quot;features&quot;: {},
+</code></pre>
+<p>Dentro de <em>wokspaceMount</em> estamos utilizando una variable propia de devcontainers (<code>${localWorkspaceFolder}</code>), para más información sobre las variables disponibles y como utilizarlas pueden visitar <a href="https://containers.dev/implementors/json_reference/#variables-in-devcontainerjson" target="_blank" hreflang="en">este link</a>.</p>
+<p>Además, siguiendo la <a href="https://frankenphp.dev/docs/config/#environment-variables" target="_blank" hreflang="en">documentación de FrankenPHP</a> agregaremos algunas variables de entorno para configurar nuestro webserver.</p>
+<pre><code class="language-diff">
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    &quot;forwardPorts&quot;: [8080],
++
++   &quot;containerEnv&quot;: {
++       &quot;SERVER_NAME&quot;: &quot;http://localhost:8080&quot;,
++       &quot;CADDY_GLOBAL_OPTIONS&quot;: &quot;auto_https off&quot; // Disable automatic HTTPS
++   },
++
+    &quot;features&quot;: {
+        &quot;ghcr.io/devcontainers/features/git:1&quot;: {}
+    },
+</code></pre>
+<p>El atributo <em>forwardPorts</em> no lo modificaremos ya que estamos configurando nuestro nuevo webserver para escuchar en el puerto 8080 por lo que queremos seguir exponiendo este mismo puerto.</p>
+<p>Por último configuraremos <em>overrideCommand</em> para evitar que devcontainers sobreescriba el proceso default de la imagen, ejecutar el webserver, ya que eso es exactamente lo que queremos que haga.</p>
+<pre><code class="language-diff">
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    &quot;image&quot;: &quot;dunglas/frankenphp:1-php8.4&quot;,
+
++   &quot;overrideCommand&quot;: false,
++
+    &quot;workspaceMount&quot;: &quot;source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached&quot;,
+    &quot;workspaceFolder&quot;: &quot;/app&quot;,
+
+</code></pre>
+<p>El resultado final debería ser que nuestro <code>.devcontainer/devcontainer.json</code> se vea así:</p>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Helloer&quot;,
+    &quot;image&quot;: &quot;dunglas/frankenphp:1-php8.4&quot;,
+
+    &quot;overrideCommand&quot;: false,
+
+    &quot;workspaceMount&quot;: &quot;source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached&quot;,
+    &quot;workspaceFolder&quot;: &quot;/app&quot;,
+
+    &quot;forwardPorts&quot;: [8080],
+
+    &quot;containerEnv&quot;: {
+        &quot;SERVER_NAME&quot;: &quot;http://localhost:8080&quot;,
+        &quot;CADDY_GLOBAL_OPTIONS&quot;: &quot;auto_https off&quot; // Disable automatic HTTPS
+    },
+
+    &quot;features&quot;: {
+        &quot;ghcr.io/devcontainers/features/git:1&quot;: {}
+    },
+
+    &quot;postCreateCommand&quot;: &quot;pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug&quot;
+}
+
+</code></pre>
+<p>Reconstruimos nuestro container y una vez más tenemos nuestra aplicación funcionando en nuestro entorno de desarrollo, esta vez utilizando el mismo webserver que utilizaríamos en producción.</p>
+<blockquote>
+<p>Al haber cambiado el <em>workspaceFolder</em> en la configuración es posible que luego de recrear el container el <span llang="en">Visual Studio Code</span> falle al intentar conectarse. Si esto ocurre solo debemos dar click a <strong lang="en">Open workspace</strong> y buscar el directorio que hemos configurado para ser el nuevo <em>workspaceFolder</em> (<code>/app/</code>).</p>
+</blockquote>
+<p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/https://github.com/iyaki/devcontainers-guide-app-example/tree/cc57ef417d3f753114bada6d676c8cd4a99a658a" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
+<h2>Intermedio</h2>
+<p>Por fin, nuestro entorno de desarrollo es perfecto y estamos listos para seguir agregando valor a la vida de millones mediante nuestra aplicación.</p>
+<p>Nuestra siguiente funcionalidad será recibir un número como parámetro y saludar indicando si el número es par o impar.</p>
+<p><a href="https://sahithyan.dev/post/the-is-odd-npm-package-meme" target="_blank" hreflang="en">Pero como somos desarrolladores que se respetan a sí mismos y siguen las mejores prácticas de comunidades importantes como la de Javascript sabemos que para realizar semejante proeza necesitaremos utilizar alguna biblioteca de terceros</a>.</p>
+<p>En PHP se utiliza el gestor de dependencias <a href="https://getcomposer.org/" target="_blank" hreflang="en" lang="en">composer</a> para gestionar bibliotecas de terceros en nuestra aplicación.</p>
+<p>Procedemos a instalar la biblioteca que necesitamos ejecutando en la terminal integrada, <code>composer require kylelamse/is-even</code>.</p>
+<p><img src="23-php-composer-require-iseven.png" alt="Captura de pantalla de la terminal ejecutando el comando anterior y fallando"></p>
+<p>Otra herramienta que nos falta.</p>
+<p>🫠</p>
+<blockquote>
+<p>Si trabajan como DevOps (si, si, ya se que ne realidad no es un rol), SysAdmin, Platfom engineer, etc lo que van a leer no es ninguna novedad; pero si son programadores es importante que sepan esto.<br>
+Este tipo de trabajos, aunque gratificantes cuando las cosas finalmente funcionan, pueden ser sumamente tediosos e iterativos.<br>
+Aprecien que alguien se preocupe por ustedes e intente facilitarles las cosas. Si ven un DevOps cansado ofrezcanle un cafe y recuereden, en <a href="https://es.wikipedia.org/wiki/D%C3%ADa_del_Administrador_de_Sistemas_Inform%C3%A1ticos" target="_blank">sú día</a> comprar unas facturas para compartir o algo por el estilo.</p>
+</blockquote>
+<p>Llegados a este punto creo que ya todos tenemos bastante claro como proceder.</p>
+<p>Buscamos si existe una <i lang="en">feature</i> de composer.</p>
+<p><img src="24-devcontainers-features-list-composer.png" alt="Lista de features de devcontainers, buscando composer"></p>
+<p>Sí, existe.</p>
+<p>La agregamos a nuestro archivo de configuración y reconstruimos el container.</p>
+<p>O tal vez nó…</p>
+<p>Quizás para cuando estén leyendo esta guía este problema ya se haya arreglado, pero <abbr title="2025-03-04">hoy</abbr>, al agregar el feature de composer ocurre lo siguiente:</p>
+<p><img src="25-devcontainer-error.png" alt="Captura de pantalla del Visual Studio Code fallando al intentar compilar el container"></p>
+<p>El container falla.</p>
+<h2>Debugging y solución de errores</h2>
+<p>Cuando se encuentren con un error que impide que el container compile correctamente, hay algunas cosas que pueden probar.</p>
+<p>Primero pueden dar click a <strong lang="en">Retry</strong>. Si el error proviene de alguna causa externa y temporal (por ejemplo, si se cortó el internet mientras el container se creaba) con esto debería solucionarse.</p>
+<p>Si <i lang="en">Retry</i> no funciona, pueden dar click en <strong lang="en">Edit devcontainer.json Locally</strong> y comenzar a leer, de abajo hacia arriba, el log que se abrirá del lado derecho de la pantalla, mientras rezan para que la causa del error sea comprensible.</p>
+<p><img src="26-devcontainer-error-log.png" alt="Log de errores en la compilación del container"></p>
+<blockquote>
+<p>Si conocen mejores maneras de <span lang="spanglish">debuggear</span> estas configuraciones, por favor déjenlo abajo, en los comentarios. Yo ya perdí bastantes horas de mi vida con errores de lo más simple, pero todavía están a tiempo de ayudar a personas que se estén iniciando en este mundo.</p>
+</blockquote>
+<p>El único consejo real que puedo darles es que <span lang="spanglish">commiteen</span> tan seguido como puedan. Cada vez que tengan una versión de la configuración que compila (aunque todavía no funcione al 100% como ustedes quieren) <span lang="spanglish">commiteenla</span>.</p>
+<p>En este caso el problema está claramente en el <i lang="en">feature</i> de composer.</p>
+<p>Si revisamos <a href="https://github.com/devcontainers-extra/features/tree/main/src/composer" target="_blank" hreflang="en">la documentación del <i lang="en">feature</i></a> vemos que el único parámetro que acepta es para configurar la versión que se instalará, por lo que no parece que haya mucho que podamos hacer desde allí.</p>
+<p>En nuestro caso será más fácil buscar una manera de instalar composer por algún otro medio, pero si se encuentran con algún problema persistente que los bloquea pueden recurrir a los <span lang="en">Issues</span> de <span lang="en">Github</span> del repositorio que corresponda.</p>
+<p>Composer cuneta con una <a href="https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md" target="_blank" hreflang="en">breve guía</a> para realizar instalaciones automáticas. Siguiendo sus instrucciones (y adaptándolas un poco) haremos lo siguiente.</p>
+<p>Creamos un nuevo archivo <code>.devcontainer/composer.sh</code>.</p>
+<pre><code class="language-sh">#!/bin/sh
+
+EXPECTED_CHECKSUM=&quot;$(php -r 'copy(&quot;https://composer.github.io/installer.sig&quot;, &quot;php://stdout&quot;);')&quot;
+php -r &quot;copy('https://getcomposer.org/installer', 'composer-setup.php');&quot;
+ACTUAL_CHECKSUM=&quot;$(php -r &quot;echo hash_file('sha384', 'composer-setup.php');&quot;)&quot;
+
+if [ &quot;$EXPECTED_CHECKSUM&quot; != &quot;$ACTUAL_CHECKSUM&quot; ]
+then
+    &gt;&amp;2 echo 'ERROR: Invalid installer checksum'
+    rm composer-setup.php
+    exit 1
+fi
+
+php composer-setup.php --quiet --install-dir=/usr/local/bin --filename=composer
+RESULT=$?
+rm composer-setup.php
+exit $RESULT
+</code></pre>
+<p>Y desde la terminal integrada le damos permisos de ejecución.</p>
+<pre><code class="language-sh">chmod +x .devcontainer/composer.sh
+</code></pre>
+<p>Luego configuramos nuestro <code>.devcontainer/devcontainer.json</code> para ejecutar el script.</p>
+<pre><code class="language-diff">
+        &quot;ghcr.io/devcontainers/features/git:1&quot;: {}
+    },
+
+-   &quot;postCreateCommand&quot;: &quot;pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug&quot;
++   &quot;postCreateCommand&quot;: {
++       &quot;install xdebug&quot;: &quot;pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug&quot;,
++       &quot;install composer&quot;: &quot;.devcontainer/composer.sh&quot;
++   }
+
+    // Configure tool-specific properties.
+    // &quot;customizations&quot;: {},
+</code></pre>
+<p>¡Ahora sí!</p>
+<p>Instalamos la dependencia <em>is-even</em></p>
+<pre><code class="language-sh">composer require kylelamse/is-even
+</code></pre>
+<p>Esto debería crear los archivos <code>compose.json</code>, <code>composer.lock</code> y el directorio <code>vendor/</code>, donde se encuentra el código fuente de la dependencia que hemos instalado</p>
+<p>Crearemos manualmente un archivo <code>.gitignore</code> para evitar commitear la carpeta <code>vendor/</code>.</p>
+<pre><code class="language-sh">printf &quot;/vendor\n&quot; &gt; .gitignore
+</code></pre>
+<p>Y modificamos nuestro archivo <code>public/index.php</code> para agregar nuestra nueva funcionalidad:</p>
+<pre><code class="language-diff">
+-Hola mundo
++&lt;?php
++
++declare(strict_types=1);
++
++require __DIR__ . '/../vendor/autoload.php';
++
++$number = $_GET['number'] ?? null;
++$number = is_numeric($number) ? (int) $number : null;
++
++$helloed = match (true) {
++    ! is_int($number) =&gt; 'mundo',
++    is_even($number) =&gt; 'par',
++    default =&gt; 'impar',
++};
++
++echo &quot;Hola, $helloed&quot;;
+</code></pre>
+<p>¡Perfecto! Nuestra aplicación ya puede diferenciar números pares e impares de manera correcta y cortes.</p>
+<p><img src="27-hola-world-again.png" alt="Captura de pantalla de la aplicación mostrando el mensaje &quot;Hola mundo&quot;">
+Aplicación saludando sin parámetro <em>numero</em>.</p>
+<p><img src="28-hello-odd.png" alt="Captura de pantalla de la aplicación mostrando el mensaje &quot;Hola impar&quot;">
+Aplicación saludando con parámetro <em>numero</em> en 1 (número impar)</p>
+<p><img src="29-hello-even.png" alt="Captura de pantalla de la aplicación mostrando el mensaje &quot;Hola par&quot;">
+Aplicación saludando con parámetro <em>numero</em> en 2 (número par)</p>
+<p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/0b732647467180125739184120d0967df1e885c6" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
+<h2>Customizations</h2>
+<p>Algunas de las herramientas y servicios que poseen integración con devcontainers permiten configuraciones específicas para ayudar a configurar ciertos aspectos de nuestro entorno de desarrollo.</p>
+<p>La integración con <span lang="en">Visual Studio Code</span> nos permite definir preferencias que aplicarán al proyecto dentro de nuestro entorno de desarrollo y extensiones que se instalarán de manera automática.</p>
+<p>Siendo que estamos trabajando en un proyecto PHP puede ser deseable agregar lo siguiente a nuestro archivo de configuración para tener un mejor soporte del lenguaje.</p>
+<pre><code class="language-diff">
+    &quot;postCreateCommand&quot;: {
+        &quot;install xdebug&quot;: &quot;pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug&quot;,
+        &quot;install composer&quot;: &quot;.devcontainer/composer.sh&quot;
+-   }
++   },
+
++   &quot;customizations&quot;: {
++       &quot;vscode&quot;: {
++           &quot;settings&quot;: {
++               &quot;files.eol&quot;: &quot;\n&quot;,
++               &quot;files.trimFinalNewlines&quot;: true,
++               &quot;intelephense.completion.fullyQualifyGlobalConstantsAndFunctions&quot;: true,
++               &quot;intelephense.completion.triggerParameterHints&quot;: true,
++               &quot;intelephense.environment.shortOpenTag&quot;: false,
++               &quot;php.suggest.basic&quot;: false
++           },
++           &quot;extensions&quot;: [
++               &quot;bmewburn.vscode-intelephense-client&quot;,
++               &quot;xdebug.php-debug&quot;
++           ]
++       }
++   }
+ }
+</code></pre>
+<p>Estas preferencias y extensiones afectarán a todos los que utilicen el entorno de desarrollo de devcontainer. Son especialmente útiles para definir <em>sensible defaults</em> que ayuden a todos los desarrolladores.</p>
+<p>Además de esta opción propia de devcontainer, el <span lang="en">Visual Studio Code</span> nos brinda una manera de configurar, solo para nosotros, extensiones que queremos que se instalen siempre de manera automática en todos nuestros containers de desarrollo.</p>
+<p>Para configurar esto nos dirigimos a las preferencias de VScode (Ctrl+Shift+p &gt; <strong>Preferences: Open Settings (UI)</strong>).<br>
+Y una vez allí buscamos <em>dev.containers.defaultExtensions</em>. Con el botón <strong lang="en">Add Item</strong> podremos agregar las extensiones que deseemos.</p>
+<p><img src="30-vscode-devcontainer-default-extensions.png" alt="Captura de pantalla de la configuración del Visual Studio Code"></p>
+<p>Los nombres de las extensiones que debemos agregar corresponden a los IDs de las extensiones. Para saber el ID de una extensión la buscamos en la pestaña de extensiones del VSCode (Ctrl+Shift+x), damos click al icono de engranaje que hay al lado de los botones de instalar y elegimos la opción <strong>Copy Extension ID</strong>. Esto copiará el ID de la extensión al portapapeles.</p>
+<p><img src="31-vscode-extensions-copilot.png" alt="Captura de pantalla de una extensión del Visual Studio Code con la opción de copiar su ID desplegada"></p>
+<p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/ba8cf78bc09860263976c789ed6f634630a16e22" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
+<h2>Back to the basics, Dockerfile</h2>
+<p>Con todo lo que hicimos hasta ahora debería ser suficiente para poder trabajar sin problemas en una amplia variedad de proyectos.</p>
+<p>Pero, en caso de despliegues mas complejos o si necesitásemos contar con muchas herramientas instaladas que no estén disponibles como <i lang="en">features</i>, escalar la creación de estos entornos de desarrollo utilizando exclusivamente características de devcontainers puede ser inviable.</p>
+<p>A partir de este punto trabajaremos en gran medida con características propias de Docker. El objetivo de esta guía no es dar una introducción a Docker ni Docker Compose por lo que no profundizaremos en aspectos que no sean propios de devcontainers.</p>
+<p>Entonces, ¿Qué hacemos si devcontainers nos queda “corto”?</p>
+<p>Recurrir a características nativas de Docker.</p>
+<p>Devcotnainers brinda la posibilidad de trabajar directamente con archivos Dockerfile y compose.yaml.</p>
+<p>Comencemos moviendo las configuraciones que actualmente tenemos en <code>.devcontainer/devcontainer.json</code> a un Dockerfile.</p>
+<p>Para esto creamos el archivo <code>.devcontainer/Dockerfile</code> y escribimos:</p>
+<pre><code class="language-dockerfile">FROM dunglas/frankenphp:1-php8.4
+
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+
+RUN pecl install xdebug \
+    &amp;&amp; docker-php-ext-enable xdebug \
+    &amp;&amp; apt-get update \
+    &amp;&amp; apt-get install -y --no-install-recommends \
+        git \
+        unzip \
+    &amp;&amp; apt-get clean \
+    &amp;&amp; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+</code></pre>
+<p>y modificamos nuestro <code>.devcontainer/devcontainer.json</code></p>
+<pre><code class="language-diff">
+ {
+    &quot;name&quot;: &quot;Helloer&quot;,
+-   &quot;image&quot;: &quot;dunglas/frankenphp:1-php8.4&quot;,
++   &quot;build&quot;: {
++       &quot;dockerfile&quot;: &quot;Dockerfile&quot;
++   },
+
+    &quot;overrideCommand&quot;: false,
+
+@@ -14,15 +16,6 @@
+        &quot;CADDY_GLOBAL_OPTIONS&quot;: &quot;auto_https off&quot; // Disable automatic HTTPS
+    },
+
+-   &quot;features&quot;: {
+-       &quot;ghcr.io/devcontainers/features/git:1&quot;: {}
+-   },
+-
+-   &quot;postCreateCommand&quot;: {
+-       &quot;install xdebug&quot;: &quot;pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug&quot;,
+-       &quot;install composer&quot;: &quot;.devcontainer/composer.sh&quot;
+-   },
+-
+    &quot;customizations&quot;: {
+        &quot;vscode&quot;: {
+            &quot;settings&quot;: {
+</code></pre>
+<p>Reconstruimos el container y todo debería seguir funcionando como hasta ahora.</p>
+<p>Este ejemplo es bastante simple, pero es posible configurar <i lang="en">context</i>, <i lang="en">arguments</i> y <i lang="en">target</i> y prácticamente todos los parámetros que podríamos utilizar al ejecutar <code>docker build</code>. La lista completa de opciones disponibles se encuentra en <a href="https://containers.dev/implementors/json_reference/#image-specific" target="_blank" hreflang="en">este link</a>.</p>
+<p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/d1ece3c1b5bd943c6630ec794b0f7590cbcec1ca" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
+<h2>Múltiples containers con Docker compose</h2>
+<p>¿Por qué necesitaríamos varios containers en desarrollo?</p>
+<p>Simple, los containers están diseñados para ejecutar únicamente un servicio. Y si bien existen maneras de ejecutar múltiples servicios en un mismo container; si queremos agregar una base de datos a nuestro entorno de desarrollo, suele ser más simple agregar un nuevo container para esta base de datos y orquestar su creación con docker compose.</p>
+<p>Así que eso haremos.</p>
+<p>Agregaremos una base de datos a nuestro proyecto y la utilizaremos para configurar saludos personalizados.</p>
+<p>Comenzaremos migrando las configuraciones presentes en nuestro <code>.devcontiner/devcontainer.json</code> a un archivo de docker compose.</p>
+<p>Primero crearemos el archivo <code>.devcontainer/compose.yaml</code>-</p>
+<pre><code class="language-yaml">services:
+
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    working_dir: /app
+    volumes:
+      - ..:/app
+      - caddy_data:/data
+      - caddy_config:/config
+    environment:
+      SERVER_NAME: &quot;${SERVER_NAME:-http://localhost:8080}&quot;
+      CADDY_GLOBAL_OPTIONS: &quot;auto_https off&quot;
+    tty: true
+
+volumes:
+  caddy_data:
+  caddy_config:
+</code></pre>
+<p>Y modificamos <code>.devconytainer/devcontainer.json</code>.</p>
+<pre><code class="language-diff">
+ {
+    &quot;name&quot;: &quot;Helloer&quot;,
+-   &quot;build&quot;: {
+-       &quot;dockerfile&quot;: &quot;Dockerfile&quot;
+-   },
++
++   &quot;dockerComposeFile&quot;: &quot;compose.yaml&quot;,
++   &quot;service&quot;: &quot;app&quot;,
++   &quot;workspaceFolder&quot;: &quot;/app&quot;,
+
+    &quot;overrideCommand&quot;: false,
+
+-   &quot;workspaceMount&quot;: &quot;source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached&quot;,
+-   &quot;workspaceFolder&quot;: &quot;/app&quot;,
+-
+    &quot;forwardPorts&quot;: [8080],
+
+-   &quot;containerEnv&quot;: {
+-       &quot;SERVER_NAME&quot;: &quot;http://localhost:8080&quot;,
+-       &quot;CADDY_GLOBAL_OPTIONS&quot;: &quot;auto_https off&quot; // Disable automatic HTTPS
+-   },
+-
+    &quot;customizations&quot;: {
+        &quot;vscode&quot;: {
+            &quot;settings&quot;: {
+
+</code></pre>
+<p>Una vez más reconstruimos el container y todo debería seguir funcionando como lo hacía hasta ahora.</p>
+<p>Agregamos el servicio que contendrá la base de datos en nuestro archivo `.devcontainer/compose.yaml’</p>
+<pre><code class="language-diff">
++x-db-default-params: &amp;db-default-params
++  MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-SUPER_SECRET_ROOT_PASSWORD}
++  MARIADB_DATABASE: ${DB_DATABASE:-helloer}
++  MARIADB_USER: ${DB_USER:-app_user}
++  MARIADB_PASSWORD: ${DB_PASSWORD:-SUPER_SECRET_PASSWORD}
++
+ services:
+
+   app:
+@@ -10,10 +16,20 @@ services:
+       - caddy_data:/data
+       - caddy_config:/config
+     environment:
++      &lt;&lt;: *db-default-params
+       SERVER_NAME: &quot;${SERVER_NAME:-http://localhost:8080}&quot;
+       CADDY_GLOBAL_OPTIONS: &quot;auto_https off&quot;
+     tty: true
+
++  db:
++    image: mariadb:11.4-noble
++    restart: unless-stopped
++    volumes:
++      - mariadb:/var/lib/mysql
++    environment:
++      &lt;&lt;: *db-default-params
++
+ volumes:
+   caddy_data:
+   caddy_config:
++  mariadb:
+</code></pre>
+<p>Configuramos <code>.devcontainer/devcontainer.json</code> par aunque inicie el servicio.</p>
+<pre><code class="language-diff">
+@@ -4,6 +4,7 @@
+    &quot;dockerComposeFile&quot;: &quot;compose.yaml&quot;,
+    &quot;service&quot;: &quot;app&quot;,
+    &quot;workspaceFolder&quot;: &quot;/app&quot;,
++   &quot;runServices&quot;: [&quot;db&quot;],
+
+    &quot;forwardPorts&quot;: [8080],
+</code></pre>
+<p>E instalamos la extensión de mysql para PHP y el cliente de mariadb en nuestro container desde <code>.devcontainer/Dockerfile</code>.</p>
+<pre><code class="language-diff">
+@@ -4,9 +4,11 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
+
+ RUN pecl install xdebug \
+     &amp;&amp; docker-php-ext-enable xdebug \
++    &amp;&amp; docker-php-ext-install mysqli \
+     &amp;&amp; apt-get update \
+     &amp;&amp; apt-get install -y --no-install-recommends \
+         git \
++        mariadb-client \
+         unzip \
+     &amp;&amp; apt-get clean \
+     &amp;&amp; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+</code></pre>
+<p>Reconstruimos los containers y ya estamos listos para agregar saludos personalizados.</p>
+<p>Empezamos creando la tabla de saludos y agregando algunos registros desde la terminal integrada.</p>
+<pre><code class="language-sh">mariadb -h db -u &quot;$MARIADB_USER&quot; -p&quot;$MARIADB_PASSWORD&quot; &quot;$MARIADB_DATABASE&quot; -e '
+CREATE TABLE greetings (
+  name varchar(255),
+  greeting varchar(255)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci;'
+mariadb -h db -u &quot;$MARIADB_USER&quot; -p&quot;$MARIADB_PASSWORD&quot; &quot;$MARIADB_DATABASE&quot; -e '
+INSERT INTO greetings
+  (name, greeting)
+VALUES
+  (&quot;Marta&quot;, &quot;Doña&quot;),
+  (&quot;Graciela&quot;, &quot;Señora&quot;),
+  (&quot;Laura&quot;, &quot;Señorita&quot;),
+  (&quot;Aureliano&quot;, &quot;Coronel&quot;),
+  (&quot;Gervasio&quot;, &quot;Don&quot;),
+  (&quot;Ezequiel&quot;, &quot;Rey&quot;),
+  (&quot;Matias&quot;, &quot;Bro&quot;)
+;'
+</code></pre>
+<p>Agregamos la nueva funcionalidad al código de nuestra aplicación.</p>
+<pre><code class="language-diff">
+@@ -7,7 +7,32 @@ require __DIR__ . '/../vendor/autoload.php';
+ $number = $_GET['number'] ?? null;
+ $number = is_numeric($number) ? (int) $number : null;
+
++$name = (string) ($_GET['name'] ?? null);
++
++$custom = null;
++if ($name) {
++    $db = new mysqli(
++        'db',
++        getenv('MARIADB_USER'),
++        getenv('MARIADB_PASSWORD'),
++        getenv('MARIADB_DATABASE')
++    );
++
++    $query = &lt;&lt;&lt;SQL
++        SELECT greeting FROM greetings
++        WHERE name = ?
++        LIMIT 1
++    SQL;
++
++    $result = $db-&gt;execute_query($query, [$name])-&gt;fetch_all(MYSQLI_ASSOC);
++
++    if ($result) {
++        $custom = $result[0]['greeting'];
++    }
++}
++
+ $helloed = match (true) {
++    $custom !== null =&gt; $custom,
+     ! is_int($number) =&gt; 'mundo',
+     is_even($number) =&gt; 'par',
+     default =&gt; 'impar',
+</code></pre>
+<p>Y ya tenemos saludos personalizados y configurables mediante la base de datos.</p>
+<p><img src="32-hello-bro.png" alt="Captura de pantalla de nuestra aplicación respondiendo &quot;Hola Bro&quot; cuando se le envía el nombre Matías como parámetro"></p>
+<blockquote>
+<p>Si revisan el repositorio de <em>templates</em> de devcontainers encontrarán uno diseñado para aplicaciones <a href="https://github.com/devcontainers/templates/tree/main/src/php-mariadb" target="_blank">PHP con MariaDB</a>. Es bastante similar a la solución a la que hemos llegado pero puede ser interesante verlo y buscar que hemos hecho distinto y por qué.</p>
+</blockquote>
+<p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/b933b971fcad6b457dfcef6512da31925d6172b1" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
+<h2>Sintiendonos como en casa con dofiles</h2>
+<p>Aunque no es una característica propiamente de devcontainers, sino del <span lang="en">Visual Studio Code</span>, hay una cosa más puede ayudarnos a que nuestro entorno de desarrollo nos resulte más cómodo: el uso de <a href="https://wiki.archlinux.org/title/Dotfiles_(Espa%C3%B1ol)" target="_blank" hreflang="en" lang="en">dotfiles</a>.</p>
+<p>En linux es bastante común versionar ciertas configuraciones de las computadoras para poder tenerlas sincronizadas entre distintos equipos. A estos repositorios donde se versionan estas configuraciones se los suele llamar <i lang="en">dotfiles</i>.</p>
+<p>Suelen utilizarse para modificar la apariencia de la terminal, agregas aliases, funciones, etc (casi siempre nos ayudará a ser más eficientes trabajando con la terminal).</p>
+<p>Yo, por ejemplo, tengo mis dotfiles en <span lang="en">Github</span> (<a href="https://github.com/iyaki/dotfiles" target="_blank">link al repositorio</a>).</p>
+<p>El VSCode puede configurarse para <a href="https://code.visualstudio.com/docs/devcontainers/containers#_personalizing-with-dotfile-repositories" target="_blank" hreflang="en">clonar estos repositorios y utilizar sus configuraciones</a>.</p>
+<p>Para esto utilizaremos las siguientes configuraciones:</p>
+<ul>
+<li><strong>dotfiles.repository</strong>: Aquí debemos escribir la <abbr title="Uniform Resource Identifier">URI</abbr> del repositorio que deseamos clonar, en mi caso utilizo <code>https://github.com/iyaki/dotfiles</code>.</li>
+<li><strong>dotfiles.targetPath</strong>: El directorio donde se clonará el repositorio. Por defecto <code>~/dotfiles</code>.</li>
+<li><strong>dotfiles.installCommand</strong>: Comando a ejecutar luego de clonar el repositorio. Aquí generalmente se ejecuta un script que mueve o “linkea” los archivos de nuestro repositorio a las ubicaciones donde los archivos de configuración deben encontrarse para surtir efecto. Por defecto intentará ejecutar el primero de estos archivos que encuentre dentro del repositorio (en orden) <code>install.sh</code>, <code>install</code>, <code>bootstrap.sh</code>, <code>bootstrap</code>, <code>setup.sh</code>, <code>setup</code>.</li>
+</ul>
+<h2>Impresiones finales</h2>
+<p>Hemos experimentado con múltiples formas de configurar devcontainers, iniciando por las más simples hasta llegar a las más complejas.</p>
+<p>A medida que la complejidad del deploy crece, el usar devcontainers y no simplemente las tecnologías en las que se basa (Docker compose) va perdiendo sentido, aunque la integración que brinda con ciertas herramientas, como el <span lang="en">Visual Studio Code</span>, puede seguir siendo interesante.</p>
+<p>Por desgracia, la complejidad no puede ser eliminada, pero herramientas como esta nos ayudan a poder tenerla más ordenada e incluso “escondida” de quienes dependen de ella para poder realizar su trabajo.</p>
+<p>Esto ha sido todo. Espero que les sea de utilidad y como siempre, por dudas, preguntas, consejos, recomendaciones o lo que sea que quieran compartir, tienen disponible la caja de comentarios o pueden escribirme a <a href="mailto:me@iyaki.ar" target="_blank">me@iyaki.ar</a>.</p>
+<p>Hasta pronto!</p>
+
+<script type="module">
+	import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
+	import diff from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/diff.min.js';
+	import php from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/php.min.js';
+	import json from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/json.min.js';
+	import yaml from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/yaml.min.js';
+	import dockerfile from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/dockerfile.min.js';
+	import bash from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/bash.min.js';
+	hljs.registerLanguage('diff', diff);
+	hljs.registerLanguage('php', php);
+	hljs.registerLanguage('json', json);
+	hljs.registerLanguage('yaml', yaml);
+	hljs.registerLanguage('dockerfile', dockerfile);
+	hljs.registerLanguage('bash', bash);
+	hljs.highlightAll()
+</script>
