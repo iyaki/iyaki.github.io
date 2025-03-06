@@ -77,11 +77,17 @@ body {
 		flex-direction: row-reverse;
 		justify-content: center;
 
+		.left-spacer {
+			width: 30ch;
+			height: 1px;
+		}
+
 		& > header {
 			position: sticky;
 			top: 0;
 			height: 100vh;
 			padding-block: 3rem;
+			width: 30ch;
 
 			margin-top: 0;
 			justify-content: space-between;
@@ -282,7 +288,7 @@ aside[aria-label="Índice"] {
 			line-height: 1.3em;
 		}
 
-	@media (width >= 992px) {
+	@media (width >= 1400px) {
 		position: fixed;
 		top: 0;
 		left: 0.5em;
@@ -298,11 +304,11 @@ aside[aria-label="Índice"] {
 		}
 
 		ul {
-			padding-inline: 1em;
+			padding-inline: 1em .25em;
 		}
 
 		li {
-			max-width: 25ch;
+			max-width: 23ch;
 			padding-top: 0.5em;
 			font-size: .9em;
 			line-height: 1.2em;
@@ -406,7 +412,7 @@ aside[aria-label="Índice"] {
 
 <script type="module" defer>
 // Script para que el índice se muestre abierto por default en Desktop
-const mql = window.matchMedia('(min-width: 992px)')
+const mql = window.matchMedia('(min-width: 1400px)')
 if(mql.matches) {
 		document.querySelector('aside[aria-label="Índice"] details').open = true
 }
@@ -414,6 +420,7 @@ if(mql.matches) {
 {% endif %}
 
 </main>
+<div class="left-spacer"></div>
 
 <script type="application/ld+json">
 { "@context": "https://schema.org",
