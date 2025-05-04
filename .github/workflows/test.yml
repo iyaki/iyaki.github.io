@@ -13,9 +13,20 @@ on:
       - '.npmrc'
       - 'package-lock.json'
       - 'package.json'
+  pull_request:
+    branches:
+      - 'main'
+    paths:
+      - 'web/**'
+      - '.github/workflows/test.yml'
+      - '.eleventy'
+      - '.eleventy.js'
+      - '.npmrc'
+      - 'package-lock.json'
+      - 'package.json'
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
