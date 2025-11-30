@@ -8,32 +8,29 @@ main {
 	margin: auto;
 	max-width: var(--main-content-width);
 
-	& > header {
-		text-align: center;
-		margin-bottom: 2em;
-
-		h1 {
-			margin: 0;
-		}
-
-		p {
-			margin: 0;
-			text-align: center;
-		}
-	}
-
 	p {
 		margin-bottom: 2em;
 		text-align: justify;
 	}
 }
-main > header > p::after,
-main > header > p::before {
-	content: ' – ';
+
+body > header {
+	text-align: center;
+	margin-bottom: 2em;
+
+	h1 {
+		margin: 0;
+	}
+
+	p {
+		margin: 0;
+
+		&::before, &::after {
+			content: '– ';
+		}
+	}
 }
 </style>
-
-<main>
 
 <header>
 
@@ -49,6 +46,8 @@ main > header > p::before {
 <p>Generalista
 
 </header>
+<main>
+
 
 <p>
 Actualmente trabajo como Head of Product & Technology en <a href="https://www.alephoo.com/" style="white-space: nowrap">Alephoo</a> y brindando servicios de consultoría en <a href="https://be-binks.com/" style="white-space: nowrap">Binks</a>. Pueden encontrar más información sobre mi carrera profesional en <a href="https://www.linkedin.com/in/ivan-yakimovicz/" lang="en" style="white-space: nowrap">Linkedin</a>.
