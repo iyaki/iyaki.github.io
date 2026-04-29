@@ -2,7 +2,7 @@
 layout: default.html
 title: Mis proyectos
 section: Proyectos
-date: "2026-04-28"
+date: "2026-04-28T20:09:39-03:00"
 ---
 <style>
 main {
@@ -32,6 +32,37 @@ body > header {
     }
   }
 }
+
+time {
+  font-size: 0.85em;
+  color: #888;
+  font-style: italic;
+  margin-left: 0.5em;
+}
+
+.status-label {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  font-size: 0.75em;
+  font-weight: bold;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-label.in-progress {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.status-label.abandoned {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
 </style>
 
 <header>
@@ -45,42 +76,65 @@ body > header {
 >
 </figure>
 <h1 class="iyaki"><span style="view-transition-name: iyaki">iyaki</span></h1>
-<p>Generalista
+<p>Generalista</p>
 
 </header>
 <main>
 
 <p>
-Estos son algunos de mis proyectos más recientes. Muchos de ellos nacieron para ayudarme a simplificar tareas diarias y procesos complejos. Algunos me ayudaron a probar y aprender nuevas tecnologías y otros son experimentos para explorar formas distintas de explotar tecnologías o herramientas que ya conocía.
+En esta sección encontrarás una colección de cosas que fui construyendo. No todas nacieron con un plan maestro; algunas fueron respuestas a incomodidades concretas (un workflow que no cerraba, un proceso repetitivo que pedía a gritos ser automatizado), otras fueron excusas para meterme con tecnologías nuevas, y unas pocas son experimentos que empezaron como "¿y si probamos...?" y terminaron siendo algo usable (o no).
 </p>
 
-<h2>Proyectos</h2>
+<h2>Mis Proyectos</h2>
 
-<h3><a href="https://github.com/iyaki/ralphex">ralphex</a></h3>
-<p>Ralphex es un CLI specs-first para ejecutar loops de codificación iterativos contra CLIs de agentes externos como OpenCode, Claude Code y Cursor. Ofrece prompts integrados de plan y build, precedencia de configuración determinista y un modelo de comando simple que funciona bien en flujos de trabajo basados en repositorios.</p>
+<h3><a href="https://github.com/iyaki/skills-update">skills-update</a> <time>2026</time></h3>
+<p>
+Una <a href="https://github.com/marketplace/actions/skills-update-action">acción de GitHub</a> que mantiene actualizadas las skills de los agentes de un repositorio. Envuelve la CLI de Skills de Vercel, la ejecuta en CI de forma no interactiva. Crea commits y pull requests para revisión humana — nada de auto-merge, las decisiones de aprobación quedan en manos del maintainer. De esas cosas que parecen un detalle administrativo hasta que te olvidás y las skills van quedando obsoletas.
+</p>
 
-<h3><a href="https://github.com/iyaki/reglint">reglint</a></h3>
-<p>RegLint es un linter basado en regex para repositorios de código fuente. Escanea archivos usando reglas definidas en YAML y emite salida en console, json o sarif para desarrollo local y pipelines de CI. (WIP, evolución de regex-pr-annotator)</p>
+<h3><a href="https://github.com/iyaki/reglint">reglint</a> <time>2026</time></h3>
+<p>
+<span class="status-label in-progress">Trabajo en progreso</span> Un linter basado en regex. Diseñado para desarrollo local o pipelines de CI. Soporta baseline e integración con git para adopciones graduales. Evolución de una GitHub Action que creé hace años y todavía sigo usando, [regex-pr-annotator](https://github.com/iyaki/regex-pr-annotator). La idea es simple: detectar patrones problemáticos sin revisar manualmente, y hacerlo de forma versionable y discutible.
+</p>
 
-<h3><a href="https://github.com/iyaki/devcontainers-features">devcontainers-features</a></h3>
-<p>Una colección de características para Devcontainers que facilitan la configuración de entornos de desarrollo consistentes y reproducibles.</p>
+<h3><a href="https://github.com/iyaki/ralphex">ralphex</a> <time>2026</time></h3>
+<p>
+Implementación cross-platform de Ralph Wiggum Loops. Envuelve CLIs de agentes (OpenCode, Claude Code, Cursor) en un loop repetible: resolver un prompt, ejecutar el agente, y repetir hasta completar. No hostea modelos, no inventa interfaces glamorosas. Define un workflow: prompts versionados, precedencia determinista y trabajo iterativo. Hoy es una de las herramientas que más utilizo para desarrollar en mi día a día.
+</p>
 
-<h3><a href="https://github.com/iyaki/daily-knowledge">daily-knowledge</a></h3>
-<p>Implementación web de random-knowledge, un pequeño script basado en RandomNote Web diseñado para trabajar sobre mi base de conocimiento en Notion.</p>
+<h3><a href="https://juego-papa.com/">El juego de la papa online</a> <time>2025</time></h3>
+<p>
+<span class="status-label in-progress">Trabajo en progreso</span> Versión online de uno de los juegos de mi infancia con los que pasábamos el tiempo en horas libres del colegio. Reunidos con un amigo, después de diez años sin vernos, recordamos este juego y nos lamentamos de que no existiera una versión online una versión web. Podría haber quedado como una charla de esas que no llevan a nada, pero la idea me gustó. El resultado es esto: un jueguito donde conectás números en orden sin que las líneas se crucen. No es perfecto pero me sirvió para comprobar las habilidades técnicas de los agentes de IA modernos.
+</p>
 
-<h3><a href="https://github.com/iyaki/content-curator">content-curator</a></h3>
-<p>Código fuente de la aplicación que replica el contenido de mi base de conocimiento en Notion al recopilador de contenido curado disponible en curated.iyaki.ar/</p>
+<h3><a href="https://github.com/iyaki/daily-knowledge">daily-knowledge</a> <time>2025</time></h3>
+<p>
+Implementación web de <a href="https://github.com/iyaki/random-knowledge">random-knowledge</a>, un script basado en <a href="https://fortelabs.com/blog/randomnote-web/">RandomNote Web</a> de Forte Labs que sirve una pieza aleatoria de mi <a href="https://iyaki.notion.site/066daa9a7abb4c029724323209c85ca6">base de conocimiento en Notion</a> cada día. Un sistema de aprendizaje espaciado impulsado por automatizaciones hechas con workflows de GitHub Actions. Funciona directamente en el browser, se puede ver en <a href="http://daily-knowledge.iyaki.ar/">daily-knowledge.iyaki.ar</a>.
+</p>
 
-<h3><a href="https://github.com/iyaki/skills-update">skills-update</a></h3>
-<p>Acción de GitHub que mantiene actualizadas las skills de los agentes en tu repositorio con un solo comando, ejecutando la CLI de Skills de Vercel en CI.</p>
+<h3><a href="https://github.com/iyaki/web-archiver">web-archiver</a> <time>2024</time></h3>
+<p>
+Una CLI liviana para guardar páginas web en el [Wayback Machine del Internet Archive](https://web.archive.org/) a partir de un sitemap XML. Parsea el sitemap, filtra por fecha de última modificación y guarda las páginas usando la API de archive.org.
+</p>
 
-<h3><a href="https://github.com/iyaki/web-archiver">web-archiver</a></h3>
-<p>Utilidad de línea de comandos para guardar páginas web desde un sitemap en el Web Archive (archive.org) con capturas completas (screenshots, enlaces externos).</p>
+<h3><a href="https://github.com/iyaki/content-curator">content-curator</a> <time>2024</time></h3>
+<p>
+El encargado de replicar contenido desde mi base de Notion hacia <a href="http://curated.iyaki.ar/">curated.iyaki.ar</a>, mi recopilador de contenido curado. Un pipeline directo y sin magia: toma contenido de un lado, lo transforma, lo publica del otro.
+</p>
 
-<h3><a href="https://github.com/iyaki/simple-newsletter">simple-newsletter</a></h3>
-<p>Servicio gratuito que convierte Feeds RSS en Newsletters enviadas por e-mail, cualquiera puede utilizarlo.</p>
+<h3><a href="https://simple-newsletter.com/">simple-newsletter</a> <time>2024</time></h3>
+<p>
+Un servicio gratuito que convierte feeds Atom y RSS en newsletters por e-mail. Cualquiera puede usarlo, no pide registro, no pide nada: un GET con tu feed y tu mail y listo.
+</p>
 
-<h3><a href="https://juego-papa.com/">El juego de la papa online</a></h3>
-<p>Juego en línea donde el objetivo es conectar números en orden sin que las líneas se crucen. Desarrollado basado en la idea de un amigo, con código disponible en repositorio privado.</p>
+<h3><a href="https://github.com/iyaki/feedly-denoiser">feedly-denoiser</a> <time>2023</time></h3>
+<p>
+<span class="status-label abandoned">Proyecto abandonado</span> Un script en JavaScript que usaba la API de Feedly para filtrar artículos según reglas personalizadas. Cumplía con su objetivo: menos ruido, más señal; hasta que Feedly cambió sus políticas de uso y la API dejó de estar disponible para usuarios del plan gratuito.
+</p>
+
+<h3><a href="https://github.com/iyaki/TheNoFramework">TheNoFramework</a> <time>2020</time></h3>
+<p>
+Un micro-framework PHP experimental con un único objetivo: permitir a una aplicación seguir los estándares PSR más importantes con la menor cantidad de código e interferencia posible. No es un framework para producción, ni tiene la intención de serlo. Es un ejercicio de minimalismo y simplicidad para desarrollar aplicaciones web modernas en un mundo consumido por frameworks pesados y complejos.
+</p>
 
 </main>
