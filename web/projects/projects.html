@@ -1,0 +1,86 @@
+---
+layout: default.html
+title: Mis proyectos
+section: Proyectos
+date: "2026-04-28"
+---
+<style>
+main {
+  padding: 1em;
+  margin: auto;
+  max-width: var(--main-content-width);
+
+  p {
+    margin-bottom: 2em;
+    text-align: justify;
+  }
+}
+
+body > header {
+  text-align: center;
+  margin-bottom: 2em;
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+
+    &::before, &::after {
+      content: '– ';
+    }
+  }
+}
+</style>
+
+<header>
+
+<figure>
+<img
+	src="/images/logo.svg"
+	alt="Logo de mi web, unos anteojos 3D de cartón blanco con celofán azul y rojo"
+	class="logo"
+	style="height: 4em; aspect-ratio: 1; view-transition-name: logo"
+>
+</figure>
+<h1 class="iyaki"><span style="view-transition-name: iyaki">iyaki</span></h1>
+<p>Generalista
+
+</header>
+<main>
+
+<p>
+Estos son algunos de mis proyectos más recientes. Muchos de ellos nacieron para ayudarme a simplificar tareas diarias y procesos complejos. Algunos me ayudaron a probar y aprender nuevas tecnologías y otros son experimentos para explorar formas distintas de explotar tecnologías o herramientas que ya conocía.
+</p>
+
+<h2>Proyectos</h2>
+
+<h3><a href="https://github.com/iyaki/ralphex">ralphex</a></h3>
+<p>Ralphex es un CLI specs-first para ejecutar loops de codificación iterativos contra CLIs de agentes externos como OpenCode, Claude Code y Cursor. Ofrece prompts integrados de plan y build, precedencia de configuración determinista y un modelo de comando simple que funciona bien en flujos de trabajo basados en repositorios.</p>
+
+<h3><a href="https://github.com/iyaki/reglint">reglint</a></h3>
+<p>RegLint es un linter basado en regex para repositorios de código fuente. Escanea archivos usando reglas definidas en YAML y emite salida en console, json o sarif para desarrollo local y pipelines de CI. (WIP, evolución de regex-pr-annotator)</p>
+
+<h3><a href="https://github.com/iyaki/devcontainers-features">devcontainers-features</a></h3>
+<p>Una colección de características para Devcontainers que facilitan la configuración de entornos de desarrollo consistentes y reproducibles.</p>
+
+<h3><a href="https://github.com/iyaki/daily-knowledge">daily-knowledge</a></h3>
+<p>Implementación web de random-knowledge, un pequeño script basado en RandomNote Web diseñado para trabajar sobre mi base de conocimiento en Notion.</p>
+
+<h3><a href="https://github.com/iyaki/content-curator">content-curator</a></h3>
+<p>Código fuente de la aplicación que replica el contenido de mi base de conocimiento en Notion al recopilador de contenido curado disponible en curated.iyaki.ar/</p>
+
+<h3><a href="https://github.com/iyaki/skills-update">skills-update</a></h3>
+<p>Acción de GitHub que mantiene actualizadas las skills de los agentes en tu repositorio con un solo comando, ejecutando la CLI de Skills de Vercel en CI.</p>
+
+<h3><a href="https://github.com/iyaki/web-archiver">web-archiver</a></h3>
+<p>Utilidad de línea de comandos para guardar páginas web desde un sitemap en el Web Archive (archive.org) con capturas completas (screenshots, enlaces externos).</p>
+
+<h3><a href="https://github.com/iyaki/simple-newsletter">simple-newsletter</a></h3>
+<p>Servicio gratuito que convierte Feeds RSS en Newsletters enviadas por e-mail, cualquiera puede utilizarlo.</p>
+
+<h3><a href="https://juego-papa.com/">El juego de la papa online</a></h3>
+<p>Juego en línea donde el objetivo es conectar números en orden sin que las líneas se crucen. Desarrollado basado en la idea de un amigo, con código disponible en repositorio privado.</p>
+
+</main>
