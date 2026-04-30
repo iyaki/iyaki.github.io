@@ -77,11 +77,15 @@ body {
 	}
 }
 
-	@media (hover: hover) and (pointer: fine) {
-		body > header a:hover {
-			text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+	body > header a:hover {
+		text-decoration: underline;
+
+		.logo {
+			transform: scale(1.05);
 		}
 	}
+}
 
 	@media (width >= 768px) {
 	body {

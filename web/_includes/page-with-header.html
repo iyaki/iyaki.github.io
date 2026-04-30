@@ -17,6 +17,12 @@ body > header {
   text-align: center;
   margin-bottom: 2em;
 
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: inline-block;
+  }
+
   h1 {
     margin: 0;
   }
@@ -26,6 +32,16 @@ body > header {
 
     &::before, &::after {
       content: '– ';
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body > header a:hover {
+    text-decoration: underline;
+
+    .logo {
+      transform: scale(1.05);
     }
   }
 }
@@ -41,9 +57,11 @@ body > header {
     style="height: 4em; aspect-ratio: 1; view-transition-name: logo"
 >
 </figure>
-</a>
 <h1 class="iyaki"><span style="view-transition-name: iyaki">iyaki</span></h1>
-<p>Generalista
+</a>
+<p>
+Generalista
+</p>
 </header>
 <main>
 {{ content }}
