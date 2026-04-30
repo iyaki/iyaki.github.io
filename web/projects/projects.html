@@ -37,31 +37,54 @@ time {
   font-size: 0.85em;
   color: #888;
   font-style: italic;
+}
+
+h2 {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
+
+h3 {
+  margin-top: 2.5em;
+  margin-bottom: 0.8em;
+  position: relative;
+}
+
+h3 .status-label {
   margin-left: 0.5em;
+}
+
+@media (min-width: 768px) {
+  h3 time {
+    position: absolute;
+    left: -4em;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .status-label {
   display: inline-block;
-  padding: 0.2em 0.6em;
-  font-size: 0.75em;
-  font-weight: bold;
+  padding: 0.15em 0.5em;
+  font-size: 0.7em;
+  font-weight: 400;
   border-radius: 0.25em;
-  margin-right: 0.5em;
+  margin-left: 0.5em;
   vertical-align: middle;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .status-label.in-progress {
-  background-color: #fff3cd;
+  background-color: #fff8e1;
   color: #856404;
-  border: 1px solid #ffeaa7;
+  border: none;
 }
 
 .status-label.abandoned {
-  background-color: #f8d7da;
+  background-color: #fff0f3;
   color: #721c24;
-  border: 1px solid #f5c6cb;
+  border: none;
 }
 </style>
 
@@ -91,30 +114,30 @@ Otras fueron excusas para aprender tecnologías nuevas, y unas pocas, experiment
 
 <h2>Mis Proyectos</h2>
 
-<h3><a href="https://github.com/iyaki/skills-update">skills-update</a> <time>2026</time></h3>
+<h3><time>2026</time> <a href="https://github.com/iyaki/skills-update">skills-update</a></h3>
 <p>
 Una <a href="https://github.com/marketplace/actions/skills-update-action">acción de GitHub</a> que mantiene actualizadas las skills de los agentes de un repositorio. Envuelve la CLI de Skills de Vercel, la ejecuta en CI de forma no interactiva. Crea commits y pull requests para revisión humana.
 <br>
 De esas cosas que parecen un detalle administrativo hasta que te olvidás y las skills van quedando obsoletas.
 </p>
 
-<h3><a href="https://github.com/iyaki/reglint">reglint</a> <time>2026</time></h3>
+<h3><time>2026</time> <a href="https://github.com/iyaki/reglint">reglint</a> <span class="status-label in-progress" title="Trabajo en progreso">WIP</span></h3>
 <p>
-<span class="status-label in-progress">Trabajo en progreso</span> Un linter basado en regex. Diseñado para desarrollo local o pipelines de CI. Soporta baseline e integración con git para adopciones graduales. Evolución de una GitHub Action que creé hace años y todavía sigo usando, [regex-pr-annotator](https://github.com/iyaki/regex-pr-annotator).
+Un linter basado en regex. Diseñado para desarrollo local o pipelines de CI. Soporta baseline e integración con git para adopciones graduales. Evolución de una GitHub Action que creé hace años y todavía sigo usando, <a href="https://github.com/iyaki/regex-pr-annotator">regex-pr-annotator</a>.
 <br>
 La idea es simple: detectar patrones problemáticos sin revisar manualmente, y hacerlo de forma versionable y discutible.
 </p>
 
-<h3><a href="https://github.com/iyaki/ralphex">ralphex</a> <time>2026</time></h3>
+<h3><time>2026</time> <a href="https://github.com/iyaki/ralphex">ralphex</a></h3>
 <p>
 Implementación cross-platform de Ralph Wiggum Loops. Envuelve CLIs de agentes (OpenCode, Claude Code, Cursor) en un loop repetible: resolver un prompt, ejecutar el agente, y repetir hasta completar. No hostea modelos, no inventa interfaces glamorosas. Define un workflow: prompts versionados, precedencia determinista y trabajo iterativo.
 <br>
 Hoy es una de las herramientas que más utilizo para desarrollar en mi día a día.
 </p>
 
-<h3><a href="https://juego-papa.com/">El juego de la papa online</a> <time>2025</time></h3>
+<h3><time>2025</time> <a href="https://juego-papa.com/">El juego de la papa online</a> <span class="status-label in-progress" title="Trabajo en progreso">WIP</span></h3>
 <p>
-<span class="status-label in-progress">Trabajo en progreso</span> Versión online de uno de los juegos de mi infancia con los que pasábamos el tiempo en horas libres del colegio.
+Versión online de uno de los juegos de mi infancia con los que pasábamos el tiempo en horas libres del colegio.
 <br>
 Reunidos con un amigo, después de diez años sin vernos, recordamos este juego y nos lamentamos de que no existiera una versión online una versión web. Podría haber quedado como una charla de esas que no llevan a nada, pero la idea me gustó.
 <br>
@@ -123,38 +146,38 @@ El resultado es esto: un jueguito donde conectás números en orden sin que las 
 Más sobre esto en <a href="/posts/20251129_hice_un_jueguito/">Hice un jueguito</a>.
 </p>
 
-<h3><a href="https://github.com/iyaki/daily-knowledge">daily-knowledge</a> <time>2025</time></h3>
+<h3><time>2025</time> <a href="https://github.com/iyaki/daily-knowledge">daily-knowledge</a></h3>
 <p>
 Implementación web de <a href="https://github.com/iyaki/random-knowledge">random-knowledge</a>, un script basado en <a href="https://fortelabs.com/blog/randomnote-web/">RandomNote Web</a> de Forte Labs que sirve una pieza aleatoria de mi <a href="https://iyaki.notion.site/066daa9a7abb4c029724323209c85ca6">base de conocimiento en Notion</a> cada día. Un sistema de aprendizaje espaciado impulsado por automatizaciones hechas con workflows de GitHub Actions. Funciona directamente en el browser, se puede ver en <a href="http://daily-knowledge.iyaki.ar/">daily-knowledge.iyaki.ar</a>.
 <br>
 Más sobre cómo gestiono el conocimiento en: <a href="/posts/20230514_reuniendo_conocimiento/">Reuniendo conocimiento</a>, <a href="/posts/20230607_ordenando_conocimiento/">Ordenando conocimiento</a>, <a href="/posts/20230610_depurando_conocimiento/">Depurando conocimiento</a> y <a href="/posts/20230621_compartiendo_conocimiento/">Compartiendo conocimiento</a>.
 </p>
 
-<h3><a href="https://github.com/iyaki/web-archiver">web-archiver</a> <time>2024</time></h3>
+<h3><time>2024</time> <a href="https://github.com/iyaki/web-archiver">web-archiver</a></h3>
 <p>
 Una CLI liviana para guardar páginas web en el <a href="https://web.archive.org/">Wayback Machine del Internet Archive</a> a partir de un sitemap XML. Parsea el sitemap, filtra por fecha de última modificación y guarda las páginas usando la API de archive.org.
 </p>
 
-<h3><a href="https://github.com/iyaki/content-curator">content-curator</a> <time>2024</time></h3>
+<h3><time>2024</time> <a href="https://github.com/iyaki/content-curator">content-curator</a></h3>
 <p>
 El encargado de replicar contenido desde mi base de Notion hacia <a href="http://curated.iyaki.ar/">curated.iyaki.ar</a>, mi recopilador de contenido curado.
 <br>
 Un pipeline directo y sin magia: toma contenido de un lado, lo transforma, lo publica del otro.
 </p>
 
-<h3><a href="https://simple-newsletter.com/">simple-newsletter</a> <time>2024</time></h3>
+<h3><time>2024</time> <a href="https://simple-newsletter.com/">simple-newsletter</a></h3>
 <p>
 Un servicio gratuito que convierte feeds Atom y RSS en newsletters por e-mail. Cualquiera puede usarlo, no pide registro, no pide nada: un GET con tu feed y tu mail y listo. También escribí un post al respecto: <a href="/posts/20240501_llegaron_las_newsletters/">Llegaron las newsletters</a>.
 </p>
 
-<h3><a href="https://github.com/iyaki/feedly-denoiser">feedly-denoiser</a> <time>2023</time></h3>
+<h3><time>2023</time> <a href="https://github.com/iyaki/feedly-denoiser">feedly-denoiser</a> <span class="status-label abandoned" title="Proyecto abandonado">Archived</span></h3>
 <p>
-<span class="status-label abandoned">Proyecto abandonado</span> Un script en JavaScript que usaba la API de Feedly para filtrar artículos según reglas personalizadas.
+Un script en JavaScript que usaba la API de Feedly para filtrar artículos según reglas personalizadas.
 <br>
 Cumplía con su objetivo: menos ruido, más señal; hasta que Feedly cambió sus políticas de uso y la API dejó de estar disponible para usuarios del plan gratuito.
 </p>
 
-<h3><a href="https://github.com/iyaki/TheNoFramework">TheNoFramework</a> <time>2020</time></h3>
+<h3><time>2020</time> <a href="https://github.com/iyaki/TheNoFramework">TheNoFramework</a></h3>
 <p>
 Un micro-framework PHP experimental con un único objetivo: permitir a una aplicación seguir los estándares PSR más importantes con la menor cantidad de código e interferencia posible.
 <br>
