@@ -19,12 +19,19 @@
 	endif
 %}
 <title>{{ siteTitle }}</title>
+{% if env.ELEVENTY_RUN_MODE == "build" %}
 <style>
-{% if env.ELEVENTY_RUN_MODE == "build" %}{% render 'css/default.css' %}{% else %}@import '/css/default.css';{% endif %}
+{% render 'css/default.css' %}
 {% for style in embeddedStylesheets %}
-	{% if env.ELEVENTY_RUN_MODE == "build" %}{% render style %}{% else %}@import '/{{ style }}';{% endif %}
+	{% render style %}
 {% endfor %}
 </style>
+{% else %}
+<link rel="stylesheet" href="/css/default.css">
+{% for style in embeddedStylesheets %}
+<link rel="stylesheet" href="/{{ style }}">
+{% endfor %}
+{% endif %}
 <meta name="description" content="{{ description | default: "Pensamientos y cosas que encuentro interesantes" }}">
 <meta name="author" content="{{ site.author }}">
 <meta name="keywords" content="{{ keywords | default: "Ivan Yakimovicz, Ivan Yaki, iyaki" }}">
