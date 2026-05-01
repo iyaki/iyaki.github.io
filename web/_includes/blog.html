@@ -54,6 +54,7 @@ body {
 				a {
 					display: flex;
 					align-items: center;
+					min-height: 40px;
 				}
 			}
 		}
@@ -140,17 +141,17 @@ main {
 
 	aside > details.newsletter {
 		margin-top: 1em;
-		padding: .5em;
+		padding: 10px;
 		border-radius: 15px;
 		background-color: gainsboro;
 
 		summary {
 			padding: 0 1em;
-			border-radius: .25em;
+			border-radius: 5px;
 			color: #383838;
 
 			span {
-				transition: padding-left .5s;
+				transition: padding-left .5s var(--ease-out);
 				display: inline-block;
 				padding: .25em 0;
 			}
@@ -180,7 +181,7 @@ main {
 				background-color: #383838;
 				color: whitesmoke;
 				cursor: pointer;
-				transition: transform 160ms ease-out, box-shadow 160ms ease-out;
+				transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out);
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
@@ -190,7 +191,7 @@ main {
 				}
 
 				&:active {
-					transform: scale(0.97);
+					transform: scale(0.96);
 				}
 			}
 		}
@@ -207,6 +208,8 @@ main {
 
 	img {
 		max-width: 100%;
+		border-radius: 3px;
+		box-shadow: 0 0 0 1px light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
 	}
 
 	figure {
@@ -245,9 +248,9 @@ main {
 		}
 	}
 
-	img, pre {
-		border: 1px solid var(--text-color);
+	pre {
 		border-radius: 3px;
+		box-shadow: 0 0 0 1px var(--text-color);
 	}
 
 }

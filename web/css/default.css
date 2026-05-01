@@ -79,6 +79,7 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
 	letter-spacing: .01em;
 	hyphens: auto;
+	text-wrap: pretty;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -99,7 +100,7 @@ a {
 }
 
 a:active {
-	transform: scale(0.97);
+	transform: scale(0.96);
 }
 
 a:visited {
@@ -131,7 +132,7 @@ input, button {
 }
 
 button:active {
-	transform: scale(0.97);
+	transform: scale(0.96);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -173,8 +174,9 @@ summary {
 /* ----------------- Start Utils ----------------- */
 
 img.logo {
-	border: var(--box-border-color) solid 1px;
+	border: none;
 	border-radius: 1000px;
+	box-shadow: 0 0 0 1px var(--box-border-color);
 	transition: transform 160ms var(--ease-out);
 }
 
