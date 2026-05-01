@@ -16,6 +16,9 @@ Media queries from:
 
 	--main-content-width: 60ch;
 
+	/* Custom easing curve for snappier animations */
+	--ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+
 	@media screen and (width >= 1400px) {
 		--base-font-size: 23px;
 	}
@@ -86,7 +89,7 @@ input, button, textarea, select {
 
 a {
 	color: var(--link-color);
-	transition: color 200ms ease;
+	transition: color 160ms var(--ease-out);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -96,7 +99,7 @@ a {
 }
 
 a:active {
-	transform: scale(0.98);
+	transform: scale(0.97);
 }
 
 a:visited {
@@ -172,7 +175,7 @@ summary {
 img.logo {
 	border: var(--box-border-color) solid 1px;
 	border-radius: 1000px;
-	transition: transform 200ms ease;
+	transition: transform 160ms var(--ease-out);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -190,7 +193,7 @@ img.logo {
 dialog {
 	opacity: 0;
 	transform: scale(0.95);
-	transition: opacity 200ms ease-out, transform 200ms ease-out;
+	transition: opacity 160ms var(--ease-out), transform 160ms var(--ease-out);
 }
 
 dialog[open] {
@@ -200,11 +203,17 @@ dialog[open] {
 
 ::backdrop {
 	opacity: 0;
-	transition: opacity 200ms ease-out;
+	transition: opacity 160ms var(--ease-out);
 }
 
 dialog[open]::backdrop {
 	opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	dialog, dialog::backdrop {
+		transition: none;
+	}
 }
 
 /* ----------------- End Utils ----------------- */
