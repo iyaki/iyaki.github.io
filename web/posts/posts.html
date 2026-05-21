@@ -7,18 +7,39 @@ noindex: true
 head:
   - <link rel="alternate" type="application/atom+xml" href="/posts/feed.xml">
 ---
+<style>
+main {
+	max-width: var(--main-content-width);
+	margin-inline: 1em;
+}
+
+ul {
+	padding-inline-start: 0;
+	list-style: none;
+}
+
+li {
+	padding-block: .25em;
+}
+
+time {
+	font-family: 'Nimbus Mono PS', 'Courier New', monospace;
+	font-size: .8em;
+}
+</style>
 <header>
-	<h1>Índice de artículos de Iván Yakimovicz</h1>
+	<h1>Índice de artículos</h1>
 </header>
-<main>
+<main id="main">
 	<p><a href="https://github.com/iyaki/iyaki.github.io/tree/main/drafts"
-			title="Artículos en formato markdown" target="_blank">Versión markdown de los artículos disponible en Github</a></p>
+			title="Artículos en formato markdown" target="_blank">Versión markdown de los artículos disponibles en Github</a></p>
 	<ul>
 		{% for post in collections.post reversed %}
 		<li>
-			[{{ post.data.created | date: "%Y-%m-%d" }}]
+			<time datetime="{{ post.data.created | date: "%Y-%m-%d" }}">{{ post.data.created | date: "%Y-%m-%d" }}</time>
 			<a href="{{ post.page.url }}">{{ post.data.title }}</a>
 		</li>
 		{% endfor %}
 	</ul>
+	<a href="/blog/" class="volver">Volver al blog</a>
 </main>

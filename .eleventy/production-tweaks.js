@@ -3,6 +3,7 @@ import postcssPresetEnv from 'postcss-preset-env'
 import cssnano from 'cssnano'
 import htmlSyntax from 'postcss-html'
 import { minify as minifyHtml } from 'html-minifier-terser'
+import { load as cheerioLoad } from 'cheerio'
 
 function getPostCss() {
 	const postCssConfig = [
@@ -58,6 +59,40 @@ export default function (eleventyConfig) {
 		})
 
 		return content
+	})
+
+	eleventyConfig.addTransform('lazy load images', async function(content) {
+		if (process.env.ELEVENTY_RUN_MODE !== 'build') {
+			return content
+		}
+
+		if( !(this.page.outputPath && this.page.outputPath.endsWith(".html")) ) {
+			return content
+		}
+
+		const $ = cheerioLoad(content, null, false)
+		$('img:not([loading]):not([src="/images/logo.svg"])').attr('loading', 'lazy')
+		return $.html()
+	})
+
+	eleventyConfig.addTransform('noopener noreferrer', async function(content) {
+		if (process.env.ELEVENTY_RUN_MODE !== 'build') {
+			return content
+		}
+
+		if( !(this.page.outputPath && this.page.outputPath.endsWith(".html")) ) {
+			return content
+		}
+
+		const $ = cheerioLoad(content, null, false)
+		$('a[target="_blank"]').each((_, el) => {
+			const $el = $(el)
+			const rel = $el.attr('rel') || ''
+			if (!rel.includes('noopener')) {
+				$el.attr('rel', (rel ? rel + ' ' : '') + 'noopener noreferrer')
+			}
+		})
+		return $.html()
 	})
 
 	eleventyConfig.addTransform('minify xml', async function(content) {

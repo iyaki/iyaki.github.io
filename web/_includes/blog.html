@@ -19,6 +19,7 @@ body {
 		.header-website {
 			order: 0;
 			width: fit-content;
+			text-align: center;
 
 			figure {
 				margin: 0;
@@ -26,7 +27,6 @@ body {
 
 			.iyaki {
 				font-size: 1.5rem;
-				text-align: center !important;
 				margin: 0;
 			}
 		}
@@ -54,7 +54,7 @@ body {
 				a {
 					display: flex;
 					align-items: center;
-					min-height: 40px;
+					min-height: 44px;
 				}
 			}
 		}
@@ -69,7 +69,7 @@ body {
 			outline-offset: 2px;
 		}
 
-		h1 {
+		h2 {
 			margin: 0;
 			font-size: 3em;
 			font-family: 'Nimbus Mono PS', 'Courier New', monospace;
@@ -143,12 +143,13 @@ main {
 		margin-top: 1em;
 		padding: 10px;
 		border-radius: 15px;
-		background-color: gainsboro;
+		background-color: var(--newsletter-bg);
 
 		summary {
 			padding: 0 1em;
 			border-radius: 5px;
-			color: #383838;
+			color: var(--newsletter-summary-text);
+			transition: background-color 160ms var(--ease-out);
 
 			span {
 				transition: padding-left .5s var(--ease-out);
@@ -156,12 +157,19 @@ main {
 				padding: .25em 0;
 			}
 
-			&:hover {
-				background-color: lightgray;
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					background-color: var(--newsletter-summary-hover);
 
-				span {
-					padding-left: .5em;
+					span {
+						padding-left: .5em;
+					}
 				}
+			}
+
+			&:focus-visible {
+				outline: 2px solid var(--link-color);
+				outline-offset: 2px;
 			}
 		}
 
@@ -178,14 +186,14 @@ main {
 
 			button {
 				border: none;
-				background-color: #383838;
-				color: whitesmoke;
+				background-color: var(--newsletter-btn-bg);
+				color: var(--newsletter-btn-text);
 				cursor: pointer;
 				transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out);
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
-						box-shadow: 3px 3px 3px #383838;
+						box-shadow: 3px 3px 3px var(--newsletter-btn-bg);
 						translate: -2px -2px;
 					}
 				}
@@ -227,14 +235,15 @@ main {
 		width: 1em;
 		height: 0.8em;
 		margin-left: 1px;
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='dimgray' viewBox='0 -3 24 24'%3E%3Cpath d='M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z'/%3E%3Cpath d='M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z'/%3E%3C/svg%3E");
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' viewBox='0 -3 24 24'%3E%3Cpath d='M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z'/%3E%3Cpath d='M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z'/%3E%3C/svg%3E");
+	opacity: 0.5;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
 		display: inline-block;
 	}
 
-	section > h1 {
+	section > h2 {
 		font-size: 1.7em;
 	}
 
@@ -250,7 +259,7 @@ main {
 
 	pre {
 		border-radius: 3px;
-		box-shadow: 0 0 0 1px var(--text-color);
+		box-shadow: 0 0 0 1px var(--box-border-color);
 	}
 
 }
@@ -273,7 +282,7 @@ main :where(h1, h2, h3, h4, h5, h6) {
 		&::before {
 			display: inline-block;
 			content: "#";
-			color: grey;
+			color: var(--heading-anchor-color);
 			font-weight: 400;
 			font-size: .8em;
 			margin-left: -.8em;
@@ -317,7 +326,7 @@ aside[aria-label="Índice"] {
 	overflow-y: auto;
 	overscroll-behavior: contain;
 
-	transition: filter 200ms ease;
+	transition: filter 200ms var(--ease-out);
 	filter: opacity(0.25);
 
 	@media (hover: hover) and (pointer: fine) {
@@ -346,7 +355,7 @@ aside[aria-label="Índice"] {
 
 <div class="header-blog">
 
-<h1><a href="/blog" title="Inicio">mi<br>Blog</a></h1>
+<h2><a href="/blog" title="Inicio">mi<br>Blog</a></h2>
 
 </div>
 
@@ -358,6 +367,8 @@ aside[aria-label="Índice"] {
 		src="/images/logo.svg"
 		alt="Logo de mi web, unos anteojos 3D de cartón blanco con celofán azul y rojo"
 		class="logo"
+		width="64"
+		height="64"
 		style="height: 4em; aspect-ratio: 1; view-transition-name: logo"
 	>
 	</figure>
@@ -385,7 +396,7 @@ aside[aria-label="Índice"] {
 
 <hr>
 
-<main>
+<main id="main">
 
 <aside aria-label="widget de suscripción a newsletter">
 <details class="newsletter">
@@ -396,9 +407,10 @@ Recibí los posts nuevos directamente en tu e-mail.
 	<input type="hidden" name="uri" value="https://iyaki.ar/posts/feed.xml">
 
 	<label>
-	<span lang="en">E-mail</span>:
-	<input type="email" name="email" required="">
+		<span lang="en">E-mail</span> <span aria-label="requerido">(requerido)</span>:
+		<input type="email" name="email" required aria-describedby="email-hint">
 	</label>
+	<p id="email-hint" style="font-size: 0.8em; margin: 0.5em 0 0;">Recibirás un e-mail de confirmación.</p>
 
 	<button type="submit">Subscribirme</button>
 </form>
@@ -411,7 +423,7 @@ Recibí los posts nuevos directamente en tu e-mail.
 </section>
 
 {% if tags contains "post" %}
-<a href="/blog/" class="volver">Volver</a>
+<a href="/blog/" class="volver">Volver al blog</a>
 
 <aside aria-label="widget de comentarios">
 <script
@@ -433,7 +445,7 @@ Recibí los posts nuevos directamente en tu e-mail.
 ></script>
 </aside>
 
-<script type="module" defer>
+<script type="module">
 // Script para que el índice se muestre abierto por default en Desktop
 const mql = window.matchMedia('(min-width: 1400px)')
 if(mql.matches) {

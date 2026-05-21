@@ -1,8 +1,25 @@
-/*
-Media queries from:
-- https://getbootstrap.com/docs/5.3/layout/breakpoints/#media-queries
-- https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
-*/
+/* ----------------- Skip link for keyboard navigation ----------------- */
+
+.skip-link {
+	position: absolute;
+	top: -100%;
+	left: 1em;
+	z-index: 1000;
+	padding: 0.5em 1em;
+	background: var(--text-color);
+	color: var(--background-color);
+	text-decoration: none;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	font-size: 0.9rem;
+	border-radius: 3px;
+	transition: top 160ms var(--ease-out);
+}
+
+.skip-link:focus {
+	top: 1em;
+	outline: 2px solid var(--link-color);
+	outline-offset: 2px;
+}
 
 /* ----------------- Start defaults ----------------- */
 
@@ -19,12 +36,25 @@ Media queries from:
 	/* Custom easing curve for snappier animations */
 	--ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 
-	--background-color: light-dark(#fff, #34342f);
-	--text-color: light-dark(#383838, whitesmoke);
+	--background-color: light-dark(#fefefe, #34342f);
+	--text-color: light-dark(#383838, #f5f5f5);
 	--link-color: light-dark(#0074d2, lightskyblue);
 	--link-hover-color: light-dark(#008cff, deepskyblue);
 	--link-visited-color: light-dark(#6700dc, plum);
-	--box-border-color: light-dark(black, darkgray);
+	--box-border-color: light-dark(#1a1a1a, darkgray);
+	--status-in-progress-bg: light-dark(#fff8e1, rgba(133, 100, 4, 0.15));
+	--status-in-progress-text: light-dark(#856404, #e6c74a);
+	--status-in-progress-border: light-dark(rgba(133, 100, 4, 0.3), rgba(133, 100, 4, 0.3));
+	--status-abandoned-bg: light-dark(#fff0f3, rgba(114, 28, 36, 0.15));
+	--status-abandoned-text: light-dark(#721c24, #e6737a);
+	--status-abandoned-border: light-dark(rgba(114, 28, 36, 0.3), rgba(114, 28, 36, 0.3));
+	--time-color: light-dark(#856404, #e6c74a);
+	--newsletter-bg: light-dark(gainsboro, #3a3a35);
+	--newsletter-btn-bg: light-dark(#383838, #4a4a45);
+	--newsletter-btn-text: light-dark(#f5f5f5, #f5f5f5);
+	--newsletter-summary-text: light-dark(#383838, #f5f5f5);
+	--newsletter-summary-hover: light-dark(#d3d3d3, #4a4a45);
+	--heading-anchor-color: light-dark(#999, #aaa);
 }
 
 ::selection {
@@ -126,7 +156,7 @@ a:focus-visible {
 }
 
 blockquote {
-	box-shadow: -20px 0px 0px -3px var(--text-color);
+	box-shadow: -20px 0px 0px -3px var(--status-in-progress-text);
 	padding-left: 1em;
 }
 
@@ -155,31 +185,42 @@ summary {
 
 /* Status labels */
 .status-label {
+	display: inline-block;
+	padding: 0.15em 0.5em;
+	font-size: 0.7em;
+	font-weight: 400;
+	border-radius: 0.25em;
+	margin-left: 0.5em;
+	vertical-align: middle;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
 	border: 1px solid transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-	.status-label.in-progress {
-		border-color: rgba(133, 100, 4, 0.3);
-	}
-	.status-label.abandoned {
-		border-color: rgba(114, 28, 36, 0.3);
-	}
+.status-label.in-progress {
+	background-color: var(--status-in-progress-bg);
+	color: var(--status-in-progress-text);
+	border-color: var(--status-in-progress-border);
+}
+
+.status-label.abandoned {
+	background-color: var(--status-abandoned-bg);
+	color: var(--status-abandoned-text);
+	border-color: var(--status-abandoned-border);
+}
+
+pre {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 /* ----------------- End defaults ----------------- */
 
-/* ----------------- Start Animations ----------------- */
-
-@media screen and (prefers-reduced-motion: no-preference) {
-	@view-transition {
-		navigation: auto;
-	}
-}
-
-/* ----------------- End Animations ----------------- */
-
 /* ----------------- Start Utils ----------------- */
+
+.nowrap {
+	white-space: nowrap;
+}
 
 img.logo {
 	border: none;
@@ -197,6 +238,23 @@ img.logo {
 .iyaki {
 	font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', 'P052', serif;
 	font-weight: normal;
+}
+
+.site-footer {
+	text-align: center;
+	padding: 2em 1em;
+	font-size: 0.8em;
+	color: var(--time-color);
+}
+
+/* ----------------- End Utils ----------------- */
+
+/* ----------------- Start Animations ----------------- */
+
+@media screen and (prefers-reduced-motion: no-preference) {
+	@view-transition {
+		navigation: auto;
+	}
 }
 
 /* Dialog animations */
@@ -226,4 +284,20 @@ dialog[open]::backdrop {
 	}
 }
 
-/* ----------------- End Utils ----------------- */
+.volver {
+	display: inline-block;
+	padding: 0.5em 1em;
+	font-family: var(--system-sans);
+	font-size: 0.8em;
+	text-decoration: none;
+	color: var(--text-color);
+	border-radius: 3px;
+	transition: background-color 160ms var(--ease-out);
+}
+
+.volver:hover {
+	background-color: light-dark(rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.05));
+	text-decoration: underline;
+}
+
+/* ----------------- End Animations ----------------- */

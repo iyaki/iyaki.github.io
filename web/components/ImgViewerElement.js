@@ -1,6 +1,10 @@
 const img = document.createElement('img');
-img.style.maxWidth = 'calc(100vw - 280px)';
+img.style.maxWidth = 'min(calc(100vw - 280px), calc(100vw - 20px))';
 img.style.maxHeight = 'calc(100vh - 20px)';
+img.style.width = 'auto';
+img.style.height = 'auto';
+img.style.display = 'block';
+img.style.margin = '0 auto';
 img.style.width = 'auto';
 img.style.height = 'auto';
 img.style.display = 'block';
@@ -51,12 +55,12 @@ closeBtn.type = 'button';
 Object.assign(closeBtn.style, {
   position: 'fixed',
   top: '50%',
-  right: '40px',
+  right: '16px',
   transform: 'translateY(-50%)',
   zIndex: '2147483648',
   display: 'none',
-  width: '2em',
-  height: '2em',
+  width: '2.5em',
+  height: '2.5em',
   lineHeight: '0',
   appearance: 'none',
   border: 'none',
@@ -92,12 +96,12 @@ newTabAnchor.target = '_blank';
 Object.assign(newTabAnchor.style, {
   position: 'fixed',
   top: '50%',
-  left: '40px',
+  left: '16px',
   transform: 'translateY(-50%)',
   zIndex: '2147483648',
   display: 'none',
-  width: '1.5em',
-  height: '1.5em',
+  width: '2.5em',
+  height: '2.5em',
   color: 'currentColor',
   lineHeight: '0',
   appearance: 'none',
