@@ -2,12 +2,6 @@
 <html lang="es-AR">
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-<a href="#main" class="skip-link">Saltar al contenido principal</a>
 {% liquid
 	assign siteTitle = site.name
 
@@ -57,6 +51,9 @@
 <!-- <meta property="og:image" content="/images/logo.webp"> -->
 <meta property="og:url" content="{{ site.url }}{{ page.url | url }}">
 <meta property="og:site_name" content="{{ site.name }}">
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 
 {{ content }}
 
