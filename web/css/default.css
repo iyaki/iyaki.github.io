@@ -245,7 +245,7 @@ img.logo {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 0.2em;
+	gap: 0.5em;
 	margin-block: 2.5em 1em;
 	padding: 0.5em 1em;
 	font-size: 0.75em;
@@ -270,6 +270,7 @@ img.logo {
 .site-footer-message {
 	opacity: 0.65;
 	font-size: 0.9em;
+	text-align: center;
 }
 
 .site-footer-nav {
@@ -278,6 +279,7 @@ img.logo {
 }
 
 .site-footer-nav a {
+	margin-top: 1em;
 	color: var(--link-color);
 	text-decoration: none;
 }
