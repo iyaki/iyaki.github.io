@@ -34,6 +34,7 @@ head:
 				<li><a href="#docker-compose">Múltiples containers con Docker compose</a>
 				<li><a href="#dotfiles">Sintiendonos como en casa con dotfiles</a>
 				<li><a href="#impresiones-finales">Impresiones finales</a>
+				<li><a href="#actualizaciones">Actualizaciones</a>
 			</ul>
 		</nav>
 	</details>
@@ -343,7 +344,7 @@ docker-php-ext-enable xdebug
 <blockquote>
 <p>Al haber cambiado el <em>workspaceFolder</em> en la configuración es posible que luego de recrear el container el <span llang="en">Visual Studio Code</span> falle al intentar conectarse. Si esto ocurre solo debemos dar click a <strong lang="en">Open workspace</strong> y buscar el directorio que hemos configurado para ser el nuevo <em>workspaceFolder</em> (<code>/app/</code>).</p>
 </blockquote>
-<p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/https://github.com/iyaki/devcontainers-guide-app-example/tree/cc57ef417d3f753114bada6d676c8cd4a99a658a" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
+<p style="text-align: center; margin-block: 3em;"><a href="https://github.com/iyaki/devcontainers-guide-app-example/tree/cc57ef417d3f753114bada6d676c8cd4a99a658a" target="_blank">Link al repositorio del proyecto de ejemplo con los cambios hasta este punto de la guía</a>.</p>
 <h2 id="intermedio"><a href="#intermedio">Intermedio</a></h2>
 <p>Por fin, nuestro entorno de desarrollo es perfecto y estamos listos para seguir agregando valor a la vida de millones mediante nuestra aplicación.</p>
 <p>Nuestra siguiente funcionalidad será recibir un número como parámetro y saludar indicando si el número es par o impar.</p>
@@ -354,7 +355,7 @@ docker-php-ext-enable xdebug
 <p>Otra herramienta que nos falta.</p>
 <p>🫠</p>
 <blockquote>
-<p>Si trabajan como DevOps (si, si, ya se que ne realidad no es un rol), SysAdmin, Platfom engineer, etc lo que van a leer no es ninguna novedad; pero si son programadores es importante que sepan esto.<br>
+<p>Si trabajan como DevOps (si, si, ya se que en realidad no es un rol), SysAdmin, Platfom engineer, etc lo que van a leer no es ninguna novedad; pero si son programadores es importante que sepan esto.<br>
 Este tipo de trabajos, aunque gratificantes cuando las cosas finalmente funcionan, pueden ser sumamente tediosos e iterativos.<br>
 Aprecien que alguien se preocupe por ustedes e intente facilitarles las cosas. Si ven un DevOps cansado ofrezcanle un cafe y recuereden, en <a href="https://es.wikipedia.org/wiki/D%C3%ADa_del_Administrador_de_Sistemas_Inform%C3%A1ticos" target="_blank">sú día</a> comprar unas facturas para compartir o algo por el estilo.</p>
 </blockquote>
@@ -738,7 +739,16 @@ VALUES
 <p>Esto ha sido todo. Espero que les sea de utilidad y como siempre, por dudas, preguntas, consejos, recomendaciones o lo que sea que quieran compartir, tienen disponible la caja de comentarios o pueden escribirme a <a href="mailto:me@iyaki.ar" target="_blank">me@iyaki.ar</a>.</p>
 <p>Hasta pronto!</p>
 
-<script type="module" defer>
+<h2 id="actualizaciones"><a href="#actualizaciones">Actualizaciones</a></h2>
+<time datetime="2026-06-25">25/06/2026</time>
+<p>
+	A principios del 2026 comencé a utilizar <a href="https://podman.io/" target="_blank" rel="noopener noreferrer" lang="en" hreflang="en">podman</a> como gestor de containers. La transición fue de lo más sencilla, lo único que hice fue seguir las instrucciones de instalación, crear un <span lang="en">symlink</span> de <code>/usr/bin/docker</code> a <code>/usr/bin/podman</code> para facilitar la integración con otras herramientas ya que suelen venir preparadas por defecto para trabajar con docker. Y agregar en mi <code>.bashrc</code> una variable de entorno para evitar problemas al montar volumenes utilizando devcontainers. Quedando:
+</p>
+<pre><code class="language-diff">
++ export PODMAN_USERNS=keep-id
+</code></pre>
+
+<script type="module">
 import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
 import diff from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/diff.min.js';
 import php from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/php.min.js';
@@ -754,7 +764,7 @@ hljs.registerLanguage('dockerfile', dockerfile);
 hljs.registerLanguage('bash', bash);
 hljs.highlightAll()
 </script>
-<script type="module" defer>
+<script type="module">
 import ImgViewer from '/components/ImgViewerElement.js'
 customElements.define('img-viewer', ImgViewer);
 </script>
