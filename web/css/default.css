@@ -49,9 +49,9 @@
 	--status-abandoned-text: light-dark(#721c24, #e6737a);
 	--status-abandoned-border: light-dark(rgba(114, 28, 36, 0.3), rgba(114, 28, 36, 0.3));
 	--time-color: light-dark(#856404, #e6c74a);
-	--newsletter-bg: light-dark(gainsboro, #3a3a35);
-	--newsletter-btn-bg: light-dark(#383838, #4a4a45);
-	--newsletter-btn-text: light-dark(#f5f5f5, #f5f5f5);
+	--newsletter-bg: light-dark(#ececec, #3a3a35);
+	--newsletter-btn-bg: light-dark(#0074d2, #5a9fd4);
+	--newsletter-btn-text: light-dark(#ffffff, #ffffff);
 	--newsletter-summary-text: light-dark(#383838, #f5f5f5);
 	--newsletter-summary-hover: light-dark(#d3d3d3, #4a4a45);
 	--heading-anchor-color: light-dark(#999, #aaa);
