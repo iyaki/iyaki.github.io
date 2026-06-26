@@ -175,12 +175,69 @@ export default class ImgViewerElement extends HTMLElement {
   }
 
   connectedCallback() {
+    // Host container styling
+    this.style.display = 'inline-block';
+    this.style.position = 'relative';
+    this.style.overflow = 'hidden';
+    this.style.cursor = 'pointer';
+    this.style.lineHeight = '0';
+    this.style.borderRadius = '3px';
+
+    // Find the thumbnail image for hover effect
+    const thumbnail = this.querySelector('img');
+    if (thumbnail) {
+      thumbnail.style.transition = 'transform 160ms cubic-bezier(0.23, 1, 0.32, 1)';
+      thumbnail.style.display = 'block';
+    }
+
+    // Create magnifier overlay
+    const overlay = document.createElement('div');
+    Object.assign(overlay.style, {
+      position: 'absolute',
+      inset: '0',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      zIndex: '1',
+      pointerEvents: 'none'
+    });
+
+    overlay.innerHTML = `
+<span style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Ampliar</span>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="2em" height="2em" style="opacity: 0; transform: scale(0.8); transition: opacity 160ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms cubic-bezier(0.23, 1, 0.32, 1); color: white; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.75));">
+  <circle cx="11" cy="11" r="8"/>
+  <line x1="23" y1="23" x2="16.65" y2="16.65"/>
+</svg>`;
+
+    this.appendChild(overlay);
+    const svgIcon = overlay.querySelector('svg');
+
+    // Gate hover on fine pointer devices (skip on touch)
+    const isFinePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    this.addEventListener('mouseenter', () => {
+      if (!isFinePointer) return;
+      if (thumbnail) thumbnail.style.transform = 'scale(1.03)';
+      svgIcon.style.opacity = '1';
+      svgIcon.style.transform = 'scale(1)';
+    });
+
+    this.addEventListener('mouseleave', () => {
+      if (!isFinePointer) return;
+      if (thumbnail) thumbnail.style.transform = 'scale(1)';
+      svgIcon.style.opacity = '0';
+      svgIcon.style.transform = 'scale(0.8)';
+    });
+
+    // Open dialog on click
     this.addEventListener('click', (ev) => {
       if (ev.ctrlKey || ev.altKey) return;
+      const image = this.querySelector('img');
+      if (!image) return;
       ev.preventDefault();
 
-      img.src = ev.target.src;
-      newTabAnchor.href = ev.target.src;
+      img.src = image.src;
+      newTabAnchor.href = image.src;
       openDialog();
     });
   }
