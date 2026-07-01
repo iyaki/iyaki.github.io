@@ -40,7 +40,7 @@ head:
 	</details>
 </aside>
 
-<p>Los lenguajes de programación evolucionan a una velocidad increíble, esto puede generar que tengamos que trabajar con distintas versiones de un mismo lenguaje de programación para distintos proyectos pero en una misma computadora.</p>
+<p>Los lenguajes de programación evolucionan a una velocidad increíble, esto puede generar que tengamos que trabajar con distintas versiones de un mismo lenguaje para distintos proyectos pero en una misma computadora.</p>
 <p>Este es un problema bien conocido y con algunas soluciones que las distintas comunidades han ido desarrollando con el tiempo, dándonos herramientas específicas como <a href="https://github.com/nvm-sh/nvm" target="_blank" hreflang="en">nvm</a> para node.js o algunas con un mayor alcance como <a href="https://asdf-vm.com/" target="_blank" hreflang="en">asdf-vm</a>.</p>
 <p>Y aunque estas soluciones pueden ser excelentes a la hora de permitirnos cambiar rápidamente entre versiones de nuestros lenguajes de programación, también presentan algunos inconvenientes, ya que, al basar su funcionamiento en el compilado desde el código fuente de las distintas versiones, requieren que uno cuente con todas las dependencias necesarias para poder compilarlas.</p>
 <p>Esto en muchos casos puede resolverse simplemente con la ayuda de Google, pero en otros casos puede resultar bastante complicado.</p>
@@ -68,7 +68,7 @@ head:
 <p><strong>Para poder seguir los distintos pasos deberán contar con Docker instalado y ejecutándose.</strong></p>
 <p>Por último, para aquellos con experiencia en Docker. Muchos de los “problemas” que solucionaremos a lo largo de esta guía mediante las características y opciones de devcontainers podrían resolverse (a veces, incluso de manera más simple) mediante el uso de Docker puro o eligiendo mejor las imágenes base, pero el objetivo aquí es explorar estas características y opciones.</p>
 <h2 id="nuevo-proyecto"><a href="#nuevo-proyecto">Comenzando un nuevo proyecto con devcontainers</a></h2>
-<p>Como ejemplo para poder explicar el funcionamiento de estos entornos de desarrollo crearemos una pequeña aplicación <abbr title="PHP: Hypertext Preprocessor" lang="en">PHP</abbr>.</p>
+<p>Como ejemplo para poder explicar el funcionamiento de estos entornos de desarrollo crearemos una pequeña aplicación <abbr title="PHP: Hypertext Preprocessor" lang="en">PHP</abbr>, pero los conceptos que aplicaremos y herramientas que usaremos sirven para proyectos Python, Ruby, Java, Go, Typescript o cualquier otro lenguaje.</p>
 <p>Por lo que en un directorio vacío comenzaremos creando el archivo <code>public/index.php</code> y en el escribiremos:</p>
 <pre><code class="language-php">Hola mundo
 </code></pre>
@@ -747,6 +747,7 @@ VALUES
 <pre><code class="language-diff">
 + export PODMAN_USERNS=keep-id
 </code></pre>
+Hoy mas que nunca los contenedores de desarrollo se han convertido en una herramienta indispensable para mí ya que me permiten trabajar dandole rienda suleta a agentes de inteligencia artificial sin miedo a que destruyan mi sistema operativo. No es un tema que haya tratado en esta guía pero mediante <span lang="en">features</span> es extremadamente simple instalar agentes como <span lang="en">Claude Code</span>, <span lang="en">OpenCode</span> o <span lang="en">Copilot</span> y podemos mantener la sesión iniciada y compartir todas nuestras configuraciones entre contenedores y nuestro equipo mediante el montaje de volúmenes.
 
 <script type="module">
 import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
