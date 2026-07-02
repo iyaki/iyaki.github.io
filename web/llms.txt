@@ -1,0 +1,36 @@
+# iyaki.ar
+
+> Personal portfolio and blog of Iván Yakimovicz, product engineer and software architect in Argentina. Content in Spanish about software engineering, technical leadership, and product management.
+
+Static site generated with Eleventy (11ty). No invasive trackers, no third-party JavaScript except for comments (giscus) and anonymized analytics (GoatCounter).
+
+## Main sections
+
+- [Home](https://iyaki.ar/) - Professional introduction and project links
+- [Blog](https://iyaki.ar/blog/) - Articles on development, architecture, and technology
+- [Projects](https://iyaki.ar/projects/) - Tools, experiments, and personal work
+- [Curriculum](https://iyaki.ar/resources/CV%20IVAN%20YAKIMOVICZ.pdf) - CV in PDF
+
+## Featured articles
+
+- [Devcontainers: de cero a cien](https://iyaki.ar/posts/20250304_devcontainers_de_cero_a_cien/20250304_devcontainers_de_cero_a_cien.html) - Practical guide to development containers
+- [Conoce tus herramientas](https://iyaki.ar/posts/20240121_conoce_tus_herramientas/20240121_conoce_tus_herramientas.html) - The importance of mastering your daily toolkit
+- [No solo de software vive el hombre](https://iyaki.ar/posts/20240328_no_solo_de_software_vive_el_hombre/20240328_no_solo_de_software_vive_el_hombre.html) - Laws and principles for project management (Pareto, Conway, Brooks)
+- [.gitconfig](https://iyaki.ar/posts/20240224_gitconfig/20240224_gitconfig.html) - My personal git configuration for programming
+
+## Notable projects
+
+- [Simple Newsletter](https://simple-newsletter.com/) - Free service that converts RSS feeds into email newsletters
+- [Curated](https://curated.iyaki.ar/) - Curated content aggregator
+- [SpecRalph](https://github.com/iyaki/specralph) - Cross-platform implementation of Ralph Wiggum Loops for iterative development with AI agents
+- [skills-update](https://github.com/iyaki/skills-update) - GitHub Action that keeps agent skills updated in CI
+
+## Contact
+
+- **LinkedIn:** https://www.linkedin.com/in/ivan-yakimovicz/
+- **GitHub:** https://github.com/iyaki
+
+## Optional
+
+- [Atom Feed](https://iyaki.ar/posts/feed.xml) - Blog RSS/Atom feed
+- [Sitemap](https://iyaki.ar/sitemap.xml) - Site map for indexing

@@ -10,6 +10,7 @@ export default function (eleventyConfig) {
 
 
 	eleventyConfig.addPassthroughCopy(BASE_PATH + '/robots.txt')
+	eleventyConfig.addPassthroughCopy(BASE_PATH + '/llms.txt')
 	// eleventyConfig.addPassthroughCopy(BASE_PATH + '/css')
 	eleventyConfig.addPassthroughCopy(BASE_PATH + '/images')
 	eleventyConfig.addPassthroughCopy(BASE_PATH + '/components')
