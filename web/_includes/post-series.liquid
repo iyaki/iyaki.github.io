@@ -1,0 +1,27 @@
+{% comment %}
+	Navegación de series de posts. Agrupa posts que compartan un tag con
+	prefijo `serie-` (ej.: serie-conocimiento). Requiere ≥2 posts para mostrarse.
+	Args: tags, collections, page, open (bool, opcional)
+{% endcomment %}
+{% for tag in tags %}
+	{% assign series_name = tag | remove_first: 'serie-' %}
+	{% if series_name != tag %}
+		{% assign series_posts = collections[tag] | sort: 'date' %}
+		{% if series_posts.size > 1 %}
+			{% assign current_part = false %}
+			{% for p in series_posts %}
+				{% if p.url == page.url %}{% assign current_part = forloop.index %}{% endif %}
+			{% endfor %}
+<aside class="post-series" aria-label="Serie de artículos: {{ series_name }}">
+	<details{% if open %} open{% endif %}>
+		<summary>Serie «{{ series_name }}»{% if current_part %} — parte {{ current_part }} de {{ series_posts.size }}{% endif %}</summary>
+		<ol>
+			{% for p in series_posts %}
+				<li{% if p.url == page.url %} aria-current="page"{% endif %}><a href="{{ p.url | url }}">{{ p.data.title }}</a></li>
+			{% endfor %}
+		</ol>
+	</details>
+</aside>
+		{% endif %}
+	{% endif %}
+{% endfor %}

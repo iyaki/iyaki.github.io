@@ -423,6 +423,35 @@ aside[aria-label="Índice"] {
 	}
 }
 
+aside.post-series {
+	margin-block-start: 2em;
+	font-size: .9em;
+
+	details {
+		border-block: 1px solid var(--box-border-color);
+		padding-block: .4em .6em;
+	}
+
+	summary {
+		cursor: pointer;
+		color: var(--time-color);
+	}
+
+	ol {
+		margin-block: .75em 0;
+		padding-inline-start: 1.5em;
+	}
+
+	li {
+		padding-block: .25em;
+	}
+
+	li[aria-current="page"] a {
+		color: var(--text-color);
+		font-style: italic;
+		text-decoration: none;
+	}
+}
 </style>
 {% endif %}
 <header>
@@ -497,10 +526,13 @@ aside[aria-label="Índice"] {
 </aside>
 
 <section>
+	{% render 'post-series', tags: tags, collections: collections, page: page %}
 	{{ content }}
 </section>
 
 {% if tags contains "post" %}
+{% render 'post-series', open: true, tags: tags, collections: collections, page: page %}
+
 <a href="/blog/" class="volver">Volver al blog</a>
 
 <aside aria-label="widget de comentarios">
