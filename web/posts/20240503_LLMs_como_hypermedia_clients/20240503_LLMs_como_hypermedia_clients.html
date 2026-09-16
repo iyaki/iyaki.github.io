@@ -8,8 +8,7 @@ epigraph: Algunas pruebas utilizando IA para consumir APIs.
 tags:
   - post
 head:
-  - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css" media="(prefers-color-scheme: dark)">'
-  - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/xcode.min.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">'
+  - '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/microlighter@2/dist/themes/vscode-plus.css">'
 ---
 <h1>La IA conversacional como <span lang="en">hypermedia client</span></h1>
 <p><time datetime="2024-05-03">03/05/2024</time></p>
@@ -26,7 +25,7 @@ head:
 <p>El experimento se centró en probar la capacidad de la <abbr title="Inteligencia Artificial">IA</abbr> para navegar por una página web e interactuar con la misma, extrayendo información o incluso realizando acciones.</p>
 <p>Para eso, primero, utilicé esta misma página, <a href="https://iyaki.ar" target="_blank">iyaki.ar</a>. Por alguna razón no supo identificar como ir desde la página principal al blog. Pero una vez “dentro” del blog no tuvo problemas para identificar los distintos posts y, posteriormente, poder recopilar información de los mismos; pudiendo incluso extraer el archivo <i>.gitconfig</i> de mi post <a href="/posts/20240224_gitconfig/" target="_blank">.gitconfig</a> y realizandole algunas modificaciones, como eliminar la mayoría de los comentarios o unificar una sección que se encontraba duplicada (la de <code>[diff]</code>).</p>
 <p>A continuación les dejo un <i>diff</i> entre el .gitconfig original y el modificado por la IA:</p>
-<pre><code class="language-diff">--- a/.gitconfig
+<pre><code class="language-git-diff">--- a/.gitconfig
 +++ b/.gitconfig
 @@ -1,62 +1,67 @@
  [user]
@@ -149,9 +148,4 @@ head:
 <p>Esto es todo por hoy, espero que les haya resultado tan interesante como a mí. Como siempre, si quieren conversar al respecto pueden dejar un comentario o contactarme vía <span lang="en">e-mail</span> a <a href="mailto:me@iyaki.ar" target="_blank">me@iyaki.ar</a>.</p>
 <p lang="en">Bye!</p>
 
-<script type="module" defer>
-	import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
-	import diff from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/diff.min.js';
-	hljs.registerLanguage('diff', diff);
-	hljs.highlightAll()
-</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/microlighter@2/dist/microlighter.min.js"></script>

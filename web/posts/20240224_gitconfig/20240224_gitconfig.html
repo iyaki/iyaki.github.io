@@ -9,8 +9,7 @@ tags:
   - post
   - serie-herramientas
 head:
-  - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css" media="(prefers-color-scheme: dark)">'
-  - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.min.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">'
+  - '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/microlighter@2/dist/themes/vscode-plus.css">'
 ---
 <h1>.gitconfig</h1>
 <p><time datetime="2024-02-24">24/02/2024</time></p>
@@ -104,7 +103,7 @@ head:
 .vscode
 </code></pre>
 <p>Esta era mi configuración de git desde hace ya unos años y hasta hace unos pocos días, cuando, en base al artículo que les compartí al principio del post decidí hacer los siguientes cambios y adiciones:</p>
-<pre><code class="language-.gitignore">[merge]
+<pre><code class="language-toml">[merge]
     conflictstyle = zdiff3 # Mejor resolución de conflictos durante los merge
 
 [rerere]
@@ -130,7 +129,4 @@ head:
 <p>Esto es todo por hoy, espero que puedan aprovechar alguna de estas configuraciones para mejorar sus propios flujos de trabajo.</p>
 <p lang="ru">Пока́!</p>
 
-<script type="module" defer>
-	import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js'
-	hljs.highlightAll()
-</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/microlighter@2/dist/microlighter.min.js"></script>

@@ -8,8 +8,7 @@ epigraph: Si alguna vez tuviste problemas gestionando múltiples versiones de un
 tags:
   - post
 head:
-  - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css" media="(prefers-color-scheme: dark)">'
-  - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/xcode.min.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">'
+  - '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/microlighter@2/dist/themes/vscode-plus.css">'
 ---
 <h1>Devcontainers de cero a cien, en español</h1>
 <p><time datetime="2025-03-04T01:13:04.984Z">03/03/2025</time></p>
@@ -138,7 +137,7 @@ Durante la ejecución del <i lang="en">Wizard</i>, y utilizando el template de P
 <p>Desde Docker Hub, en la sección de tags buscamos el correspondiente a la versión 8.4.</p>
 <p><img-viewer><a href="15-dockerhub-php.png"><img src="15-dockerhub-php.png" alt="Captura de pantalla de la imagen oficial de PHP en Docker Hub" loading="lazy" decoding="async"></a></img-viewer></p>
 <p>Ahora que ya tenemos el nombre de la imagen y tag que deseamos utilizar en nuestro <code>.devcontainer/devcontainer.json</code> modificamos el atributo <em lang="en">image</em>.</p>
-<pre><code class="language-diff">{
+<pre><code class="language-git-diff">{
         &quot;name&quot;: &quot;PHP&quot;,
         // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 -       &quot;image&quot;: &quot;mcr.microsoft.com/devcontainers/php:1-8.2-bullseye&quot;,
@@ -164,7 +163,7 @@ Durante la ejecución del <i lang="en">Wizard</i>, y utilizando el template de P
 <p><img-viewer><a href="18-devcontainers-features-git.png"><img src="18-devcontainers-features-git.png" alt="Captura de pantalla del feature de git en el Visual Studio Code" loading="lazy" decoding="async"></a></img-viewer></p>
 <p>Luego damos click a <strong>OK</strong> y en el siguiente paso elegimos la opción <strong lang="en">Keep Defaults</strong>.</p>
 <p>Esto nos agregará una nueva sección en nuestro archivo de configuración.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
         // &quot;customizations&quot;: {},
 
         // Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -204,7 +203,7 @@ docker-php-ext-enable xdebug
 <p>Por suerte para nosotros, devcontainers nos da una mejor solución.</p>
 <p>Podemos configurarlo para que luego de crearse el container ejecute comandos que definamos.</p>
 <p>Esto lo haremos mediante el atributo <em>postCreateCommand</em> de nuestro archivo de configuración.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
         &quot;forwardPorts&quot;: [8080],
         &quot;features&quot;: {
                 &quot;ghcr.io/devcontainers/features/git:1&quot;: {}
@@ -228,7 +227,7 @@ docker-php-ext-enable xdebug
 <p>¿Cómo es posible que cada vez que abrimos nuestro container de desarrollo debamos iniciar manualmente nuestro servidor web?</p>
 <p>¡Inaceptable!</p>
 <p>Aprovecharemos el atributo <em>postStartCommand</em> para arrancar automáticamente nuestro web server.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
     },
 
     // Use 'postCreateCommand' to run commands after the container is created.
@@ -254,7 +253,7 @@ docker-php-ext-enable xdebug
 <p>Vamos a usar en nuestro entorno de desarrollo el mismo websever que utilizaremos en producción.</p>
 <p>Existen varias opciones perfectamente válidas, pero hoy usaremos <a href="https://frankenphp.dev/" target="_blank" hreflang="en" lang="en">FrankenPHP</a>.</p>
 <p>Para esto, eliminaremos el <em>postStartCommand</em> que acabamos de agregar y cambiaremos la imagen por la de FrankenPHP.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
  {
     &quot;name&quot;: &quot;PHP&quot;,
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
@@ -277,7 +276,7 @@ docker-php-ext-enable xdebug
 
 </code></pre>
 <p>La imagen de FrankenPHP, por defecto, tiene su <a href="https://docs.docker.com/reference/dockerfile/#workdir" target="_blank" hreflang="en" lang="en"><i>WORKDIR</i></a> configurado en <code>/app/public/</code> asi que el proyecto intentará montarse allí. Pero nosotros ya contamos con un directorio <code>public/</code> por lo que deberemos configurar tanto el <i lang="en">working dir</i> como el punto de montaje.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     &quot;image&quot;: &quot;dunglas/frankenphp:1-php8.4&quot;,
 
@@ -289,7 +288,7 @@ docker-php-ext-enable xdebug
 </code></pre>
 <p>Dentro de <em>wokspaceMount</em> estamos utilizando una variable propia de devcontainers (<code>${localWorkspaceFolder}</code>), para más información sobre las variables disponibles y como utilizarlas pueden visitar <a href="https://containers.dev/implementors/json_reference/#variables-in-devcontainerjson" target="_blank" hreflang="en">este link</a>.</p>
 <p>Además, siguiendo la <a href="https://frankenphp.dev/docs/config/#environment-variables" target="_blank" hreflang="en">documentación de FrankenPHP</a> agregaremos algunas variables de entorno para configurar nuestro webserver.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     &quot;forwardPorts&quot;: [8080],
@@ -305,7 +304,7 @@ docker-php-ext-enable xdebug
 </code></pre>
 <p>El atributo <em>forwardPorts</em> no lo modificaremos ya que estamos configurando nuestro nuevo webserver para escuchar en el puerto 8080 por lo que queremos seguir exponiendo este mismo puerto.</p>
 <p>Por último configuraremos <em>overrideCommand</em> para evitar que devcontainers sobreescriba el proceso default de la imagen, ejecutar el webserver, ya que eso es exactamente lo que queremos que haga.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     &quot;image&quot;: &quot;dunglas/frankenphp:1-php8.4&quot;,
 
@@ -404,7 +403,7 @@ exit $RESULT
 <pre><code class="language-sh">chmod +x .devcontainer/composer.sh
 </code></pre>
 <p>Luego configuramos nuestro <code>.devcontainer/devcontainer.json</code> para ejecutar el script.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
         &quot;ghcr.io/devcontainers/features/git:1&quot;: {}
     },
 
@@ -426,24 +425,23 @@ exit $RESULT
 <pre><code class="language-sh">printf &quot;/vendor\n&quot; &gt; .gitignore
 </code></pre>
 <p>Y modificamos nuestro archivo <code>public/index.php</code> para agregar nuestra nueva funcionalidad:</p>
-<pre><code class="language-diff">
--Hola mundo
-+&lt;?php
-+
-+declare(strict_types=1);
-+
-+require __DIR__ . '/../vendor/autoload.php';
-+
-+$number = $_GET['number'] ?? null;
-+$number = is_numeric($number) ? (int) $number : null;
-+
-+$helloed = match (true) {
-+    ! is_int($number) =&gt; 'mundo',
-+    is_even($number) =&gt; 'par',
-+    default =&gt; 'impar',
-+};
-+
-+echo &quot;Hola, $helloed&quot;;
+<pre><code class="language-php">
+&lt;?php
+
+declare(strict_types=1);
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$number = $_GET['number'] ?? null;
+$number = is_numeric($number) ? (int) $number : null;
+
+$helloed = match (true) {
+    ! is_int($number) =&gt; 'mundo',
+    is_even($number) =&gt; 'par',
+    default =&gt; 'impar',
+};
+
+echo &quot;Hola, $helloed&quot;;
 </code></pre>
 <p>¡Perfecto! Nuestra aplicación ya puede diferenciar números pares e impares de manera correcta y cortes.</p>
 <p><img src="27-hola-world-again.png" alt="Captura de pantalla de la aplicación mostrando el mensaje &quot;Hola mundo&quot;">
@@ -457,7 +455,7 @@ Aplicación saludando con parámetro <em>numero</em> en 2 (número par)</p>
 <p>Algunas de las herramientas y servicios que poseen integración con devcontainers permiten configuraciones específicas para ayudar a configurar ciertos aspectos de nuestro entorno de desarrollo.</p>
 <p>La integración con <span lang="en">Visual Studio Code</span> nos permite definir preferencias que aplicarán al proyecto dentro de nuestro entorno de desarrollo y extensiones que se instalarán de manera automática.</p>
 <p>Siendo que estamos trabajando en un proyecto PHP puede ser deseable agregar lo siguiente a nuestro archivo de configuración para tener un mejor soporte del lenguaje.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
     &quot;postCreateCommand&quot;: {
         &quot;install xdebug&quot;: &quot;pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug&quot;,
         &quot;install composer&quot;: &quot;.devcontainer/composer.sh&quot;
@@ -513,7 +511,7 @@ RUN pecl install xdebug \
     &amp;&amp; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 </code></pre>
 <p>y modificamos nuestro <code>.devcontainer/devcontainer.json</code></p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
  {
     &quot;name&quot;: &quot;Helloer&quot;,
 -   &quot;image&quot;: &quot;dunglas/frankenphp:1-php8.4&quot;,
@@ -571,7 +569,7 @@ volumes:
   caddy_config:
 </code></pre>
 <p>Y modificamos <code>.devconytainer/devcontainer.json</code>.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
  {
     &quot;name&quot;: &quot;Helloer&quot;,
 -   &quot;build&quot;: {
@@ -601,7 +599,7 @@ volumes:
 </code></pre>
 <p>Una vez más reconstruimos el container y todo debería seguir funcionando como lo hacía hasta ahora.</p>
 <p>Agregamos el servicio que contendrá la base de datos en nuestro archivo `.devcontainer/compose.yaml’</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
 +x-db-default-params: &amp;db-default-params
 +  MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-SUPER_SECRET_ROOT_PASSWORD}
 +  MARIADB_DATABASE: ${DB_DATABASE:-helloer}
@@ -634,7 +632,7 @@ volumes:
 +  mariadb:
 </code></pre>
 <p>Configuramos <code>.devcontainer/devcontainer.json</code> par aunque inicie el servicio.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
 @@ -4,6 +4,7 @@
     &quot;dockerComposeFile&quot;: &quot;compose.yaml&quot;,
     &quot;service&quot;: &quot;app&quot;,
@@ -644,7 +642,7 @@ volumes:
     &quot;forwardPorts&quot;: [8080],
 </code></pre>
 <p>E instalamos la extensión de mysql para PHP y el cliente de mariadb en nuestro container desde <code>.devcontainer/Dockerfile</code>.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
 @@ -4,9 +4,11 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 
  RUN pecl install xdebug \
@@ -679,7 +677,7 @@ VALUES
 ;'
 </code></pre>
 <p>Agregamos la nueva funcionalidad al código de nuestra aplicación.</p>
-<pre><code class="language-diff">
+<pre><code class="language-git-diff">
 @@ -7,7 +7,32 @@ require __DIR__ . '/../vendor/autoload.php';
  $number = $_GET['number'] ?? null;
  $number = is_numeric($number) ? (int) $number : null;
@@ -744,31 +742,14 @@ VALUES
 <p>
 	A principios del 2026 comencé a utilizar <a href="https://podman.io/" target="_blank" rel="noopener noreferrer" lang="en" hreflang="en">podman</a> como gestor de containers. La transición fue de lo más sencilla, lo único que hice fue seguir las instrucciones de instalación, crear un <span lang="en">symlink</span> de <code>/usr/bin/docker</code> a <code>/usr/bin/podman</code> para facilitar la integración con otras herramientas ya que suelen venir preparadas por defecto para trabajar con docker. Y agregar en mi <code>.bashrc</code> una variable de entorno para evitar problemas al montar volumenes utilizando devcontainers. Quedando:
 </p>
-<pre><code class="language-diff">
-+ export PODMAN_USERNS=keep-id
-</code></pre>
+<pre><code class="language-sh">export PODMAN_USERNS=keep-id</code></pre>
 <br>
 <time datetime="2026-06-30">30/06/2026</time>
 <p>
 Hoy mas que nunca los contenedores de desarrollo se han convertido en una herramienta indispensable para mí ya que me permiten trabajar dandole rienda suleta a agentes de inteligencia artificial sin miedo a que destruyan mi sistema operativo. No es un tema que haya tratado en esta guía pero mediante <span lang="en">features</span> es extremadamente simple instalar agentes como <span lang="en">Claude Code</span>, <span lang="en">OpenCode</span> o <span lang="en">Copilot</span> y podemos mantener la sesión iniciada y compartir todas nuestras configuraciones entre contenedores y nuestro equipo mediante el montaje de volúmenes.
 </p>
 
-<script type="module">
-import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/highlight.min.js';
-import diff from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/diff.min.js';
-import php from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/php.min.js';
-import json from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/json.min.js';
-import yaml from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/yaml.min.js';
-import dockerfile from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/dockerfile.min.js';
-import bash from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/bash.min.js';
-hljs.registerLanguage('diff', diff);
-hljs.registerLanguage('php', php);
-hljs.registerLanguage('json', json);
-hljs.registerLanguage('yaml', yaml);
-hljs.registerLanguage('dockerfile', dockerfile);
-hljs.registerLanguage('bash', bash);
-hljs.highlightAll()
-</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/microlighter@2/dist/microlighter.min.js"></script>
 <script type="module">
 import ImgViewer from '/components/ImgViewerElement.js'
 customElements.define('img-viewer', ImgViewer);
