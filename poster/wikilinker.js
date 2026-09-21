@@ -12,7 +12,7 @@ function replaceCommonLinks(markdown) {
 		'Feedly': 'https://feedly.com/',
 		'Brave': 'https://brave.com/',
 		'Markdown': 'https://es.wikipedia.org/wiki/Markdown',
-		'Notion': 'https://www.notion.so/',
+		'Notion': 'https://www.notion.com/',
 		'Google': 'https://www.google.com/',
 		'ChatGPT': 'https://chatgpt.com/',
 		'OpenAI': 'https://openai.com/',
