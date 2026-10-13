@@ -568,6 +568,7 @@ if(mql.matches) {
 </main>
 <div class="left-spacer"></div>
 
+{% if tags contains "post" %}
 <script type="application/ld+json">
 { "@context": "https://schema.org",
 	"@type": "BlogPosting",
@@ -584,3 +585,4 @@ if(mql.matches) {
 	}
 }
 </script>
+{% endif %}

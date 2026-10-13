@@ -34,16 +34,38 @@ Para hablar sobre proyectos, consultoría, acompañamiento, ideas o simplemente 
 <script type="application/ld+json">
 {
 	"@context": "https://schema.org",
-	"@type": "Person",
-	"email": "me@iyaki.ar",
-	"jobTitle": "Head of Product and Technology",
-	"name": "Ivan Yakimovicz",
-	"birthPlace": "Argentina, Buenos Aires",
-	"nationality": "Argentinian",
-	"url": "https://iyaki.ar/",
-	"sameAs": [
-		"https://www.linkedin.com/in/ivan-yakimovicz/",
-		"https://github.com/iyaki"
+	"@graph": [
+		{
+			"@type": "Person",
+			"email": "me@iyaki.ar",
+			"jobTitle": "Head of Product and Technology",
+			"name": "Ivan Yakimovicz",
+			"description": "Generalista tecnológico con 10 años de experiencia en Product Engineering, Software Architecture, DevOps y People management.",
+			"knowsAbout": [
+				"Product Engineering",
+				"Software Architecture",
+				"DevOps",
+				"People Management"
+			],
+			"worksFor": [
+				{ "@type": "Organization", "name": "Alephoo" },
+				{ "@type": "Organization", "name": "Binks Software Solutions" }
+			],
+			"birthPlace": "Argentina, Buenos Aires",
+			"nationality": "Argentinian",
+			"url": "https://iyaki.ar/",
+			"sameAs": [
+				"https://www.linkedin.com/in/ivan-yakimovicz/",
+				"https://github.com/iyaki"
+			]
+		},
+		{
+			"@type": "WebSite",
+			"name": "iyaki",
+			"url": "https://iyaki.ar/",
+			"inLanguage": "es",
+			"author": { "@type": "Person", "name": "Ivan Yakimovicz", "url": "https://iyaki.ar/" }
+		}
 	]
 }
 </script>
