@@ -13,10 +13,10 @@ Static site generated with Eleventy (11ty). No invasive trackers, no third-party
 
 ## Featured articles
 
-- [Devcontainers: de cero a cien](https://iyaki.ar/posts/20250304_devcontainers_de_cero_a_cien/20250304_devcontainers_de_cero_a_cien.html) - Practical guide to development containers
-- [Conoce tus herramientas](https://iyaki.ar/posts/20240121_conoce_tus_herramientas/20240121_conoce_tus_herramientas.html) - The importance of mastering your daily toolkit
-- [No solo de software vive el hombre](https://iyaki.ar/posts/20240328_no_solo_de_software_vive_el_hombre/20240328_no_solo_de_software_vive_el_hombre.html) - Laws and principles for project management (Pareto, Conway, Brooks)
-- [.gitconfig](https://iyaki.ar/posts/20240224_gitconfig/20240224_gitconfig.html) - My personal git configuration for programming
+- [Devcontainers: de cero a cien](https://iyaki.ar/posts/20250304_devcontainers_de_cero_a_cien/) - Practical guide to development containers
+- [Conoce tus herramientas](https://iyaki.ar/posts/20240121_conoce_tus_herramientas/) - The importance of mastering your daily toolkit
+- [No solo de software vive el hombre](https://iyaki.ar/posts/20240328_no_solo_de_software_vive_el_hombre/) - Laws and principles for project management (Pareto, Conway, Brooks)
+- [.gitconfig](https://iyaki.ar/posts/20240224_gitconfig/) - My personal git configuration for programming
 
 ## Notable projects
 
