@@ -1,0 +1,11 @@
+{
+	"openapi": "3.1.0",
+	"info": {
+		"title": "iyaki.ar",
+		"summary": "Personal portfolio and blog of Iván Yakimovicz",
+		"version": "1.0.0",
+		"description": "Static site: HTML pages, an Atom feed (/posts/feed.xml) and a sitemap (/sitemap.xml). There is no programmatic JSON API; machine-readable docs live at /llms.txt."
+	},
+	"paths": {},
+	"servers": [{ "url": "https://iyaki.ar" }]
+}

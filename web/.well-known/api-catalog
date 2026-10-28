@@ -1,0 +1,19 @@
+{
+	"linkset": [
+		{
+			"anchor": "https://iyaki.ar",
+			"service-desc": [
+				{
+					"href": "https://iyaki.ar/openapi.json",
+					"type": "application/vnd.oai.openapi+json"
+				}
+			],
+			"service-doc": [
+				{
+					"href": "https://iyaki.ar/llms.txt",
+					"type": "text/plain"
+				}
+			]
+		}
+	]
+}
