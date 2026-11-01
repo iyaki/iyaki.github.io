@@ -20,7 +20,7 @@
     "node": "24"
   },
   "dependencies": {
-    "node-html-parser": "^9.0.4",
+    "node-html-parser": "^9.0.5",
     "remarkable": "^2.0.1"
   }
 }
