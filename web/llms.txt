@@ -30,7 +30,6 @@ Static site generated with Eleventy (11ty). No invasive trackers, no third-party
 - **Email (preferred):** me@iyaki.ar
 - **LinkedIn:** https://www.linkedin.com/in/ivan-yakimovicz/
 - **GitHub:** https://github.com/iyaki
-- Details and guidelines: https://iyaki.ar/contact/
 
 ### Policy for AI agents and automated systems
 

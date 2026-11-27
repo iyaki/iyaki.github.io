@@ -288,6 +288,18 @@ img.logo {
 	text-decoration: underline;
 }
 
+.site-footer-agents {
+	margin: 0 auto;
+	max-width: 40em;
+	opacity: 0.65;
+	font-size: 0.9em;
+	text-align: center;
+}
+
+.site-footer-agents a {
+	color: var(--link-color);
+}
+
 /* ----------------- End Utils ----------------- */
 
 /* ----------------- Start Animations ----------------- */
